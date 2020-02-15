@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">User Name</th>
+    <th scope="col">Full Name</th>
+    <th scope="col">Phone Number</th>
+    <th scope="col">phoneNumberConfirmed</th>
+    <th scope="col">Country</th>
+    <th scope="col">Email</th>
+    <th scope="col">Email Confirmed</th>
+    <th scope="col">Two Factor Enabled</th>
+    <th scope="col">Lockout End</th>
+    <th scope="col">Access Failed Count</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr >
+
+    <td>{{userList.userName}}</td>
+    <td>{{userList.fullName}}</td>
+    <td>{{userList.phoneNumber}}</td>
+    <td> <i [ngClass]="{'fa fa-check' : userList.phoneNumberConfirmed , 'fa fa-times' : !userList.phoneNumberConfirmed }" aria-hidden="true"></i></td>
+    <td>{{userList.country}}</td>
+    <td>{{userList.email}}</td>
+    <td> <i [ngClass]="{'fa fa-check' : userList.emailConfirmed , 'fa fa-times' : !userList.emailConfirmed }" aria-hidden="true"></i></td>
+    <td><i [ngClass]="{'fa fa-check' : userList.twoFactorEnabled , 'fa fa-times' : !userList.twoFactorEnabled }" aria-hidden="true"></i></td>
+    <td>{{userList.lockoutEnd}}</td>
+    <td>{{userList.accessFailedCount}}</td>
+
+  </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>

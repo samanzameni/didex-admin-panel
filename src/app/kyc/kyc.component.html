@@ -1,0 +1,39 @@
+<div *ngIf="mainPage">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+  <table class="table table-striped" >
+    <thead>
+    <tr>
+
+      <th scope="col">Last Name</th>
+      <th scope="col">First Name</th>
+      <th scope="col">ID</th>
+      <th scope="col">Detail</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of list">
+      <td>{{i.lastName}}</td>
+      <td>{{i.firstName}}</td>
+      <td>{{i.id}}</td>
+      <td>
+        <button type="button" class="btn btn-info"  (click)="userDetail(i)">
+          <i class="fa fa-info" aria-hidden="true"></i>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div class="row" *ngIf="!mainPage">
+  <div class="col-2">
+    <button type="button" class="btn btn-warning"  (click)="back()">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<app-kyc-detail [userList]="IList" *ngIf="!mainPage"></app-kyc-detail>

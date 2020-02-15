@@ -1,0 +1,70 @@
+<div class="container" *ngIf="mainPage">
+  <div class="card">
+    <div class="card-body">
+<div class="row"><div class="col">
+  <div class="form-group col-4">
+    <label for="Network">Admin Role</label>
+    <select class="form-control" id="Network" [(ngModel)]="adminList.roles"  (change)="selectedRole($event)" >
+      <option [ngValue]="undefined" disabled selected> select </option>
+      <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
+    </select>
+  </div>
+</div></div>
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th scope="col">Remove From Role</th>
+    <th scope="col">Add To Role</th>
+    <th scope="col">Reset Password</th>
+    <th scope="col">Country</th>
+    <th scope="col">Phone Number</th>
+    <th scope="col">User Name</th>
+    <th scope="col">Full Name</th>
+    <th scope="col">Detail</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let i of roleList">
+    <td>
+      <button type="button" class="btn btn-danger" (click)="userRemoveFromRole(i)" >
+        <i class="fa fa-minus" aria-hidden="true"></i>
+      </button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-success" (click)="userAddToRole(i)">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-warning" (click)="userResetPassword(i)" >
+        <i class="fa fa-key" aria-hidden="true"></i>
+      </button>
+    </td>
+    <td>{{i.country}}</td>
+    <td>{{i.phoneNumber}}</td>
+    <td>{{i.userName}}</td>
+    <td>{{i.fullName}}</td>
+    <td>
+      <button type="button" class="btn btn-info"  (click)="userDetail(i)">
+        <i class="fa fa-info" aria-hidden="true"></i>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+    </div>
+  </div>
+</div>
+<div class="row" *ngIf="!mainPage">
+  <div class="col-2">
+    <button type="button" class="btn btn-warning"  (click)="userBack()">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+
+<app-detail [userList]="userRoleList" *ngIf="detailSubmitted"></app-detail>
+<app-add-to-role [userList]="userRoleList" *ngIf="AddToRoleSubmitted"></app-add-to-role>
+<app-reset-password [userList]="userRoleList" *ngIf="ResetPasswordSubmitted"></app-reset-password>
+<app-remove-from-role [userList]="userRoleList" *ngIf="RemoveFromRoleSubmitted"></app-remove-from-role>

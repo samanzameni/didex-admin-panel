@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Email</th>
+          <th scope="col">Status</th>
+          <th scope="col">Change Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let i of traderList">
+          <td>{{i.id}}</td>
+          <td>{{i.email}}</td>
+          <td>{{traderEnum[i.status]}}</td>
+          <td>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" (click)="change(i.id)">
+              <i class="fa fa-edit" aria-hidden="true" ></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Change Status</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+          <div class="form-group">
+            <label for="Network">Status</label>
+            <select class="form-control" id="Network" [(ngModel)]="trader.status" >
+              <option [ngValue]="undefined" disabled selected> select </option>
+              <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
+            </select>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="changeTrader()">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+
+      </div>
+    </div>
+  </div>
+</div>

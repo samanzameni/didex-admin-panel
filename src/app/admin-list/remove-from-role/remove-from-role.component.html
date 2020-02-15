@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="card col-6 offset-3 align-self-center">
+    <div class="card-body">
+      <div class="form-row">
+        <div class="col-5">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" [placeholder]="userList.email" id="email"  disabled>
+        </div>
+        <div class="col-5">
+          <label for="Network">Role</label>
+          <select class="form-control" id="Network" [(ngModel)]="add.role"  >
+            <option [ngValue]="undefined" disabled selected> select </option>
+            <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
+          </select>
+        </div>
+        <div class="col-2 btn-center">
+          <label for="submit"> </label>
+          <button type="button" id="submit" class="btn btn-danger " (click)="removeSubmit()" > Submit </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

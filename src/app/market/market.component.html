@@ -1,0 +1,81 @@
+<div class="container" *ngIf="mainPage">
+  <div class="card">
+    <div class="card-body">
+<div class="row btn-right">
+  <div class="col ">
+    <button type="button" class="btn btn-primary" (click)="addMarket()">
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">Delete</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Provide<br>Liquidity<br>Rate</th>
+    <th scope="col">Take<br>Liquidity<br>Rate</th>
+    <th scope="col">Tick Size</th>
+    <th scope="col">Quantity<br>Increment</th>
+    <th scope="col">Quote<br>Currency<br>ShortName</th>
+    <th scope="col">Base<br>Currency<br>ShortName</th>
+    <th scope="col">Symbol</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let i of marketList">
+    <td>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteMarket(i)">
+        <i class="fa fa-trash" aria-hidden="true" ></i>
+      </button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-warning" (click)="updateMarket(i)">
+        <i class="fa fa-edit" aria-hidden="true"></i>
+      </button>
+    </td>
+    <td>{{i.provideLiquidityRate}}</td>
+    <td>{{i.takeLiquidityRate}}</td>
+    <td>{{i.tickSize}}</td>
+    <td>{{i.quantityIncrement}}</td>
+    <td>{{i.quoteCurrencyShortName}}</td>
+    <td>{{i.baseCurrencyShortName}}</td>
+    <td>{{i.symbol}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+  <div class="row" *ngIf="!mainPage">
+    <div class="col-2">
+      <button type="button" class="btn btn-warning"  (click)="userBack()">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are You Sure?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="deleteAccept()">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-market-add (pageEvent)="pageAdd($event)"  *ngIf="addSubmitted"></app-market-add>
+<app-market-edit (pageEvent)="pageEdit($event)" [market]="market" *ngIf="editSubmitted"></app-market-edit>

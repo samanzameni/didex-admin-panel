@@ -1,0 +1,42 @@
+import { Injectable } from '@angular/core';
+import {Observable} from 'rxjs';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Currency} from './currency';
+import {StorageService} from '../Login/storage.service';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class CurrencyService {
+
+  constructor(private http: HttpClient, private storageService: StorageService) {
+  }
+  token = this.storageService.getAccessToken();
+  ServerUrl = 'https://118.190.58.246/api/';
+  httpOptions = {
+    headers: new HttpHeaders({ 'accept': 'text/plain',
+      'Authorization': 'Bearer ' + this.token,
+      },
+    ),
+  };
+  currencyPost(formdata: Currency ): Observable<any> {
+    return this.http.post
+    (this.ServerUrl + 'admin/Currency', formdata, this.httpOptions  );
+  }
+  currencyGet() {
+    return this.http.get
+    (this.ServerUrl + 'admin/Currency', this.httpOptions  );
+  }
+  shortNameGet(id: string): Observable<any> {
+    return this.http.get
+    (this.ServerUrl + 'admin/Currency/' + id, this.httpOptions  );
+  }
+  shortNamePut(id: string , formdata: Currency ): Observable<any> {
+    return this.http.put
+    (this.ServerUrl + 'admin/Currency/' + id , formdata, this.httpOptions  );
+  }
+  shortNameDelete(id: string): Observable<any> {
+    return this.http.delete
+    (this.ServerUrl + 'admin/Currency/' + id, this.httpOptions  );
+  }
+}

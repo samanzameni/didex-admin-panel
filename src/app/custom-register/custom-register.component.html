@@ -1,0 +1,73 @@
+<div class="container login-center">
+  <div class="card">
+    <div class="card-body">
+  <div class="row h-100">
+    <div class="col-12">
+      <div class="card back-border">
+        <form class="card-body" [formGroup]="registerForm" (ngSubmit)="userRegister()" novalidate>
+
+          <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Sign Up</h1>
+          <label for="Email" class="sr-only">Email address</label>
+          <input id="Email" class="form-control bottom-space" formControlName="email" type="email" name="email" placeholder="Email address" (input)="emailChange($event)" required autofocus>
+          <div *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)" class="alert alert-danger">
+            <div *ngIf="registerForm.controls['email'].errors.required">
+              Email is required.
+            </div>
+          </div>
+
+          <label for="Password" class="sr-only">Password</label>
+          <input type="password" name="password"  formControlName="password" id="Password" class="form-control bottom-space" placeholder="Password" (input)="passChange($event)" required>
+          <div *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)" class="alert alert-danger">
+            <div *ngIf="registerForm.controls['password'].errors.required">
+              Password is required.
+            </div>
+            <div *ngIf="registerForm.controls['password'].errors.pattern ">
+              Passwords must be at least 8 characters.
+              Passwords must have at least one non alphanumeric character.
+              Passwords must have at least one digit ('0'-'9').
+              Passwords must have at least one uppercase ('A'-'Z').
+            </div>
+          </div>
+
+          <label for="FullName" class="sr-only">FullName</label>
+          <input type="text" name="fullName"  formControlName="fullName" id="FullName" class="form-control bottom-space" placeholder="FullName" (input)="fullNameChange($event)" required>
+          <div *ngIf="registerForm.controls['fullName'].invalid && (registerForm.controls['fullName'].dirty || registerForm.controls['fullName'].touched)" class="alert alert-danger">
+            <div *ngIf="registerForm.controls['fullName'].errors.required">
+              FullName is required.
+            </div>
+          </div>
+
+          <label for="Country" class="sr-only">Country</label>
+          <input type="text" name="country"  formControlName="country" id="Country" class="form-control bottom-space" placeholder="Country" (input)="countryChange($event)" required>
+          <div *ngIf="registerForm.controls['country'].invalid && (registerForm.controls['country'].dirty || registerForm.controls['country'].touched)" class="alert alert-danger">
+            <div *ngIf="registerForm.controls['country'].errors.required">
+              Country is required.
+            </div>
+          </div>
+
+          <label for="PhoneNumber" class="sr-only">PhoneNumber</label>
+          <input type="number" name="phoneNumber"  formControlName="phoneNumber" id="PhoneNumber" class="form-control bottom-space" placeholder="PhoneNumber" (input)="phoneNumberChange($event)" required>
+          <div *ngIf="registerForm.controls['phoneNumber'].invalid && (registerForm.controls['phoneNumber'].dirty || registerForm.controls['phoneNumber'].touched)" class="alert alert-danger">
+            <div *ngIf="registerForm.controls['phoneNumber'].errors.required">
+              PhoneNumber is required.
+            </div>
+          </div>
+
+          <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!registerForm.valid">Register</button>
+          <div class="text-center top-space">
+						<span class="form-Control">
+                        don't have an account?
+						</span>
+
+            <a class="form-Control" routerLink="/login">
+              Sign In Page
+            </a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>

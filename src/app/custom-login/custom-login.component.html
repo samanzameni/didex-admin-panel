@@ -1,0 +1,43 @@
+<div class="container login-center">
+  <div class="card">
+    <div class="card-body">
+  <div class="row h-100">
+    <div class="col-12">
+      <div class="card back-border">
+  <form class="card-body" [formGroup]="loginForm" (ngSubmit)="userLogin()" novalidate>
+
+    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Sign In</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input id="inputEmail" class="form-control bottom-space" formControlName="email" type="email" name="email" placeholder="Email address" (input)="emailChange($event)" required autofocus>
+    <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)" class="alert alert-danger">
+      <div *ngIf="loginForm.controls['email'].errors.required">
+        Email is required.
+      </div>
+    </div>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="password"  formControlName="password" id="inputPassword" class="form-control bottom-space" placeholder="Password" (input)="passChange($event)" required>
+    <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert alert-danger">
+      <div *ngIf="loginForm.controls['password'].errors.required">
+        Password is required.
+      </div>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">Log In</button>
+    <div class="text-center top-space">
+						<span class="form-Control">
+              have an account?
+						</span>
+
+      <a class="form-Control" routerLink="/register">
+        Sign Up Page
+      </a>
+    </div>
+
+  </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+

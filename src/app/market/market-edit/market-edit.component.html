@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="marketForm">
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="3">Quantity Increment</label>
+              <input type="number" class="form-control" id="3" placeholder="Quantity Increment" formControlName="quantityIncrement" [(ngModel)]="marketPut.quantityIncrement">
+              <div *ngIf="marketForm.controls['quantityIncrement'].invalid && (marketForm.controls['quantityIncrement'].dirty || marketForm.controls['quantityIncrement'].touched)" class="alert alert-danger">
+                <div *ngIf="marketForm.controls['quantityIncrement'].errors.required">
+                  Quantity Increment is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="4">Tick Size</label>
+              <input type="number" class="form-control" id="4" placeholder="Tick Size" formControlName="tickSize" [(ngModel)]="marketPut.tickSize">
+              <div *ngIf="marketForm.controls['tickSize'].invalid && (marketForm.controls['tickSize'].dirty || marketForm.controls['tickSize'].touched)" class="alert alert-danger">
+                <div *ngIf="marketForm.controls['tickSize'].errors.required">
+                  Tick Size is required.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="5">Take Liquidity Rate</label>
+              <input type="number" class="form-control" id="5" placeholder="Take Liquidity Rate" formControlName="takeLiquidityRate" [(ngModel)]="marketPut.takeLiquidityRate">
+              <div *ngIf="marketForm.controls['takeLiquidityRate'].invalid && (marketForm.controls['takeLiquidityRate'].dirty || marketForm.controls['takeLiquidityRate'].touched)" class="alert alert-danger">
+                <div *ngIf="marketForm.controls['takeLiquidityRate'].errors.required">
+                  Take Liquidity Rate is required.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="6">Provide Liquidity Rate</label>
+              <input type="number" class="form-control" id="6" placeholder="Provide Liquidity Rate" formControlName="provideLiquidityRate" [(ngModel)]="marketPut.provideLiquidityRate">
+              <div *ngIf="marketForm.controls['provideLiquidityRate'].invalid && (marketForm.controls['provideLiquidityRate'].dirty || marketForm.controls['provideLiquidityRate'].touched)" class="alert alert-danger">
+                <div *ngIf="marketForm.controls['provideLiquidityRate'].errors.required">
+                  Provide Liquidity Rate is required.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row float-right">
+          <div class="col-2 btn-center">
+            <label for="submit"> </label>
+            <button type="button" id="submit" class="btn btn-success " (click)="addSubmit()" [disabled]="marketForm.invalid" > Submit </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+

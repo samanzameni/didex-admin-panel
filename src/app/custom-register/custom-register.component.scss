@@ -1,0 +1,28 @@
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.login-center {
+  margin-top: 5%;
+  width: 600px;
+}
+.bottom-space {
+  margin-bottom: 3%;
+}
+.top-space {
+  margin-top: 3%;
+}
+.back-border {
+  border-radius: 25px;
+  background-color: whitesmoke;
+}
