@@ -1,3 +1,13 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
 <div class="container" *ngIf="mainPage">
   <div class="card">
     <div class="card-body">
@@ -8,42 +18,44 @@
     </button>
   </div>
 </div>
+      <div class="table-responsive">
 <table class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">Delete</th>
-    <th scope="col">Edit</th>
-    <th scope="col">Provide<br>Liquidity<br>Rate</th>
-    <th scope="col">Take<br>Liquidity<br>Rate</th>
-    <th scope="col">Tick Size</th>
-    <th scope="col">Quantity<br>Increment</th>
-    <th scope="col">Quote<br>Currency<br>ShortName</th>
-    <th scope="col">Base<br>Currency<br>ShortName</th>
     <th scope="col">Symbol</th>
+    <th scope="col">Base<br>Currency<br>ShortName</th>
+    <th scope="col">Quote<br>Currency<br>ShortName</th>
+    <th scope="col">Quantity<br>Increment</th>
+    <th scope="col">Tick<br>Size</th>
+    <th scope="col">Take<br>Liquidity<br>Rate</th>
+    <th scope="col">Provide<br>Liquidity<br>Rate</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let i of marketList">
-    <td>
-      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteMarket(i)">
-        <i class="fa fa-trash" aria-hidden="true" ></i>
-      </button>
-    </td>
+    <td>{{i.symbol}}</td>
+    <td>{{i.baseCurrencyShortName}}</td>
+    <td>{{i.quoteCurrencyShortName}}</td>
+    <td>{{i.quantityIncrement}}</td>
+    <td>{{i.tickSize}}</td>
+    <td>{{i.takeLiquidityRate}}</td>
+    <td>{{i.provideLiquidityRate}}</td>
     <td>
       <button type="button" class="btn btn-warning" (click)="updateMarket(i)">
         <i class="fa fa-edit" aria-hidden="true"></i>
       </button>
     </td>
-    <td>{{i.provideLiquidityRate}}</td>
-    <td>{{i.takeLiquidityRate}}</td>
-    <td>{{i.tickSize}}</td>
-    <td>{{i.quantityIncrement}}</td>
-    <td>{{i.quoteCurrencyShortName}}</td>
-    <td>{{i.baseCurrencyShortName}}</td>
-    <td>{{i.symbol}}</td>
+    <td>
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteMarket(i)">
+        <i class="fa fa-trash" aria-hidden="true" ></i>
+      </button>
+    </td>
   </tr>
   </tbody>
 </table>
+</div>
 </div>
 </div>
 </div>

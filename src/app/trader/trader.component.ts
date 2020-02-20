@@ -3,6 +3,8 @@ import {ToastrService} from 'ngx-toastr';
 import {Trader} from '../@core/Trader/trader';
 import {TraderService} from '../@core/Trader/trader.service';
 import {TraderStatus} from '../@core/Trader/trader-status.enum';
+import {AdminService} from '../@core/Admin/admin.service';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-trader',
@@ -13,7 +15,7 @@ export class TraderComponent implements OnInit {
 traderList: Trader[];
 trader: Trader;
 traderEnum = TraderStatus;
-  constructor(private toastrService: ToastrService, private traderService: TraderService) {
+  constructor(private toastrService: ToastrService, private traderService: TraderService, private ngxShowLoader: NgxSpinnerService) {
     this.trader = {
       id: null,
       email: '',
@@ -22,14 +24,16 @@ traderEnum = TraderStatus;
   }
 
   showTrader() {
+    this.ngxShowLoader.show();
     return this.traderService.traderGet().subscribe(
       (res: any) => {
         console.log(res);
         this.traderList = res;
+        this.ngxShowLoader.hide();
       },
       (err) => {
         console.log(err);
-
+        this.ngxShowLoader.hide();
       },
     );
   }
@@ -37,14 +41,18 @@ traderEnum = TraderStatus;
     this.trader.id = i;
   }
   changeTrader() {
+    this.ngxShowLoader.show();
     return this.traderService.traderPatch(this.trader.id , this.trader).subscribe(
       (res: any) => {
         console.log(res);
-        this.toastrService.success('You Have Successfully Change Status.', '', {timeOut: 4000});
         this.showTrader();
+        this.ngxShowLoader.hide();
+        this.toastrService.success('You Have Successfully Change Status.', '', {timeOut: 4000});
+
       },
       (err) => {
         console.log(err);
+        this.ngxShowLoader.hide();
         this.toastrService.error('Error', '', {timeOut: 4000});
 
       },
@@ -57,6 +65,7 @@ traderEnum = TraderStatus;
   }
   ngOnInit() {
     this.showTrader();
+    window.scroll(0, 0);
   }
 
 }

@@ -1,39 +1,46 @@
 <div class="container">
   <div class="card">
     <div class="card-body">
+      <div class="table-responsive">
 <table class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">User Name</th>
-    <th scope="col">Full Name</th>
-    <th scope="col">Phone Number</th>
-    <th scope="col">phoneNumberConfirmed</th>
+    <th scope="col">UserName</th>
+    <th scope="col">FullName</th>
+    <th scope="col">Phone<br>Number</th>
+    <th scope="col">phone<br>Number<br>Confirmed</th>
     <th scope="col">Country</th>
-    <th scope="col">Email</th>
-    <th scope="col">Email Confirmed</th>
-    <th scope="col">Two Factor Enabled</th>
-    <th scope="col">Lockout End</th>
-    <th scope="col">Access Failed Count</th>
-
   </tr>
   </thead>
   <tbody>
   <tr >
-
     <td>{{userList.userName}}</td>
     <td>{{userList.fullName}}</td>
     <td>{{userList.phoneNumber}}</td>
-    <td> <i [ngClass]="{'fa fa-check' : userList.phoneNumberConfirmed , 'fa fa-times' : !userList.phoneNumberConfirmed }" aria-hidden="true"></i></td>
+    <td> <i [ngClass]="{'fa fa-check btn-inverse-success' : userList.phoneNumberConfirmed , 'fa fa-times btn-inverse-danger' : !userList.phoneNumberConfirmed }" aria-hidden="true"></i></td>
     <td>{{userList.country}}</td>
+  </tr>
+  </tbody>
+  <thead>
+  <tr>
+    <th scope="col">Email</th>
+    <th scope="col">Email<br>Confirmed</th>
+    <th scope="col">Two<br>Factor<br>Enabled</th>
+    <th scope="col">Lockout<br>End</th>
+    <th scope="col">Access<br>Failed<br>Count</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
     <td>{{userList.email}}</td>
-    <td> <i [ngClass]="{'fa fa-check' : userList.emailConfirmed , 'fa fa-times' : !userList.emailConfirmed }" aria-hidden="true"></i></td>
-    <td><i [ngClass]="{'fa fa-check' : userList.twoFactorEnabled , 'fa fa-times' : !userList.twoFactorEnabled }" aria-hidden="true"></i></td>
+    <td> <i [ngClass]="{'fa fa-check btn-inverse-success' : userList.emailConfirmed , 'fa fa-times btn-inverse-danger' : !userList.emailConfirmed }" aria-hidden="true"></i></td>
+    <td><i [ngClass]="{'fa fa-check btn-inverse-success' : userList.twoFactorEnabled , 'fa fa-times btn-inverse-danger' : !userList.twoFactorEnabled }" aria-hidden="true"></i></td>
     <td>{{userList.lockoutEnd}}</td>
     <td>{{userList.accessFailedCount}}</td>
-
   </tr>
   </tbody>
 </table>
+</div>
 </div>
 </div>
 </div>

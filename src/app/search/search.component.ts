@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
 import {SearchService} from '../@core/Search/search.service';
 import {Trader} from '../@core/Trader/trader';
@@ -13,11 +13,20 @@ import {debounceTime, distinctUntilChanged, filter, map} from 'rxjs/operators';
 })
 export class SearchComponent implements OnInit, AfterViewInit {
   search: Trader[];
+  userSearch: Trader;
   user: string;
+  hide = true;
   @ViewChild('searchInput', {static: false}) searchInput: ElementRef;
-  constructor(private toastrService: ToastrService, private searchService: SearchService) { }
-  searchKey(i) {
-    return this.searchService.searchGet(i).subscribe(
+  @Output() id = new EventEmitter<number>();
+  constructor(private toastrService: ToastrService, private searchService: SearchService) {
+    this.userSearch = {
+      id: null,
+      email: null
+    };
+  }
+  searchKey(text) {
+    this.hide = true;
+    return this.searchService.searchGet(text).subscribe(
   (res: any) => {
     console.log(res);
     this.search = res;
@@ -26,11 +35,14 @@ export class SearchComponent implements OnInit, AfterViewInit {
     console.log(err);
   },
 );
-
+  }
+  userId(i) {
+    this.hide = false;
+    this.userSearch.id = i;
+    this.id.emit(this.userSearch.id);
   }
   ngOnInit() {
-
-    }
+  }
     ngAfterViewInit(): void {
       fromEvent(this.searchInput.nativeElement, 'keyup').pipe(
         // get value

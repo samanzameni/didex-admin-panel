@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
 import {MarketService} from '../@core/Market/market.service';
 import {MarketList} from '../@core/Market/market-list';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-market',
@@ -15,7 +16,7 @@ export class MarketComponent implements OnInit {
   mainPage = true;
   editSubmitted = false;
   addSubmitted = false;
-  constructor(private toastrService: ToastrService, private marketService: MarketService) {
+  constructor(private toastrService: ToastrService, private marketService: MarketService, private ngxShowLoader: NgxSpinnerService) {
     this.market = {
       baseCurrencyShortName: '',
       quoteCurrencyShortName: '',
@@ -35,25 +36,31 @@ export class MarketComponent implements OnInit {
   }
 
   showMarket() {
+    this.ngxShowLoader.show();
     return this.marketService.MarketGet().subscribe(
       (res: any) => {
         console.log(res);
         this.marketList = res;
+        this.ngxShowLoader.hide();
       },
       (err) => {
         console.log(err);
+        this.ngxShowLoader.hide();
       },
     );
 }
   deleteSymbol(i) {
+    this.ngxShowLoader.show();
     return this.marketService.symbolDelete(i).subscribe(
       (res: any) => {
         console.log(res);
-        this.toastrService.success('You Have Successfully Delete Market.', '', {timeOut: 4000});
         this.showMarket();
+        this.ngxShowLoader.hide();
+        this.toastrService.success('You Have Successfully Delete Market.', '', {timeOut: 4000});
       },
       (err) => {
         console.log(err);
+        this.ngxShowLoader.hide();
         this.toastrService.error('Error.', '', {timeOut: 4000});
       },
     );
@@ -94,6 +101,7 @@ export class MarketComponent implements OnInit {
   }
   ngOnInit() {
     this.showMarket();
+    window.scroll(0, 0);
   }
 
 }

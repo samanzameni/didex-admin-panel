@@ -1,265 +1,59 @@
-<div class="container">
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="container" *ngIf="pageSubmitted">
   <div class="card">
     <div class="card-body">
 <div class="row btn-right">
   <div class="col">
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Add">
+    <button type="button" class="btn btn-primary"  (click)="addSN()">
       <i class="fa fa-plus" aria-hidden="true"></i>
     </button>
   </div>
 </div>
+      <div class="table-responsive">
 <table class="table table-striped">
   <thead>
   <tr>
+    <th scope="col">Detail</th>
+    <th scope="col">Name</th>
+    <th scope="col">ShortName</th>
     <th scope="col">Edit</th>
     <th scope="col">Delete</th>
-    <th scope="col">ShortName</th>
-    <th scope="col">Name</th>
-    <th scope="col">Detail</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let i of cry">
     <td>
-      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#Edit" (click)="updateSN(i.shortName)">
+      <button type="button" class="btn btn-info"  (click)="detailSN(i.shortName)">
+        <i class="fa fa-info" aria-hidden="true"></i>
+      </button>
+    </td>
+    <td>{{i.name}}</td>
+    <td>{{i.shortName}}</td>
+    <td>
+      <button type="button" class="btn btn-warning"  (click)="updateSN(i.shortName)">
         <i class="fa fa-edit" aria-hidden="true"></i>
       </button>
     </td>
     <td>
       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete" (click)="deleteSN(i.shortName)" >
-      <i class="fa fa-trash" aria-hidden="true"></i>
-    </button>
-    </td>
-    <td>{{i.shortName}}</td>
-    <td>{{i.name}}</td>
-    <td>
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#Detail" (click)="showShortName(i.shortName)">
-      <i class="fa fa-info" aria-hidden="true"></i>
-    </button>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </button>
     </td>
   </tr>
   </tbody>
 </table>
-
+      </div>
 
 <!-- Modal -->
-<div class="modal fade" id="Add" tabindex="-1" role="dialog" aria-labelledby="AddLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="AddLabel">Add Currency</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col">
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="ShortName" >ShortName</label>
-                <input type="text" class="form-control" id="ShortName" placeholder="ShortName"  [(ngModel)]="cryPost.shortName">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="Name">Name</label>
-                <input type="text" class="form-control" id="Name" placeholder="Name" [(ngModel)]="cryPost.name">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="Network">Network</label>
-                <select class="form-control" id="Network" [(ngModel)]="cryPost.network">
-                  <option [ngValue]="undefined" disabled  selected> select </option>
-                  <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
-                </select>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Crypto" [(ngModel)]="cryPost.crypto">
-                <label class="form-check-label" for="Crypto">
-                  Crypto
-                </label>
-              </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Enabled" [(ngModel)]="cryPost.enabled">
-                <label class="form-check-label" for="Enabled">
-                  Enabled
-                </label>
-              </div>
-              </div>
-            </div></div>
-          </div>
-          <div class="col">
-            <div class="row"><div class="col">
-              <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="payinEnabled" [(ngModel)]="cryPost.payinEnabled">
-                <label class="form-check-label" for="payinEnabled">
-                  Pay in Enabled
-                </label>
-              </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="payInConfirmations">pay in Confirmations</label>
-                <input type="number" class="form-control" id="payInConfirmations" placeholder="pay in Confirmations" [(ngModel)]="cryPost.payinConfirmations">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled" [(ngModel)]="cryPost.payoutEnabled">
-                <label class="form-check-label" for="PayoutEnabled">
-                  Pay out Enabled
-                </label>
-              </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled" [(ngModel)]="cryPost.transferEnabled">
-                <label class="form-check-label" for="TransferEnabled">
-                  Transfer Enabled
-                </label>
-              </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="payOutFee">Pay Out Fee</label>
-                <input type="number" class="form-control" id="payOutFee" placeholder="Pay Out Fee" [(ngModel)]="cryPost.payoutFee">
-              </div>
-            </div></div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="addCurrency()">Add</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" id="Edit" tabindex="-1" role="dialog" aria-labelledby="EditLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="EditLabel">Edit</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col">
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="ShortName1">ShortName</label>
-                <input type="text" class="form-control" id="ShortName1" placeholder="ShortName" disabled [(ngModel)]="SNCurrency.shortName">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="Name1">Name</label>
-                <input type="text" class="form-control" id="Name1" placeholder="Name" [(ngModel)]="SNCurrency.name">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="Network1">Network</label>
-                <select class="form-control" id="Network1" [(ngModel)]="SNCurrency.network">
-                  <option [ngValue]="undefined" disabled  selected> select </option>
-                  <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
-                </select>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="crypto1" [(ngModel)]="SNCurrency.crypto">
-                  <label class="form-check-label" for="crypto1">
-                    Crypto
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="Enabled1" [(ngModel)]="SNCurrency.enabled">
-                  <label class="form-check-label" for="Enabled1">
-                    Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-          </div>
-          <div class="col">
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="payinEnabled1" [(ngModel)]="SNCurrency.payinEnabled">
-                  <label class="form-check-label" for="payinEnabled1">
-                    Pay in Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="payInConfirmations1">pay in Confirmations</label>
-                <input type="number" class="form-control" id="payInConfirmations1" placeholder="pay in Confirmations" [(ngModel)]="SNCurrency.payinConfirmations">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled1" [(ngModel)]="SNCurrency.payoutEnabled">
-                  <label class="form-check-label" for="PayoutEnabled1">
-                    Pay out Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="TransferEnabled1" [(ngModel)]="SNCurrency.transferEnabled">
-                  <label class="form-check-label" for="TransferEnabled1">
-                    Transfer Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="payOutFee1">Pay Out Fee</label>
-                <input type="number" class="form-control" id="payOutFee1" placeholder="Pay Out Fee" [(ngModel)]="SNCurrency.payoutFee">
-              </div>
-            </div></div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="updateSHortName()">Save changes</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="modal fade" id="Delete" tabindex="-1" role="dialog" aria-labelledby="DeleteLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -279,115 +73,18 @@
     </div>
   </div>
 </div>
-
-<div class="modal fade" id="Detail" tabindex="-1" role="dialog" aria-labelledby="DetailLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="DetailLabel">Detail</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col">
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="ShortName2">ShortName</label>
-                <input type="text" class="form-control" id="ShortName2" placeholder="ShortName" [(ngModel)]="SNCurrency.shortName">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="Name2">Name</label>
-                <input type="text" class="form-control" id="Name2" placeholder="Name" [(ngModel)]="SNCurrency.name">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="Network2">Network</label>
-                <select class="form-control" id="Network2" [(ngModel)]="SNCurrency.network">
-                  <option [ngValue]="undefined" disabled  selected> select </option>
-                  <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
-                </select>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="crypto2" [(ngModel)]="SNCurrency.crypto">
-                  <label class="form-check-label" for="crypto2">
-                    Crypto
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="Enabled2" [(ngModel)]="SNCurrency.enabled">
-                  <label class="form-check-label" for="Enabled2">
-                    Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-          </div>
-          <div class="col">
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="payinEnabled2" [(ngModel)]="SNCurrency.payinEnabled">
-                  <label class="form-check-label" for="payinEnabled2">
-                    Pay in Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="payInConfirmations2">pay in Confirmations</label>
-                <input type="number" class="form-control" id="payInConfirmations2" placeholder="pay in Confirmations" [(ngModel)]="SNCurrency.payinConfirmations">
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled2" [(ngModel)]="SNCurrency.payoutEnabled">
-                  <label class="form-check-label" for="PayoutEnabled2">
-                    Pay out Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="TransferEnabled2" [(ngModel)]="SNCurrency.transferEnabled">
-                  <label class="form-check-label" for="TransferEnabled2">
-                    Transfer Enabled
-                  </label>
-                </div>
-              </div>
-            </div></div>
-            <div class="row"><div class="col">
-              <div class="form-group">
-                <label for="payOutFee2">Pay Out Fee</label>
-                <input type="number" class="form-control" id="payOutFee2" placeholder="Pay Out Fee" [(ngModel)]="SNCurrency.payoutFee">
-              </div>
-            </div></div>
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+</div>
+</div>
+</div>
+<div class="row" *ngIf="!pageSubmitted">
+  <div class="col-2">
+    <button type="button" class="btn btn-warning"  (click)="back()">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </button>
   </div>
 </div>
-</div>
-</div>
-</div>
 
+<app-add-currency *ngIf="addSubmitted" (messageEvent)="receiveMessage($event)"></app-add-currency>
+<app-detail-currency [ESN]="ESN" *ngIf="detailSubmitted"></app-detail-currency>
+<app-edit-currency [USN]="USN" *ngIf="editSubmitted" (messageEvent)="receiveMessage($event)"></app-edit-currency>
 

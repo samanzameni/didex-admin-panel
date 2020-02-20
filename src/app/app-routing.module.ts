@@ -25,9 +25,14 @@ import {KYCComponent} from './kyc/kyc.component';
 import {MarketComponent} from './market/market.component';
 import {SearchComponent} from './search/search.component';
 import {TraderComponent} from './trader/trader.component';
+import {ReportsComponent} from './reports/reports.component';
+import {DetailComponent} from './admin-list/detail/detail.component';
+import {DetailCurrencyComponent} from './currency/detail-currency/detail-currency.component';
+import {AddCurrencyComponent} from './currency/add-currency/add-currency.component';
+import {EditCurrencyComponent} from './currency/edit-currency/edit-currency.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'forms', component: FormsComponent },
   { path: 'buttons', component: ButtonsComponent },
@@ -50,9 +55,8 @@ const routes: Routes = [
   { path: 'currency', component: CurrencyComponent },
   { path: 'kyc', component: KYCComponent },
   { path: 'market', component: MarketComponent },
-  { path: 'search', component: SearchComponent },
   { path: 'trader', component: TraderComponent },
-
+  { path: 'reports', component: ReportsComponent },
 ];
 
 @NgModule({

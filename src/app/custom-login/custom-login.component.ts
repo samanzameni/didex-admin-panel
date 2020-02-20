@@ -41,5 +41,6 @@ export class CustomLoginComponent implements OnInit {
       this.authService.loginPost(this.login);
   }
   ngOnInit() {
+    window.scroll(0, 0);
   }
 }

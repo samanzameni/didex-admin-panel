@@ -44,6 +44,11 @@ import {TraderComponent} from './trader/trader.component';
 import { HttpClientModule} from '@angular/common/http';
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ReportsComponent } from './reports/reports.component';
+import {NgxSpinnerModule} from 'ngx-spinner';
+import { AddCurrencyComponent } from './currency/add-currency/add-currency.component';
+import { EditCurrencyComponent } from './currency/edit-currency/edit-currency.component';
+import { DetailCurrencyComponent } from './currency/detail-currency/detail-currency.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +86,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     MarketAddComponent,
     MarketEditComponent,
     SearchComponent,
-    TraderComponent
+    TraderComponent,
+    ReportsComponent,
+    AddCurrencyComponent,
+    EditCurrencyComponent,
+    DetailCurrencyComponent
   ],
   imports: [
     BrowserModule,
@@ -93,6 +102,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import {AdminChild} from '../../@core/Admin/admin-child';
 import {AdminRole} from '../../@core/Admin/admin-role';
 import {AdminService} from '../../@core/Admin/admin.service';
 import {ToastrService} from 'ngx-toastr';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-remove-from-role',
@@ -14,7 +15,7 @@ export class RemoveFromRoleComponent implements OnInit {
   add: AdminChild;
   adminRoles: AdminRole;
   @Input() userList: RoleList;
-  constructor(private adminService: AdminService, private toastrService: ToastrService) {
+  constructor(private adminService: AdminService, private toastrService: ToastrService, private ngxShowLoader: NgxSpinnerService) {
     this.add = {
       email: '',
       role: '',
@@ -24,23 +25,28 @@ export class RemoveFromRoleComponent implements OnInit {
     };
   }
   removeSubmit() {
+    this.ngxShowLoader.show();
     this.add.email = this.userList.email;
     return this.adminService.removePatch(this.add).subscribe(
       (res: any) => {
         console.log(res);
+        this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Remove From Role.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
+        this.ngxShowLoader.hide();
         this.toastrService.error('Invalid Role.', '', {timeOut: 4000});
       },
     );
   }
   showList() {
+    this.ngxShowLoader.show();
     return this.adminService.getRoles().subscribe(
       (res: any) => {
         console.log(res);
         this.adminRoles = res;
+        this.ngxShowLoader.hide();
       },
       err => {
         console.log(err);
@@ -50,6 +56,7 @@ export class RemoveFromRoleComponent implements OnInit {
 
   ngOnInit() {
     this.showList();
+    window.scroll(0, 0);
   }
 
 }

@@ -1,0 +1,108 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="container col-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="ShortName1">ShortName</label>
+              <input type="text" class="form-control" id="ShortName1" placeholder="ShortName" disabled [(ngModel)]="SNCurrency.shortName">
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="Name1">Name</label>
+              <input type="text" class="form-control" id="Name1" placeholder="Name" [(ngModel)]="SNCurrency.name">
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="Network1">Network</label>
+              <select class="form-control" id="Network1" [(ngModel)]="SNCurrency.network">
+                <option [ngValue]="undefined" disabled  selected> select </option>
+                <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
+              </select>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="crypto1" [(ngModel)]="SNCurrency.crypto">
+                <label class="form-check-label" for="crypto1">
+                  Crypto
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="Enabled1" [(ngModel)]="SNCurrency.enabled">
+                <label class="form-check-label" for="Enabled1">
+                  Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="payinEnabled1" [(ngModel)]="SNCurrency.payinEnabled">
+                <label class="form-check-label" for="payinEnabled1">
+                  Pay in Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="payInConfirmations1">pay in Confirmations</label>
+              <input type="number" class="form-control" id="payInConfirmations1" placeholder="pay in Confirmations" [(ngModel)]="SNCurrency.payinConfirmations">
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled1" [(ngModel)]="SNCurrency.payoutEnabled">
+                <label class="form-check-label" for="PayoutEnabled1">
+                  Pay out Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled1" [(ngModel)]="SNCurrency.transferEnabled">
+                <label class="form-check-label" for="TransferEnabled1">
+                  Transfer Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="payOutFee1">Pay Out Fee</label>
+              <input type="number" class="form-control" id="payOutFee1" placeholder="Pay Out Fee" [(ngModel)]="SNCurrency.payoutFee">
+            </div>
+          </div></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col float-right">
+          <button type="button" class="btn btn-success"  (click)="updateSHortName()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

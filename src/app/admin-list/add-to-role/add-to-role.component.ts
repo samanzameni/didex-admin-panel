@@ -4,6 +4,7 @@ import {AdminChild} from '../../@core/Admin/admin-child';
 import {ToastrService} from 'ngx-toastr';
 import {AdminRole} from '../../@core/Admin/admin-role';
 import {RoleList} from '../../@core/Admin/role-list';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-add-to-role',
@@ -14,7 +15,7 @@ export class AddToRoleComponent implements OnInit {
   add: AdminChild;
   adminRoles: AdminRole;
   @Input() userList: RoleList;
-  constructor(private adminService: AdminService, private toastrService: ToastrService) {
+  constructor(private adminService: AdminService, private toastrService: ToastrService, private ngxShowLoader: NgxSpinnerService) {
     this.add = {
     email: '',
     role: '',
@@ -24,31 +25,38 @@ export class AddToRoleComponent implements OnInit {
     };
   }
   addSubmit() {
+    this.ngxShowLoader.show();
     this.add.email = this.userList.email;
     return this.adminService.addPatch(this.add).subscribe(
       (res: any) => {
         console.log(res);
+        this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Add To Role.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
+        this.ngxShowLoader.hide();
         this.toastrService.error('Invalid Role.', '', {timeOut: 4000});
       },
     );
   }
   showList() {
+    this.ngxShowLoader.show();
     return this.adminService.getRoles().subscribe(
       (res: any) => {
         console.log(res);
         this.adminRoles = res;
+        this.ngxShowLoader.hide();
       },
       err => {
         console.log(err);
+        this.ngxShowLoader.hide();
       },
     );
   }
   ngOnInit() {
     this.showList();
+    window.scroll(0, 0);
   }
 
 }

@@ -27,6 +27,7 @@
     "core-js": "^3.6.4",
     "font-awesome": "^4.7.0",
     "ng-bootstrap": "^1.6.3",
+    "ngx-spinner": "^8.1.0",
     "ngx-toastr": "^11.3.3",
     "rxjs": "~6.5.4",
     "rxjs-compat": "^6.5.4",

@@ -3,6 +3,7 @@ import {AdminRole} from '../@core/Admin/admin-role';
 import {ToastrService} from 'ngx-toastr';
 import {AdminService} from '../@core/Admin/admin.service';
 import {RoleList} from '../@core/Admin/role-list';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-admin-list',
@@ -20,7 +21,7 @@ export class AdminListComponent implements OnInit {
   ResetPasswordSubmitted = false;
   RemoveFromRoleSubmitted = false;
 
-  constructor(private toastrService: ToastrService, private admin: AdminService) {
+  constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService) {
     this.adminRoles = {
       roles: '',
     };
@@ -29,25 +30,30 @@ export class AdminListComponent implements OnInit {
     };
   }
   showRoles() {
+    this.ngxShowLoader.show();
     return this.admin.getRoles().subscribe(
       (res: any) => {
         console.log(res);
         this.adminRoles = res;
+        this.ngxShowLoader.hide();
       },
       err => {
         console.log(err);
+        this.ngxShowLoader.hide();
       },
     );
   }
   showList() {
-    console.log(this.adminList.roles);
+    this.ngxShowLoader.show();
     return this.admin.getList(this.adminList.roles).subscribe(
       (res: any) => {
         console.log(res);
         this.roleList = res;
+          this.ngxShowLoader.hide();
       },
       err => {
         console.log(err);
+        this.ngxShowLoader.hide();
       },
     );
   }
@@ -85,6 +91,7 @@ export class AdminListComponent implements OnInit {
   }
   ngOnInit() {
     this.showRoles();
+    window.scroll(0, 0);
   }
 
 }

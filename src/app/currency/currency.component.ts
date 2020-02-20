@@ -3,6 +3,8 @@ import {BlockChainNetworks} from '../@core/Currency/block-chain-networks.enum';
 import {Currency} from '../@core/Currency/currency';
 import {ToastrService} from 'ngx-toastr';
 import {CurrencyService} from '../@core/Currency/currency.service';
+import {AdminService} from '../@core/Admin/admin.service';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-currency',
@@ -11,112 +13,82 @@ import {CurrencyService} from '../@core/Currency/currency.service';
 })
 export class CurrencyComponent implements OnInit {
   cry: Currency[];
-  cryPost: Currency;
-  SNCurrency: Currency;
-  public DSN: string;
-  public USN: string;
-  constructor(private toastrService: ToastrService, private currency: CurrencyService) {
-    this.SNCurrency = {
-      shortName: '',
-      name: '',
-      network: BlockChainNetworks.NotBlockChain,
-      crypto: false,
-      enabled: false,
-      payinEnabled: false,
-      payinConfirmations: 0,
-      payoutEnabled: false,
-      transferEnabled: false,
-      payoutFee: 0,
-    };
-    this.cryPost = {
-      shortName: '',
-      name: '',
-      network: BlockChainNetworks.NotBlockChain,
-      crypto: false,
-      enabled: false,
-      payinEnabled: false,
-      payinConfirmations: 0,
-      payoutEnabled: false,
-      transferEnabled: false,
-      payoutFee: 0,
-    };
+   DSN: string;
+   USN: string;
+   ESN: string;
+  editSubmitted: boolean;
+  addSubmitted: boolean;
+  detailSubmitted: boolean;
+  pageSubmitted: boolean;
+  constructor(private toastrService: ToastrService, private currency: CurrencyService, private ngxShowLoader: NgxSpinnerService) {
   }
-
-  addCurrency() {
-    return this.currency.currencyPost(this.cryPost).subscribe(
-      (res: any) => {
-        console.log(res);
-        this.showCurrency();
-        this.toastrService.success('You Have Successfully Add Currency.', '', {timeOut: 4000});
-      },
-      err => {
-        console.log(err);
-        this.toastrService.error('Invalid Inputs', '', {timeOut: 4000});
-      },
-    );
+  addSN() {
+    this.pageSubmitted = false;
+    this.addSubmitted = true;
   }
-  showCurrency() {
-    return this.currency.currencyGet().subscribe(
-      (res: any) => {
-        console.log(res);
-        this.cry = res;
-      },
-      err => {
-        console.log(err);
-      },
-    );
-  }
-  showShortName(shortName: string) {
-    return this.currency.shortNameGet(shortName).subscribe(
-      (res: any) => {
-        console.log(res);
-        this.SNCurrency = res;
-      },
-      err => {
-        console.log(err);
-      },
-    );
+  detailSN(shortName: string) {
+    this.ESN = shortName;
+    this.pageSubmitted = false;
+    this.detailSubmitted = true;
   }
   updateSN(shortName: string) {
     this.USN = shortName;
-    this.showShortName(this.USN);
-  }
-  updateSHortName() {
-    return this.currency.shortNamePut(this.USN , this.SNCurrency).subscribe(
-      (res: any) => {
-        console.log(res);
-        this.showCurrency();
-        this.toastrService.success('You Have Successfully Update Currency.', '', {timeOut: 4000});
-      },
-      err => {
-        console.log(err);
-        this.toastrService.error('Invalid Inputs.', '', {timeOut: 4000});
-      },
-    );
+    this.pageSubmitted = false;
+    this.editSubmitted = true;
   }
   deleteSN(shortName: string) {
     this.DSN = shortName;
   }
   deleteShortName() {
+    this.ngxShowLoader.show();
     return this.currency.shortNameDelete(this.DSN).subscribe(
       (res: any) => {
         console.log(res);
-        this.showCurrency();
+        this.showCurrencyList();
+        this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Delete Currency.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
+        this.ngxShowLoader.hide();
       },
     );
   }
-   get fields(): string[] {
-    const f = BlockChainNetworks;
-    const keys = Object.keys(f);
-    return keys.slice(keys.length / 2);
+  showCurrencyList() {
+    this.ngxShowLoader.show();
+    return this.currency.currencyGet().subscribe(
+      (res: any) => {
+        console.log(res);
+        this.cry = res;
+        this.ngxShowLoader.hide();
+      },
+      err => {
+        console.log(err);
+        this.ngxShowLoader.hide();
+      },
+    );
   }
-
+  back() {
+    this.showCurrencyList();
+    this.editSubmitted = false;
+    this.addSubmitted = false;
+    this.detailSubmitted = false;
+    this.pageSubmitted = true;
+  }
+  receiveMessage($event) {
+    this.showCurrencyList();
+    this.pageSubmitted = $event;
+    this.editSubmitted = false;
+    this.addSubmitted = false;
+    this.detailSubmitted = false;
+  }
   ngOnInit() {
-     this.showCurrency();
+     this.showCurrencyList();
+     this.pageSubmitted = true;
+     this.editSubmitted = false;
+     this.addSubmitted = false;
+     this.detailSubmitted = false;
+     window.scroll(0, 0);
   }
 
 }

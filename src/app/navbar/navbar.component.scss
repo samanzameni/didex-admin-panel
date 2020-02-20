@@ -31,9 +31,8 @@
         color: lighten(color(gray-dark), 10%);
       }
       img {
-        width: calc(#{$sidebar-width-lg} - 130px);
+        width: calc(220px - 130px);
         max-width: 100%;
-        height: 28px;
         margin: auto;
         vertical-align: middle;
       }

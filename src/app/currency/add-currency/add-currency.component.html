@@ -1,0 +1,110 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="container col-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="col">
+            <div class="form-group">
+              <label for="ShortName" >ShortName</label>
+              <input type="text" class="form-control" id="ShortName" placeholder="ShortName"  [(ngModel)]="cryPost.shortName">
+            </div>
+          </div>
+          </div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="Name">Name</label>
+              <input type="text" class="form-control" id="Name" placeholder="Name" [(ngModel)]="cryPost.name">
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="Network">Network</label>
+              <select class="form-control" id="Network" [(ngModel)]="cryPost.network">
+                <option [ngValue]="undefined" disabled  selected> select </option>
+                <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
+              </select>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="Crypto" [(ngModel)]="cryPost.crypto">
+                <label class="form-check-label" for="Crypto">
+                  Crypto
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="Enabled" [(ngModel)]="cryPost.enabled">
+                <label class="form-check-label" for="Enabled">
+                  Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="payinEnabled" [(ngModel)]="cryPost.payinEnabled">
+                <label class="form-check-label" for="payinEnabled">
+                  Pay in Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="payInConfirmations">pay in Confirmations</label>
+              <input type="number" class="form-control" id="payInConfirmations" placeholder="pay in Confirmations" [(ngModel)]="cryPost.payinConfirmations">
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled" [(ngModel)]="cryPost.payoutEnabled">
+                <label class="form-check-label" for="PayoutEnabled">
+                  Pay out Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled" [(ngModel)]="cryPost.transferEnabled">
+                <label class="form-check-label" for="TransferEnabled">
+                  Transfer Enabled
+                </label>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="payOutFee">Pay Out Fee</label>
+              <input type="number" class="form-control" id="payOutFee" placeholder="Pay Out Fee" [(ngModel)]="cryPost.payoutFee">
+            </div>
+          </div></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col float-right">
+          <button type="button" class="btn btn-success" (click)="addCurrency()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

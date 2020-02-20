@@ -52,6 +52,7 @@ export class CustomRegisterComponent implements OnInit {
       this.authService.registerPost(this.register);
   }
   ngOnInit() {
+    window.scroll(0, 0);
   }
 
 }

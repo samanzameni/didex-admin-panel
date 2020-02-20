@@ -1,0 +1,212 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="container">
+<div class="card">
+<div class="card-body">
+<div class="row">
+  <div class="col">
+    <div class="form-group">
+      <label for="Search">Search</label>
+      <app-search id="Search" (id)="receiveId($event)"></app-search>
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="Symbol">Symbol</label>
+      <input type="text" class="form-control" id="Symbol" placeholder="Enter Symbol" [(ngModel)]="reports.Symbol">
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="Order By">Order By</label>
+        <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc">
+          <option [ngValue]="undefined" disabled selected> select </option>
+          <option ngValue="true">Ascending</option>
+          <option ngValue="false" >Descending</option>
+        </select>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="Filter By">Filter By</label>
+        <select class="form-control border-primary" id="Filter By" [(ngModel)]="reports.FilterBy">
+          <option [ngValue]="undefined" disabled selected> select </option>
+          <option ngValue="id" >Id</option>
+          <option ngValue="timestamp">Time Stamp</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <div *ngIf="reports.FilterBy == 'id'">
+        <label for="From">From</label>
+        <input type="text" class="form-control" id="From" placeholder="id" [(ngModel)]="reports.From">
+        </div>
+        <div *ngIf="reports.FilterBy == 'timestamp'">
+          <label for="From1">From</label>
+          <input type="text" class="form-control" id="From1" placeholder="dd-mm-yyyy"  [(ngModel)]="reports.From" >
+      </div>
+    </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <div *ngIf="reports.FilterBy == 'id'">
+        <label for="Till">Till</label>
+        <input type="text" class="form-control" id="Till" placeholder="id" [(ngModel)]="reports.Till">
+        </div>
+        <div *ngIf="reports.FilterBy == 'timestamp'">
+        <label for="Till1">Till</label>
+        <input type="text" class="form-control" id="Till1" placeholder="dd-mm-yyyy" [(ngModel)]="reports.Till">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button type="submit" class="btn btn-success mr-2 float-right" (click)="reportsGet()">Submit</button>
+    </div>
+  </div>
+  <hr>
+</div>
+</div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <ngb-pagination [collectionSize]="40" [pageSize]="10" [page]="1" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
+      <div class="table-responsive">
+        <table class="table table-striped" *ngFor="let i of reportsRes">
+          <thead>
+          <tr>
+            <th>
+              Id
+            </th>
+            <th>
+              Trader Id
+            </th>
+            <th>
+              Market Symbol
+            </th>
+            <th>
+              Side
+            </th>
+            <th>
+              Status
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td >
+              {{i.id}}
+            </td>
+            <td>
+              {{i.traderId}}
+            </td>
+            <td>
+              {{i.marketSymbol}}
+            </td>
+            <td>
+              {{i.side}}
+            </td>
+            <td>
+              {{i.status}}
+            </td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th>
+              Type
+            </th>
+            <th>
+              Time In Force
+            </th>
+            <th>
+              Quantity
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              Executed Quantity
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              {{i.type}}
+            </td>
+            <td>
+              {{i.timeInForce}}
+            </td>
+            <td>
+             {{i.quantity}}
+            </td>
+            <td>
+              {{i.price}}
+            </td>
+            <td>
+              {{i.executedQuantity}}
+            </td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th>
+              Created At
+            </th>
+            <th>
+              Updated At
+            </th>
+            <th>
+              Stop Price
+            </th>
+            <th>
+              Post Only
+            </th>
+            <th>
+              Expire Time
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td >
+              {{i.createdAt}}
+            </td>
+            <td>
+              {{i.updatedAt}}
+            </td>
+            <td>
+              {{i.stopPrice}}
+            </td>
+            <td>
+              {{i.postOnly}}
+            </td>
+            <td>
+              {{i.expireTime}}
+            </td>
+          </tr>
+          </tbody>
+          <hr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

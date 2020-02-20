@@ -11,7 +11,7 @@ export class LoginRestfulAPIService {
 
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
-   ServerUrl = 'https://118.190.58.246/api/';
+   ServerUrl = 'https://didex.com/api/';
    httpOptions = {
     headers: new HttpHeaders({'accept': 'text/plain',
       'Content-Type': 'application/json',
