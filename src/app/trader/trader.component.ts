@@ -3,7 +3,6 @@ import {ToastrService} from 'ngx-toastr';
 import {Trader} from '../@core/Trader/trader';
 import {TraderService} from '../@core/Trader/trader.service';
 import {TraderStatus} from '../@core/Trader/trader-status.enum';
-import {AdminService} from '../@core/Admin/admin.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({

@@ -21,7 +21,7 @@ export class AuthServiceService {
     return this.loginRestfulAPIService.userLogin(login).subscribe(
       (res: any) => {
         this.storageService.setAccessToken(res.token);
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['pages/dashboard']);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Login.', '', {timeOut: 4000});
       },
@@ -38,7 +38,7 @@ export class AuthServiceService {
     return this.loginRestfulAPIService.userRegister(login).subscribe(
       (res: any) => {
         this.storageService.setAccessToken(res.token);
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['pages/dashboard']);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Register.', '', {timeOut: 4000});
       },
@@ -52,9 +52,10 @@ export class AuthServiceService {
   logOut() {
     this.ngxShowLoader.show();
     this.storageService.removeAccessToken();
-    this.router.navigate(['/login']);
+    this.router.navigateByUrl('/login');
     this.ngxShowLoader.hide();
     this.toastrService.success('You Have Successfully Sign Out.', '', {timeOut: 4000});
+
   }
   public isAuthenticated(): boolean {
     const jwtHelper = new JwtHelperService();
