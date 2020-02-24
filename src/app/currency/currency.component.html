@@ -83,6 +83,7 @@
     </button>
   </div>
 </div>
+<br>
 
 <app-add-currency *ngIf="addSubmitted" (messageEvent)="receiveMessage($event)"></app-add-currency>
 <app-detail-currency [ESN]="ESN" *ngIf="detailSubmitted"></app-detail-currency>
