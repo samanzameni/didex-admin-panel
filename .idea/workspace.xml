@@ -2,80 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/5.28f1b439e2ca5e06b6b0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/main.fc9b2a335390c0c21c37.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/runtime.91f914a34e9995c9e106.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/72/62/b1beb249552d7a85ace01658634cbf7703b2d30d3605a4992094060b69457374b91e9bc72bd08aa2266bf9abb0ff9d886f53a8b647e725f4b6d02eb3b0ae" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/73/47/966b1479b4e468e9e2136b04d1e1a665e97f452fb4f7bc70b93a9f20992258909da4855e8e43cde4c81ed65badcc407d4bb0efefdc54e66cabafb20a9fe3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/c2/79/f5e383ad6321d505ca42a3ece99634174fba193a65d80acb36e8100b9eb695e1a27d863e4b1ef7f91cd99c1b0d94c94468f0f649bf8fff8487425e7cdcf1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/6f/4e/ee1647533e9d741fb2c8dbeb407b0811d3c35faaf8dd3bd9e41609c8b45f" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/72/00/f6fcc63fa586cb99a260995e44c8329f567bf79dbf330cb84601236c045a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/8e/69/d7d08cf6b7913be6dd82e6777e379fb7bcad83eb0aa072c0edf1cba14fbb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/angular-font-awesome.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/angular-font-awesome.es5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/angular-font-awesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/angular-font-awesome.metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/bundles/angular-font-awesome.umd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/bundles/angular-font-awesome.umd.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/src/angular-font-awesome.module.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/src/component/angular-font-awesome.component.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/dist/src/service/angular-font-awesome.service.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/angular-font-awesome.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/angular-font-awesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/angular-font-awesome.metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/src/angular-font-awesome.module.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/src/angular-font-awesome.module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/src/component/angular-font-awesome.component.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/src/component/angular-font-awesome.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/src/service/angular-font-awesome.service.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es2015/src/service/angular-font-awesome.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/angular-font-awesome.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/angular-font-awesome.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/angular-font-awesome.metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/src/angular-font-awesome.module.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/src/angular-font-awesome.module.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/src/component/angular-font-awesome.component.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/src/component/angular-font-awesome.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/src/service/angular-font-awesome.service.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib-es5/src/service/angular-font-awesome.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/src/angular-font-awesome.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/src/component/angular-font-awesome.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/src/component/angular-font-awesome.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/src/component/angular-font-awesome.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/src/component/angular-font-awesome.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/src/service/angular-font-awesome.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/src/service/angular-font-awesome.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/tsconfig.es5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/tsconfig.lib.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/out-tsc/lib/typings.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/angular-font-awesome/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.916893fadbbf194818c5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/runtime.458556a34b891ea32398.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/font-awesome/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/font-awesome/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-list/detail/detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/detail/detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/market/market.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +84,7 @@
       <workItem from="1582358853911" duration="587000" />
       <workItem from="1582359479728" duration="8476000" />
       <workItem from="1582371191114" duration="14750000" />
-      <workItem from="1582443074544" duration="34364000" />
+      <workItem from="1582443074544" duration="52860000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -204,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582530941848</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fixed UI.">
+      <created>1582544264719</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582544264719</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +152,8 @@
     <MESSAGE value="first push." />
     <MESSAGE value="demo push." />
     <MESSAGE value="fixed routing." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed routing." />
+    <MESSAGE value="fixed UI." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed UI." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Notifications" timestamp="1581768492956">
@@ -229,10 +168,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="449" y="29" key="CommitChangelistDialog2" timestamp="1582530935169">
+    <state x="449" y="29" key="CommitChangelistDialog2" timestamp="1582544260516">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582530935169" />
+    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -242,10 +181,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1582530945305">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1582544267547">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582530945305" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="646" y="94" width="627" height="852" key="find.popup" timestamp="1582384570544">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -86,9 +86,9 @@
 <div class="container">
   <div class="card">
     <div class="card-body">
-      <ngb-pagination [collectionSize]="40" [pageSize]="10" [page]="1" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
+      <ngb-pagination [collectionSize]="reportsRes.count" [pageSize]="10" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
       <div class="table-responsive">
-        <table class="table table-striped" *ngFor="let i of reportsRes">
+        <table class="table table-striped" >
           <thead>
           <tr>
             <th>
@@ -106,29 +106,6 @@
             <th>
               Status
             </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td >
-              {{i.id}}
-            </td>
-            <td>
-              {{i.traderId}}
-            </td>
-            <td>
-              {{i.marketSymbol}}
-            </td>
-            <td>
-              {{i.side}}
-            </td>
-            <td>
-              {{i.status}}
-            </td>
-          </tr>
-          </tbody>
-          <thead>
-          <tr>
             <th>
               Type
             </th>
@@ -144,29 +121,6 @@
             <th>
               Executed Quantity
             </th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>
-              {{i.type}}
-            </td>
-            <td>
-              {{i.timeInForce}}
-            </td>
-            <td>
-             {{i.quantity}}
-            </td>
-            <td>
-              {{i.price}}
-            </td>
-            <td>
-              {{i.executedQuantity}}
-            </td>
-          </tr>
-          </tbody>
-          <thead>
-          <tr>
             <th>
               Created At
             </th>
@@ -185,7 +139,37 @@
           </tr>
           </thead>
           <tbody>
-          <tr>
+          <tr *ngFor="let i of reportsRes.records | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+            <td >
+              {{i.id}}
+            </td>
+            <td>
+              {{i.traderId}}
+            </td>
+            <td>
+              {{i.marketSymbol}}
+            </td>
+            <td>
+              {{i.side}}
+            </td>
+            <td>
+              {{i.status}}
+            </td>
+            <td>
+              {{i.type}}
+            </td>
+            <td>
+              {{i.timeInForce}}
+            </td>
+            <td>
+              {{i.quantity}}
+            </td>
+            <td>
+              {{i.price}}
+            </td>
+            <td>
+              {{i.executedQuantity}}
+            </td>
             <td >
               {{i.createdAt}}
             </td>
@@ -203,7 +187,6 @@
             </td>
           </tr>
           </tbody>
-          <hr>
         </table>
       </div>
     </div>

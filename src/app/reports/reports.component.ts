@@ -3,7 +3,6 @@ import {ReportsService} from '../@core/Reports/reports.service';
 import {ToastrService} from 'ngx-toastr';
 import {ReportsQuery} from '../@core/Reports/reports-query';
 import {Reports} from '../@core/Reports/reports';
-import {AdminService} from '../@core/Admin/admin.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 
 
@@ -13,9 +12,10 @@ import {NgxSpinnerService} from 'ngx-spinner';
   styleUrls: ['./reports.component.scss']
 })
 export class ReportsComponent implements OnInit {
-reports: ReportsQuery;
-reportsRes: Reports[];
-i: number;
+  reports: ReportsQuery;
+  reportsRes: Reports;
+  page = 1;
+  pageSize = 10;
   constructor(private reportsService: ReportsService, private toastrService: ToastrService, private ngxShowLoader: NgxSpinnerService) {
     this.reports = {
     TraderId : null,
@@ -24,8 +24,30 @@ i: number;
     FilterBy: null,
     From: null,
     Till: null,
-    Offset: 20,
-    Limit: 20,
+    Offset: null,
+    Limit: null,
+    };
+    this.reportsRes = {
+      count: null,
+    records: [
+      {
+        id: null,
+    traderId: null,
+    marketSymbol: null,
+    side: null,
+    status: null,
+    type: null,
+    timeInForce: null,
+    quantity: null,
+    price: null,
+    executedQuantity: null,
+    createdAt: null,
+    updatedAt: null,
+    stopPrice: null,
+    postOnly: null,
+    expireTime: null,
+  }
+  ]
     };
   }
   receiveId($event) {
@@ -46,11 +68,12 @@ i: number;
       (res: any) => {
         console.log(res);
         this.reportsRes = res;
-        // for (this.i = 0 ;  this.i <= this.reportsRes.length ; this.i++) {
-        //   this.reportsRes[this.i].updatedAt = this.reportsRes[this.i].updatedAt.split('T')[0];
-        //   this.reportsRes[this.i].expireTime = this.reportsRes[this.i].expireTime.split('T')[0];
-        //   this.reportsRes[this.i].createdAt = this.reportsRes[this.i].createdAt.split('T')[0];
-        // }
+
+        for ( const i of this.reportsRes.records) {
+          if ( i.updatedAt !== null) {i.updatedAt = i.updatedAt.split('T')[0]; }
+          if ( i.expireTime !== null) {i.expireTime = i.expireTime.split('T')[0]; }
+          if ( i.createdAt !== null) {i.createdAt = i.createdAt.split('T')[0]; }
+        }
         this.reports.Till = null;
         this.reports.From = null;
         this.ngxShowLoader.hide();
