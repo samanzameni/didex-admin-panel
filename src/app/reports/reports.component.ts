@@ -4,6 +4,10 @@ import {ToastrService} from 'ngx-toastr';
 import {ReportsQuery} from '../@core/Reports/reports-query';
 import {Reports} from '../@core/Reports/reports';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {OrderSides} from '../@core/Reports/order-sides.enum';
+import {OrderStatus} from '../@core/Reports/order-status.enum';
+import {OrderType} from '../@core/Reports/order-type.enum';
+import {OrderTimeInForce} from '../@core/Reports/order-time-in-force.enum';
 
 
 @Component({
@@ -16,7 +20,12 @@ export class ReportsComponent implements OnInit {
   reportsRes: Reports;
   page = 1;
   pageSize = 10;
-  constructor(private reportsService: ReportsService, private toastrService: ToastrService, private ngxShowLoader: NgxSpinnerService) {
+  oSides = OrderSides;
+  oStatus = OrderStatus;
+  oTimeInForce = OrderTimeInForce;
+  oType = OrderType;
+  constructor(private reportsService: ReportsService, private toastrService: ToastrService,
+              private ngxShowLoader: NgxSpinnerService) {
     this.reports = {
     TraderId : null,
     Symbol : null,
@@ -34,10 +43,10 @@ export class ReportsComponent implements OnInit {
         id: null,
     traderId: null,
     marketSymbol: null,
-    side: null,
-    status: null,
-    type: null,
-    timeInForce: null,
+    side: OrderSides.Buy,
+    status: OrderStatus.Canceled,
+    type: OrderType.Limit,
+    timeInForce: OrderTimeInForce.Day,
     quantity: null,
     price: null,
     executedQuantity: null,
@@ -58,7 +67,6 @@ export class ReportsComponent implements OnInit {
     if (this.reports.FilterBy === 'timestamp' ) {
       if (this.reports.From != null) {
         this.reports.From = new Date(this.reports.From).toISOString();
-        console.log(this.reports.From);
       }
       if (this.reports.Till != null) {
         this.reports.Till = new Date(this.reports.Till).toISOString();

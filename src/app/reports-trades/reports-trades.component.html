@@ -1,0 +1,169 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="Search">Search</label>
+            <app-search id="Search" (id)="receiveId($event)"></app-search>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="Symbol">Symbol</label>
+            <input type="text" class="form-control" id="Symbol" placeholder="Enter Symbol" [(ngModel)]="reports.Symbol">
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label for="Order By">Order By</label>
+            <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc">
+              <option [ngValue]="undefined" disabled selected> select </option>
+              <option ngValue="true">Ascending</option>
+              <option ngValue="false" >Descending</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="Filter By">Filter By</label>
+            <select class="form-control border-primary" id="Filter By" [(ngModel)]="reports.FilterBy">
+              <option [ngValue]="undefined" disabled selected> select </option>
+              <option ngValue="id" >Id</option>
+              <option ngValue="timestamp">Time Stamp</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <div *ngIf="reports.FilterBy == 'id'">
+              <label for="From">From</label>
+              <input type="text" class="form-control" id="From" placeholder="id" [(ngModel)]="reports.From">
+            </div>
+            <div *ngIf="reports.FilterBy == 'timestamp'">
+              <label for="From1">From</label>
+              <input type="text" class="form-control" id="From1" placeholder="dd-mm-yyyy"  [(ngModel)]="reports.From" >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <div *ngIf="reports.FilterBy == 'id'">
+              <label for="Till">Till</label>
+              <input type="text" class="form-control" id="Till" placeholder="id" [(ngModel)]="reports.Till">
+            </div>
+            <div *ngIf="reports.FilterBy == 'timestamp'">
+              <label for="Till1">Till</label>
+              <input type="text" class="form-control" id="Till1" placeholder="dd-mm-yyyy" [(ngModel)]="reports.Till">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-success mr-2 float-right" (click)="reportsTradesGet()">Submit</button>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <ngb-pagination [collectionSize]="reportsRes.count" [pageSize]="10" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
+      <div class="table-responsive">
+        <table class="table table-striped" >
+          <thead>
+          <tr>
+            <th>
+              Id
+            </th>
+            <th>
+              Market Symbol
+            </th>
+            <th>
+              Buyer Trader Id
+            </th>
+            <th>
+              Seller Trader Id
+            </th>
+            <th>
+              Volume
+            </th>
+            <th>
+              Volume In Qoute
+            </th>
+            <th>
+              Price
+            </th>
+            <th>
+              Buyer Fee
+            </th>
+            <th>
+              Seller Fee
+            </th>
+            <th>
+              Time Stamp
+            </th>
+            <th>
+              Take Side
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let i of reportsRes.records | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+            <td >
+              {{i.id}}
+            </td>
+            <td>
+              {{i.marketSymbol}}
+            </td>
+            <td>
+              {{i.buyerTraderId}}
+            </td>
+            <td>
+              {{i.sellerTraderId}}
+            </td>
+            <td>
+              {{i.volume}}
+            </td>
+            <td>
+              {{i.volumeInQoute}}
+            </td>
+            <td>
+              {{i.price}}
+            </td>
+            <td>
+              {{i.buyerFee}}
+            </td>
+            <td>
+              {{i.sellerFee}}
+            </td>
+            <td >
+              {{i.timeStamp}}
+            </td>
+            <td>
+              {{i.takeSide}}
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+

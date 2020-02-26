@@ -44,6 +44,7 @@ import {NgxSpinnerModule} from 'ngx-spinner';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {ToastrModule} from 'ngx-toastr';
+import {ReportsTradesComponent} from '../reports-trades/reports-trades.component';
 
 
 @NgModule({
@@ -84,7 +85,8 @@ import {ToastrModule} from 'ngx-toastr';
     ReportsComponent,
     AddCurrencyComponent,
     EditCurrencyComponent,
-    DetailCurrencyComponent
+    DetailCurrencyComponent,
+    ReportsTradesComponent
   ],
   imports: [
     CommonModule,
@@ -135,7 +137,8 @@ import {ToastrModule} from 'ngx-toastr';
     ReportsComponent,
     AddCurrencyComponent,
     EditCurrencyComponent,
-    DetailCurrencyComponent
+    DetailCurrencyComponent,
+    ReportsTradesComponent
   ]
 })
 export class PagesModule { }

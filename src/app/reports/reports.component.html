@@ -24,18 +24,18 @@
       <input type="text" class="form-control" id="Symbol" placeholder="Enter Symbol" [(ngModel)]="reports.Symbol">
     </div>
   </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="Order By">Order By</label>
+      <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc">
+        <option [ngValue]="undefined" disabled selected> select </option>
+        <option ngValue="true">Ascending</option>
+        <option ngValue="false" >Descending</option>
+      </select>
+    </div>
+  </div>
 </div>
   <div class="row">
-    <div class="col">
-      <div class="form-group">
-        <label for="Order By">Order By</label>
-        <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc">
-          <option [ngValue]="undefined" disabled selected> select </option>
-          <option ngValue="true">Ascending</option>
-          <option ngValue="false" >Descending</option>
-        </select>
-      </div>
-    </div>
     <div class="col">
       <div class="form-group">
         <label for="Filter By">Filter By</label>
@@ -46,29 +46,27 @@
         </select>
       </div>
     </div>
-  </div>
-  <div class="row">
     <div class="col">
       <div class="form-group">
         <div *ngIf="reports.FilterBy == 'id'">
-        <label for="From">From</label>
-        <input type="text" class="form-control" id="From" placeholder="id" [(ngModel)]="reports.From">
+          <label for="From">From</label>
+          <input type="text" class="form-control" id="From" placeholder="id" [(ngModel)]="reports.From">
         </div>
         <div *ngIf="reports.FilterBy == 'timestamp'">
           <label for="From1">From</label>
           <input type="text" class="form-control" id="From1" placeholder="dd-mm-yyyy"  [(ngModel)]="reports.From" >
+        </div>
       </div>
-    </div>
     </div>
     <div class="col">
       <div class="form-group">
         <div *ngIf="reports.FilterBy == 'id'">
-        <label for="Till">Till</label>
-        <input type="text" class="form-control" id="Till" placeholder="id" [(ngModel)]="reports.Till">
+          <label for="Till">Till</label>
+          <input type="text" class="form-control" id="Till" placeholder="id" [(ngModel)]="reports.Till">
         </div>
         <div *ngIf="reports.FilterBy == 'timestamp'">
-        <label for="Till1">Till</label>
-        <input type="text" class="form-control" id="Till1" placeholder="dd-mm-yyyy" [(ngModel)]="reports.Till">
+          <label for="Till1">Till</label>
+          <input type="text" class="form-control" id="Till1" placeholder="dd-mm-yyyy" [(ngModel)]="reports.Till">
         </div>
       </div>
     </div>
@@ -150,16 +148,16 @@
               {{i.marketSymbol}}
             </td>
             <td>
-              {{i.side}}
+              {{oSides[i.side]}}
             </td>
             <td>
-              {{i.status}}
+              {{oStatus[i.status]}}
             </td>
             <td>
-              {{i.type}}
+              {{oType[i.type]}}
             </td>
             <td>
-              {{i.timeInForce}}
+              {{oTimeInForce[i.timeInForce]}}
             </td>
             <td>
               {{i.quantity}}

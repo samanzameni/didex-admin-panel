@@ -23,6 +23,7 @@ import {KYCComponent} from '../kyc/kyc.component';
 import {MarketComponent} from '../market/market.component';
 import {TraderComponent} from '../trader/trader.component';
 import {ReportsComponent} from '../reports/reports.component';
+import {ReportsTradesComponent} from '../reports-trades/reports-trades.component';
 
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
       { path: 'kyc', component: KYCComponent },
       { path: 'market', component: MarketComponent },
       { path: 'trader', component: TraderComponent },
-      { path: 'reports', component: ReportsComponent },
+      { path: 'reportsOrders', component: ReportsComponent },
+      { path: 'reportsTrades', component: ReportsTradesComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'buttons', component: ButtonsComponent },

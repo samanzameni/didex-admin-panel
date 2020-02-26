@@ -1,3 +1,8 @@
+import {OrderSides} from './order-sides.enum';
+import {OrderStatus} from './order-status.enum';
+import {OrderTimeInForce} from './order-time-in-force.enum';
+import {OrderType} from './order-type.enum';
+
 export interface Reports {
   count: number;
   records: [
@@ -5,10 +10,10 @@ export interface Reports {
     id: number;
     traderId: number;
     marketSymbol: string;
-    side: number;
-    status: number;
-    type: number;
-    timeInForce: number;
+    side: OrderSides;
+    status: OrderStatus;
+    type: OrderType;
+    timeInForce: OrderTimeInForce;
     quantity: number;
     price: number;
     executedQuantity: number;

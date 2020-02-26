@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
+    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="creating Reports/Trades.">
+      <change afterPath="$PROJECT_DIR$/dist/5.bc7f15cddaca2d5f372f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.26fb6d413ace262375b7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/runtime.96a542470a09e4b0b6ba.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/35/7f/bc812d883ad1e00b62f23b02d5d71f647c12808752337e37ba26fb544f1e6d5c5a5b16666722ca7cd11f32dbf95d67d3bcdde6c6fe0f0b94e52c777c14c8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/c5/52/0eaecd52b2ade6bef598826e631e801ff96cb279609afe8c6633584f8fe42d63ee1a94893959851168553f6155fe16cdbc643c66dafda4cb1d333e0abaae" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/e0/54/e29f77d7b08ba80a727bb2ae8fb0fc555cca926ebfe04044eb53a10a7d499d056ba5825f5edaf7fe690a3e17a02ade2f35419ab933798c4c8a54bedd0f6c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/5b/e5/6df4b456cb8081beba66ae306d8a1b5b0d632985a00349576284aad55efe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/8d/7d/36d7edf3b5596cfdb174b8daee6d1349cc50b0f95d655113430d3cead692" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/90/17/80ba1f49e048315ec433c421bab5abaa4b685717594478b8dcc3d2b96a9c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Reports/order-sides.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Reports/order-status.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Reports/order-time-in-force.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Reports/order-type.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-trades.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-trades.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-trades.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/5.28f1b439e2ca5e06b6b0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.fc9b2a335390c0c21c37.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/runtime.91f914a34e9995c9e106.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +111,7 @@
       <workItem from="1582358853911" duration="587000" />
       <workItem from="1582359479728" duration="8476000" />
       <workItem from="1582371191114" duration="14750000" />
-      <workItem from="1582443074544" duration="52860000" />
+      <workItem from="1582443074544" duration="65294000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -142,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582544264719</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed Reports/Orders.">
+      <created>1582651436918</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582651436918</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +187,9 @@
     <MESSAGE value="demo push." />
     <MESSAGE value="fixed routing." />
     <MESSAGE value="fixed UI." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed UI." />
+    <MESSAGE value="fixed Reports/Orders." />
+    <MESSAGE value="creating Reports/Trades." />
+    <option name="LAST_COMMIT_MESSAGE" value="creating Reports/Trades." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Notifications" timestamp="1581768492956">
@@ -168,9 +204,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="449" y="29" key="CommitChangelistDialog2" timestamp="1582544260516">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="374" y="0" key="CommitChangelistDialog2" timestamp="1582724477807">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="374" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1582724477807" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -181,9 +218,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1582544267547">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1582651438788">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1582651438788" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="646" y="94" width="627" height="852" key="find.popup" timestamp="1582384570544">
       <screen x="0" y="0" width="1920" height="1040" />
