@@ -4,6 +4,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 import {ReportsTradesService} from '../@core/Reports/reports-trades.service';
 import {ReportsQuery} from '../@core/Reports/reports-query';
 import {ReportsTrades} from '../@core/Reports/reports-trades';
+import {OrderSides} from '../@core/Reports/order-sides.enum';
 
 @Component({
   selector: 'app-reports-trades',
@@ -15,6 +16,7 @@ export class ReportsTradesComponent implements OnInit {
   reportsRes: ReportsTrades;
   page = 1;
   pageSize = 10;
+  tSide = OrderSides;
   constructor(private reportsTradesService: ReportsTradesService, private toastrService: ToastrService,
               private ngxShowLoader: NgxSpinnerService) {
     this.reports = {
@@ -41,7 +43,7 @@ export class ReportsTradesComponent implements OnInit {
           buyerFee: null,
           sellerFee: null,
           timeStamp: null,
-          takeSide: null,
+          takeSide: OrderSides.Buy,
         }
       ]
     };

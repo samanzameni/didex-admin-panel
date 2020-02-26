@@ -1,3 +1,5 @@
+import {OrderSides} from './order-sides.enum';
+
 export interface ReportsTrades {
   count: number;
   records: [
@@ -12,7 +14,7 @@ export interface ReportsTrades {
       buyerFee: number;
       sellerFee: number;
       timeStamp: string;
-      takeSide: number;
+      takeSide: OrderSides;
     }
   ];
 }
