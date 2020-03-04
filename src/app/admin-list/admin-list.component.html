@@ -26,7 +26,6 @@
 <table class="table table-striped" >
   <thead>
   <tr>
-    <th scope="col">Detail</th>
     <th scope="col">Full Name</th>
     <th scope="col">User Name</th>
     <th scope="col">Phone<br>Number</th>
@@ -34,15 +33,11 @@
     <th scope="col">Reset<br>Password</th>
     <th scope="col">Add<br>To<br>Role</th>
     <th scope="col">Remove<br>From<br>Role</th>
+    <th scope="col">Detail</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let i of roleList">
-    <td>
-      <button type="button" class="btn btn-info"  (click)="userDetail(i)">
-        <i class="fa fa-info" aria-hidden="true"></i>
-      </button>
-    </td>
     <td>{{i.fullName}}</td>
     <td>{{i.userName}}</td>
     <td>{{i.phoneNumber}}</td>
@@ -62,7 +57,11 @@
         <i class="fa fa-minus" aria-hidden="true"></i>
       </button>
     </td>
-
+    <td>
+      <button type="button" class="btn btn-inverse-secondary"  (click)="userDetail(i)">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    </td>
   </tr>
   </tbody>
 </table>

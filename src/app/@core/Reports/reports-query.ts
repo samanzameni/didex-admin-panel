@@ -5,6 +5,8 @@ export interface ReportsQuery {
   FilterBy?: string;
   From?: string;
   Till?: string;
-  Offset: number;
-  Limit: number;
+  Offset?: number;
+  Limit?: number;
+  CurrencyShortName?: string;
+  TransactionId?: string;
 }

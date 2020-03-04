@@ -5,7 +5,8 @@
 
 .navbar {
   font-family: $type-2;
-  background: $blue-teal-gradient;
+  //background: $blue-teal-gradient;
+  background: #f2f8f9;
   transition: background $action-transition-duration $action-transition-timing-function;
   -webkit-transition: background $action-transition-duration $action-transition-timing-function;
   -moz-transition: background $action-transition-duration $action-transition-timing-function;

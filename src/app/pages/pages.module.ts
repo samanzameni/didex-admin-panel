@@ -45,6 +45,7 @@ import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import {ToastrModule} from 'ngx-toastr';
 import {ReportsTradesComponent} from '../reports-trades/reports-trades.component';
+import {ReportsTransactionsComponent} from '../reports-transactions/reports-transactions.component';
 
 
 @NgModule({
@@ -86,7 +87,8 @@ import {ReportsTradesComponent} from '../reports-trades/reports-trades.component
     AddCurrencyComponent,
     EditCurrencyComponent,
     DetailCurrencyComponent,
-    ReportsTradesComponent
+    ReportsTradesComponent,
+    ReportsTransactionsComponent
   ],
   imports: [
     CommonModule,
@@ -138,7 +140,8 @@ import {ReportsTradesComponent} from '../reports-trades/reports-trades.component
     AddCurrencyComponent,
     EditCurrencyComponent,
     DetailCurrencyComponent,
-    ReportsTradesComponent
+    ReportsTradesComponent,
+    ReportsTransactionsComponent
   ]
 })
 export class PagesModule { }

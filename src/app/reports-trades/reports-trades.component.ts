@@ -72,16 +72,15 @@ export class ReportsTradesComponent implements OnInit {
         this.reports.Till = null;
         this.reports.From = null;
         this.ngxShowLoader.hide();
-        this.toastrService.success('You Have Successfully Get Reports.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
         this.ngxShowLoader.hide();
-        this.toastrService.error('Invalid Inputs.', '', {timeOut: 4000});
       },
     );
   }
   ngOnInit() {
+    this.reportsTradesGet();
     window.scroll(0, 0);
   }
 

@@ -22,20 +22,15 @@
 <table class="table table-striped">
   <thead>
   <tr>
-    <th scope="col">Detail</th>
     <th scope="col">Name</th>
     <th scope="col">ShortName</th>
     <th scope="col">Edit</th>
     <th scope="col">Delete</th>
+    <th scope="col">Detail</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let i of cry">
-    <td>
-      <button type="button" class="btn btn-info"  (click)="detailSN(i.shortName)">
-        <i class="fa fa-info" aria-hidden="true"></i>
-      </button>
-    </td>
     <td>{{i.name}}</td>
     <td>{{i.shortName}}</td>
     <td>
@@ -46,6 +41,11 @@
     <td>
       <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Delete" (click)="deleteSN(i.shortName)" >
         <i class="fa fa-trash" aria-hidden="true"></i>
+      </button>
+    </td>
+    <td>
+      <button type="button" class="btn btn-inverse-secondary"  (click)="detailSN(i.shortName)">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </button>
     </td>
   </tr>

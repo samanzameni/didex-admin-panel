@@ -16,25 +16,22 @@
   <table class="table table-striped" >
     <thead>
     <tr>
-      <th scope="col">Detail</th>
       <th scope="col">ID</th>
       <th scope="col">First Name</th>
       <th scope="col">Last Name</th>
-
-
-
+      <th scope="col">Detail</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let i of list">
-      <td>
-        <button type="button" class="btn btn-info"  (click)="userDetail(i)">
-          <i class="fa fa-info" aria-hidden="true"></i>
-        </button>
-      </td>
       <td>{{i.id}}</td>
       <td>{{i.firstName}}</td>
       <td>{{i.lastName}}</td>
+      <td>
+        <button type="button" class="btn btn-inverse-secondary"  (click)="userDetail(i)">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </td>
     </tr>
     </tbody>
   </table>

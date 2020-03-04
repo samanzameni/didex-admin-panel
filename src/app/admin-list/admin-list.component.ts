@@ -26,7 +26,7 @@ export class AdminListComponent implements OnInit {
       roles: '',
     };
     this.adminList = {
-      roles: '',
+      roles: 'trader',
     };
   }
   showRoles() {
@@ -91,6 +91,7 @@ export class AdminListComponent implements OnInit {
   }
   ngOnInit() {
     this.showRoles();
+    this.showList();
     window.scroll(0, 0);
   }
 

@@ -24,6 +24,7 @@ import {MarketComponent} from '../market/market.component';
 import {TraderComponent} from '../trader/trader.component';
 import {ReportsComponent} from '../reports/reports.component';
 import {ReportsTradesComponent} from '../reports-trades/reports-trades.component';
+import {ReportsTransactionsComponent} from '../reports-transactions/reports-transactions.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,7 @@ const routes: Routes = [
       { path: 'trader', component: TraderComponent },
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },
+      { path: 'reportsTransactions', component: ReportsTransactionsComponent },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'buttons', component: ButtonsComponent },
