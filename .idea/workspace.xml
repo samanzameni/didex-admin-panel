@@ -2,32 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dist/main.f246671247bad542444d.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/70/9b/df2ac9b9edbe417701ca53d38e270565646320c1f127602d2dc0297b1396cbc1668fbb96f76cc3b02ae19b3096b1dffc01d0d7cf60f7bb80a3c368b98b1c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/f3/9b/bd0d200ba0bc4801cedaf18f54ca8d510957caedb526c8b960b8cec3eff6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Admin/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Admin/admin.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Currency/currency.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Currency/currency.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/KYC/kyc.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/KYC/kyc.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/login-restful-api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/login-restful-api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Market/market.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Market/market.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports-query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-query.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports-trades.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-trades.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Search/search.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Search/search.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Trader/trader.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Trader/trader.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/navbar/navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navbar/navbar.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.91d7b957825fe49783c3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/detail/detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/detail/detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +94,9 @@
       <workItem from="1582724962776" duration="1185000" />
       <workItem from="1582793888015" duration="3740000" />
       <workItem from="1583009244309" duration="25473000" />
-      <workItem from="1583324568856" duration="3443000" />
+      <workItem from="1583324568856" duration="4071000" />
+      <workItem from="1583405377288" duration="1013000" />
+      <workItem from="1583589907210" duration="7836000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -209,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583009694059</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="transactions reports created.">
+      <created>1583328496952</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1583328496953</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +218,8 @@
     <MESSAGE value="creating Reports/Trades." />
     <MESSAGE value="fixing ReportsTrades enum." />
     <MESSAGE value="test." />
-    <option name="LAST_COMMIT_MESSAGE" value="test." />
+    <MESSAGE value="transactions reports created." />
+    <option name="LAST_COMMIT_MESSAGE" value="transactions reports created." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="179" key="#Notifications" timestamp="1581768492956">
@@ -239,10 +234,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="364" y="0" key="CommitChangelistDialog2" timestamp="1583009688931">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1583328492356">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="364" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1583009688931" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1583328492356" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -253,10 +248,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1583009696731">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1583328501275">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1583009696731" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1583328501275" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1583176747283">
       <screen x="0" y="0" width="1600" height="860" />

@@ -17,7 +17,7 @@
     <td>{{userList.userName}}</td>
     <td>{{userList.fullName}}</td>
     <td>{{userList.phoneNumber}}</td>
-    <td> <i [ngClass]="userList.phoneNumberConfirmed ?  'fa fa-check btn-success':'fa fa-times btn-danger'" ></i></td>
+    <td> <i [ngClass]="userList.phoneNumberConfirmed ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
     <td>{{userList.country}}</td>
   </tr>
   </tbody>
@@ -33,8 +33,8 @@
   <tbody>
   <tr>
     <td>{{userList.email}}</td>
-    <td> <i [ngClass]="userList.emailConfirmed ?  'fa fa-check btn-success':'fa fa-times btn-danger'" ></i></td>
-    <td><i [ngClass]="userList.twoFactorEnabled ?  'fa fa-check btn-success':'fa fa-times btn-danger'" ></i></td>
+    <td> <i [ngClass]="userList.emailConfirmed ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+    <td><i [ngClass]="userList.twoFactorEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
     <td>{{userList.lockoutEnd}}</td>
     <td>{{userList.accessFailedCount}}</td>
   </tr>

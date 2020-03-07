@@ -5,7 +5,6 @@ import {MarketList} from '../../@core/Market/market-list';
 import {CurrencyService} from '../../@core/Currency/currency.service';
 import {Currency} from '../../@core/Currency/currency';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {KYCService} from '../../@core/KYC/kyc.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
@@ -15,8 +14,8 @@ import {NgxSpinnerService} from 'ngx-spinner';
 })
 export class MarketAddComponent implements OnInit {
   marketForm: FormGroup;
-marketAdd: MarketList;
-cur: Currency[];
+  marketAdd: MarketList;
+  cur: Currency[];
   addSubmitted: boolean;
   @Output() pageEvent = new EventEmitter<boolean>();
   constructor(private toastrService: ToastrService, private marketService: MarketService,

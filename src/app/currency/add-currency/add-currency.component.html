@@ -11,26 +11,37 @@
 <div class="container col-4">
   <div class="card">
     <div class="card-body">
+      <form [formGroup]="currencyForm">
       <div class="row">
         <div class="col">
           <div class="row">
             <div class="col">
             <div class="form-group">
               <label for="ShortName" >ShortName</label>
-              <input type="text" class="form-control" id="ShortName" placeholder="ShortName"  [(ngModel)]="cryPost.shortName">
+              <input type="text" class="form-control" id="ShortName" placeholder="ShortName" formControlName="shortName"  [(ngModel)]="cryPost.shortName" >
+              <div *ngIf="currencyForm.controls['shortName'].invalid && (currencyForm.controls['shortName'].dirty || currencyForm.controls['shortName'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['shortName'].errors.required">
+                  Short Name is required.
+                </div>
+              </div>
             </div>
           </div>
           </div>
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="Name">Name</label>
-              <input type="text" class="form-control" id="Name" placeholder="Name" [(ngModel)]="cryPost.name">
+              <input type="text" class="form-control" id="Name" placeholder="Name" formControlName="name" [(ngModel)]="cryPost.name">
+              <div *ngIf="currencyForm.controls['name'].invalid && (currencyForm.controls['name'].dirty || currencyForm.controls['name'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['name'].errors.required">
+                  Name is required.
+                </div>
+              </div>
             </div>
           </div></div>
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="Network">Network</label>
-              <select class="form-control" id="Network" [(ngModel)]="cryPost.network">
+              <select class="form-control" id="Network" [(ngModel)]="cryPost.network" [ngModelOptions]="{standalone: true}">
                 <option [ngValue]="undefined" disabled  selected> select </option>
                 <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
               </select>
@@ -39,7 +50,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Crypto" [(ngModel)]="cryPost.crypto">
+                <input class="form-check-input" type="checkbox" value="" id="Crypto" [(ngModel)]="cryPost.crypto" [ngModelOptions]="{standalone: true}">
                 <label class="form-check-label" for="Crypto">
                   Crypto
                 </label>
@@ -49,7 +60,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Enabled" [(ngModel)]="cryPost.enabled">
+                <input class="form-check-input" type="checkbox" value="" id="Enabled" [(ngModel)]="cryPost.enabled" [ngModelOptions]="{standalone: true}">
                 <label class="form-check-label" for="Enabled">
                   Enabled
                 </label>
@@ -59,7 +70,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="payinEnabled" [(ngModel)]="cryPost.payinEnabled">
+                <input class="form-check-input" type="checkbox" value="" id="payinEnabled" [(ngModel)]="cryPost.payinEnabled" [ngModelOptions]="{standalone: true}">
                 <label class="form-check-label" for="payinEnabled">
                   Pay in Enabled
                 </label>
@@ -69,13 +80,18 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="payInConfirmations">pay in Confirmations</label>
-              <input type="number" class="form-control" id="payInConfirmations" placeholder="pay in Confirmations" [(ngModel)]="cryPost.payinConfirmations">
+              <input type="number" class="form-control" id="payInConfirmations" formControlName="payinConfirmations" placeholder="pay in Confirmations" [(ngModel)]="cryPost.payinConfirmations" >
+              <div *ngIf="currencyForm.controls['payinConfirmations'].invalid && (currencyForm.controls['payinConfirmations'].dirty || currencyForm.controls['payinConfirmations'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['payinConfirmations'].errors.required">
+                  Pay In Confirmations is required.
+                </div>
+              </div>
             </div>
           </div></div>
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled" [(ngModel)]="cryPost.payoutEnabled">
+                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled" [(ngModel)]="cryPost.payoutEnabled" [ngModelOptions]="{standalone: true}">
                 <label class="form-check-label" for="PayoutEnabled">
                   Pay out Enabled
                 </label>
@@ -85,7 +101,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled" [(ngModel)]="cryPost.transferEnabled">
+                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled" [(ngModel)]="cryPost.transferEnabled" [ngModelOptions]="{standalone: true}">
                 <label class="form-check-label" for="TransferEnabled">
                   Transfer Enabled
                 </label>
@@ -95,16 +111,22 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="payOutFee">Pay Out Fee</label>
-              <input type="number" class="form-control" id="payOutFee" placeholder="Pay Out Fee" [(ngModel)]="cryPost.payoutFee">
+              <input type="number" class="form-control" id="payOutFee" placeholder="Pay Out Fee" [(ngModel)]="cryPost.payoutFee" formControlName="payoutFee">
+              <div *ngIf="currencyForm.controls['payoutFee'].invalid && (currencyForm.controls['payoutFee'].dirty || currencyForm.controls['payoutFee'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['payoutFee'].errors.required">
+                  Pay out Fee is required.
+                </div>
+              </div>
             </div>
           </div></div>
         </div>
       </div>
-      <div class="row">
-        <div class="col float-right">
-          <button type="button" class="btn btn-success" (click)="addCurrency()">Add</button>
+      <div class="row float-right">
+        <div class="col ">
+          <button type="button" class="btn btn-success" [disabled]="currencyForm.invalid" (click)="addCurrency()">Add</button>
         </div>
       </div>
+      </form>
     </div>
   </div>
 </div>

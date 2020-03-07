@@ -4,7 +4,6 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
 import {MarketService} from '../../@core/Market/market.service';
 import {MarketPut} from '../../@core/Market/market-put';
-import {KYCService} from '../../@core/KYC/kyc.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({

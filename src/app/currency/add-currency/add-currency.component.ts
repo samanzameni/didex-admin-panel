@@ -4,6 +4,7 @@ import {CurrencyService} from '../../@core/Currency/currency.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {BlockChainNetworks} from '../../@core/Currency/block-chain-networks.enum';
 import {Currency} from '../../@core/Currency/currency';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-add-currency',
@@ -13,8 +14,11 @@ import {Currency} from '../../@core/Currency/currency';
 export class AddCurrencyComponent implements OnInit {
   cryPost: Currency;
   closeSubmitted = true;
+  currencyForm: FormGroup;
   @Output() messageEvent = new EventEmitter<boolean>();
-  constructor(private toastrService: ToastrService, private currency: CurrencyService, private ngxShowLoader: NgxSpinnerService) {
+  constructor(private toastrService: ToastrService, private currency: CurrencyService,
+              private ngxShowLoader: NgxSpinnerService, private formBuilder: FormBuilder) {
+    this.createForm();
     this.cryPost = {
       shortName: '',
       name: '',
@@ -22,11 +26,19 @@ export class AddCurrencyComponent implements OnInit {
       crypto: false,
       enabled: false,
       payinEnabled: false,
-      payinConfirmations: 0,
+      payinConfirmations: null,
       payoutEnabled: false,
       transferEnabled: false,
-      payoutFee: 0,
+      payoutFee: null,
     };
+  }
+  createForm() {
+    this.currencyForm = this.formBuilder.group({
+      shortName: ['', Validators.required ],
+      name: ['', Validators.required ],
+      payinConfirmations: ['', Validators.required ],
+      payoutFee: ['', Validators.required ],
+    });
   }
   addCurrency() {
     this.ngxShowLoader.show();
