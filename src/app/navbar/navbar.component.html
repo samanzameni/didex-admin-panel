@@ -1,13 +1,63 @@
 <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
-    <a class="navbar-brand brand-logo" href="index.html" height="unset">
-      <img src="assets/images/logo.png" alt="logo"  />
+    <a class="navbar-brand brand-logo"  height="unset">
+      <img src="assets/images/logo.svg" alt="logo"  />
     </a>
-    <a class="navbar-brand brand-logo-mini" href="index.html">
-      <img src="assets/images/logo-mini.svg" alt="logo" />
+    <div class="dropdown show ">
+    <a class="navbar-brand brand-logo-mini "   href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <img src="assets/images/logo.svg" alt="logo"  />
     </a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="nav-link dropdown-item" routerLink="/pages/dashboard" routerLinkActive="active">
+          <i class="menu-icon mdi mdi-television navbar-icon"></i>
+          <span class="menu-title">Dashboard</span>
+        </a>
+            <a class="nav-link dropdown-item" routerLink="/pages/adminList" routerLinkActive="active">
+              <i class="menu-icon mdi mdi-view-list navbar-icon"></i>
+              <span class="menu-title">Admin List</span>
+            </a>
+
+            <a class="nav-link dropdown-item" routerLink="/pages/currency" routerLinkActive="active">
+              <i class="menu-icon mdi mdi-currency-btc navbar-icon"></i>
+              <span class="menu-title">Currency</span>
+            </a>
+
+            <a class="nav-link dropdown-item" routerLink="/pages/kyc" routerLinkActive="active">
+              <i class="menu-icon mdi mdi-account-alert navbar-icon"></i>
+              <span class="menu-title">KYC</span>
+            </a>
+
+            <a class="nav-link dropdown-item" routerLink="/pages/market" routerLinkActive="active">
+              <i class="menu-icon mdi mdi-plus-box-multiple navbar-icon"></i>
+              <span class="menu-title">Market</span>
+            </a>
+
+            <a class="nav-link dropdown-item" routerLink="/pages/trader" routerLinkActive="active">
+              <i class="menu-icon mdi mdi-account-convert navbar-icon"></i>
+              <span class="menu-title">Trader</span>
+            </a>
+
+            <a class="nav-link dropdown-item" routerLink="/pages/reportsOrders" routerLinkActive="active">
+              <i class="menu-icon mdi mdi-account-card-details navbar-icon"></i>
+              <span class="menu-title">Reports Orders</span>
+            </a>
+
+            <a class="nav-link dropdown-item" routerLink="/pages/reportsTrades" routerLinkActive="active">
+              <i class="menu-icon mdi mdi-account-switch navbar-icon"></i>
+              <span class="menu-title">Reports Trades</span>
+            </a>
+
+            <a class="nav-link dropdown-item" routerLink="/pages/reportsTransactions" routerLinkActive="active">
+              <i class="menu-icon fa fa-handshake-o navbar-icon"></i>
+              <span class="menu-title">Reports Transactions</span>
+            </a>
+
+      </div>
+    </div>
   </div>
 <!--  <div class="navbar-menu-wrapper d-flex align-items-center">-->
+
+
 <!--    <ul class="navbar-nav navbar-nav-left header-links d-none d-md-flex">-->
 <!--      <li class="nav-item">-->
 <!--        <a href="#" class="nav-link">Schedule-->
@@ -171,5 +221,8 @@
 <!--    <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" (click)="toggleOffcanvas()">-->
 <!--      <span class="mdi mdi-menu"></span>-->
 <!--    </button>-->
+
+
+
 <!--  </div>-->
 </nav>

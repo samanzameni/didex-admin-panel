@@ -12,25 +12,25 @@
   <div class="card">
     <div class="card-body">
       <div class="row">
-        <div class="col">
+        <div class="col-sm">
           <div class="form-group">
             <label for="Search">Search</label>
             <app-search id="Search" (id)="receiveId($event)"></app-search>
           </div>
         </div>
-        <div class="col">
+        <div class="col-sm">
           <div class="form-group">
             <label for="ShortName">Currency ShortName</label>
             <input type="text" class="form-control" id="ShortName" placeholder="Enter Currency ShortName" [(ngModel)]="reports.CurrencyShortName">
           </div>
         </div>
-        <div class="col">
+        <div class="col-sm">
           <div class="form-group">
             <label for="TransactionId">Transaction Id</label>
             <input type="text" class="form-control" id="TransactionId" placeholder="Enter Transaction Id" [(ngModel)]="reports.TransactionId">
           </div>
         </div>
-        <div class="col">
+        <div class="col-sm">
           <div class="form-group">
             <label for="Order By">Order By</label>
             <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc">
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-3">
+        <div class="col-sm-3">
           <div class="form-group">
             <label for="Filter By">Filter By</label>
             <select class="form-control border-primary" id="Filter By" [(ngModel)]="reports.FilterBy">
@@ -52,7 +52,7 @@
             </select>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-sm-3">
           <div class="form-group">
             <div *ngIf="reports.FilterBy == 'id'">
               <label for="From">From</label>
@@ -64,7 +64,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-sm-3">
           <div class="form-group">
             <div *ngIf="reports.FilterBy == 'id'">
               <label for="Till">Till</label>
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col-sm">
           <button type="submit" class="btn btn-success mr-2 float-right" (click)="reportsTransactionsGet()">Submit</button>
         </div>
       </div>
@@ -90,7 +90,6 @@
 <div class="container">
   <div class="card">
     <div class="card-body">
-      <ngb-pagination [collectionSize]="reportsRes.count" [pageSize]="pageSize" [(page)]="page" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
       <div class="table-responsive">
         <table class="table table-striped" >
           <thead>
@@ -182,6 +181,7 @@
         </table>
       </div>
     </div>
+    <ngb-pagination [collectionSize]="reportsRes.count" [pageSize]="pageSize" [(page)]="page" [maxSize]="3" [rotate]="true" [boundaryLinks]="false" [directionLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
   </div>
 </div>
 

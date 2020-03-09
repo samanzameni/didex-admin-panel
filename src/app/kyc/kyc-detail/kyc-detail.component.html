@@ -12,13 +12,13 @@
   <div class="card">
     <div class="card-body">
   <div class="row">
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input1">First Name</label>
         <input type="text" class="form-control" id="Input1" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.firstName" disabled>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input2">Last Name</label>
         <input type="text" class="form-control" id="Input2" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.lastName" disabled>
@@ -26,13 +26,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input3">Email</label>
         <input type="text" class="form-control" id="Input3" aria-describedby="emailHelp" [placeholder]="userInformation.email" disabled>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input4">Mobile Number</label>
         <input type="text" class="form-control" id="Input4" aria-describedby="emailHelp" [placeholder]="userInformation.mobileNumber.mobileNumber" disabled>
@@ -40,13 +40,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input5">Country Telephone Code</label>
         <input type="text" class="form-control" id="Input5" aria-describedby="emailHelp" [placeholder]="userInformation.mobileNumber.countryTelephoneCode" disabled>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input6">Date Of Birth</label>
         <input type="text" class="form-control" id="Input6" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.dateOfBirth" disabled>
@@ -54,13 +54,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input7">City</label>
         <input type="text" class="form-control" id="Input7" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.city" disabled>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input8">Country Code</label>
         <input type="text" class="form-control" id="Input8" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.countryCode" disabled>
@@ -68,13 +68,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input9">Birth Country Code</label>
         <input type="text" class="form-control" id="Input9" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.birthCountryCode" disabled>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input10">Zip Code</label>
         <input type="text" class="form-control" id="Input10" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.zipCode" disabled>
@@ -82,13 +82,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input11">Address Line 1</label>
         <input type="text" class="form-control" id="Input11" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.addressLine1" disabled>
       </div>
     </div>
-    <div class="col">
+    <div class="col-sm">
       <div class="form-group">
         <label for="Input12">Address Line 2</label>
         <input type="text" class="form-control" id="Input12" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.addressLine2" disabled>
@@ -96,13 +96,13 @@
     </div>
   </div>
   <div class="row" *ngFor="let i of userInformation.kycImages">
-  <div class="col" >
+  <div class="col-sm" >
     <div class="form-group">
       <label for="Input13">Image Type</label>
       <input type="text" class="form-control" id="Input13" aria-describedby="emailHelp" [placeholder]="i.imageType" disabled>
     </div>
   </div>
-  <div class="col" >
+  <div class="col-sm" >
     <div class="form-group">
       <label for="Input14">Image:</label>
       <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" id="Input14"  (click)="getI(i.image)">
@@ -114,7 +114,7 @@
   </div>
 </div>
   <div class="row float-right">
-    <div class="col-4 ">
+    <div class="col-sm-4 ">
       <div class="form-group">
         <button type="button" class="btn btn-success" (click)="getApprove()" >
           <i class="fa fa-key" aria-hidden="true"></i>Approve

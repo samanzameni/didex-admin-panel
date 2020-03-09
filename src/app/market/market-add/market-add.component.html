@@ -13,7 +13,7 @@
 <div class="card-body">
   <form [formGroup]="marketForm">
 <div class="row">
-  <div class="col">
+  <div class="col-sm">
     <div class="form-group">
       <label for="1">Base Currency ShortName</label>
       <select class="form-control" id="1" [(ngModel)]="marketAdd.baseCurrencyShortName" formControlName="baseCurrencyShortName">
@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col-sm">
     <div class="form-group">
       <label for="2">Quote Currency ShortName</label>
       <select class="form-control" id="2" [(ngModel)]="marketAdd.quoteCurrencyShortName" formControlName="quoteCurrencyShortName">
@@ -43,7 +43,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-sm">
     <div class="form-group">
       <label for="3">Quantity Increment</label>
       <input type="number" class="form-control" id="3" placeholder="Quantity Increment" formControlName="quantityIncrement" [(ngModel)]="marketAdd.quantityIncrement">
@@ -54,7 +54,7 @@
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col-sm">
     <div class="form-group">
       <label for="4">Tick Size</label>
       <input type="number" class="form-control" id="4" placeholder="Tick Size" formControlName="tickSize" [(ngModel)]="marketAdd.tickSize">
@@ -67,7 +67,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col">
+  <div class="col-sm">
     <div class="form-group">
       <label for="5">Take Liquidity Rate</label>
       <input type="number" class="form-control" id="5" placeholder="Take Liquidity Rate" formControlName="takeLiquidityRate" [(ngModel)]="marketAdd.takeLiquidityRate">
@@ -78,7 +78,7 @@
       </div>
     </div>
   </div>
-  <div class="col">
+  <div class="col-sm">
     <div class="form-group">
       <label for="6">Provide Liquidity Rate</label>
       <input type="number" class="form-control" id="6" placeholder="Provide Liquidity Rate" formControlName="provideLiquidityRate" [(ngModel)]="marketAdd.provideLiquidityRate">
@@ -91,7 +91,7 @@
   </div>
 </div>
   <div class="row float-right">
-      <div class="col-2 btn-center">
+      <div class="col-sm-2 btn-center">
         <label for="submit"> </label>
         <button type="button" id="submit" class="btn btn-success " (click)="addSubmit()" [disabled]="marketForm.invalid" > Submit </button>
       </div>
