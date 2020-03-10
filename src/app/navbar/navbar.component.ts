@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
+import {AuthServiceService} from '../@core/Login/auth-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -13,13 +14,15 @@ export class NavbarComponent implements OnInit {
     this.sidebarOpened = !this.sidebarOpened;
     if (this.sidebarOpened) {
       document.querySelector('.sidebar-offcanvas').classList.add('active');
-    }
-    else {
+    } else {
       document.querySelector('.sidebar-offcanvas').classList.remove('active');
     }
   }
-  constructor(config: NgbDropdownConfig) {
+  constructor(config: NgbDropdownConfig, private authService: AuthServiceService ) {
     config.placement = 'bottom-right';
+  }
+  SignOut() {
+    this.authService.logOut();
   }
   ngOnInit() {
   }
