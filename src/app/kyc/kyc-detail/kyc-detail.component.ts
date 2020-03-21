@@ -20,27 +20,28 @@ export class KycDetailComponent implements OnInit {
   constructor(private toastrService: ToastrService, private kycService: KYCService, private ngxShowLoader: NgxSpinnerService) {
     this.userInformation = {
       personalInformation: {
-        firstName: '',
-        lastName: '',
-        dateOfBirth: '',
-        birthCountryCode: '',
-        addressLine1: '',
-        addressLine2: '',
-        countryCode: '',
-        zipCode: '',
-        city: '',
+        firstName: null,
+        lastName: null,
+        dateOfBirth: null,
+        birthCountryCode: null,
+        addressLine1: null,
+        addressLine2: null,
+        countryCode: null,
+        zipCode: null,
+        city: null,
   },
       mobileNumber: {
-        mobileNumber: '',
-        countryTelephoneCode: '',
+        mobileNumber: null,
+        countryTelephoneCode: null,
+        code: null,
     },
       kycImages: [
         {
-          image: '',
-          imageType: 0,
+          image: null,
+          imageType: null,
         },
                 ],
-      email: '',
+      email: null,
     };
   }
 
@@ -67,7 +68,8 @@ export class KycDetailComponent implements OnInit {
         console.log(res);
         this.userInformationNull = res;
         if (this.userInformationNull.personalInformation != null) {
-         this.userInformation.personalInformation = this.userInformationNull.personalInformation;
+          this.userInformationNull.personalInformation.dateOfBirth = this.userInformationNull.personalInformation.dateOfBirth.split('T')[0];
+          this.userInformation.personalInformation = this.userInformationNull.personalInformation;
         }
         if (this.userInformationNull.mobileNumber != null) {
           this.userInformation.mobileNumber = this.userInformationNull.mobileNumber;

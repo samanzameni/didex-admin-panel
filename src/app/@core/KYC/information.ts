@@ -13,6 +13,7 @@ export interface Information {
   mobileNumber: {
     mobileNumber: string;
     countryTelephoneCode: string;
+    code: string;
   };
   kycImages: [
     {

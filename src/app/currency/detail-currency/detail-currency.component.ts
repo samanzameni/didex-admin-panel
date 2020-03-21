@@ -13,18 +13,19 @@ import {Currency} from '../../@core/Currency/currency';
 export class DetailCurrencyComponent implements OnInit {
   SNCurrency: Currency;
   @Input() ESN: string;
+  BCN = BlockChainNetworks;
   constructor(private toastrService: ToastrService, private currency: CurrencyService, private ngxShowLoader: NgxSpinnerService) {
     this.SNCurrency = {
-      shortName: '',
-      name: '',
-      network: BlockChainNetworks.NotBlockChain,
-      crypto: false,
-      enabled: false,
-      payinEnabled: false,
-      payinConfirmations: 0,
-      payoutEnabled: false,
-      transferEnabled: false,
-      payoutFee: 0,
+      shortName: null,
+      name: null,
+      network: null,
+      crypto: null,
+      enabled: null,
+      payinEnabled: null,
+      payinConfirmations: null,
+      payoutEnabled: null,
+      transferEnabled: null,
+      payoutFee: null,
     };
   }
   showShortName(shortName: string) {
@@ -40,11 +41,6 @@ export class DetailCurrencyComponent implements OnInit {
         this.ngxShowLoader.hide();
       },
     );
-  }
-  get fields(): string[] {
-    const f = BlockChainNetworks;
-    const keys = Object.keys(f);
-    return keys.slice(keys.length / 2);
   }
   ngOnInit() {
     this.showShortName(this.ESN);

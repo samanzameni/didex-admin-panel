@@ -8,96 +8,49 @@
     <p style="color: white" > Loading... </p>
   </ngx-spinner>
 </div>
-<div class="col-sm-10 col-md-8 col-lg-6 offset-sm-1  offset-md-2 offset-lg-3 align-self-center">
+<div class="">
   <div class="card">
     <div class="card-body">
-      <div class="row">
-        <div class="col">
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <label for="ShortName2">ShortName</label>
-              <input type="text" class="form-control" id="ShortName2" placeholder="ShortName" [(ngModel)]="SNCurrency.shortName" disabled>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <label for="Name2">Name</label>
-              <input type="text" class="form-control" id="Name2" placeholder="Name" [(ngModel)]="SNCurrency.name" disabled>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <label for="Network2">Network</label>
-              <select class="form-control" id="Network2" [(ngModel)]="SNCurrency.network" disabled>
-                <option [ngValue]="undefined" disabled  selected> select </option>
-                <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
-              </select>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="crypto2" [(ngModel)]="SNCurrency.crypto" disabled>
-                <label class="form-check-label" for="crypto2">
-                  Crypto
-                </label>
-              </div>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Enabled2" [(ngModel)]="SNCurrency.enabled" disabled>
-                <label class="form-check-label" for="Enabled2">
-                  Enabled
-                </label>
-              </div>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="payinEnabled2" [(ngModel)]="SNCurrency.payinEnabled" disabled>
-                <label class="form-check-label" for="payinEnabled2">
-                  Pay in Enabled
-                </label>
-              </div>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <label for="payInConfirmations2">pay in Confirmations</label>
-              <input type="number" class="form-control" id="payInConfirmations2" placeholder="pay in Confirmations" [(ngModel)]="SNCurrency.payinConfirmations" disabled>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled2" [(ngModel)]="SNCurrency.payoutEnabled" disabled>
-                <label class="form-check-label" for="PayoutEnabled2">
-                  Pay out Enabled
-                </label>
-              </div>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled2" [(ngModel)]="SNCurrency.transferEnabled" disabled>
-                <label class="form-check-label" for="TransferEnabled2">
-                  Transfer Enabled
-                </label>
-              </div>
-            </div>
-          </div></div>
-          <div class="row"><div class="col">
-            <div class="form-group">
-              <label for="payOutFee2">Pay Out Fee</label>
-              <input type="number" class="form-control" id="payOutFee2" placeholder="Pay Out Fee" [(ngModel)]="SNCurrency.payoutFee" disabled>
-            </div>
-          </div></div>
-        </div>
-      </div>
+      <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">ShortName</th>
+          <th scope="col">Name</th>
+          <th scope="col">Network</th>
+          <th scope="col">Crypto</th>
+          <th scope="col">Enabled</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+          <td>{{SNCurrency.shortName}}</td>
+          <td>{{SNCurrency.name}}</td>
+          <td>{{BCN[SNCurrency.network]}}</td>
+          <td> <i [ngClass]="SNCurrency.crypto ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+          <td><i [ngClass]="SNCurrency.enabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+        </tr>
+        </tbody>
+        <thead>
+        <tr>
+          <th scope="col">Pay in<br>Enabled</th>
+          <th scope="col">pay in<br>Confirmations</th>
+          <th scope="col">Pay out<br>Enabled</th>
+          <th scope="col">Transfer<br>Enabled</th>
+          <th scope="col">Pay Out Fee</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><i [ngClass]="SNCurrency.payinEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+          <td> {{SNCurrency.payinConfirmations}}</td>
+          <td><i [ngClass]="SNCurrency.payoutEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+          <td><i [ngClass]="SNCurrency.transferEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+          <td>{{SNCurrency.payoutFee}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
     </div>
   </div>
 </div>

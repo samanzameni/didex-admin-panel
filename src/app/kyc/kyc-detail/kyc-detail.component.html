@@ -11,108 +11,68 @@
 <div class="">
   <div class="card">
     <div class="card-body">
-  <div class="row">
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input1">First Name</label>
-        <input type="text" class="form-control" id="Input1" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.firstName" disabled>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Country Telephone Code</th>
+            <th scope="col">Date Of Birth</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <td>{{userInformation.personalInformation.firstName}}</td>
+            <td>{{userInformation.personalInformation.lastName}}</td>
+            <td>{{userInformation.email}}</td>
+            <td>{{userInformation.mobileNumber.mobileNumber}}</td>
+            <td>{{userInformation.mobileNumber.countryTelephoneCode}}</td>
+            <td>{{userInformation.personalInformation.dateOfBirth}}</td>
+           </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">City</th>
+            <th scope="col">Country Code</th>
+            <th scope="col">Birth Country Code</th>
+            <th scope="col">Zip Code</th>
+            <th scope="col">Address Line 1</th>
+            <th scope="col">Address Line 2</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+           <td>{{userInformation.personalInformation.city}}</td>
+            <td>{{userInformation.personalInformation.countryCode}}</td>
+            <td>{{userInformation.personalInformation.birthCountryCode}}</td>
+            <td>{{userInformation.personalInformation.zipCode}}</td>
+            <td>{{userInformation.personalInformation.addressLine1}}</td>
+            <td>{{userInformation.personalInformation.addressLine2}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">Image Type</th>
+            <th scope="col">Image</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let i of userInformation.kycImages">
+            <td>{{i.imageType}}</td>
+            <td>
+              <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" id="Input14"  (click)="getI(i.image)">
+                ​<picture>  ​
+                <img [src]="i.image" alt="" width="70px"  height="70px" class="img-fluid img-thumbnail">
+              </picture>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input2">Last Name</label>
-        <input type="text" class="form-control" id="Input2" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.lastName" disabled>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input3">Email</label>
-        <input type="text" class="form-control" id="Input3" aria-describedby="emailHelp" [placeholder]="userInformation.email" disabled>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input4">Mobile Number</label>
-        <input type="text" class="form-control" id="Input4" aria-describedby="emailHelp" [placeholder]="userInformation.mobileNumber.mobileNumber" disabled>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input5">Country Telephone Code</label>
-        <input type="text" class="form-control" id="Input5" aria-describedby="emailHelp" [placeholder]="userInformation.mobileNumber.countryTelephoneCode" disabled>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input6">Date Of Birth</label>
-        <input type="text" class="form-control" id="Input6" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.dateOfBirth" disabled>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input7">City</label>
-        <input type="text" class="form-control" id="Input7" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.city" disabled>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input8">Country Code</label>
-        <input type="text" class="form-control" id="Input8" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.countryCode" disabled>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input9">Birth Country Code</label>
-        <input type="text" class="form-control" id="Input9" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.birthCountryCode" disabled>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input10">Zip Code</label>
-        <input type="text" class="form-control" id="Input10" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.zipCode" disabled>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input11">Address Line 1</label>
-        <input type="text" class="form-control" id="Input11" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.addressLine1" disabled>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div class="form-group">
-        <label for="Input12">Address Line 2</label>
-        <input type="text" class="form-control" id="Input12" aria-describedby="emailHelp" [placeholder]="userInformation.personalInformation.addressLine2" disabled>
-      </div>
-    </div>
-  </div>
-  <div class="row" *ngFor="let i of userInformation.kycImages">
-  <div class="col-sm" >
-    <div class="form-group">
-      <label for="Input13">Image Type</label>
-      <input type="text" class="form-control" id="Input13" aria-describedby="emailHelp" [placeholder]="i.imageType" disabled>
-    </div>
-  </div>
-  <div class="col-sm" >
-    <div class="form-group">
-      <label for="Input14">Image:</label>
-      <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" id="Input14"  (click)="getI(i.image)">
-      ​<picture>  ​
-      <img [src]="i.image" alt="" width="70px"  height="70px" class="img-fluid img-thumbnail">
-      </picture>
-      </button>
-    </div>
-  </div>
-</div>
   <div class="row float-right">
     <div class="col-sm-4 ">
       <div class="form-group">
