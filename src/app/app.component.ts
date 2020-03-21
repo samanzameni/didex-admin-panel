@@ -8,18 +8,10 @@ import {AuthServiceService} from './@core/Login/auth-service.service';
 })
 export class AppComponent implements OnInit {
   title = 'Didex Admin';
-  login: boolean;
-  first: boolean;
 
-  constructor(private authServiceService: AuthServiceService) {
+  constructor() {
   }
 
   ngOnInit() {
-    if (this.authServiceService.isAuthenticated() === true ) {
-     this.login = true;
-    } else {
-      this.login = false;
-      this.first = true;
-    }
   }
 }
