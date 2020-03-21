@@ -88,7 +88,7 @@
       <workItem from="1583405377288" duration="1013000" />
       <workItem from="1583589907210" duration="40444000" />
       <workItem from="1584535094684" duration="1090000" />
-      <workItem from="1584612507079" duration="14898000" />
+      <workItem from="1584612507079" duration="15649000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -223,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584785367350</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fixing buttons and table padding.">
+      <created>1584789077755</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1584789077755</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,9 +253,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="fixing buttons and table padding." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="179" key="#Notifications" timestamp="1581768492956">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="460" y="148" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1584789116296" />
     <state x="552" y="179" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1581768492956" />
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582369466112">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -258,10 +266,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1584785363693">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1584789074553">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1584785363693" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1584789074553" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -272,10 +280,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1584785371158">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1584789094973">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1584785371158" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1584789094973" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1583747630648">
       <screen x="0" y="0" width="1600" height="860" />
