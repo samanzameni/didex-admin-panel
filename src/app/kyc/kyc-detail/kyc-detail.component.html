@@ -18,9 +18,10 @@
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">Email</th>
-            <th scope="col">Mobile Number</th>
-            <th scope="col">Country Telephone Code</th>
             <th scope="col">Date Of Birth</th>
+            <th scope="col">City</th>
+
+
           </tr>
           </thead>
           <tbody>
@@ -28,16 +29,34 @@
             <td>{{userInformation.personalInformation.firstName}}</td>
             <td>{{userInformation.personalInformation.lastName}}</td>
             <td>{{userInformation.email}}</td>
-            <td>{{userInformation.mobileNumber.mobileNumber}}</td>
-            <td>{{userInformation.mobileNumber.countryTelephoneCode}}</td>
             <td>{{userInformation.personalInformation.dateOfBirth}}</td>
+            <td>{{userInformation.personalInformation.city}}</td>
+
+
            </tr>
           </tbody>
           <thead>
           <tr>
-            <th scope="col">City</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Country Telephone Code</th>
+            <th scope="col">Code</th>
             <th scope="col">Country Code</th>
             <th scope="col">Birth Country Code</th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{userInformation.mobileNumber.mobileNumber}}</td>
+            <td>{{userInformation.mobileNumber.countryTelephoneCode}}</td>
+            <td>{{userInformation.mobileNumber.code}}</td>
+            <td>{{userInformation.personalInformation.countryCode}}</td>
+            <td>{{userInformation.personalInformation.birthCountryCode}}</td>
+
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
             <th scope="col">Zip Code</th>
             <th scope="col">Address Line 1</th>
             <th scope="col">Address Line 2</th>
@@ -45,9 +64,6 @@
           </thead>
           <tbody>
           <tr>
-           <td>{{userInformation.personalInformation.city}}</td>
-            <td>{{userInformation.personalInformation.countryCode}}</td>
-            <td>{{userInformation.personalInformation.birthCountryCode}}</td>
             <td>{{userInformation.personalInformation.zipCode}}</td>
             <td>{{userInformation.personalInformation.addressLine1}}</td>
             <td>{{userInformation.personalInformation.addressLine2}}</td>

@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/main.71d1fc00e0cbfa326200.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/8f/1c/172cfc03d7a15920124bdc4c91454dd5989ba22d869d273eb4d0f3d7c628fa8248950bcb5c0c54a249a7a0e379ecc5c56151254971bc84d36540008e427e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/7b/8c/eb3b081058be9573bc8468ee0e9465c493ba4c881172a04cd7b5f2e3b02a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/1c/5d/a2d461fa6a085a151086584f8208c2fcf44f1af8f9f66fa343e4dec7f28b0e1993c4f56f0146de47aaf99f21f43fdb16fa6dad60bc456dd743708be6783f" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/32/14/410a51c1726298ace564de8b3b4f1aefbf324b8ca80416520d7b2a771b98" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.e2f458a6d529910c1d7c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/KYC/information.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/KYC/information.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.71d1fc00e0cbfa326200.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.3f70f83e48835592fbc0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/auth-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/auth-service.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,8 @@
       <workItem from="1583405377288" duration="1013000" />
       <workItem from="1583589907210" duration="40444000" />
       <workItem from="1584535094684" duration="1090000" />
-      <workItem from="1584612507079" duration="24385000" />
+      <workItem from="1584612507079" duration="34230000" />
+      <workItem from="1585048561288" duration="918000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -262,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584794659292</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fixing detail page table .">
+      <created>1584803063872</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1584803063872</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +287,8 @@
     <MESSAGE value="fixing Mobile UI." />
     <MESSAGE value="fixing Mobile Sign Out." />
     <MESSAGE value="fixing buttons and table padding." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing buttons and table padding." />
+    <MESSAGE value="fixing detail page table ." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing detail page table ." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -298,10 +304,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1584794656457">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1584803060013">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1584794656457" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1584803060013" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -312,15 +318,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1584794667992">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1584803085986">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1584794667992" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1584803085986" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
-    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1583747630648">
+    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1584872733318">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1583747630648" />
+    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1584872733318" />
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582384570544" />
     <state x="513" y="198" key="run.anything.popup" timestamp="1583152098022">
       <screen x="0" y="0" width="1600" height="860" />

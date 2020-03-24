@@ -28,7 +28,7 @@ export class AuthServiceService {
       err => {
         console.log(err);
         this.ngxShowLoader.hide();
-        this.toastrService.error('Invalid Email Or Password.', '', {timeOut: 4000});
+        this.toastrService.error('Wrong Email Or Password.', '', {timeOut: 10000});
       },
     );
   }

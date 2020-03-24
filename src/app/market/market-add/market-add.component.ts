@@ -53,7 +53,7 @@ export class MarketAddComponent implements OnInit {
       err => {
         console.log(err);
         this.ngxShowLoader.hide();
-        this.toastrService.error('Take Liquidity Rate & Provide Liquidity Rate should be between 0 and 1.',
+        this.toastrService.error('Take Liquidity Rate & Provide Liquidity Rate should be between 0.00000001 and 1.',
           '', {timeOut: 4000});
       },
     );
