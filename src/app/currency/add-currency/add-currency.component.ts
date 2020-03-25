@@ -62,6 +62,7 @@ export class AddCurrencyComponent implements OnInit {
     return keys.slice(keys.length / 2);
   }
   ngOnInit() {
+    window.scroll(0, 0);
   }
 
 }

@@ -12,6 +12,8 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { PagesModule } from './pages/pages.module';
+import {RecaptchaModule} from 'ng-recaptcha';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +33,10 @@ import { PagesModule } from './pages/pages.module';
     ToastrModule.forRoot(),
     PagesModule,
     NgxSpinnerModule,
+    RecaptchaModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

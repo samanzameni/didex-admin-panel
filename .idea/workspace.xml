@@ -2,7 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/grecaptcha/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/grecaptcha/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/grecaptcha/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/@types/grecaptcha/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/bundles/ng-recaptcha.umd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/bundles/ng-recaptcha.umd.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/bundles/ng-recaptcha.umd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/bundles/ng-recaptcha.umd.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/ng-recaptcha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha-common.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha-forms.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha-loader.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha-settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha-v3.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha-v3.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha-value-accessor.directive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm2015/recaptcha/recaptcha.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/ng-recaptcha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha-common.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha-forms.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha-loader.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha-settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha-v3.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha-v3.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha-value-accessor.directive.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha.component.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/esm5/recaptcha/recaptcha.module.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/fesm2015/ng-recaptcha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/fesm2015/ng-recaptcha.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/fesm5/ng-recaptcha.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/fesm5/ng-recaptcha.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/ng-recaptcha.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/ng-recaptcha.metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha-common.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha-forms.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha-loader.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha-settings.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha-v3.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha-v3.service.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha-value-accessor.directive.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha.component.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/ng-recaptcha/recaptcha/recaptcha.module.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/Delete Icon.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/storage.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/storage.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +152,7 @@
       <workItem from="1583589907210" duration="40444000" />
       <workItem from="1584535094684" duration="1090000" />
       <workItem from="1584612507079" duration="34230000" />
-      <workItem from="1585048561288" duration="2335000" />
+      <workItem from="1585048561288" duration="30972000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -266,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1585049519011</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Fixed tables.">
+      <created>1585050928596</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1585050928596</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixed tables.">
+      <created>1585051035633</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1585051035633</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +365,8 @@
     <MESSAGE value="fixing buttons and table padding." />
     <MESSAGE value="fixing detail page table ." />
     <MESSAGE value="Fixing tables." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing tables." />
+    <MESSAGE value="Fixed tables." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed tables." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -304,10 +382,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585050925114">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585051031845">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585050925114" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585051031845" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -318,15 +396,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585050960806">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585051042163">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585050960806" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585051042163" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
-    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1584872733318">
+    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585139996928">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1584872733318" />
+    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1585139996928" />
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582384570544" />
     <state x="513" y="198" key="run.anything.popup" timestamp="1583152098022">
       <screen x="0" y="0" width="1600" height="860" />

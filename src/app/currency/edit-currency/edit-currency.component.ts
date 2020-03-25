@@ -66,6 +66,7 @@ export class EditCurrencyComponent implements OnInit {
   }
   ngOnInit() {
     this.showShortName(this.USN);
+    window.scroll(0, 0);
   }
 
 }

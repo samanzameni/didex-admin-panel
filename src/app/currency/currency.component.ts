@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {BlockChainNetworks} from '../@core/Currency/block-chain-networks.enum';
 import {Currency} from '../@core/Currency/currency';
 import {ToastrService} from 'ngx-toastr';
 import {CurrencyService} from '../@core/Currency/currency.service';
-import {AdminService} from '../@core/Admin/admin.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
@@ -14,6 +12,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 export class CurrencyComponent implements OnInit {
   cry: Currency[];
    DSN: string;
+   DN: string;
    USN: string;
    ESN: string;
   editSubmitted: boolean;
@@ -36,8 +35,15 @@ export class CurrencyComponent implements OnInit {
     this.pageSubmitted = false;
     this.editSubmitted = true;
   }
-  deleteSN(shortName: string) {
-    this.DSN = shortName;
+  deleteSN(name: string, shortName: string , event) {
+    console.log(event);
+    if (event.target.checked) {
+      this.DSN = shortName;
+      this.DN = name;
+    } else {
+      this.DSN = null;
+      this.DN = null;
+    }
   }
   deleteShortName() {
     this.ngxShowLoader.show();

@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {ToastrService} from 'ngx-toastr';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {AuthServiceService} from '../@core/Login/auth-service.service';
 import {Login} from '../@core/Login/login';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-custom-login',
@@ -15,7 +14,7 @@ export class CustomLoginComponent implements OnInit {
   submitted = false;
   login: Login;
   constructor(private authService: AuthServiceService, private formBuilder: FormBuilder,
-              private router: Router, private authServiceService: AuthServiceService) {
+             ) {
     this.login = {
       email: '',
       password: '',
@@ -44,5 +43,9 @@ export class CustomLoginComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
+  }
+
+  resolved(captchaResponse: string) {
+    console.log(`Resolved captcha with response: ${captchaResponse}`);
   }
 }

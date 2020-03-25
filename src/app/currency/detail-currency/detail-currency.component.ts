@@ -44,6 +44,7 @@ export class DetailCurrencyComponent implements OnInit {
   }
   ngOnInit() {
     this.showShortName(this.ESN);
+    window.scroll(0, 0);
   }
 
 }
