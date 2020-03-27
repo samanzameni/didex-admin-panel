@@ -11,7 +11,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
   providedIn: 'root',
 })
 export class AuthServiceService {
-
+  role: string[];
   constructor(private storageService: StorageService, private loginRestfulAPIService: LoginRestfulAPIService,
               private toastrService: ToastrService,  private router: Router, private ngxShowLoader: NgxSpinnerService) {
   }
@@ -20,10 +20,13 @@ export class AuthServiceService {
     this.ngxShowLoader.show();
     return this.loginRestfulAPIService.userLogin(login).subscribe(
       (res: any) => {
+        console.log(res);
         this.storageService.setAccessToken(res.token);
+        this.role = res.roles;
+        this.storageService.setAccessRole(this.role);
         this.router.navigate(['pages/dashboard']);
         this.ngxShowLoader.hide();
-        this.toastrService.success('You Have Successfully Login.', '', {timeOut: 4000});
+
       },
       err => {
         console.log(err);
@@ -32,7 +35,25 @@ export class AuthServiceService {
       },
     );
   }
+  logOut() {
+    this.ngxShowLoader.show();
+    this.storageService.removeAccessToken();
+    this.storageService.removeAccessRole();
+    this.router.navigateByUrl('/login');
+    this.ngxShowLoader.hide();
+    this.toastrService.success('You Have Successfully Sign Out.', '', {timeOut: 4000});
 
+  }
+  public isAuthenticated(): boolean {
+    const jwtHelper = new JwtHelperService();
+    const token = this.storageService.getAccessToken();
+    // Check whether there is a token and return
+    // true or false
+    if (!token) { return false; }
+    // Check whether the token is expired and return
+    // true or false
+    return !jwtHelper.isTokenExpired(token);
+  }
   registerPost(login: Login) {
     this.ngxShowLoader.show();
     return this.loginRestfulAPIService.userRegister(login).subscribe(
@@ -48,23 +69,5 @@ export class AuthServiceService {
         this.toastrService.error('Invalid Inputs.', '', {timeOut: 10000});
       },
     );
-  }
-  logOut() {
-    this.ngxShowLoader.show();
-    this.storageService.removeAccessToken();
-    this.router.navigateByUrl('/login');
-    this.ngxShowLoader.hide();
-    this.toastrService.success('You Have Successfully Sign Out.', '', {timeOut: 4000});
-
-  }
-  public isAuthenticated(): boolean {
-    const jwtHelper = new JwtHelperService();
-    const token = this.storageService.getAccessToken();
-    // Check whether there is a token and return
-    // true or false
-    if (!token) { return false; }
-    // Check whether the token is expired and return
-    // true or false
-    return !jwtHelper.isTokenExpired(token);
   }
 }

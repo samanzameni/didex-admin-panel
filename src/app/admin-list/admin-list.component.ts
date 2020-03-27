@@ -89,6 +89,15 @@ export class AdminListComponent implements OnInit {
     this.RemoveFromRoleSubmitted = false;
     this.detailSubmitted = false;
   }
+  receiveMessage($event) {
+    this.showRoles();
+    this.showList();
+    this.mainPage = $event;
+    this.ResetPasswordSubmitted = false;
+    this.AddToRoleSubmitted = false;
+    this.RemoveFromRoleSubmitted = false;
+    this.detailSubmitted = false;
+  }
   ngOnInit() {
     this.showRoles();
     this.showList();

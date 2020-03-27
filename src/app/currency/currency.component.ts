@@ -3,6 +3,7 @@ import {Currency} from '../@core/Currency/currency';
 import {ToastrService} from 'ngx-toastr';
 import {CurrencyService} from '../@core/Currency/currency.service';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {SuperUserGuard} from '../@core/Login/super-user.guard';
 
 @Component({
   selector: 'app-currency',
@@ -19,7 +20,8 @@ export class CurrencyComponent implements OnInit {
   addSubmitted: boolean;
   detailSubmitted: boolean;
   pageSubmitted: boolean;
-  constructor(private toastrService: ToastrService, private currency: CurrencyService, private ngxShowLoader: NgxSpinnerService) {
+  constructor(private toastrService: ToastrService, private currency: CurrencyService,
+              private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
   }
   addSN() {
     this.pageSubmitted = false;
@@ -36,7 +38,6 @@ export class CurrencyComponent implements OnInit {
     this.editSubmitted = true;
   }
   deleteSN(name: string, shortName: string , event) {
-    console.log(event);
     if (event.target.checked) {
       this.DSN = shortName;
       this.DN = name;
@@ -75,7 +76,6 @@ export class CurrencyComponent implements OnInit {
     );
   }
   back() {
-    this.showCurrencyList();
     this.editSubmitted = false;
     this.addSubmitted = false;
     this.detailSubmitted = false;

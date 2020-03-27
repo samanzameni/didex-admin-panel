@@ -3,6 +3,7 @@ import {ToastrService} from 'ngx-toastr';
 import {MarketService} from '../@core/Market/market.service';
 import {MarketList} from '../@core/Market/market-list';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {SuperUserGuard} from '../@core/Login/super-user.guard';
 
 @Component({
   selector: 'app-market',
@@ -16,7 +17,8 @@ export class MarketComponent implements OnInit {
   mainPage = true;
   editSubmitted = false;
   addSubmitted = false;
-  constructor(private toastrService: ToastrService, private marketService: MarketService, private ngxShowLoader: NgxSpinnerService) {
+  constructor(private toastrService: ToastrService, private marketService: MarketService,
+              private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
     this.market = {
       baseCurrencyShortName: '',
       quoteCurrencyShortName: '',

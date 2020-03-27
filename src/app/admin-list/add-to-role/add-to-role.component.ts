@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {AdminService} from '../../@core/Admin/admin.service';
 import {AdminChild} from '../../@core/Admin/admin-child';
 import {ToastrService} from 'ngx-toastr';
@@ -15,6 +15,8 @@ export class AddToRoleComponent implements OnInit {
   add: AdminChild;
   adminRoles: AdminRole;
   @Input() userList: RoleList;
+  mainPage = true;
+  @Output() messageEvent = new EventEmitter<boolean>();
   constructor(private adminService: AdminService, private toastrService: ToastrService, private ngxShowLoader: NgxSpinnerService) {
     this.add = {
     email: '',
@@ -30,6 +32,7 @@ export class AddToRoleComponent implements OnInit {
     return this.adminService.addPatch(this.add).subscribe(
       (res: any) => {
         console.log(res);
+        this.messageEvent.emit(this.mainPage);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Add To Role.', '', {timeOut: 4000});
       },

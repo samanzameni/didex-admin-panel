@@ -45,7 +45,5 @@ export class CustomLoginComponent implements OnInit {
     window.scroll(0, 0);
   }
 
-  resolved(captchaResponse: string) {
-    console.log(`Resolved captcha with response: ${captchaResponse}`);
-  }
+
 }

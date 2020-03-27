@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {RoleList} from '../../@core/Admin/role-list';
 import {AdminChild} from '../../@core/Admin/admin-child';
 import {AdminService} from '../../@core/Admin/admin.service';
@@ -13,6 +13,8 @@ import {NgxSpinnerService} from 'ngx-spinner';
 export class ResetPasswordComponent implements OnInit {
   add: AdminChild;
   @Input() userList: RoleList;
+  mainPage = true;
+  @Output() messageEvent = new EventEmitter<boolean>();
   constructor(private adminService: AdminService, private toastrService: ToastrService , private ngxShowLoader: NgxSpinnerService) {
     this.add = {
       email: '',
@@ -25,6 +27,7 @@ export class ResetPasswordComponent implements OnInit {
     return this.adminService.resetPatch(this.add).subscribe(
       (res: any) => {
         console.log(res);
+        this.messageEvent.emit(this.mainPage);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Change Password.', '', {timeOut: 4000});
       },

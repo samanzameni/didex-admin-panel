@@ -13,7 +13,7 @@
     <div class="card-body">
 <div class="row btn-right">
   <div class="col ">
-    <button type="button" class="btn btn-primary" (click)="addMarket()">
+    <button type="button" class="btn btn-primary" (click)="addMarket()" *ngIf="superUserGuard.canActivate()">
       <i class="fa fa-plus" aria-hidden="true"></i> Add
     </button>
   </div>
@@ -48,7 +48,7 @@
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteMarket(i)">
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteMarket(i)" *ngIf="superUserGuard.canActivate()">
         <i class="fa fa-trash" aria-hidden="true" ></i>
       </button>
     </td>
@@ -73,7 +73,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><img src="assets/images/Delete Icon.jpeg" alt="logo" height="25" width="25" style="margin-bottom: 10px"/> Delete</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

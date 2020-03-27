@@ -8,14 +8,23 @@ export class StorageService {
   constructor() { }
 
     setAccessToken(token: string): void {
-        localStorage.setItem('didex_admin_access_token', token);
+      localStorage.setItem('didex_admin_access_token', token);
       }
     getAccessToken(): string {
-         return localStorage.getItem('didex_admin_access_token');
+      return localStorage.getItem('didex_admin_access_token');
         }
     removeAccessToken(): void {
-          localStorage.removeItem('didex_admin_access_token');
+      localStorage.removeItem('didex_admin_access_token');
         }
+    setAccessRole(role: string[]): void {
+      localStorage.setItem('didex_admin_role', JSON.stringify(role) );
+    }
+    getAccessRole(): string {
+      return JSON.parse(localStorage.getItem('didex_admin_role'));
+    }
+    removeAccessRole(): void {
+      localStorage.removeItem('didex_admin_role');
+    }
     setCaptchaToken(token: string): void {
       localStorage.setItem('didex_admin_captcha_token', token);
     }

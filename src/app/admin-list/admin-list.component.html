@@ -79,6 +79,6 @@
 <br>
 
 <app-detail [userList]="userRoleList" *ngIf="detailSubmitted"></app-detail>
-<app-add-to-role [userList]="userRoleList" *ngIf="AddToRoleSubmitted"></app-add-to-role>
-<app-reset-password [userList]="userRoleList" *ngIf="ResetPasswordSubmitted"></app-reset-password>
-<app-remove-from-role [userList]="userRoleList" *ngIf="RemoveFromRoleSubmitted"></app-remove-from-role>
+<app-add-to-role [userList]="userRoleList" *ngIf="AddToRoleSubmitted" (messageEvent)="receiveMessage($event)"></app-add-to-role>
+<app-reset-password [userList]="userRoleList" *ngIf="ResetPasswordSubmitted" (messageEvent)="receiveMessage($event)"></app-reset-password>
+<app-remove-from-role [userList]="userRoleList" *ngIf="RemoveFromRoleSubmitted" (messageEvent)="receiveMessage($event)"></app-remove-from-role>
