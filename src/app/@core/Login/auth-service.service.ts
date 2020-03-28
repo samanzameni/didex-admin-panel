@@ -20,13 +20,11 @@ export class AuthServiceService {
     this.ngxShowLoader.show();
     return this.loginRestfulAPIService.userLogin(login).subscribe(
       (res: any) => {
-        console.log(res);
         this.storageService.setAccessToken(res.token);
         this.role = res.roles;
         this.storageService.setAccessRole(this.role);
         this.router.navigate(['pages/dashboard']);
         this.ngxShowLoader.hide();
-
       },
       err => {
         console.log(err);

@@ -30,7 +30,7 @@
     <th scope="col">Take<br>Liquidity<br>Rate</th>
     <th scope="col">Provide<br>Liquidity<br>Rate</th>
     <th scope="col">Edit</th>
-    <th scope="col">Delete</th>
+    <th scope="col" *ngIf="superUserGuard.canActivate()">Delete</th>
   </tr>
   </thead>
   <tbody>
