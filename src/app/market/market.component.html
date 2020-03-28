@@ -11,9 +11,9 @@
 <div class="" *ngIf="mainPage">
   <div class="card">
     <div class="card-body">
-<div class="row btn-right">
+<div class="row btn-right" *ngIf="superUserGuard.canActivate()">
   <div class="col ">
-    <button type="button" class="btn btn-primary" (click)="addMarket()" *ngIf="superUserGuard.canActivate()">
+    <button type="button" class="btn btn-primary" (click)="addMarket()" >
       <i class="fa fa-plus" aria-hidden="true"></i> Add
     </button>
   </div>
@@ -47,8 +47,8 @@
         <i class="fa fa-edit" aria-hidden="true"></i>
       </button>
     </td>
-    <td>
-      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteMarket(i)" *ngIf="superUserGuard.canActivate()">
+    <td *ngIf="superUserGuard.canActivate()">
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" (click)="deleteMarket(i)" >
         <i class="fa fa-trash" aria-hidden="true" ></i>
       </button>
     </td>

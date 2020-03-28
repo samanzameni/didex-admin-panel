@@ -53,6 +53,9 @@ export class AdminListComponent implements OnInit {
       },
       err => {
         console.log(err);
+        if ( err.status === 403) {
+          this.toastrService.error('You Dont Have Privilege To See This Table.', '', {timeOut: 4000});
+        }
         this.ngxShowLoader.hide();
       },
     );

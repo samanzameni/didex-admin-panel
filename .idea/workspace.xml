@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.f808ab6c56b66985624f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/auth-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/auth-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/market/market.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +95,7 @@
       <workItem from="1584535094684" duration="1090000" />
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
-      <workItem from="1585334455120" duration="3245000" />
+      <workItem from="1585334455120" duration="13663000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -306,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585334770021</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fixing canactivate.">
+      <created>1585391333603</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1585391333603</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +340,8 @@
     <MESSAGE value="Changing currency UI." />
     <MESSAGE value="Set Privilege.." />
     <MESSAGE value="dist update." />
-    <option name="LAST_COMMIT_MESSAGE" value="dist update." />
+    <MESSAGE value="fixing canactivate." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing canactivate." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -348,10 +357,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585334766053">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585391329214">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585334766053" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585391329214" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -362,15 +371,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585334775343">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585391335516">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585334775343" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585391335516" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
-    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585139996928">
+    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585423348617">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1585139996928" />
+    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1585423348617" />
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582384570544" />
     <state x="513" y="198" key="run.anything.popup" timestamp="1583152098022">
       <screen x="0" y="0" width="1600" height="860" />

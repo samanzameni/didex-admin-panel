@@ -2,6 +2,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {AuthServiceService} from '../@core/Login/auth-service.service';
 import {Login} from '../@core/Login/login';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ReCaptchaV3Service} from 'ng-recaptcha';
+import {StorageService} from '../@core/Login/storage.service';
 
 
 @Component({
@@ -11,10 +13,9 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class CustomLoginComponent implements OnInit {
   loginForm: FormGroup;
-  submitted = false;
   login: Login;
   constructor(private authService: AuthServiceService, private formBuilder: FormBuilder,
-             ) {
+              private recaptchaV3Service: ReCaptchaV3Service, private storageService: StorageService) {
     this.login = {
       email: '',
       password: '',
@@ -37,13 +38,13 @@ export class CustomLoginComponent implements OnInit {
   }
 
   userLogin() {
-      this.submitted = true;
+    this.recaptchaV3Service.execute('importantAction')
+      .subscribe((token) => this.storageService.setCaptchaToken(token));
       this.authService.loginPost(this.login);
   }
 
   ngOnInit() {
     window.scroll(0, 0);
   }
-
 
 }
