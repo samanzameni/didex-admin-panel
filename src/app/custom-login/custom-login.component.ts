@@ -39,7 +39,10 @@ export class CustomLoginComponent implements OnInit {
 
   userLogin() {
     this.recaptchaV3Service.execute('importantAction')
-      .subscribe((token) => this.storageService.setCaptchaToken(token));
+      .subscribe(
+        (token) => this.storageService.setCaptchaToken(token)
+      );
+    console.log(this.storageService.getCaptchaToken());
       this.authService.loginPost(this.login);
   }
 

@@ -10,8 +10,8 @@ export class SuperUserGuard implements CanActivate {
   canActivate(): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const expectedRole = 'superUser';
     const role = this.storageService.getAccessRole();
-    for (let i = 0; i < role.length; i++) {
-      if (role[i] === expectedRole ) {
+    for (const i of role) {
+      if (i === expectedRole ) {
         return true;
       }
     }
