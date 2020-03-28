@@ -16,7 +16,7 @@ export class RolesGuard implements CanActivate {
     const expectedRole = 'superUser';
     const expectedRole1 = 'moderator';
     const role = this.storageService.getAccessRole();
-    console.log(role);
+    if (role !== null) {
     for (const i of role) {
       if (i === expectedRole || i === expectedRole1 ) {
         this.toastrService.success('You Have Successfully Login.', '', {timeOut: 4000});
@@ -27,5 +27,6 @@ export class RolesGuard implements CanActivate {
     this.storageService.removeAccessToken();
     this.storageService.removeAccessRole();
     return false;
+    }
   }
 }

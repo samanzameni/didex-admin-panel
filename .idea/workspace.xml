@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/12/13/e2e0c0baab93190d897d85f2b3d716ba2867a120a8896a252d4c2527bd52a76d21e6141e3dc02a65aa46e04e7bdb04ad7eb21d4809f2c8e9747087bff0ea" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/fa/d7/321c70c8e799575291caf059dfa4cf1202a74599f73d4785e1d98f9db8d1fe7eaa83e390f3788720388726dd5ed036f74a42a68a5042eb9088f90c554b23" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/39/2c/15bf97cba97ec17a9f13ed830de627d5570d7fba28b14bb85001f1c40fcc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/a6/8b/36ab9c33c29fc778f2f9abd6bfc90fd93756d7dfad3c10c49a7efa3cb23d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.7a4996c206d741035ab8.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.364d4bb65d9c147ceebb.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/@core/Login/roles.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/roles.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/super-user.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/super-user.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +97,7 @@
       <workItem from="1584535094684" duration="1090000" />
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
-      <workItem from="1585334455120" duration="15852000" />
+      <workItem from="1585334455120" duration="17784000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -319,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585429773979</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="recaptcha test and error fixed.">
+      <created>1585432146997</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1585432146997</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +358,8 @@
     <MESSAGE value="dist update." />
     <MESSAGE value="fixing canactivate." />
     <MESSAGE value="recaptcha test." />
-    <option name="LAST_COMMIT_MESSAGE" value="recaptcha test." />
+    <MESSAGE value="recaptcha test and error fixed." />
+    <option name="LAST_COMMIT_MESSAGE" value="recaptcha test and error fixed." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -363,24 +375,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585429768249">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585432142616">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585429768249" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585432142616" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581714082913" />
     <state x="696" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582372970364" />
-    <state x="540" y="256" key="IDE.errors.dialog" timestamp="1582202279741">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585429784396">
+    <state x="450" y="212" key="IDE.errors.dialog" timestamp="1585433664208">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585429784396" />
+    <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
+    <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585432164936">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585432164936" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585431563373">
       <screen x="0" y="0" width="1600" height="860" />
