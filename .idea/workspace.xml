@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/7c/9e/a4077db6e362686d938029d3dbe9a4db33ff02a5ce32724338866d56d65f42fc918e1aa17d3e9d87c2a0157488fc2cb46364ce086b398e1e30bae5072cbd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/40/18/3bd8c26f0f63682e1d8529a1636696e918cde9c4e65246b12967c67bb37d" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.52bc234a1546f43142e8.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.74199f9df339e677499a.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/auth.guard.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/@core/Login/roles.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/roles.guard.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +92,7 @@
       <workItem from="1584535094684" duration="1090000" />
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
-      <workItem from="1585334455120" duration="26083000" />
+      <workItem from="1585334455120" duration="28514000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -356,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585477552657</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="recaptcha and guard fixed.">
+      <created>1585478541637</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1585478541637</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,10 +408,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585477549101">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585478537992">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585477549101" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585478537992" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -419,15 +423,15 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585477555839">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585478544844">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585477555839" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585478544844" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
-    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585431563373">
+    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585518739293">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1585431563373" />
+    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1585518739293" />
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582384570544" />
     <state x="513" y="198" key="run.anything.popup" timestamp="1583152098022">
       <screen x="0" y="0" width="1600" height="860" />

@@ -27,10 +27,13 @@ export class RolesGuard implements CanActivate {
     this.toastrService.error('You Dont Have Privilege To Login In This Site.', '', {timeOut: 4000});
     this.storageService.removeAccessToken();
     this.storageService.removeAccessRole();
+    this.storageService.removeCaptchaToken();
+    this.router.navigateByUrl('/login');
     return false;
     }
     this.router.navigateByUrl('/login');
     this.storageService.removeAccessToken();
+    this.storageService.removeCaptchaToken();
     return false;
   }
 }
