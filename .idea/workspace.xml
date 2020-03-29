@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="recaptcha test and error  again.">
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/content-v2/sha512/25/35/4adb9998df836d2343e366ec5bf49820e5f5144aa004f6576e515384897bc622f9a05441abd96c39f331f496d5b438ab1ff66684faa5d4c1e4b89c884e47" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/.cache/terser-webpack-plugin/index-v5/95/a6/5f7d8936c27107608741a2ac5cb79b14da8ca490356e891775a148f07111" afterDir="false" />
+    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.364d4bb65d9c147ceebb.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.52bc234a1546f43142e8.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/auth-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/auth-service.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/login-restful-api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/login-restful-api.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/@core/Login/roles.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/roles.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/custom-login/custom-login.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +91,7 @@
       <workItem from="1584535094684" duration="1090000" />
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
-      <workItem from="1585334455120" duration="21297000" />
+      <workItem from="1585334455120" duration="24988000" />
     </task>
     <task id="LOCAL-00001" summary="first push.">
       <created>1581767838007</created>
@@ -338,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585433888589</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="recaptcha .">
+      <created>1585463962453</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1585463962453</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +368,8 @@
     <MESSAGE value="recaptcha test." />
     <MESSAGE value="recaptcha test and error fixed." />
     <MESSAGE value="recaptcha test and error  again." />
-    <option name="LAST_COMMIT_MESSAGE" value="recaptcha test and error  again." />
+    <MESSAGE value="recaptcha ." />
+    <option name="LAST_COMMIT_MESSAGE" value="recaptcha ." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -384,10 +385,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585463085568">
+    <state x="363" y="0" key="CommitChangelistDialog2" timestamp="1585463958808">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585463085568" />
+    <state x="363" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1585463958808" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -399,10 +400,10 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585433890790">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1585463964250">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585433890790" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585463964250" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585431563373">
       <screen x="0" y="0" width="1600" height="860" />
