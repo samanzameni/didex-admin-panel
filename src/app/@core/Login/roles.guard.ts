@@ -9,7 +9,8 @@ import {ToastrService} from 'ngx-toastr';
   providedIn: 'root'
 })
 export class RolesGuard implements CanActivate {
-  constructor(public storageService: StorageService, public router: Router, private toastrService: ToastrService) {}
+  constructor(public storageService: StorageService, public router: Router,
+              private toastrService: ToastrService) {}
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -28,5 +29,7 @@ export class RolesGuard implements CanActivate {
     this.storageService.removeAccessRole();
     return false;
     }
+    this.router.navigateByUrl('/login');
+    return false;
   }
 }

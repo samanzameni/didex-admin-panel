@@ -10,7 +10,7 @@ import {StorageService} from './storage.service';
 export class LoginRestfulAPIService {
 
   constructor(private http: HttpClient, private storageService: StorageService) { }
-  token = this.storageService.getAccessToken();
+  token = this.storageService.getCaptchaToken();
    ServerUrl = 'https://api.didex.com/api/';
    httpOptions = {
     headers: new HttpHeaders({'accept': 'text/plain',

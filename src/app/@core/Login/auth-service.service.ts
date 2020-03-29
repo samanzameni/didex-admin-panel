@@ -37,6 +37,7 @@ export class AuthServiceService {
     this.ngxShowLoader.show();
     this.storageService.removeAccessToken();
     this.storageService.removeAccessRole();
+    this.storageService.removeCaptchaToken();
     this.router.navigateByUrl('/login');
     this.ngxShowLoader.hide();
     this.toastrService.success('You Have Successfully Sign Out.', '', {timeOut: 4000});

@@ -42,7 +42,6 @@ export class CustomLoginComponent implements OnInit {
       .subscribe(
         (token) => this.storageService.setCaptchaToken(token)
       );
-    console.log(this.storageService.getCaptchaToken());
       this.authService.loginPost(this.login);
   }
 
