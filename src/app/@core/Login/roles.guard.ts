@@ -20,11 +20,11 @@ export class RolesGuard implements CanActivate {
     if (role !== null) {
     for (const i of role) {
       if (i === expectedRole || i === expectedRole1 ) {
-        this.toastrService.success('You Have Successfully Login.', '', {timeOut: 4000});
+        this.toastrService.success('You Have Successfully Signed In.', '', {timeOut: 4000});
         return true;
       }
     }
-    this.toastrService.error('You Dont Have Privilege To Login In This Site.', '', {timeOut: 4000});
+    this.toastrService.error('You Dont Have Privilege To Sign In This Site.', '', {timeOut: 4000});
     this.storageService.removeAccessToken();
     this.storageService.removeAccessRole();
     this.storageService.removeCaptchaToken();

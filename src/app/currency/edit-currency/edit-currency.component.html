@@ -29,7 +29,6 @@
             <div class="form-group">
               <label for="Network1">Network</label>
               <select class="form-control" id="Network1" [(ngModel)]="SNCurrency.network">
-                <option [ngValue]="undefined" disabled  selected> select </option>
                 <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
               </select>
             </div>

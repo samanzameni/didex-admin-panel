@@ -4,6 +4,7 @@ import {ToastrService} from 'ngx-toastr';
 import {KYCService} from '../../@core/KYC/kyc.service';
 import {Information} from '../../@core/KYC/information';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {Image} from '../../@core/KYC/image.enum';
 
 @Component({
   selector: 'app-kyc-detail',
@@ -16,6 +17,7 @@ export class KycDetailComponent implements OnInit {
   userInformationNull: Information;
   modalImage: string;
   message = true;
+  image = Image;
   @Output() messageEvent = new EventEmitter<boolean>();
   constructor(private toastrService: ToastrService, private kycService: KYCService, private ngxShowLoader: NgxSpinnerService) {
     this.userInformation = {

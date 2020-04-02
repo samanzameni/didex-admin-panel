@@ -53,6 +53,9 @@ export class AddToRoleComponent implements OnInit {
       },
       err => {
         console.log(err);
+        if ( err.status === 403) {
+          this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
+        }
         this.ngxShowLoader.hide();
       },
     );

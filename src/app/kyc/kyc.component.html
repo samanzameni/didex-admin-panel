@@ -28,7 +28,7 @@
       <td>{{i.firstName}}</td>
       <td>{{i.lastName}}</td>
       <td>
-        <button type="button" class="btn btn-inverse-secondary"  (click)="userDetail(i)">
+        <button type="button" class="btn btn-outline-secondary"  (click)="userDetail(i)">
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </button>
       </td>
@@ -41,7 +41,7 @@
   </div>
 </div>
 <div class="row" *ngIf="!mainPage">
-  <div class="col-2" style="text-align: center">
+  <div class="col-2" style="text-align: left">
     <button type="button" class="btn btn-warning"  (click)="back()">
       <i class="fa fa-chevron-left" aria-hidden="true"></i>
     </button>

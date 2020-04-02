@@ -16,7 +16,6 @@
   <div class="form-group col-sm-4">
     <label for="Network">Admin Role</label>
     <select class="form-control" id="Network" [(ngModel)]="adminList.roles"  (change)="selectedRole($event)" >
-      <option [ngValue]="undefined" disabled selected> select </option>
       <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
     </select>
   </div>
@@ -29,7 +28,6 @@
     <th scope="col">Full Name</th>
     <th scope="col">User Name</th>
     <th scope="col">Phone<br>Number</th>
-    <th scope="col">Country</th>
     <th scope="col">Reset<br>Password</th>
     <th scope="col">Add To<br>Role</th>
     <th scope="col">Remove<br>From Role</th>
@@ -41,24 +39,23 @@
     <td>{{i.fullName}}</td>
     <td>{{i.userName}}</td>
     <td>{{i.phoneNumber}}</td>
-    <td>{{i.country}}</td>
     <td>
-      <button type="button" class="btn btn-warning" (click)="userResetPassword(i)" >
+      <button type="button" class="btn btn-outline-warning" (click)="userResetPassword(i)" >
         <i class="fa fa-key" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-success" (click)="userAddToRole(i)">
+      <button type="button" class="btn btn-outline-primary" (click)="userAddToRole(i)">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-danger" (click)="userRemoveFromRole(i)" >
+      <button type="button" class="btn btn-outline-danger" (click)="userRemoveFromRole(i)" >
         <i class="fa fa-minus" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-inverse-secondary"  (click)="userDetail(i)">
+      <button type="button" class="btn btn-outline-secondary"  (click)="userDetail(i)">
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </button>
     </td>
@@ -70,7 +67,7 @@
   </div>
 </div>
 <div class="row" *ngIf="!mainPage">
-  <div class="col-2" style="text-align: center">
+  <div class="col-2" style="text-align: left">
     <button type="button" class="btn btn-warning"  (click)="userBack()">
       <i class="fa fa-chevron-left" aria-hidden="true"></i>
     </button>

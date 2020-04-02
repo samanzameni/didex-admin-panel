@@ -40,12 +40,12 @@
     <td>{{i.name}}</td>
     <td>{{i.shortName}}</td>
     <td>
-      <button type="button" class="btn btn-warning"  (click)="updateSN(i.shortName)">
+      <button type="button" class="btn btn-outline-warning"  (click)="updateSN(i.shortName)">
         <i class="fa fa-edit" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-inverse-secondary"  (click)="detailSN(i.shortName)">
+      <button type="button" class="btn btn-outline-secondary"  (click)="detailSN(i.shortName)">
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </button>
     </td>
@@ -78,7 +78,7 @@
 </div>
 </div>
 <div class="row" *ngIf="!pageSubmitted">
-  <div class="col-2" style="text-align: center">
+  <div class="col-2" style="text-align: left">
     <button type="button" class="btn btn-warning"  (click)="back()" >
       <i class="fa fa-chevron-left" aria-hidden="true"></i>
     </button>

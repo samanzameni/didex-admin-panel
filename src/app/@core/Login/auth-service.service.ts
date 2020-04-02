@@ -40,7 +40,7 @@ export class AuthServiceService {
     this.storageService.removeCaptchaToken();
     this.router.navigateByUrl('/login');
     this.ngxShowLoader.hide();
-    this.toastrService.success('You Have Successfully Sign Out.', '', {timeOut: 4000});
+    this.toastrService.success('You Have Successfully Signed Out.', '', {timeOut: 4000});
 
   }
   public isAuthenticated(): boolean {

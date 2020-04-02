@@ -9,7 +9,6 @@
     <div class="col-sm">
       <label for="Network">Role</label>
       <select class="form-control" id="Network" [(ngModel)]="add.role"  >
-        <option [ngValue]="undefined" disabled selected> select </option>
         <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
       </select>
     </div>

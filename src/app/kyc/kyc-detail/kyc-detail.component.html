@@ -16,69 +16,79 @@
           <thead>
           <tr>
             <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Date Of Birth</th>
-            <th scope="col">City</th>
-
-
+            <td>{{userInformation.personalInformation.firstName}}</td>
           </tr>
           </thead>
           <tbody>
           <tr >
-            <td>{{userInformation.personalInformation.firstName}}</td>
+            <th scope="col">Last Name</th>
             <td>{{userInformation.personalInformation.lastName}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">Email</th>
             <td>{{userInformation.email}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Date Of Birth</th>
             <td>{{userInformation.personalInformation.dateOfBirth}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">City</th>
             <td>{{userInformation.personalInformation.city}}</td>
-
-
-           </tr>
-          </tbody>
-          <thead>
-          <tr>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
             <th scope="col">Mobile Number</th>
-            <th scope="col">Country Telephone Code</th>
-            <th scope="col">Code</th>
-            <th scope="col">Country Code</th>
-            <th scope="col">Birth Country Code</th>
-
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
             <td>{{userInformation.mobileNumber.mobileNumber}}</td>
-            <td>{{userInformation.mobileNumber.countryTelephoneCode}}</td>
-            <td>{{userInformation.mobileNumber.code}}</td>
-            <td>{{userInformation.personalInformation.countryCode}}</td>
-            <td>{{userInformation.personalInformation.birthCountryCode}}</td>
-
           </tr>
           </tbody>
           <thead>
           <tr>
-            <th scope="col">Zip Code</th>
-            <th scope="col">Address Line 1</th>
-            <th scope="col">Address Line 2</th>
+            <th scope="col">Country Telephone Code</th>
+            <td>{{userInformation.mobileNumber.countryTelephoneCode}}</td>
           </tr>
           </thead>
           <tbody>
+          <tr >
+            <th scope="col">Country Code</th>
+            <td>{{userInformation.personalInformation.countryCode}}</td>
+          </tr>
+          </tbody>
+          <thead>
           <tr>
+            <th scope="col">Birth Country Code</th>
+            <td>{{userInformation.personalInformation.birthCountryCode}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Zip Code</th>
             <td>{{userInformation.personalInformation.zipCode}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">Address Line 1</th>
             <td>{{userInformation.personalInformation.addressLine1}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Address Line 2</th>
             <td>{{userInformation.personalInformation.addressLine2}}</td>
           </tr>
           </tbody>
-          <thead>
+          <thead *ngFor="let i of userInformation.kycImages">
           <tr>
-            <th scope="col">Image Type</th>
-            <th scope="col">Image</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let i of userInformation.kycImages">
-            <td>{{i.imageType}}</td>
-            <td>
+            <th scope="col" style="vertical-align: middle;">{{image[i.imageType]}}</th>
+            <td >
               <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal" id="Input14"  (click)="getI(i.image)">
                 ​<picture>  ​
                 <img [src]="i.image" alt="" width="70px"  height="70px" class="img-fluid img-thumbnail">
@@ -86,14 +96,14 @@
               </button>
             </td>
           </tr>
-          </tbody>
+          </thead>
         </table>
       </div>
-  <div class="row float-right">
-    <div class="col-sm-4 ">
+  <div class="row" style="text-align: right">
+    <div class="col-sm ">
       <div class="form-group">
-        <button type="button" class="btn btn-success" (click)="getApprove()" >
-          <i class="fa fa-key" aria-hidden="true"></i>Approve
+        <button type="button" class="btn btn-success" (click)="getApprove()"  style="margin-top: 10px;">
+          <i class="fa fa-key" aria-hidden="true"></i> Approve
         </button>
       </div>
     </div>

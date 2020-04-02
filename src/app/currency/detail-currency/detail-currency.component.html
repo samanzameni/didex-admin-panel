@@ -15,37 +15,61 @@
       <table class="table table-striped">
         <thead>
         <tr>
-          <th scope="col">ShortName</th>
-          <th scope="col">Name</th>
-          <th scope="col">Network</th>
-          <th scope="col">Crypto</th>
-          <th scope="col">Enabled</th>
+          <th scope="col" >ShortName</th>
+          <td >{{SNCurrency.shortName}}</td>
         </tr>
         </thead>
         <tbody>
         <tr >
-          <td>{{SNCurrency.shortName}}</td>
+          <th scope="col">Name</th>
           <td>{{SNCurrency.name}}</td>
-          <td>{{BCN[SNCurrency.network]}}</td>
-          <td> <i [ngClass]="SNCurrency.crypto ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
-          <td><i [ngClass]="SNCurrency.enabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
         </tr>
         </tbody>
         <thead>
         <tr>
-          <th scope="col">Pay in<br>Enabled</th>
-          <th scope="col">pay in<br>Confirmations</th>
-          <th scope="col">Pay out<br>Enabled</th>
-          <th scope="col">Transfer<br>Enabled</th>
-          <th scope="col">Pay Out Fee</th>
+          <th scope="col">Network</th>
+          <td>{{BCN[SNCurrency.network]}}</td>
         </tr>
         </thead>
         <tbody>
+        <tr >
+          <th scope="col">Crypto</th>
+          <td> <i [ngClass]="SNCurrency.crypto ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+        </tr>
+        </tbody>
+        <thead>
         <tr>
+          <th scope="col">Enabled</th>
+          <td><i [ngClass]="SNCurrency.enabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+          <th scope="col">Pay in Enabled</th>
           <td><i [ngClass]="SNCurrency.payinEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+        </tr>
+        </tbody>
+        <thead>
+        <tr>
+          <th scope="col">pay in Confirmations</th>
           <td> {{SNCurrency.payinConfirmations}}</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+          <th scope="col">Pay out Enabled</th>
           <td><i [ngClass]="SNCurrency.payoutEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+        </tr>
+        </tbody>
+        <thead>
+        <tr>
+          <th scope="col">Transfer Enabled</th>
           <td><i [ngClass]="SNCurrency.transferEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr >
+          <th scope="col">Pay Out Fee</th>
           <td>{{SNCurrency.payoutFee}}</td>
         </tr>
         </tbody>

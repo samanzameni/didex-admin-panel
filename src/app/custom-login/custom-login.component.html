@@ -9,20 +9,12 @@
   </ngx-spinner>
 </div>
 <div class="container login-center">
-  <div class="card">
+  <div class="card" >
     <div class="card-body">
-      <div class="row" style="margin-bottom: 20px">
-        <div class="col" style="text-align: center">
-          <a >
-            <img src="assets/images/logo.svg" alt="logo" height="70px"/>
-          </a>
-        </div>
-      </div>
   <div class="row ">
     <div class="col-sm-8 col-md-7 col-lg-6" style="margin: auto">
-  <form class="card-body back-border" [formGroup]="loginForm" (ngSubmit)="userLogin()" novalidate>
-
-    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Sign In</h1>
+  <form class="card-body" [formGroup]="loginForm" (ngSubmit)="userLogin()" novalidate>
+    <div class="h3 mb-3 font-weight-normal" style="text-align: left;"><img src="assets/images/logo-color-symbol.svg" alt="logo" height="30" style="margin-right: 5px"/> <b style=" color: #1463a7">Sign In</b> To <b>Admin Didex</b></div>
     <div class="form-group">
     <label for="inputEmail" >Email address</label>
     <input id="inputEmail" class="form-control bottom-space" formControlName="email" type="email" name="email" placeholder="Email address" (input)="emailChange($event)" required autofocus>
@@ -42,7 +34,7 @@
     </div>
     </div>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">Log In</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">Sign In</button>
 <!--    <div class="text-center top-space">-->
 <!--						<span class="form-Control">-->
 <!--              have an account?-->

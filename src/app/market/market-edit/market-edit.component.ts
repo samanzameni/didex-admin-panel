@@ -42,8 +42,8 @@ export class MarketEditComponent implements OnInit {
       err => {
         console.log(err);
         this.ngxShowLoader.hide();
-        this.toastrService.error('Take Liquidity Rate & Provide Liquidity Rate should be between 0 and 1.',
-          '', {timeOut: 4000});
+        this.toastrService.error('Tick Size  & Quantity Increment should be between 0.00000000001 and 99999999.', '', {timeOut: 4000});
+        this.toastrService.error('Take Liquidity Rate & Provide Liquidity Rate should be between 0.00000001 and 1.', '', {timeOut: 4000});
       },
     );
   }

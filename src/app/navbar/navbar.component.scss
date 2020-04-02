@@ -153,11 +153,14 @@
 }
 
 @media (max-width:991px) {
+  .navbar-didex{
+    width:70px !important;
+  }
   .navbar {
     &.default-layout {
       flex-direction: row;
       .navbar-brand-wrapper {
-        width: 100%;
+        width: 70px;
         .brand-logo {
           display: none;
         }
@@ -177,4 +180,7 @@
   width: 16px;
   line-height: 1;
   font-size: 18px;
+}
+.navbar-didex{
+  width:255px;
 }

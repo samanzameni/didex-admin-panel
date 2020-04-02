@@ -42,7 +42,6 @@
             <div class="form-group">
               <label for="Network">Network</label>
               <select class="form-control" id="Network" [(ngModel)]="cryPost.network" [ngModelOptions]="{standalone: true}">
-                <option [ngValue]="undefined" disabled  selected> select </option>
                 <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
               </select>
             </div>

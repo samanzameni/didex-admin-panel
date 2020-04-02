@@ -6,36 +6,60 @@
   <thead>
   <tr>
     <th scope="col">UserName</th>
-    <th scope="col">FullName</th>
-    <th scope="col">Phone<br>Number</th>
-    <th scope="col">phone<br>Number<br>Confirmed</th>
-    <th scope="col">Country</th>
+    <td>{{userList.userName}}</td>
   </tr>
   </thead>
   <tbody>
   <tr >
-    <td>{{userList.userName}}</td>
+    <th scope="col">FullName</th>
     <td>{{userList.fullName}}</td>
-    <td>{{userList.phoneNumber}}</td>
-    <td> <i [ngClass]="userList.phoneNumberConfirmed ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
-    <td>{{userList.country}}</td>
   </tr>
   </tbody>
   <thead>
   <tr>
-    <th scope="col">Email</th>
-    <th scope="col">Email<br>Confirmed</th>
-    <th scope="col">Two<br>Factor<br>Enabled</th>
-    <th scope="col">Lockout<br>End</th>
-    <th scope="col">Access<br>Failed<br>Count</th>
+    <th scope="col">Phone Number</th>
+    <td>{{userList.phoneNumber}}</td>
   </tr>
   </thead>
   <tbody>
+  <tr >
+    <th scope="col">phone Number Confirmed</th>
+    <td> <i [ngClass]="userList.phoneNumberConfirmed ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+  </tr>
+  </tbody>
+  <thead>
   <tr>
+    <th scope="col">Country</th>
+    <td>{{userList.country}}</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr >
+    <th scope="col">Email</th>
     <td>{{userList.email}}</td>
+  </tr>
+  </tbody>
+  <thead>
+  <tr>
+    <th scope="col">Email Confirmed</th>
     <td> <i [ngClass]="userList.emailConfirmed ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr >
+    <th scope="col">Two Factor Enabled</th>
     <td><i [ngClass]="userList.twoFactorEnabled ?  'fa fa-check btn-outline-success':'fa fa-times btn-outline-danger'" ></i></td>
+  </tr>
+  </tbody>
+  <thead>
+  <tr>
+    <th scope="col">Lockout End</th>
     <td>{{userList.lockoutEnd}}</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr >
+    <th scope="col">Access Failed Count</th>
     <td>{{userList.accessFailedCount}}</td>
   </tr>
   </tbody>
