@@ -17,6 +17,8 @@ export class AdminListComponent implements OnInit {
   roleList: RoleList[];
   userRoleList: RoleList;
   add: AdminChild;
+  remove: AdminChild;
+  reset: AdminChild;
   mainPage = true;
   detailSubmitted = false;
 
@@ -30,19 +32,26 @@ export class AdminListComponent implements OnInit {
     this.add = {
       email: null,
       role: null,
+    };
+    this.remove = {
+      email: null,
+      role: null,
+    };
+    this.reset = {
+      email: null,
       newPassword: null,
     };
     this.userRoleList = {
       userName: null,
-    accessFailedCount: null,
-    country: null,
-    email: null,
-    emailConfirmed: null,
-    fullName: null,
-    lockoutEnd: null,
-    phoneNumber: null,
-    phoneNumberConfirmed: null,
-    twoFactorEnabled: null,
+      accessFailedCount: null,
+      country: null,
+      email: null,
+      emailConfirmed: null,
+      fullName: null,
+      lockoutEnd: null,
+      phoneNumber: null,
+      phoneNumberConfirmed: null,
+      twoFactorEnabled: null,
     };
   }
   showRoles() {
@@ -103,20 +112,20 @@ export class AdminListComponent implements OnInit {
 
   resetSubmit() {
     this.ngxShowLoader.show();
-    this.add.email = this.userRoleList.email;
-    this.add.role = null;
-    return this.admin.resetPatch(this.add).subscribe(
+    this.reset.email = this.userRoleList.email;
+    return this.admin.resetPatch(this.reset).subscribe(
       (res: any) => {
         console.log(res);
-        this.add.newPassword = null;
+        this.reset.newPassword = null;
         this.showList();
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Change Password.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
-        this.add.newPassword = null;
+        this.reset.newPassword = null;
         if ( err.status === 403) {
+          this.ngxShowLoader.hide();
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
         } else {
         this.ngxShowLoader.hide();
@@ -128,7 +137,6 @@ export class AdminListComponent implements OnInit {
   addSubmit() {
     this.ngxShowLoader.show();
     this.add.email = this.userRoleList.email;
-    this.add.newPassword = null;
     return this.admin.addPatch(this.add).subscribe(
       (res: any) => {
         console.log(res);
@@ -141,6 +149,7 @@ export class AdminListComponent implements OnInit {
         console.log(err);
         this.add.role = null;
         if ( err.status === 403) {
+          this.ngxShowLoader.hide();
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
         } else {
         this.ngxShowLoader.hide();
@@ -151,20 +160,20 @@ export class AdminListComponent implements OnInit {
 
   removeSubmit() {
     this.ngxShowLoader.show();
-    this.add.email = this.userRoleList.email;
-    this.add.newPassword = null;
-    return this.admin.removePatch(this.add).subscribe(
+    this.remove.email = this.userRoleList.email;
+    return this.admin.removePatch(this.remove).subscribe(
       (res: any) => {
         console.log(res);
-        this.add.role = null;
+        this.remove.role = null;
         this.showList();
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Remove From Role.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
-        this.add.role = null;
+        this.remove.role = null;
         if ( err.status === 403) {
+          this.ngxShowLoader.hide();
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
         } else {
         this.ngxShowLoader.hide();

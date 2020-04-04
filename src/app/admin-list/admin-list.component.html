@@ -98,7 +98,7 @@
               </div>
               <div class="col-sm">
                 <label for="pass">New Password</label>
-                <input type="password" class="form-control" placeholder="New Password" id="pass"  [(ngModel)]="add.newPassword">
+                <input type="password" class="form-control" placeholder="New Password" id="pass"  [(ngModel)]="reset.newPassword">
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@
               </div>
               <div class="col-sm">
                 <label for="role2">Role</label>
-                <select class="form-control" id="role2" [(ngModel)]="add.role">
+                <select class="form-control" id="role2" [(ngModel)]="remove.role">
                   <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
                 </select>
               </div>
