@@ -17,6 +17,7 @@ export class MarketComponent implements OnInit {
   mainPage = true;
   editSubmitted = false;
   addSubmitted = false;
+  disableDelete = false;
   constructor(private toastrService: ToastrService, private marketService: MarketService,
               private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
     this.market = {
@@ -76,13 +77,26 @@ export class MarketComponent implements OnInit {
     this.mainPage = false;
     this.editSubmitted = true;
 }
-  deleteMarket(i) {
-    this.marketDelete = i;
+  deleteMarket(symbol: string , event) {
+    if (event.target.checked) {
+      this.marketDelete.symbol = symbol;
+      this.disableDelete = true;
+    } else {
+      this.marketDelete.symbol = null;
+      this.disableDelete = false;
+    }
   }
   deleteAccept() {
     this.deleteSymbol(this.marketDelete.symbol);
 }
+  deSelectDelete(event) {
+    if (event.target.checked) {
+      this.disableDelete = false;
+      this.marketDelete.symbol = null;
+    }
+  }
   userBack() {
+    this.showMarket();
     this.mainPage = true;
     this.editSubmitted = false;
     this.addSubmitted = false;
@@ -90,9 +104,7 @@ export class MarketComponent implements OnInit {
   pageEdit($event) {
     this.editSubmitted = $event;
     this.mainPage = true;
-    setTimeout(() => {
-      this.showMarket();
-    }, 2500);
+    this.showMarket();
   }
   pageAdd($event) {
     this.addSubmitted = $event;

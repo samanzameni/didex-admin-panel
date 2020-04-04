@@ -20,6 +20,7 @@ export class CurrencyComponent implements OnInit {
   addSubmitted: boolean;
   detailSubmitted: boolean;
   pageSubmitted: boolean;
+  disableDelete = false;
   constructor(private toastrService: ToastrService, private currency: CurrencyService,
               private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
   }
@@ -41,7 +42,16 @@ export class CurrencyComponent implements OnInit {
     if (event.target.checked) {
       this.DSN = shortName;
       this.DN = name;
+      this.disableDelete = true;
     } else {
+      this.DSN = null;
+      this.DN = null;
+      this.disableDelete = false;
+    }
+  }
+  deSelectDelete(event ) {
+    if (event.target.checked) {
+      this.disableDelete = false;
       this.DSN = null;
       this.DN = null;
     }
