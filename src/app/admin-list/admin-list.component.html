@@ -40,17 +40,17 @@
     <td>{{i.userName}}</td>
     <td>{{i.phoneNumber}}</td>
     <td>
-      <button type="button" class="btn btn-outline-warning" (click)="userResetPassword(i)" >
+      <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reset" (click)="userResetPassword(i)" >
         <i class="fa fa-key" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-outline-primary" (click)="userAddToRole(i)">
+      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#add" (click)="userAddToRole(i)">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-outline-danger" (click)="userRemoveFromRole(i)" >
+      <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#remove" (click)="userRemoveFromRole(i)" >
         <i class="fa fa-minus" aria-hidden="true"></i>
       </button>
     </td>
@@ -76,6 +76,108 @@
 <br>
 
 <app-detail [userList]="userRoleList" *ngIf="detailSubmitted"></app-detail>
-<app-add-to-role [userList]="userRoleList" *ngIf="AddToRoleSubmitted" (messageEvent)="receiveMessage($event)"></app-add-to-role>
-<app-reset-password [userList]="userRoleList" *ngIf="ResetPasswordSubmitted" (messageEvent)="receiveMessage($event)"></app-reset-password>
-<app-remove-from-role [userList]="userRoleList" *ngIf="RemoveFromRoleSubmitted" (messageEvent)="receiveMessage($event)"></app-remove-from-role>
+
+
+
+<div class="modal fade" id="reset" tabindex="-1" role="dialog" aria-labelledby="resetModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resetModalLabel">Reset Password</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card ">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="col-sm">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" [placeholder]="userRoleList.email" id="email"  disabled>
+              </div>
+              <div class="col-sm">
+                <label for="pass">New Password</label>
+                <input type="password" class="form-control" placeholder="New Password" id="pass"  [(ngModel)]="add.newPassword">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="resetSubmit()">Submit</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="addModalLabel">Add To Role</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="col-sm">
+                <label for="email1">Email</label>
+                <input type="email" class="form-control" [placeholder]="userRoleList.email" id="email1"  disabled>
+              </div>
+              <div class="col-sm">
+                <label for="role">Role</label>
+                <select class="form-control" id="role" [(ngModel)]="add.role"  >
+                  <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="addSubmit()">Submit</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="removeModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="removeModalLabel">Remove From Role</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="form-row">
+              <div class="col-sm">
+                <label for="email2">Email</label>
+                <input type="email" class="form-control" [placeholder]="userRoleList.email" id="email2"  disabled>
+              </div>
+              <div class="col-sm">
+                <label for="role2">Role</label>
+                <select class="form-control" id="role2" [(ngModel)]="add.role">
+                  <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="removeSubmit()">Submit</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

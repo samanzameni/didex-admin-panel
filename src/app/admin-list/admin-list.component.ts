@@ -4,6 +4,7 @@ import {ToastrService} from 'ngx-toastr';
 import {AdminService} from '../@core/Admin/admin.service';
 import {RoleList} from '../@core/Admin/role-list';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {AdminChild} from '../@core/Admin/admin-child';
 
 @Component({
   selector: 'app-admin-list',
@@ -15,18 +16,33 @@ export class AdminListComponent implements OnInit {
   adminList: AdminRole;
   roleList: RoleList[];
   userRoleList: RoleList;
+  add: AdminChild;
   mainPage = true;
   detailSubmitted = false;
-  AddToRoleSubmitted = false;
-  ResetPasswordSubmitted = false;
-  RemoveFromRoleSubmitted = false;
 
   constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService) {
     this.adminRoles = {
-      roles: '',
+      roles: null,
     };
     this.adminList = {
       roles: 'trader',
+    };
+    this.add = {
+      email: null,
+      role: null,
+      newPassword: null,
+    };
+    this.userRoleList = {
+      userName: null,
+    accessFailedCount: null,
+    country: null,
+    email: null,
+    emailConfirmed: null,
+    fullName: null,
+    lockoutEnd: null,
+    phoneNumber: null,
+    phoneNumberConfirmed: null,
+    twoFactorEnabled: null,
     };
   }
   showRoles() {
@@ -72,35 +88,92 @@ export class AdminListComponent implements OnInit {
   }
   userRemoveFromRole(i) {
     this.userRoleList = i;
-    this.mainPage = false;
-    this.RemoveFromRoleSubmitted = true;
   }
   userAddToRole(i) {
     this.userRoleList = i;
-    this.mainPage = false;
-    this.AddToRoleSubmitted = true;
   }
   userResetPassword(i) {
     this.userRoleList = i;
-    this.mainPage = false;
-    this.ResetPasswordSubmitted = true;
   }
   userBack() {
     this.mainPage = true;
-    this.ResetPasswordSubmitted = false;
-    this.AddToRoleSubmitted = false;
-    this.RemoveFromRoleSubmitted = false;
     this.detailSubmitted = false;
   }
-  receiveMessage($event) {
-    this.showRoles();
-    this.showList();
-    this.mainPage = $event;
-    this.ResetPasswordSubmitted = false;
-    this.AddToRoleSubmitted = false;
-    this.RemoveFromRoleSubmitted = false;
-    this.detailSubmitted = false;
+
+
+  resetSubmit() {
+    this.ngxShowLoader.show();
+    this.add.email = this.userRoleList.email;
+    this.add.role = null;
+    return this.admin.resetPatch(this.add).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.add.newPassword = null;
+        this.showList();
+        this.ngxShowLoader.hide();
+        this.toastrService.success('You Have Successfully Change Password.', '', {timeOut: 4000});
+      },
+      err => {
+        console.log(err);
+        this.add.newPassword = null;
+        if ( err.status === 403) {
+          this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
+        } else {
+        this.ngxShowLoader.hide();
+        this.toastrService.error('Invalid Password.', '', {timeOut: 4000}); }
+      },
+    );
   }
+
+  addSubmit() {
+    this.ngxShowLoader.show();
+    this.add.email = this.userRoleList.email;
+    this.add.newPassword = null;
+    return this.admin.addPatch(this.add).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.add.role = null;
+        this.showList();
+        this.ngxShowLoader.hide();
+        this.toastrService.success('You Have Successfully Add To Role.', '', {timeOut: 4000});
+      },
+      err => {
+        console.log(err);
+        this.add.role = null;
+        if ( err.status === 403) {
+          this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
+        } else {
+        this.ngxShowLoader.hide();
+        this.toastrService.error('Invalid Role.', '', {timeOut: 4000}); }
+      },
+    );
+  }
+
+  removeSubmit() {
+    this.ngxShowLoader.show();
+    this.add.email = this.userRoleList.email;
+    this.add.newPassword = null;
+    return this.admin.removePatch(this.add).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.add.role = null;
+        this.showList();
+        this.ngxShowLoader.hide();
+        this.toastrService.success('You Have Successfully Remove From Role.', '', {timeOut: 4000});
+      },
+      err => {
+        console.log(err);
+        this.add.role = null;
+        if ( err.status === 403) {
+          this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
+        } else {
+        this.ngxShowLoader.hide();
+        this.toastrService.error('Invalid Role.', '', {timeOut: 4000}); }
+      },
+    );
+  }
+
+
   ngOnInit() {
     this.showRoles();
     this.showList();

@@ -3,6 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/add-to-role/add-to-role.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/add-to-role/add-to-role.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/add-to-role/add-to-role.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/add-to-role/add-to-role.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/remove-from-role/remove-from-role.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/remove-from-role/remove-from-role.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/remove-from-role/remove-from-role.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/remove-from-role/remove-from-role.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/reset-password/reset-password.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/reset-password/reset-password.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/reset-password/reset-password.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/reset-password/reset-password.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +28,8 @@
   <component name="Git.Settings">
     <option name="PUSH_TAGS">
       <GitPushTagMode>
-        <option name="argument" value="--follow-tags" />
-        <option name="title" value="Current Branch" />
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,14 +113,7 @@
       <workItem from="1584535094684" duration="1090000" />
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
-      <workItem from="1585334455120" duration="84382000" />
-    </task>
-    <task id="LOCAL-00001" summary="first push.">
-      <created>1581767838007</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1581767838007</updated>
+      <workItem from="1585334455120" duration="94052000" />
     </task>
     <task id="LOCAL-00002" summary="first push.">
       <created>1581768544651</created>
@@ -435,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586012103850</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="devapi push.">
+      <created>1586012535465</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1586012535465</updated>
+    </task>
+    <task id="LOCAL-00050" summary="devapi push.">
+      <created>1586012615162</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1586012615164</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -494,10 +517,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586012532872">
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586012612617">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586012532872" />
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586012612617" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -509,10 +532,10 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586012571162">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586012621473">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586012571162" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586012621473" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585640960320">
       <screen x="0" y="0" width="1600" height="860" />

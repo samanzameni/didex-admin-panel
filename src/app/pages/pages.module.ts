@@ -29,10 +29,7 @@ import {TabsComponent} from '../tabs/tabs.component';
 import {NavbarComponent} from '../navbar/navbar.component';
 import {SidebarComponent} from '../sidebar/sidebar.component';
 import {FooterComponent} from '../footer/footer.component';
-import {ResetPasswordComponent} from '../admin-list/reset-password/reset-password.component';
-import {RemoveFromRoleComponent} from '../admin-list/remove-from-role/remove-from-role.component';
 import {DetailComponent} from '../admin-list/detail/detail.component';
-import {AddToRoleComponent} from '../admin-list/add-to-role/add-to-role.component';
 import {KycDetailComponent} from '../kyc/kyc-detail/kyc-detail.component';
 import {MarketAddComponent} from '../market/market-add/market-add.component';
 import {MarketEditComponent} from '../market/market-edit/market-edit.component';
@@ -71,10 +68,7 @@ import {ReportsTransactionsComponent} from '../reports-transactions/reports-tran
     CarouselComponent,
     TabsComponent,
     AdminListComponent,
-    ResetPasswordComponent,
-    RemoveFromRoleComponent,
     DetailComponent,
-    AddToRoleComponent,
     CurrencyComponent,
     KYCComponent,
     KycDetailComponent,
@@ -124,10 +118,7 @@ import {ReportsTransactionsComponent} from '../reports-transactions/reports-tran
     CarouselComponent,
     TabsComponent,
     AdminListComponent,
-    ResetPasswordComponent,
-    RemoveFromRoleComponent,
     DetailComponent,
-    AddToRoleComponent,
     CurrencyComponent,
     KYCComponent,
     KycDetailComponent,
