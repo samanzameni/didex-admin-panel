@@ -28,7 +28,6 @@
           <div class="form-group">
             <label for="Order By">Order By</label>
             <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc">
-              <option [ngValue]="undefined" disabled selected> select </option>
               <option ngValue="true">Ascending</option>
               <option ngValue="false" >Descending</option>
             </select>
@@ -40,7 +39,6 @@
           <div class="form-group">
             <label for="Filter By">Filter By</label>
             <select class="form-control border-primary" id="Filter By" [(ngModel)]="reports.FilterBy">
-              <option [ngValue]="undefined" disabled selected> select </option>
               <option ngValue="id" >Id</option>
               <option ngValue="timestamp">Time Stamp</option>
             </select>
