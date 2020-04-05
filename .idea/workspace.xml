@@ -4,15 +4,7 @@
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/market/market.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +100,7 @@
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
       <workItem from="1585334455120" duration="94360000" />
-      <workItem from="1586040811660" duration="13320000" />
-    </task>
-    <task id="LOCAL-00006" summary="demo push.">
-      <created>1582204724308</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1582204724308</updated>
+      <workItem from="1586040811660" duration="20246000" />
     </task>
     <task id="LOCAL-00007" summary="fixed routing.">
       <created>1582530941848</created>
@@ -453,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586074978798</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="BreadCrumbs.">
+      <created>1586086843593</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1586086843593</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixing detail adminList UL." />
     <MESSAGE value="fixing Mobile UI." />
     <MESSAGE value="fixing Mobile Sign Out." />
     <MESSAGE value="fixing buttons and table padding." />
@@ -498,7 +489,8 @@
     <MESSAGE value="Update AdminList page." />
     <MESSAGE value="Update AdminList page fixed errors." />
     <MESSAGE value="niloofar audit." />
-    <option name="LAST_COMMIT_MESSAGE" value="niloofar audit." />
+    <MESSAGE value="BreadCrumbs." />
+    <option name="LAST_COMMIT_MESSAGE" value="BreadCrumbs." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -514,10 +506,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586074971303">
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586086840935">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586074971303" />
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586086840935" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -529,15 +521,15 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586075018326">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586086864943">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586075018326" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586086864943" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
-    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585640960320">
+    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1586096890603">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1585640960320" />
+    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1586096890603" />
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582384570544" />
     <state x="513" y="198" key="run.anything.popup" timestamp="1583152098022">
       <screen x="0" y="0" width="1600" height="860" />

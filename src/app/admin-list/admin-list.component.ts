@@ -5,6 +5,7 @@ import {AdminService} from '../@core/Admin/admin.service';
 import {RoleList} from '../@core/Admin/role-list';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {AdminChild} from '../@core/Admin/admin-child';
+import {ErrorPass} from '../@core/Admin/error';
 
 @Component({
   selector: 'app-admin-list',
@@ -21,6 +22,11 @@ export class AdminListComponent implements OnInit {
   reset: AdminChild;
   mainPage = true;
   detailSubmitted = false;
+  errorPass: ErrorPass[];
+  PasswordTooShort: boolean;
+  PasswordRequiresNonAlphanumeric: boolean;
+  PasswordRequiresDigit: boolean;
+  PasswordRequiresUpper: boolean;
 
   constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService) {
     this.adminRoles = {
@@ -112,6 +118,10 @@ export class AdminListComponent implements OnInit {
 
   resetSubmit() {
     this.ngxShowLoader.show();
+    this.PasswordTooShort = false;
+    this.PasswordRequiresNonAlphanumeric = false;
+    this.PasswordRequiresDigit = false;
+    this.PasswordRequiresUpper = false;
     this.reset.email = this.userRoleList.email;
     return this.admin.resetPatch(this.reset).subscribe(
       (res: any) => {
@@ -124,12 +134,29 @@ export class AdminListComponent implements OnInit {
       err => {
         console.log(err);
         this.reset.newPassword = null;
+        this.errorPass = err.error;
+        for (const i of this.errorPass) {
+          if (i.code === 'PasswordTooShort') {
+            this.PasswordTooShort = true;
+            this.toastrService.error('Passwords must be at least 8 characters.', '', {timeOut: 4000});
+          }
+          if (i.code === 'PasswordRequiresNonAlphanumeric') {
+            this.PasswordRequiresNonAlphanumeric = true;
+            this.toastrService.error('Passwords must have at least one non alphanumeric character.', '', {timeOut: 4000});
+          }
+          if (i.code === 'PasswordRequiresDigit') {
+            this.PasswordRequiresDigit = true;
+            this.toastrService.error('Passwords must have at least one digit (\'0\'-\'9\').', '', {timeOut: 4000});
+          }
+          if (i.code === 'PasswordRequiresUpper') {
+            this.PasswordRequiresUpper = true;
+            this.toastrService.error('Passwords must have at least one uppercase (\'A\'-\'Z\').', '', {timeOut: 4000});
+          }
+        }
         if ( err.status === 403) {
           this.ngxShowLoader.hide();
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
-        } else {
-        this.ngxShowLoader.hide();
-        this.toastrService.error('Invalid Password.', '', {timeOut: 4000}); }
+        }
       },
     );
   }

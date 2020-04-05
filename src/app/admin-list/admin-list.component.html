@@ -118,11 +118,48 @@
                 <input type="password" class="form-control" placeholder="New Password" id="pass"  [(ngModel)]="reset.newPassword">
               </div>
             </div>
+            <div class="form-row">
+              <div class="col-sm"></div>
+              <div class="col-sm">
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="PasswordTooShort" disabled>
+                      <label class="form-check-label" for="exampleCheck1" style="font-size: 12px; color: red">Password Too Short</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck" [(ngModel)]="PasswordRequiresNonAlphanumeric" disabled>
+                      <label class="form-check-label" for="exampleCheck" style="font-size: 12px; color: red">Password Requires Non Alphanumeric</label>
+                    </div>
+                  </div>
+                </div>
+                  <div class="row">
+                  <div class="col-sm">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck2" [(ngModel)]="PasswordRequiresDigit" disabled>
+                      <label class="form-check-label" for="exampleCheck2" style="font-size: 12px; color: red">Password Requires Digit</label>
+                    </div>
+                  </div>
+                  </div>
+                    <div class="row">
+                  <div class="col-sm">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck3" [(ngModel)]="PasswordRequiresUpper" disabled>
+                      <label class="form-check-label" for="exampleCheck3" style="font-size: 12px; color: red">Password Requires Upper</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="resetSubmit()">Reset</button>
+        <button type="button" class="btn btn-success"  (click)="resetSubmit()">Reset</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
       </div>
     </div>
