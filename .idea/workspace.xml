@@ -4,15 +4,15 @@
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sidebar/sidebar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +108,7 @@
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
       <workItem from="1585334455120" duration="94360000" />
-      <workItem from="1586040811660" duration="5075000" />
-    </task>
-    <task id="LOCAL-00005" summary="demo push.">
-      <created>1582204644701</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1582204644701</updated>
+      <workItem from="1586040811660" duration="13320000" />
     </task>
     <task id="LOCAL-00006" summary="demo push.">
       <created>1582204724308</created>
@@ -453,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586041603858</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="niloofar audit.">
+      <created>1586074978797</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1586074978798</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="transactions reports created." />
     <MESSAGE value="fixing detail adminList UL." />
     <MESSAGE value="fixing Mobile UI." />
     <MESSAGE value="fixing Mobile Sign Out." />
@@ -498,7 +497,8 @@
     <MESSAGE value="devapi push." />
     <MESSAGE value="Update AdminList page." />
     <MESSAGE value="Update AdminList page fixed errors." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update AdminList page fixed errors." />
+    <MESSAGE value="niloofar audit." />
+    <option name="LAST_COMMIT_MESSAGE" value="niloofar audit." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -529,10 +529,10 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586041670040">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586075018326">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586041670040" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586075018326" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1585640960320">
       <screen x="0" y="0" width="1600" height="860" />

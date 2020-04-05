@@ -8,6 +8,14 @@
     <p style="color: white" > Loading... </p>
   </ngx-spinner>
 </div>
+<div class="col-md-4 grid-margin " *ngIf="mainPage">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>KYC</span></li>
+    </ol>
+  </nav>
+</div>
 <div *ngIf="mainPage">
   <div class="">
     <div class="card">
@@ -39,6 +47,15 @@
 </div>
     </div>
   </div>
+</div>
+<div class="col-md-4 grid-margin " *ngIf="!mainPage">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item"><a >KYC</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Detail</span></li>
+    </ol>
+  </nav>
 </div>
 <div class="row" *ngIf="!mainPage">
   <div class="col-2" style="text-align: left">

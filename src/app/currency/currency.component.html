@@ -8,6 +8,14 @@
     <p style="color: white" > Loading... </p>
   </ngx-spinner>
 </div>
+<div class="col-md-4 grid-margin " *ngIf="pageSubmitted">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Currency</span></li>
+    </ol>
+  </nav>
+</div>
 <div class="" *ngIf="pageSubmitted">
   <div class="card">
     <div class="card-body">
@@ -79,6 +87,37 @@
 </div>
 </div>
 </div>
+
+<div class="col-md-4 grid-margin " *ngIf="editSubmitted">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a>Home</a></li>
+      <li class="breadcrumb-item"><a>Currency</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Eidt</span></li>
+    </ol>
+  </nav>
+</div>
+
+<div class="col-md-4 grid-margin " *ngIf="addSubmitted">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a>Home</a></li>
+      <li class="breadcrumb-item"><a>Currency</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Add</span></li>
+    </ol>
+  </nav>
+</div>
+
+<div class="col-md-4 grid-margin " *ngIf="detailSubmitted">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a>Home</a></li>
+      <li class="breadcrumb-item"><a>Currency</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Detail</span></li>
+    </ol>
+  </nav>
+</div>
+
 <div class="row" *ngIf="!pageSubmitted">
   <div class="col-2" style="text-align: left">
     <button type="button" class="btn btn-outline-warning"  (click)="back()" >

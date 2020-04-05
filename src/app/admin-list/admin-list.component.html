@@ -8,6 +8,14 @@
     <p style="color: white" > Loading... </p>
   </ngx-spinner>
 </div>
+<div class="col-md-4 grid-margin " *ngIf="mainPage">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>User List</span></li>
+    </ol>
+  </nav>
+</div>
 <div class="" *ngIf="mainPage">
   <div class="card">
     <div class="card-body">
@@ -66,6 +74,17 @@
     </div>
   </div>
 </div>
+
+<div class="col-md-4 grid-margin " *ngIf="!mainPage">
+<nav aria-label="breadcrumb" role="navigation">
+  <ol class="breadcrumb breadcrumb-custom">
+    <li class="breadcrumb-item"><a >Home</a></li>
+    <li class="breadcrumb-item"><a >User List</a></li>
+    <li class="breadcrumb-item active" aria-current="page"><span>Detail</span></li>
+  </ol>
+</nav>
+</div>
+
 <div class="row" *ngIf="!mainPage">
   <div class="col-2" style="text-align: left">
     <button type="button" class="btn btn-outline-warning"  (click)="userBack()">
@@ -76,8 +95,6 @@
 <br>
 
 <app-detail [userList]="userRoleList" *ngIf="detailSubmitted"></app-detail>
-
-
 
 <div class="modal fade" id="reset" tabindex="-1" role="dialog" aria-labelledby="resetModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
