@@ -157,6 +157,7 @@ export class AdminListComponent implements OnInit {
           this.ngxShowLoader.hide();
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
         }
+        this.ngxShowLoader.hide();
       },
     );
   }

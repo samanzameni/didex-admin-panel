@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,14 +99,7 @@
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
       <workItem from="1585334455120" duration="94360000" />
-      <workItem from="1586040811660" duration="20246000" />
-    </task>
-    <task id="LOCAL-00007" summary="fixed routing.">
-      <created>1582530941848</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1582530941848</updated>
+      <workItem from="1586040811660" duration="20536000" />
     </task>
     <task id="LOCAL-00008" summary="fixed UI.">
       <created>1582544264719</created>
@@ -445,7 +437,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586086843593</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="AdminList errors.">
+      <created>1586099590038</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1586099590038</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +464,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixing Mobile UI." />
     <MESSAGE value="fixing Mobile Sign Out." />
     <MESSAGE value="fixing buttons and table padding." />
     <MESSAGE value="fixing detail page table ." />
@@ -490,7 +488,8 @@
     <MESSAGE value="Update AdminList page fixed errors." />
     <MESSAGE value="niloofar audit." />
     <MESSAGE value="BreadCrumbs." />
-    <option name="LAST_COMMIT_MESSAGE" value="BreadCrumbs." />
+    <MESSAGE value="AdminList errors." />
+    <option name="LAST_COMMIT_MESSAGE" value="AdminList errors." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -506,10 +505,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586086840935">
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586099587430">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586086840935" />
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586099587430" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -521,10 +520,10 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586086864943">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586099649068">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586086864943" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586099649068" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1586096890603">
       <screen x="0" y="0" width="1600" height="860" />
