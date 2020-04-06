@@ -79,7 +79,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="payInConfirmations">pay in Confirmations</label>
-              <input type="number" class="form-control" id="payInConfirmations" formControlName="payinConfirmations" placeholder="pay in Confirmations" [(ngModel)]="cryPost.payinConfirmations" >
+              <input type="number" class="form-control" id="payInConfirmations" formControlName="payinConfirmations" min="0" placeholder="pay in Confirmations" [(ngModel)]="cryPost.payinConfirmations" >
               <div *ngIf="currencyForm.controls['payinConfirmations'].invalid && (currencyForm.controls['payinConfirmations'].dirty || currencyForm.controls['payinConfirmations'].touched)" class="alert alert-danger">
                 <div *ngIf="currencyForm.controls['payinConfirmations'].errors.required">
                   Pay In Confirmations is required.

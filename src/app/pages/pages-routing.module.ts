@@ -25,16 +25,33 @@ import {TraderComponent} from '../trader/trader.component';
 import {ReportsComponent} from '../reports/reports.component';
 import {ReportsTradesComponent} from '../reports-trades/reports-trades.component';
 import {ReportsTransactionsComponent} from '../reports-transactions/reports-transactions.component';
+import {DetailComponent} from '../admin-list/detail/detail.component';
+import {AddCurrencyComponent} from '../currency/add-currency/add-currency.component';
+import {EditCurrencyComponent} from '../currency/edit-currency/edit-currency.component';
+import {DetailCurrencyComponent} from '../currency/detail-currency/detail-currency.component';
+import {KycDetailComponent} from '../kyc/kyc-detail/kyc-detail.component';
+import {MarketAddComponent} from '../market/market-add/market-add.component';
+import {MarketEditComponent} from '../market/market-edit/market-edit.component';
 
 
 const routes: Routes = [
   {
     path: '' , component: PagesComponent , children: [
-      { path: '', component: DashboardComponent},
-      { path: 'adminList', component: AdminListComponent },
-      { path: 'currency', component: CurrencyComponent },
-      { path: 'kyc', component: KYCComponent },
-      { path: 'market', component: MarketComponent },
+      { path: 'adminList', component: AdminListComponent , children: [
+          { path: 'adminListDetail', component: DetailComponent},
+      ]},
+      { path: 'currency', component: CurrencyComponent , children: [
+          { path: 'currencyAdd', component: AddCurrencyComponent},
+          { path: 'currencyEdit', component: EditCurrencyComponent},
+          { path: 'currencyDetail', component: DetailCurrencyComponent},
+        ]},
+      { path: 'kyc', component: KYCComponent , children: [
+          { path: 'kycDetail', component: KycDetailComponent},
+        ]},
+      { path: 'market', component: MarketComponent , children: [
+          { path: 'marketAdd', component: MarketAddComponent},
+          { path: 'marketEdit', component: MarketEditComponent},
+        ]},
       { path: 'trader', component: TraderComponent },
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },

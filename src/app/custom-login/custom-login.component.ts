@@ -25,18 +25,21 @@ export class CustomLoginComponent implements OnInit {
   createForm() {
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required ],
-      password: ['', Validators.required ],
+      password: ['', Validators.required],
     });
   }
-
-  emailChange(event) {
-    this.login.email = event.target.value;
+  hasNumber(): boolean {
+    return /\d/.test(this.login.password);
   }
-
-  passChange(event) {
-    this.login.password = event.target.value;
+  hasUpper(): boolean {
+    return /[A-Z]/.test(this.login.password);
   }
-
+  hasLower(): boolean {
+    return /[a-z]/.test(this.login.password);
+  }
+  hasSpecial(): boolean {
+    return /[$@$!%*?&]/.test(this.login.password);
+  }
   userLogin() {
     this.recaptchaV3Service.execute('importantAction')
       .subscribe(

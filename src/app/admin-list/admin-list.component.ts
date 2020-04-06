@@ -6,6 +6,7 @@ import {RoleList} from '../@core/Admin/role-list';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {AdminChild} from '../@core/Admin/admin-child';
 import {ErrorPass} from '../@core/Admin/error';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-admin-list',
@@ -23,12 +24,10 @@ export class AdminListComponent implements OnInit {
   mainPage = true;
   detailSubmitted = false;
   errorPass: ErrorPass[];
-  PasswordTooShort: boolean;
-  PasswordRequiresNonAlphanumeric: boolean;
-  PasswordRequiresDigit: boolean;
-  PasswordRequiresUpper: boolean;
+  passForm: FormGroup;
 
-  constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService) {
+  constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService
+  , private formBuilder: FormBuilder) {
     this.adminRoles = {
       roles: null,
     };
@@ -59,6 +58,34 @@ export class AdminListComponent implements OnInit {
       phoneNumberConfirmed: null,
       twoFactorEnabled: null,
     };
+    this.createForm();
+  }
+
+  createForm() {
+    this.passForm = this.formBuilder.group({
+      password: ['', Validators.required],
+    });
+  }
+
+  hasNumber(): boolean {
+    if (this.reset.newPassword === null) { return  true; } else {
+    return /\d/.test(this.reset.newPassword); }
+  }
+  hasUpper(): boolean {
+    if (this.reset.newPassword === null) { return  true; } else {
+    return /[A-Z]/.test(this.reset.newPassword); }
+  }
+  hasLower(): boolean {
+    if (this.reset.newPassword === null) { return  true; } else {
+    return /[a-z]/.test(this.reset.newPassword); }
+  }
+  hasSpecial(): boolean {
+    if (this.reset.newPassword === null) { return  true; } else {
+    return /[!@#$%^&*_?]/.test(this.reset.newPassword); }
+  }
+  hasLength(): boolean {
+    if (this.reset.newPassword === null) { return  true; } else {
+    return /[A-Za-z\d!@#$%^&*_?]{8,}/.test(this.reset.newPassword); }
   }
   showRoles() {
     this.ngxShowLoader.show();
@@ -114,14 +141,12 @@ export class AdminListComponent implements OnInit {
     this.mainPage = true;
     this.detailSubmitted = false;
   }
-
+  resetCancel() {
+    this.reset.newPassword = null;
+  }
 
   resetSubmit() {
     this.ngxShowLoader.show();
-    this.PasswordTooShort = false;
-    this.PasswordRequiresNonAlphanumeric = false;
-    this.PasswordRequiresDigit = false;
-    this.PasswordRequiresUpper = false;
     this.reset.email = this.userRoleList.email;
     return this.admin.resetPatch(this.reset).subscribe(
       (res: any) => {
@@ -133,31 +158,29 @@ export class AdminListComponent implements OnInit {
       },
       err => {
         console.log(err);
+        this.ngxShowLoader.hide();
         this.reset.newPassword = null;
         this.errorPass = err.error;
         for (const i of this.errorPass) {
           if (i.code === 'PasswordTooShort') {
-            this.PasswordTooShort = true;
             this.toastrService.error('Passwords must be at least 8 characters.', '', {timeOut: 4000});
           }
           if (i.code === 'PasswordRequiresNonAlphanumeric') {
-            this.PasswordRequiresNonAlphanumeric = true;
             this.toastrService.error('Passwords must have at least one non alphanumeric character.', '', {timeOut: 4000});
           }
           if (i.code === 'PasswordRequiresDigit') {
-            this.PasswordRequiresDigit = true;
             this.toastrService.error('Passwords must have at least one digit (\'0\'-\'9\').', '', {timeOut: 4000});
           }
           if (i.code === 'PasswordRequiresUpper') {
-            this.PasswordRequiresUpper = true;
             this.toastrService.error('Passwords must have at least one uppercase (\'A\'-\'Z\').', '', {timeOut: 4000});
+          }
+          if (i.code === 'PasswordRequiresLower') {
+            this.toastrService.error('Passwords must have at least one lowercase (\'a\'-\'z\').', '', {timeOut: 4000});
           }
         }
         if ( err.status === 403) {
-          this.ngxShowLoader.hide();
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
         }
-        this.ngxShowLoader.hide();
       },
     );
   }
