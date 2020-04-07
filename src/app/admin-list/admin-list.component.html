@@ -48,17 +48,17 @@
     <td>{{i.userName}}</td>
     <td>{{i.phoneNumber}}</td>
     <td>
-      <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reset" (click)="userResetPassword(i)" >
+      <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#reset" data-backdrop="static" data-keyboard="false" (click)="userResetPassword(i)" >
         <i class="fa fa-key" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#add" (click)="userAddToRole(i)">
+      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#add" data-backdrop="static" data-keyboard="false" (click)="userAddToRole(i)">
         <i class="fa fa-plus" aria-hidden="true"></i>
       </button>
     </td>
     <td>
-      <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#remove" (click)="userRemoveFromRole(i)" >
+      <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#remove" data-backdrop="static" data-keyboard="false" (click)="userRemoveFromRole(i)" >
         <i class="fa fa-minus" aria-hidden="true"></i>
       </button>
     </td>
@@ -80,7 +80,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="resetModalLabel">Reset Password</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="resetCancel()">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -96,11 +96,6 @@
               <div class="col-sm">
                 <label for="pass">New Password</label>
                 <input type="password" class="form-control" formControlName="password" placeholder="New Password" id="pass"  [(ngModel)]="reset.newPassword">
-                <div *ngIf="passForm.controls['password'].invalid && (passForm.controls['password'].dirty || passForm.controls['password'].touched)" class="alert alert-danger">
-                  <div *ngIf="passForm.controls['password'].errors.required">
-                    Password is required.
-                  </div>
-                </div>
                 <div *ngIf="!hasLength()"  class="alert alert-danger">
                   Password Requires 8 character.
                 </div>
