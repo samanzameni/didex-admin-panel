@@ -4,6 +4,8 @@ import {ToastrService} from 'ngx-toastr';
 import {CurrencyService} from '../@core/Currency/currency.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {SuperUserGuard} from '../@core/Login/super-user.guard';
+import {FormBuilder} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-currency',
@@ -16,29 +18,21 @@ export class CurrencyComponent implements OnInit {
    DN: string;
    USN: string;
    ESN: string;
-  editSubmitted: boolean;
-  addSubmitted: boolean;
-  detailSubmitted: boolean;
-  pageSubmitted: boolean;
   disableDelete = false;
-  constructor(private toastrService: ToastrService, private currency: CurrencyService,
+  constructor(private toastrService: ToastrService, private currency: CurrencyService, private router: Router,
               private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
-  }
-  addSN() {
-    this.pageSubmitted = false;
-    this.addSubmitted = true;
   }
   detailSN(shortName: string) {
     this.ESN = shortName;
-    this.pageSubmitted = false;
-    this.detailSubmitted = true;
+    this.router.navigate(['/pages/currencyDetail'],
+        { queryParams: { shortName: this.ESN} });
   }
   updateSN(shortName: string) {
     this.USN = shortName;
-    this.pageSubmitted = false;
-    this.editSubmitted = true;
+    this.router.navigate(['/pages/currencyEdit'],
+        { queryParams: { shortName: this.USN } });
   }
-  deleteSN(name: string, shortName: string , event) {
+  deleteSN(name: string, shortName: string,  event) {
     if (event.target.checked) {
       this.DSN = shortName;
       this.DN = name;
@@ -49,11 +43,11 @@ export class CurrencyComponent implements OnInit {
       this.disableDelete = false;
     }
   }
-  deSelectDelete(event ) {
+  deSelectDelete(event) {
     if (event.target.checked) {
-      this.disableDelete = false;
       this.DSN = null;
       this.DN = null;
+      this.disableDelete = false;
     }
   }
   deleteShortName() {
@@ -85,25 +79,8 @@ export class CurrencyComponent implements OnInit {
       },
     );
   }
-  back() {
-    this.editSubmitted = false;
-    this.addSubmitted = false;
-    this.detailSubmitted = false;
-    this.pageSubmitted = true;
-  }
-  receiveMessage($event) {
-    this.showCurrencyList();
-    this.pageSubmitted = $event;
-    this.editSubmitted = false;
-    this.addSubmitted = false;
-    this.detailSubmitted = false;
-  }
   ngOnInit() {
      this.showCurrencyList();
-     this.pageSubmitted = true;
-     this.editSubmitted = false;
-     this.addSubmitted = false;
-     this.detailSubmitted = false;
      window.scroll(0, 0);
   }
 

@@ -5,6 +5,8 @@ import {KYCService} from '../../@core/KYC/kyc.service';
 import {Information} from '../../@core/KYC/information';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {Image} from '../../@core/KYC/image.enum';
+import {MarketService} from '../../@core/Market/market.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-kyc-detail',
@@ -12,14 +14,14 @@ import {Image} from '../../@core/KYC/image.enum';
   styleUrls: ['./kyc-detail.component.scss'],
 })
 export class KycDetailComponent implements OnInit {
-  @Input() userList: Pending;
+  userList: Pending;
   userInformation: Information;
   userInformationNull: Information;
   modalImage: string;
-  message = true;
   image = Image;
-  @Output() messageEvent = new EventEmitter<boolean>();
-  constructor(private toastrService: ToastrService, private kycService: KYCService, private ngxShowLoader: NgxSpinnerService) {
+  KQueryParam: number;
+  constructor(private toastrService: ToastrService, private kycService: KYCService,
+              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute) {
     this.userInformation = {
       personalInformation: {
         firstName: null,
@@ -52,7 +54,6 @@ export class KycDetailComponent implements OnInit {
     return this.kycService.getListApprove(this.userList.id).subscribe(
       (res: any) => {
         console.log(res);
-        this.messageEvent.emit(this.message);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Get Approve.', '', {timeOut: 4000});
       },
@@ -65,7 +66,7 @@ export class KycDetailComponent implements OnInit {
   }
   getInformation() {
     this.ngxShowLoader.show();
-    return this.kycService.getTraderInformation(this.userList.id).subscribe(
+    return this.kycService.getTraderInformation(this.KQueryParam).subscribe(
       (res: any) => {
         console.log(res);
         this.userInformationNull = res;
@@ -94,6 +95,7 @@ export class KycDetailComponent implements OnInit {
     this.modalImage = i;
   }
   ngOnInit() {
+    this.KQueryParam = parseFloat(this.router.snapshot.queryParamMap.get('id'));
     this.getInformation();
     window.scroll(0, 0);
   }

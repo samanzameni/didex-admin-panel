@@ -7,6 +7,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 import {AdminChild} from '../@core/Admin/admin-child';
 import {ErrorPass} from '../@core/Admin/error';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-admin-list',
@@ -21,13 +22,11 @@ export class AdminListComponent implements OnInit {
   add: AdminChild;
   remove: AdminChild;
   reset: AdminChild;
-  mainPage = true;
-  detailSubmitted = false;
   errorPass: ErrorPass[];
   passForm: FormGroup;
 
   constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService
-  , private formBuilder: FormBuilder) {
+  , private formBuilder: FormBuilder, private router: Router) {
     this.adminRoles = {
       roles: null,
     };
@@ -125,8 +124,8 @@ export class AdminListComponent implements OnInit {
   }
   userDetail(i) {
    this.userRoleList = i;
-    this.mainPage = false;
-    this.detailSubmitted = true;
+    this.router.navigate(['/pages/adminListDetail'],
+      { queryParams: { adminRole: this.adminList.roles , detail: this.userRoleList.userName } });
   }
   userRemoveFromRole(i) {
     this.userRoleList = i;
@@ -136,10 +135,6 @@ export class AdminListComponent implements OnInit {
   }
   userResetPassword(i) {
     this.userRoleList = i;
-  }
-  userBack() {
-    this.mainPage = true;
-    this.detailSubmitted = false;
   }
   resetCancel() {
     this.reset.newPassword = null;

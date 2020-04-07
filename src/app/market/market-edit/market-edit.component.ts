@@ -5,6 +5,7 @@ import {ToastrService} from 'ngx-toastr';
 import {MarketService} from '../../@core/Market/market.service';
 import {MarketPut} from '../../@core/Market/market-put';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-market-edit',
@@ -12,13 +13,27 @@ import {NgxSpinnerService} from 'ngx-spinner';
   styleUrls: ['./market-edit.component.scss'],
 })
 export class MarketEditComponent implements OnInit {
-  @Input() market: MarketList;
+  market: MarketList;
+  marketList: MarketList[];
   marketPut: MarketPut;
   marketForm: FormGroup;
-  editSubmitted: boolean;
-  @Output() pageEvent = new EventEmitter<boolean>();
-  constructor(private toastrService: ToastrService, private marketService: MarketService,
+  SQueryParam: string;
+  constructor(private toastrService: ToastrService, private marketService: MarketService, private router: ActivatedRoute,
               private formBuilder: FormBuilder, private ngxShowLoader: NgxSpinnerService) {
+    this.market = {
+      baseCurrencyShortName: null,
+      quoteCurrencyShortName: null,
+      quantityIncrement: null,
+      tickSize: null,
+      takeLiquidityRate: null,
+      provideLiquidityRate: null,
+    };
+    this.marketPut = {
+      quantityIncrement: null,
+      tickSize: null,
+      takeLiquidityRate: null,
+      provideLiquidityRate: null,
+    };
     this.createForm();
   }
   createForm() {
@@ -31,8 +46,6 @@ export class MarketEditComponent implements OnInit {
   }
   addSubmit() {
     this.ngxShowLoader.show();
-    this.editSubmitted = false;
-    this.pageEvent.emit(this.editSubmitted);
     return this.marketService.symbolPut(this.marketPut.symbol, this.marketPut).subscribe(
       (res: any) => {
         console.log(res);
@@ -47,8 +60,30 @@ export class MarketEditComponent implements OnInit {
       },
     );
   }
+  showMarket() {
+    this.ngxShowLoader.show();
+    return this.marketService.MarketGet().subscribe(
+      (res: any) => {
+        console.log(res);
+        this.marketList = res;
+        for (const i of this.marketList) {
+          if (this.SQueryParam === i.symbol) {
+            this.market = i;
+            this.marketPut = this.market;
+            console.log(this.market);
+          }
+        }
+        this.ngxShowLoader.hide();
+      },
+      (err) => {
+        console.log(err);
+        this.ngxShowLoader.hide();
+      },
+    );
+  }
   ngOnInit() {
-    this.marketPut = this.market;
+    this.SQueryParam = this.router.snapshot.queryParamMap.get('symbol');
+    this.showMarket();
     window.scroll(0, 0);
   }
 

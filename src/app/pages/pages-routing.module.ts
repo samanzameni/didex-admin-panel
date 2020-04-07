@@ -37,21 +37,17 @@ import {MarketEditComponent} from '../market/market-edit/market-edit.component';
 const routes: Routes = [
   {
     path: '' , component: PagesComponent , children: [
-      { path: 'adminList', component: AdminListComponent , children: [
-          { path: 'adminListDetail', component: DetailComponent},
-      ]},
-      { path: 'currency', component: CurrencyComponent , children: [
-          { path: 'currencyAdd', component: AddCurrencyComponent},
-          { path: 'currencyEdit', component: EditCurrencyComponent},
-          { path: 'currencyDetail', component: DetailCurrencyComponent},
-        ]},
-      { path: 'kyc', component: KYCComponent , children: [
-          { path: 'kycDetail', component: KycDetailComponent},
-        ]},
-      { path: 'market', component: MarketComponent , children: [
-          { path: 'marketAdd', component: MarketAddComponent},
-          { path: 'marketEdit', component: MarketEditComponent},
-        ]},
+      { path: 'adminList', component: AdminListComponent },
+      { path: 'adminListDetail', component: DetailComponent},
+      { path: 'currency', component: CurrencyComponent },
+      { path: 'currencyAdd', component: AddCurrencyComponent},
+      { path: 'currencyEdit', component: EditCurrencyComponent},
+      { path: 'currencyDetail', component: DetailCurrencyComponent},
+      { path: 'kyc', component: KYCComponent },
+      { path: 'kycDetail', component: KycDetailComponent},
+      { path: 'market', component: MarketComponent },
+      { path: 'marketAdd', component: MarketAddComponent},
+      { path: 'marketEdit', component: MarketEditComponent},
       { path: 'trader', component: TraderComponent },
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },

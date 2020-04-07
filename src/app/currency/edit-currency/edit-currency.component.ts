@@ -4,6 +4,7 @@ import {CurrencyService} from '../../@core/Currency/currency.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {BlockChainNetworks} from '../../@core/Currency/block-chain-networks.enum';
 import {Currency} from '../../@core/Currency/currency';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-edit-currency',
@@ -12,10 +13,9 @@ import {Currency} from '../../@core/Currency/currency';
 })
 export class EditCurrencyComponent implements OnInit {
   SNCurrency: Currency;
-  @Input() USN: string;
-  closeSubmitted = true;
-  @Output() messageEvent = new EventEmitter<boolean>();
-  constructor(private toastrService: ToastrService, private currency: CurrencyService, private ngxShowLoader: NgxSpinnerService) {
+  USN: string;
+  constructor(private toastrService: ToastrService, private currency: CurrencyService,
+              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute) {
     this.SNCurrency = {
       shortName: '',
       name: '',
@@ -49,7 +49,6 @@ export class EditCurrencyComponent implements OnInit {
       (res: any) => {
         console.log(res);
         this.ngxShowLoader.hide();
-        this.messageEvent.emit(this.closeSubmitted);
         this.toastrService.success('You Have Successfully Update Currency.', '', {timeOut: 4000});
       },
       err => {
@@ -65,6 +64,7 @@ export class EditCurrencyComponent implements OnInit {
     return keys.slice(keys.length / 2);
   }
   ngOnInit() {
+    this.USN = this.router.snapshot.queryParamMap.get('shortName');
     this.showShortName(this.USN);
     window.scroll(0, 0);
   }

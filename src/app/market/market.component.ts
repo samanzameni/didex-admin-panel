@@ -4,6 +4,7 @@ import {MarketService} from '../@core/Market/market.service';
 import {MarketList} from '../@core/Market/market-list';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {SuperUserGuard} from '../@core/Login/super-user.guard';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-market',
@@ -14,23 +15,20 @@ export class MarketComponent implements OnInit {
   marketList: MarketList[];
   market: MarketList;
   marketDelete: MarketList;
-  mainPage = true;
-  editSubmitted = false;
-  addSubmitted = false;
   disableDelete = false;
-  constructor(private toastrService: ToastrService, private marketService: MarketService,
+  constructor(private toastrService: ToastrService, private marketService: MarketService, private router: Router,
               private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
     this.market = {
-      baseCurrencyShortName: '',
-      quoteCurrencyShortName: '',
+      baseCurrencyShortName: null,
+      quoteCurrencyShortName: null,
       quantityIncrement: null,
       tickSize: null,
       takeLiquidityRate: null,
       provideLiquidityRate: null,
     };
     this.marketDelete = {
-      baseCurrencyShortName: '',
-      quoteCurrencyShortName: '',
+      baseCurrencyShortName: null,
+      quoteCurrencyShortName: null,
       quantityIncrement: null,
       tickSize: null,
       takeLiquidityRate: null,
@@ -68,14 +66,10 @@ export class MarketComponent implements OnInit {
       },
     );
   }
-  addMarket() {
-    this.mainPage = false;
-    this.addSubmitted = true;
-  }
   updateMarket(i) {
     this.market = i;
-    this.mainPage = false;
-    this.editSubmitted = true;
+    this.router.navigate(['/pages/marketEdit'],
+        { queryParams: { symbol: this.market.symbol } });
 }
   deleteMarket(symbol: string , event) {
     if (event.target.checked) {
@@ -94,24 +88,6 @@ export class MarketComponent implements OnInit {
       this.disableDelete = false;
       this.marketDelete.symbol = null;
     }
-  }
-  userBack() {
-    this.showMarket();
-    this.mainPage = true;
-    this.editSubmitted = false;
-    this.addSubmitted = false;
-  }
-  pageEdit($event) {
-    this.editSubmitted = $event;
-    this.mainPage = true;
-    this.showMarket();
-  }
-  pageAdd($event) {
-    this.addSubmitted = $event;
-    this.mainPage = true;
-    setTimeout(() => {
-      this.showMarket();
-    }, 2500);
   }
   ngOnInit() {
     this.showMarket();

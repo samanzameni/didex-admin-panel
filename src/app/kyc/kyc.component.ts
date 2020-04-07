@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Pending} from '../@core/KYC/pending';
 import {ToastrService} from 'ngx-toastr';
 import {KYCService} from '../@core/KYC/kyc.service';
-import {AdminService} from '../@core/Admin/admin.service';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-kyc',
@@ -11,10 +11,10 @@ import {NgxSpinnerService} from 'ngx-spinner';
   styleUrls: ['./kyc.component.scss'],
 })
 export class KYCComponent implements OnInit {
-  mainPage = true;
   list: Pending[];
   IList: Pending;
-  constructor(private toastrService: ToastrService, private kycService: KYCService, private ngxShowLoader: NgxSpinnerService) { }
+  constructor(private toastrService: ToastrService, private kycService: KYCService,
+              private ngxShowLoader: NgxSpinnerService, private router: Router) { }
   getList() {
     this.ngxShowLoader.show();
     return this.kycService.getPendingVerification().subscribe(
@@ -31,14 +31,8 @@ export class KYCComponent implements OnInit {
   }
   userDetail(i) {
     this.IList = i;
-    this.mainPage = false;
-  }
-  back() {
-    this.mainPage = true;
-  }
-  receiveMessage($event) {
-    this.mainPage = $event;
-    this.getList();
+    this.router.navigate(['/pages/kycDetail'],
+      { queryParams: { id : this.IList.id } });
   }
   ngOnInit() {
     this.getList();

@@ -8,7 +8,7 @@
     <p style="color: white" > Loading... </p>
   </ngx-spinner>
 </div>
-<div class="col-md-4 grid-margin " *ngIf="mainPage">
+<div class="col-md-4 grid-margin " >
   <nav aria-label="breadcrumb" role="navigation">
     <ol class="breadcrumb breadcrumb-custom">
       <li class="breadcrumb-item"><a >Home</a></li>
@@ -16,7 +16,7 @@
     </ol>
   </nav>
 </div>
-<div class="" *ngIf="mainPage">
+<div class="" >
   <div class="card">
     <div class="card-body">
 <div class="row float-right" *ngIf="superUserGuard.canActivate()">
@@ -24,7 +24,7 @@
     <button type="button" class="btn btn-danger btn-right" data-toggle="modal" data-target="#exampleModal" [disabled]="!disableDelete" >
       <i class="fa fa-trash" aria-hidden="true" ></i> Delete
     </button>
-    <button type="button" class="btn btn-primary btn-right" (click)="addMarket()" >
+    <button type="button" class="btn btn-primary btn-right" routerLink="/pages/marketAdd" >
       <i class="fa fa-plus" aria-hidden="true"></i> Add
     </button>
   </div>
@@ -34,7 +34,7 @@
   <thead>
   <tr>
     <th scope="col" *ngIf="superUserGuard.canActivate()">
-      <div class="form-check"><input type="radio" name="marketRadios" class="" (change)="deSelectDelete($event)" > UnSelect</div>
+      <div class="form-check"><input type="radio" name="marketRadios" class="" (change)="deSelectDelete($event)"> UnSelect</div>
     </th>
     <th scope="col">Symbol</th>
     <th scope="col">Base<br>Currency<br>ShortName</th>
@@ -70,34 +70,8 @@
 </div>
 </div>
 </div>
-<div class="col-md-4 grid-margin " *ngIf="editSubmitted">
-  <nav aria-label="breadcrumb" role="navigation">
-    <ol class="breadcrumb breadcrumb-custom">
-      <li class="breadcrumb-item"><a >Home</a></li>
-      <li class="breadcrumb-item"><a >Market</a></li>
-      <li class="breadcrumb-item active" aria-current="page"><span>Edit</span></li>
-    </ol>
-  </nav>
-</div>
-<div class="col-md-4 grid-margin " *ngIf="addSubmitted">
-  <nav aria-label="breadcrumb" role="navigation">
-    <ol class="breadcrumb breadcrumb-custom">
-      <li class="breadcrumb-item"><a >Home</a></li>
-      <li class="breadcrumb-item"><a >Market</a></li>
-      <li class="breadcrumb-item active" aria-current="page"><span>Add</span></li>
-    </ol>
-  </nav>
-</div>
-  <div class="row" *ngIf="!mainPage">
-    <div class="col-2" style="text-align: left">
-      <button type="button" class="btn btn-outline-warning"  (click)="userBack()">
-        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
-      </button>
-    </div>
-  </div>
-<br>
 
-
+<!--Modal-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -119,5 +93,3 @@
   </div>
 </div>
 
-<app-market-add (pageEvent)="pageAdd($event)"  *ngIf="addSubmitted"></app-market-add>
-<app-market-edit (pageEvent)="pageEdit($event)" [market]="market" *ngIf="editSubmitted"></app-market-edit>

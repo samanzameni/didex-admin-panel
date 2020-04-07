@@ -4,6 +4,7 @@ import {CurrencyService} from '../../@core/Currency/currency.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {BlockChainNetworks} from '../../@core/Currency/block-chain-networks.enum';
 import {Currency} from '../../@core/Currency/currency';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-detail-currency',
@@ -12,9 +13,10 @@ import {Currency} from '../../@core/Currency/currency';
 })
 export class DetailCurrencyComponent implements OnInit {
   SNCurrency: Currency;
-  @Input() ESN: string;
+  ESN: string;
   BCN = BlockChainNetworks;
-  constructor(private toastrService: ToastrService, private currency: CurrencyService, private ngxShowLoader: NgxSpinnerService) {
+  constructor(private toastrService: ToastrService, private currency: CurrencyService,
+              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute) {
     this.SNCurrency = {
       shortName: null,
       name: null,
@@ -43,6 +45,7 @@ export class DetailCurrencyComponent implements OnInit {
     );
   }
   ngOnInit() {
+    this.ESN = this.router.snapshot.queryParamMap.get('shortName');
     this.showShortName(this.ESN);
     window.scroll(0, 0);
   }

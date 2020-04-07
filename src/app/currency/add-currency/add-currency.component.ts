@@ -13,22 +13,20 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class AddCurrencyComponent implements OnInit {
   cryPost: Currency;
-  closeSubmitted = true;
   currencyForm: FormGroup;
-  @Output() messageEvent = new EventEmitter<boolean>();
   constructor(private toastrService: ToastrService, private currency: CurrencyService,
               private ngxShowLoader: NgxSpinnerService, private formBuilder: FormBuilder) {
     this.createForm();
     this.cryPost = {
-      shortName: '',
-      name: '',
-      network: BlockChainNetworks.NotBlockChain,
-      crypto: false,
-      enabled: false,
-      payinEnabled: false,
+      shortName: null,
+      name: null,
+      network: null,
+      crypto: null,
+      enabled: null,
+      payinEnabled: null,
       payinConfirmations: null,
-      payoutEnabled: false,
-      transferEnabled: false,
+      payoutEnabled: null,
+      transferEnabled: null,
       payoutFee: null,
     };
   }
@@ -46,7 +44,6 @@ export class AddCurrencyComponent implements OnInit {
       (res: any) => {
         console.log(res);
         this.ngxShowLoader.hide();
-        this.messageEvent.emit(this.closeSubmitted);
         this.toastrService.success('You Have Successfully Add Currency.', '', {timeOut: 4000});
       },
       err => {
