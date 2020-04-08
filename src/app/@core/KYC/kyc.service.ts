@@ -10,7 +10,7 @@ export class KYCService {
 
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = 'https://api.didex.com/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',
         'Authorization': 'Bearer ' + this.token,

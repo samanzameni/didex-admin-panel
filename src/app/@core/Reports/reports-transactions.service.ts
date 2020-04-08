@@ -10,7 +10,7 @@ import {Observable} from 'rxjs';
 export class ReportsTransactionsService {
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = 'https://api.didex.com/api/';
   mark = '';
 
   getReportsTransactions(queryString: ReportsQuery): Observable<any> {

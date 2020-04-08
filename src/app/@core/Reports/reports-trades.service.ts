@@ -11,7 +11,7 @@ export class ReportsTradesService {
 
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = 'https://api.didex.com/api/';
   mark = '';
 
   getReportsTrades(queryString: ReportsQuery): Observable<any> {
