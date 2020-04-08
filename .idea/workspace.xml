@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Admin/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Admin/admin.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Currency/currency.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Currency/currency.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/KYC/kyc.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/KYC/kyc.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Login/login-restful-api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Login/login-restful-api.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Market/market.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Market/market.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports-trades.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-trades.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports-transactions.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-transactions.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Search/search.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Search/search.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Trader/trader.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Trader/trader.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/market/market.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,14 +98,7 @@
       <workItem from="1584612507079" duration="34230000" />
       <workItem from="1585048561288" duration="57452000" />
       <workItem from="1585334455120" duration="94360000" />
-      <workItem from="1586040811660" duration="68619000" />
-    </task>
-    <task id="LOCAL-00015" summary="transactions reports created.">
-      <created>1583328496952</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1583328496953</updated>
+      <workItem from="1586040811660" duration="69205000" />
     </task>
     <task id="LOCAL-00016" summary="fixing detail adminList UL.">
       <created>1583600546254</created>
@@ -455,7 +436,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586331517681</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="devapi.didex.com.">
+      <created>1586332424145</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1586332424145</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +463,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Set Privilege.." />
     <MESSAGE value="dist update." />
     <MESSAGE value="fixing canactivate." />
     <MESSAGE value="recaptcha test." />
@@ -500,7 +487,8 @@
     <MESSAGE value="reCaptcha V2." />
     <MESSAGE value="reCaptcha V2 again." />
     <MESSAGE value="api.didex.com." />
-    <option name="LAST_COMMIT_MESSAGE" value="api.didex.com." />
+    <MESSAGE value="devapi.didex.com." />
+    <option name="LAST_COMMIT_MESSAGE" value="devapi.didex.com." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -516,10 +504,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586331514679">
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586332421206">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586331514679" />
+    <state x="363" y="126" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586332421206" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -531,10 +519,10 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586331519469">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586332439113">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586331519469" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586332439113" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1586096890603">
       <screen x="0" y="0" width="1600" height="860" />
