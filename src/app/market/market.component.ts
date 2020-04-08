@@ -17,7 +17,7 @@ export class MarketComponent implements OnInit {
   marketDelete: MarketList;
   disableDelete = false;
   constructor(private toastrService: ToastrService, private marketService: MarketService, private router: Router,
-              private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
+              private ngxShowLoader: NgxSpinnerService, public superUserGuard: SuperUserGuard) {
     this.market = {
       baseCurrencyShortName: null,
       quoteCurrencyShortName: null,

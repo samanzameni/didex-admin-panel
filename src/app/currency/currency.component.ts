@@ -20,7 +20,7 @@ export class CurrencyComponent implements OnInit {
    ESN: string;
   disableDelete = false;
   constructor(private toastrService: ToastrService, private currency: CurrencyService, private router: Router,
-              private ngxShowLoader: NgxSpinnerService, private superUserGuard: SuperUserGuard) {
+              private ngxShowLoader: NgxSpinnerService, public superUserGuard: SuperUserGuard) {
   }
   detailSN(shortName: string) {
     this.ESN = shortName;
