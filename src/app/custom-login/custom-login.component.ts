@@ -15,7 +15,7 @@ export class CustomLoginComponent implements OnInit {
   loginForm: FormGroup;
   login: Login;
   constructor(private authService: AuthServiceService, private formBuilder: FormBuilder,
-              private recaptchaV3Service: ReCaptchaV3Service, private storageService: StorageService) {
+               private storageService: StorageService) {
     this.login = {
       email: '',
       password: '',
@@ -28,24 +28,14 @@ export class CustomLoginComponent implements OnInit {
       password: ['', Validators.required],
     });
   }
-  hasNumber(): boolean {
-    return /\d/.test(this.login.password);
-  }
-  hasUpper(): boolean {
-    return /[A-Z]/.test(this.login.password);
-  }
-  hasLower(): boolean {
-    return /[a-z]/.test(this.login.password);
-  }
-  hasSpecial(): boolean {
-    return /[$@$!%*?&]/.test(this.login.password);
-  }
+
   userLogin() {
-    this.recaptchaV3Service.execute('importantAction')
-      .subscribe(
-        (token) => this.storageService.setCaptchaToken(token)
-      );
+
       this.authService.loginPost(this.login);
+  }
+  resolved(captchaResponse: string) {
+    console.log(`Resolved captcha with response: ${captchaResponse}`);
+    this.storageService.setCaptchaToken(captchaResponse);
   }
 
   ngOnInit() {

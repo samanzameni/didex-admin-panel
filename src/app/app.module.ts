@@ -12,7 +12,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { PagesModule } from './pages/pages.module';
-import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
+import {RecaptchaModule} from 'ng-recaptcha';
 
 
 @NgModule({
@@ -33,10 +33,9 @@ import {RECAPTCHA_V3_SITE_KEY, RecaptchaV3Module} from 'ng-recaptcha';
     ToastrModule.forRoot(),
     PagesModule,
     NgxSpinnerModule,
-    RecaptchaV3Module
+    RecaptchaModule,
   ],
   providers: [
-    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcgguIUAAAAAE1GXYfJd7z-uEah67Dd9kTgWcpz' },
   ],
   bootstrap: [AppComponent]
 })
