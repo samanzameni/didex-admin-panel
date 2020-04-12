@@ -19,7 +19,10 @@
 </div>
 <div class="row">
     <div class="col-2" style="text-align: left">
-      <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" >
+      <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" *ngIf="currencyForm.dirty">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+      </button>
+      <button type="button" class="btn btn-outline-warning" data-toggle="modal" routerLink="/pages/currency" *ngIf="!currencyForm.dirty">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
       </button>
     </div>
@@ -28,24 +31,25 @@
 <div class="">
   <div class="card">
     <div class="card-body col-sm-10 col-md-8 col-lg-6  align-self-center">
+      <form [formGroup]="currencyForm">
       <div class="row">
         <div class="col">
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="ShortName1">ShortName</label>
-              <input type="text" class="form-control" id="ShortName1" placeholder="ShortName" disabled [(ngModel)]="SNCurrency.shortName">
+              <input type="text" class="form-control" id="ShortName1" placeholder="ShortName" disabled formControlName="shortName"  [(ngModel)]="SNCurrency.shortName" >
             </div>
           </div></div>
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="Name1">Name</label>
-              <input type="text" class="form-control" id="Name1" placeholder="Name" [(ngModel)]="SNCurrency.name">
+              <input type="text" class="form-control" id="Name1" placeholder="Name" formControlName="name" [(ngModel)]="SNCurrency.name"  >
             </div>
           </div></div>
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="Network1">Network</label>
-              <select class="form-control" id="Network1" [(ngModel)]="SNCurrency.network">
+              <select class="form-control" id="Network1" formControlName="network" [(ngModel)]="SNCurrency.network"  >
                 <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
               </select>
             </div>
@@ -53,7 +57,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="crypto1" [(ngModel)]="SNCurrency.crypto">
+                <input class="form-check-input" type="checkbox" value="" id="crypto1" formControlName="crypto" [(ngModel)]="SNCurrency.crypto">
                 <label class="form-check-label" for="crypto1">
                   Crypto
                 </label>
@@ -63,7 +67,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="Enabled1" [(ngModel)]="SNCurrency.enabled">
+                <input class="form-check-input" type="checkbox" value="" id="Enabled1" formControlName="enabled" [(ngModel)]="SNCurrency.enabled">
                 <label class="form-check-label" for="Enabled1">
                   Enabled
                 </label>
@@ -73,7 +77,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="payinEnabled1" [(ngModel)]="SNCurrency.payinEnabled">
+                <input class="form-check-input" type="checkbox" value="" id="payinEnabled1" formControlName="payinEnabled" [(ngModel)]="SNCurrency.payinEnabled">
                 <label class="form-check-label" for="payinEnabled1">
                   Pay in Enabled
                 </label>
@@ -83,13 +87,13 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="payInConfirmations1">pay in Confirmations</label>
-              <input type="number" class="form-control" id="payInConfirmations1" placeholder="pay in Confirmations" min="0" [(ngModel)]="SNCurrency.payinConfirmations">
+              <input type="number" class="form-control" id="payInConfirmations1" placeholder="pay in Confirmations" min="0" formControlName="payinConfirmations" [(ngModel)]="SNCurrency.payinConfirmations">
             </div>
           </div></div>
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled1" [(ngModel)]="SNCurrency.payoutEnabled">
+                <input class="form-check-input" type="checkbox" value="" id="PayoutEnabled1" formControlName="payoutEnabled" [(ngModel)]="SNCurrency.payoutEnabled">
                 <label class="form-check-label" for="PayoutEnabled1">
                   Pay out Enabled
                 </label>
@@ -99,7 +103,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled1" [(ngModel)]="SNCurrency.transferEnabled">
+                <input class="form-check-input" type="checkbox" value="" id="TransferEnabled1" formControlName="transferEnabled" [(ngModel)]="SNCurrency.transferEnabled">
                 <label class="form-check-label" for="TransferEnabled1">
                   Transfer Enabled
                 </label>
@@ -109,7 +113,7 @@
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="payOutFee1">Pay Out Fee</label>
-              <input type="number" class="form-control" id="payOutFee1" placeholder="Pay Out Fee" min="0" [(ngModel)]="SNCurrency.payoutFee">
+              <input type="number" class="form-control" id="payOutFee1" placeholder="Pay Out Fee" min="0" formControlName="payoutFee" [(ngModel)]="SNCurrency.payoutFee">
             </div>
           </div></div>
         </div>
@@ -119,12 +123,13 @@
           <button type="button" class="btn btn-success float-right"  (click)="updateSHortName()">Save changes</button>
         </div>
       </div>
+      </form>
     </div>
   </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -134,10 +139,10 @@
         </button>
       </div>
       <div class="modal-body">
-        Are You Sure?
+        Are you sure you want to leave the page? Your changes are not saved.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal" routerLink="/pages/currency">Yse</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" routerLink="/pages/currency">Yes</button>
         <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
       </div>
     </div>

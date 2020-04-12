@@ -4,7 +4,8 @@ import {CurrencyService} from '../../@core/Currency/currency.service';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {BlockChainNetworks} from '../../@core/Currency/block-chain-networks.enum';
 import {Currency} from '../../@core/Currency/currency';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-edit-currency',
@@ -14,20 +15,36 @@ import {ActivatedRoute} from '@angular/router';
 export class EditCurrencyComponent implements OnInit {
   SNCurrency: Currency;
   USN: string;
-  constructor(private toastrService: ToastrService, private currency: CurrencyService,
-              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute) {
+  currencyForm: FormGroup;
+  constructor(private toastrService: ToastrService, private currency: CurrencyService, private formBuilder: FormBuilder,
+              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private route: Router) {
+    this.createForm();
     this.SNCurrency = {
-      shortName: '',
-      name: '',
-      network: BlockChainNetworks.NotBlockChain,
-      crypto: false,
-      enabled: false,
-      payinEnabled: false,
-      payinConfirmations: 0,
-      payoutEnabled: false,
-      transferEnabled: false,
-      payoutFee: 0,
+      shortName: null,
+      name: null,
+      network: null,
+      crypto: null,
+      enabled: null,
+      payinEnabled: null,
+      payinConfirmations: null,
+      payoutEnabled: null,
+      transferEnabled: null,
+      payoutFee: null,
     };
+  }
+  createForm() {
+    this.currencyForm = this.formBuilder.group({
+      shortName: ['', Validators.required ],
+      name: ['', Validators.required ],
+      payinConfirmations: ['', Validators.required ],
+      payoutFee: ['', Validators.required ],
+      network: [''],
+      payoutEnabled: [''],
+      transferEnabled: [''],
+      payinEnabled: [''],
+      enabled: [''],
+      crypto: [''],
+    });
   }
   showShortName(shortName: string) {
     this.ngxShowLoader.show();
@@ -57,6 +74,9 @@ export class EditCurrencyComponent implements OnInit {
         this.toastrService.error('Invalid Inputs.', '', {timeOut: 4000});
       },
     );
+  }
+  check() {
+
   }
   get fields(): string[] {
     const f = BlockChainNetworks;

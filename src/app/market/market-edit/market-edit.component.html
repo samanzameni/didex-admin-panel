@@ -19,7 +19,10 @@
 </div>
 <div class="row">
   <div class="col-2" style="text-align: left">
-    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" >
+    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false"  *ngIf="marketForm.dirty">
+    <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+  </button>
+    <button type="button" class="btn btn-outline-warning" routerLink="/pages/market" *ngIf="!marketForm.dirty" >
       <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
     </button>
   </div>
@@ -99,10 +102,10 @@
         </button>
       </div>
       <div class="modal-body">
-        Are You Sure?
+        Are you sure you want to leave the page? Your changes are not saved.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal" routerLink="/pages/market">Yse</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" routerLink="/pages/market">Yes</button>
         <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
       </div>
     </div>
