@@ -54,7 +54,7 @@ export class MarketComponent implements OnInit {
     this.ngxShowLoader.show();
     return this.marketService.symbolDelete(i).subscribe(
       (res: any) => {
-        console.log(res);
+        // console.log(res);
         this.showMarket();
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Delete Market.', '', {timeOut: 4000});

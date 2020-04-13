@@ -2,7 +2,6 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {AuthServiceService} from '../@core/Login/auth-service.service';
 import {Login} from '../@core/Login/login';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {ReCaptchaV3Service} from 'ng-recaptcha';
 import {StorageService} from '../@core/Login/storage.service';
 
 

@@ -5,6 +5,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 import {BlockChainNetworks} from '../../@core/Currency/block-chain-networks.enum';
 import {Currency} from '../../@core/Currency/currency';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-currency',
@@ -14,19 +15,19 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class AddCurrencyComponent implements OnInit {
   cryPost: Currency;
   currencyForm: FormGroup;
-  constructor(private toastrService: ToastrService, private currency: CurrencyService,
+  constructor(private toastrService: ToastrService, private currency: CurrencyService, private route: Router,
               private ngxShowLoader: NgxSpinnerService, private formBuilder: FormBuilder) {
     this.createForm();
     this.cryPost = {
       shortName: null,
       name: null,
-      network: null,
-      crypto: null,
-      enabled: null,
-      payinEnabled: null,
+      network: BlockChainNetworks.NotBlockChain,
+      crypto: false,
+      enabled: false,
+      payinEnabled: false,
       payinConfirmations: null,
-      payoutEnabled: null,
-      transferEnabled: null,
+      payoutEnabled: false,
+      transferEnabled: false,
       payoutFee: null,
     };
   }
@@ -43,6 +44,7 @@ export class AddCurrencyComponent implements OnInit {
     return this.currency.currencyPost(this.cryPost).subscribe(
       (res: any) => {
         console.log(res);
+        this.route.navigate(['/pages/currency']);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Add Currency.', '', {timeOut: 4000});
       },

@@ -65,6 +65,7 @@ export class EditCurrencyComponent implements OnInit {
     return this.currency.shortNamePut(this.USN , this.SNCurrency).subscribe(
       (res: any) => {
         console.log(res);
+        this.route.navigate(['/pages/currency']);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Update Currency.', '', {timeOut: 4000});
       },
@@ -74,9 +75,6 @@ export class EditCurrencyComponent implements OnInit {
         this.toastrService.error('Invalid Inputs.', '', {timeOut: 4000});
       },
     );
-  }
-  check() {
-
   }
   get fields(): string[] {
     const f = BlockChainNetworks;

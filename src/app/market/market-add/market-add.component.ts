@@ -6,6 +6,7 @@ import {CurrencyService} from '../../@core/Currency/currency.service';
 import {Currency} from '../../@core/Currency/currency';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-market-add',
@@ -18,12 +19,12 @@ export class MarketAddComponent implements OnInit {
   cur: Currency[];
   addSubmitted: boolean;
   @Output() pageEvent = new EventEmitter<boolean>();
-  constructor(private toastrService: ToastrService, private marketService: MarketService,
+  constructor(private toastrService: ToastrService, private marketService: MarketService, private route: Router,
               private currency: CurrencyService, private formBuilder: FormBuilder, private ngxShowLoader: NgxSpinnerService) {
     this.createForm();
     this.marketAdd = {
-      baseCurrencyShortName: '',
-      quoteCurrencyShortName: '',
+      baseCurrencyShortName: null,
+      quoteCurrencyShortName: null,
       quantityIncrement: null,
       tickSize: null,
       takeLiquidityRate: null,
@@ -47,6 +48,7 @@ export class MarketAddComponent implements OnInit {
     return this.marketService.MarketPost(this.marketAdd).subscribe(
       (res: any) => {
         console.log(res);
+        this.route.navigate(['/pages/market']);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Add To Market.', '', {timeOut: 4000});
       },

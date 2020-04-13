@@ -5,7 +5,7 @@ import {ToastrService} from 'ngx-toastr';
 import {MarketService} from '../../@core/Market/market.service';
 import {MarketPut} from '../../@core/Market/market-put';
 import {NgxSpinnerService} from 'ngx-spinner';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-market-edit',
@@ -19,7 +19,7 @@ export class MarketEditComponent implements OnInit {
   marketForm: FormGroup;
   SQueryParam: string;
   constructor(private toastrService: ToastrService, private marketService: MarketService, private router: ActivatedRoute,
-              private formBuilder: FormBuilder, private ngxShowLoader: NgxSpinnerService) {
+              private route: Router, private formBuilder: FormBuilder, private ngxShowLoader: NgxSpinnerService) {
     this.market = {
       baseCurrencyShortName: null,
       quoteCurrencyShortName: null,
@@ -49,6 +49,7 @@ export class MarketEditComponent implements OnInit {
     return this.marketService.symbolPut(this.marketPut.symbol, this.marketPut).subscribe(
       (res: any) => {
         console.log(res);
+        this.route.navigate(['/pages/market']);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Add To Market.', '', {timeOut: 4000});
       },
