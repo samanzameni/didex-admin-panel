@@ -33,12 +33,12 @@ export class MarketAddComponent implements OnInit {
   }
   createForm() {
     this.marketForm = this.formBuilder.group({
-      takeLiquidityRate: ['', Validators.required ],
-      provideLiquidityRate: ['', Validators.required ],
       baseCurrencyShortName: ['', Validators.required ],
       quoteCurrencyShortName: ['', Validators.required ],
-      tickSize: ['', Validators.required ],
-      quantityIncrement: ['', Validators.required ],
+      takeLiquidityRate: ['', [Validators.required, Validators.min(0.00000001), Validators.max(1)] ],
+      provideLiquidityRate: ['', [Validators.required, Validators.min(0.00000001), Validators.max(1)] ],
+      tickSize: ['', [Validators.required, Validators.min(0), Validators.max(1)]],
+      quantityIncrement: ['', [Validators.required, Validators.min(0), Validators.max(1)]],
     });
   }
   addSubmit() {
@@ -55,8 +55,7 @@ export class MarketAddComponent implements OnInit {
       err => {
         console.log(err);
         this.ngxShowLoader.hide();
-        this.toastrService.error('Tick Size  & Quantity Increment should be between 0.00000000001 and 99999999.', '', {timeOut: 4000});
-        this.toastrService.error('Take Liquidity Rate & Provide Liquidity Rate should be between 0.00000001 and 1.', '', {timeOut: 4000});
+        this.toastrService.error('Invalid Inputs.', '', {timeOut: 4000});
       },
     );
   }

@@ -66,6 +66,12 @@
         <div *ngIf="marketForm.controls['quantityIncrement'].errors.required">
           Quantity Increment is required.
         </div>
+        <div *ngIf="marketForm.controls['quantityIncrement'].errors.min">
+          Quantity Increment must be more than 0.
+        </div>
+        <div *ngIf="marketForm.controls['quantityIncrement'].errors.max">
+          Quantity Increment must be less than one.
+        </div>
       </div>
     </div>
   </div>
@@ -76,6 +82,12 @@
       <div *ngIf="marketForm.controls['tickSize'].invalid && (marketForm.controls['tickSize'].dirty || marketForm.controls['tickSize'].touched)" class="alert alert-danger">
         <div *ngIf="marketForm.controls['tickSize'].errors.required">
           Tick Size is required.
+        </div>
+        <div *ngIf="marketForm.controls['tickSize'].errors.min">
+          tickSize must be more than 0.
+        </div>
+        <div *ngIf="marketForm.controls['tickSize'].errors.max">
+          tickSize must be less than one.
         </div>
       </div>
     </div>
@@ -90,6 +102,12 @@
         <div *ngIf="marketForm.controls['takeLiquidityRate'].errors.required">
           Take Liquidity Rate is required.
         </div>
+        <div *ngIf="marketForm.controls['takeLiquidityRate'].errors.min">
+          Take Liquidity Rate must be more than 0.00000001.
+        </div>
+        <div *ngIf="marketForm.controls['takeLiquidityRate'].errors.max">
+          Take Liquidity Rate must be less than one.
+        </div>
       </div>
     </div>
   </div>
@@ -100,6 +118,12 @@
       <div *ngIf="marketForm.controls['provideLiquidityRate'].invalid && (marketForm.controls['provideLiquidityRate'].dirty || marketForm.controls['provideLiquidityRate'].touched)" class="alert alert-danger">
         <div *ngIf="marketForm.controls['provideLiquidityRate'].errors.required">
           Provide Liquidity Rate is required.
+        </div>
+        <div *ngIf="marketForm.controls['provideLiquidityRate'].errors.min">
+          Provide Liquidity Rate must be more than 0.00000001.
+        </div>
+        <div *ngIf="marketForm.controls['provideLiquidityRate'].errors.max">
+          Provide Liquidity Rate must be less than one.
         </div>
       </div>
     </div>

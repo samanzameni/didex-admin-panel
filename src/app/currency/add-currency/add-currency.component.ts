@@ -35,8 +35,8 @@ export class AddCurrencyComponent implements OnInit {
     this.currencyForm = this.formBuilder.group({
       shortName: ['', Validators.required ],
       name: ['', Validators.required ],
-      payinConfirmations: ['', Validators.required ],
-      payoutFee: ['', Validators.required ],
+      payinConfirmations: ['', [Validators.required, Validators.min(0)]],
+      payoutFee: ['', [Validators.required, Validators.min(0)] ],
     });
   }
   addCurrency() {

@@ -101,6 +101,9 @@
                 <div *ngIf="currencyForm.controls['payinConfirmations'].errors.required">
                   Pay In Confirmations is required.
                 </div>
+                <div *ngIf="currencyForm.controls['payinConfirmations'].errors.min">
+                  Pay In Confirmations must be more than 0.
+                </div>
               </div>
             </div>
           </div></div>
@@ -131,6 +134,9 @@
               <div *ngIf="currencyForm.controls['payoutFee'].invalid && (currencyForm.controls['payoutFee'].dirty || currencyForm.controls['payoutFee'].touched)" class="alert alert-danger">
                 <div *ngIf="currencyForm.controls['payoutFee'].errors.required">
                   Pay out Fee is required.
+                </div>
+                <div *ngIf="currencyForm.controls['payoutFee'].errors.min">
+                  Pay out Fee must be more than 0.
                 </div>
               </div>
             </div>

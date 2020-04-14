@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,14 +109,7 @@
       <workItem from="1585334455120" duration="94360000" />
       <workItem from="1586040811660" duration="70025000" />
       <workItem from="1586673017907" duration="10203000" />
-      <workItem from="1586690398521" duration="20248000" />
-    </task>
-    <task id="LOCAL-00019" summary="fixing buttons and table padding.">
-      <created>1584785367350</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1584785367350</updated>
+      <workItem from="1586690398521" duration="25728000" />
     </task>
     <task id="LOCAL-00020" summary="fixing buttons and table padding.">
       <created>1584789077755</created>
@@ -448,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586773430986</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="input number.">
+      <created>1586783499586</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1586783499586</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="recaptcha test and error fixed." />
     <MESSAGE value="recaptcha test and error  again." />
     <MESSAGE value="recaptcha ." />
     <MESSAGE value="recaptcha and guard fixed." />
@@ -493,7 +498,8 @@
     <MESSAGE value="api.didex.com original." />
     <MESSAGE value="fixed back button." />
     <MESSAGE value="fixed ngmodel." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed ngmodel." />
+    <MESSAGE value="input number." />
+    <option name="LAST_COMMIT_MESSAGE" value="input number." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1584789116296">
@@ -509,10 +515,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586773428031">
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1586783496549">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586773428031" />
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586783496549" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1582372970364">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -524,10 +530,10 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1585433664208" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586773478500">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1586783543675">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586773478500" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1586783543675" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1586096890603">
       <screen x="0" y="0" width="1600" height="860" />

@@ -38,12 +38,22 @@
             <div class="form-group">
               <label for="ShortName1">ShortName</label>
               <input type="text" class="form-control" id="ShortName1" placeholder="ShortName" disabled formControlName="shortName"  [(ngModel)]="SNCurrency.shortName" >
+              <div *ngIf="currencyForm.controls['shortName'].invalid && (currencyForm.controls['shortName'].dirty || currencyForm.controls['shortName'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['shortName'].errors.required">
+                  Short Name is required.
+                </div>
+              </div>
             </div>
           </div></div>
           <div class="row"><div class="col">
             <div class="form-group">
               <label for="Name1">Name</label>
               <input type="text" class="form-control" id="Name1" placeholder="Name" formControlName="name" [(ngModel)]="SNCurrency.name"  >
+              <div *ngIf="currencyForm.controls['name'].invalid && (currencyForm.controls['name'].dirty || currencyForm.controls['name'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['name'].errors.required">
+                  Name is required.
+                </div>
+              </div>
             </div>
           </div></div>
           <div class="row"><div class="col">
@@ -88,6 +98,14 @@
             <div class="form-group">
               <label for="payInConfirmations1">pay in Confirmations</label>
               <input type="number" class="form-control" id="payInConfirmations1" placeholder="pay in Confirmations" min="0" formControlName="payinConfirmations" [(ngModel)]="SNCurrency.payinConfirmations">
+              <div *ngIf="currencyForm.controls['payinConfirmations'].invalid && (currencyForm.controls['payinConfirmations'].dirty || currencyForm.controls['payinConfirmations'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['payinConfirmations'].errors.required">
+                  Pay In Confirmations is required.
+                </div>
+                <div *ngIf="currencyForm.controls['payinConfirmations'].errors.min">
+                  Pay In Confirmations must be more than 0.
+                </div>
+              </div>
             </div>
           </div></div>
           <div class="row"><div class="col">
@@ -114,13 +132,21 @@
             <div class="form-group">
               <label for="payOutFee1">Pay Out Fee</label>
               <input type="number" class="form-control" id="payOutFee1" placeholder="Pay Out Fee" min="0" formControlName="payoutFee" [(ngModel)]="SNCurrency.payoutFee">
+              <div *ngIf="currencyForm.controls['payoutFee'].invalid && (currencyForm.controls['payoutFee'].dirty || currencyForm.controls['payoutFee'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['payoutFee'].errors.required">
+                  Pay out Fee is required.
+                </div>
+                <div *ngIf="currencyForm.controls['payoutFee'].errors.min">
+                  Pay out Fee must be more than 0.
+                </div>
+              </div>
             </div>
           </div></div>
         </div>
       </div>
       <div class="row">
         <div class="col ">
-          <button type="button" class="btn btn-success float-right"  (click)="updateSHortName()">Save changes</button>
+          <button type="button" class="btn btn-success float-right" [disabled]="currencyForm.invalid" (click)="updateSHortName()">Save changes</button>
         </div>
       </div>
       </form>
