@@ -153,28 +153,12 @@ export class AdminListComponent implements OnInit {
       },
       err => {
         console.log(err);
-        this.ngxShowLoader.hide();
         this.reset.newPassword = null;
-        this.errorPass = err.error;
-        for (const i of this.errorPass) {
-          if (i.code === 'PasswordTooShort') {
-            this.toastrService.error('Passwords must be at least 8 characters.', '', {timeOut: 4000});
-          }
-          if (i.code === 'PasswordRequiresNonAlphanumeric') {
-            this.toastrService.error('Passwords must have at least one non alphanumeric character.', '', {timeOut: 4000});
-          }
-          if (i.code === 'PasswordRequiresDigit') {
-            this.toastrService.error('Passwords must have at least one digit (\'0\'-\'9\').', '', {timeOut: 4000});
-          }
-          if (i.code === 'PasswordRequiresUpper') {
-            this.toastrService.error('Passwords must have at least one uppercase (\'A\'-\'Z\').', '', {timeOut: 4000});
-          }
-          if (i.code === 'PasswordRequiresLower') {
-            this.toastrService.error('Passwords must have at least one lowercase (\'a\'-\'z\').', '', {timeOut: 4000});
-          }
-        }
+        this.ngxShowLoader.hide();
         if ( err.status === 403) {
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
+        } else {
+          this.toastrService.error('Invalid New Password Inputs.', '', {timeOut: 4000});
         }
       },
     );
@@ -194,11 +178,10 @@ export class AdminListComponent implements OnInit {
       err => {
         console.log(err);
         this.add.role = null;
+        this.ngxShowLoader.hide();
         if ( err.status === 403) {
-          this.ngxShowLoader.hide();
           this.toastrService.error('You Dont Have Privilege.', '', {timeOut: 4000});
         } else {
-        this.ngxShowLoader.hide();
         this.toastrService.error('Invalid Role.', '', {timeOut: 4000}); }
       },
     );
