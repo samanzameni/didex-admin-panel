@@ -62,7 +62,7 @@ export class AdminListComponent implements OnInit {
 
   createForm() {
     this.passForm = this.formBuilder.group({
-      password: ['', Validators.required],
+      password: ['', [Validators.required]],
     });
   }
 

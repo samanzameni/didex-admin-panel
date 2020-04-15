@@ -118,7 +118,8 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success" [disabled]="!passForm.valid" (click)="resetSubmit()">Reset</button>
+        <button type="button" class="btn btn-success" [disabled]="!passForm.valid || !hasLower() || !hasUpper() || !hasNumber() || !hasSpecial() || !hasLength()"
+                (click)="resetSubmit()">Reset</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="resetCancel()">Cancel</button>
       </div>
     </div>
