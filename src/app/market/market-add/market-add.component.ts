@@ -37,8 +37,8 @@ export class MarketAddComponent implements OnInit {
       quoteCurrencyShortName: ['', Validators.required ],
       takeLiquidityRate: ['', [Validators.required, Validators.min(0.00000001), Validators.max(1)] ],
       provideLiquidityRate: ['', [Validators.required, Validators.min(0.00000001), Validators.max(1)] ],
-      tickSize: ['', [Validators.required, Validators.min(0), Validators.max(1)]],
-      quantityIncrement: ['', [Validators.required, Validators.min(0), Validators.max(1)]],
+      tickSize: ['', [Validators.required, Validators.min(0)]],
+      quantityIncrement: ['', [Validators.required, Validators.min(0)]],
     });
   }
   addSubmit() {

@@ -36,7 +36,7 @@
           <div class="col-sm">
             <div class="form-group">
               <label for="3">Quantity Increment</label>
-              <input type="number" class="form-control" id="3" placeholder="Quantity Increment" formControlName="quantityIncrement" min="0" max="1" step="0.1" [(ngModel)]="marketPut.quantityIncrement">
+              <input type="number" class="form-control" id="3" placeholder="Quantity Increment" formControlName="quantityIncrement" min="0"  [(ngModel)]="marketPut.quantityIncrement">
               <div *ngIf="marketForm.controls['quantityIncrement'].invalid && (marketForm.controls['quantityIncrement'].dirty || marketForm.controls['quantityIncrement'].touched)" class="alert alert-danger">
                 <div *ngIf="marketForm.controls['quantityIncrement'].errors.required">
                   Quantity Increment is required.
@@ -44,25 +44,19 @@
                 <div *ngIf="marketForm.controls['quantityIncrement'].errors.min">
                   Quantity Increment must be more than 0.
                 </div>
-                <div *ngIf="marketForm.controls['quantityIncrement'].errors.max">
-                  Quantity Increment must be less than one.
-                </div>
               </div>
             </div>
           </div>
           <div class="col-sm">
             <div class="form-group">
               <label for="4">Tick Size</label>
-              <input type="number" class="form-control" id="4" placeholder="Tick Size" formControlName="tickSize" min="0" max="1" step="0.1" [(ngModel)]="marketPut.tickSize">
+              <input type="number" class="form-control" id="4" placeholder="Tick Size" formControlName="tickSize" min="0" [(ngModel)]="marketPut.tickSize">
               <div *ngIf="marketForm.controls['tickSize'].invalid && (marketForm.controls['tickSize'].dirty || marketForm.controls['tickSize'].touched)" class="alert alert-danger">
                 <div *ngIf="marketForm.controls['tickSize'].errors.required">
                   Tick Size is required.
                 </div>
                 <div *ngIf="marketForm.controls['tickSize'].errors.min">
                   tickSize must be more than 0.
-                </div>
-                <div *ngIf="marketForm.controls['tickSize'].errors.max">
-                  tickSize must be less than one.
                 </div>
               </div>
             </div>

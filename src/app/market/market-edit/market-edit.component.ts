@@ -40,8 +40,8 @@ export class MarketEditComponent implements OnInit {
     this.marketForm = this.formBuilder.group({
       takeLiquidityRate: ['', [Validators.required, Validators.min(0.00000001), Validators.max(1)] ],
       provideLiquidityRate: ['', [Validators.required, Validators.min(0.00000001), Validators.max(1)] ],
-      tickSize: ['', [Validators.required, Validators.min(0), Validators.max(1)]],
-      quantityIncrement: ['', [Validators.required, Validators.min(0), Validators.max(1)]],
+      tickSize: ['', [Validators.required, Validators.min(0)]],
+      quantityIncrement: ['', [Validators.required, Validators.min(0)]],
     });
   }
   addSubmit() {
