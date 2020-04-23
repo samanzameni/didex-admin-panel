@@ -24,6 +24,7 @@
   <div class="form-group col-sm-4">
     <label for="Network">Admin Role</label>
     <select class="form-control" id="Network" [(ngModel)]="adminList.roles"  (change)="selectedRole($event)" >
+      <option  value="">No Role</option>
       <option *ngFor="let i of adminRoles.roles" [ngValue]="i">{{i}}</option>
     </select>
   </div>

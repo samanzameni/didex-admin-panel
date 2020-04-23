@@ -91,7 +91,6 @@ import {ReportsTransactionsComponent} from '../reports-transactions/reports-tran
     FormsModule,
     NgbModule,
     NgxSpinnerModule,
-    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
