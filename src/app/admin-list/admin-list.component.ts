@@ -24,7 +24,7 @@ export class AdminListComponent implements OnInit {
   reset: AdminChild;
   errorPass: ErrorPass[];
   passForm: FormGroup;
-
+  inputType = false;
   constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService
   , private formBuilder: FormBuilder, private router: Router) {
     this.adminRoles = {
@@ -211,7 +211,13 @@ export class AdminListComponent implements OnInit {
     );
   }
 
-
+  eyeClick() {
+    if (this.inputType === false) {
+      this.inputType = true;
+    } else {
+      this.inputType = false;
+    }
+  }
   ngOnInit() {
     this.showRoles();
     this.showList();

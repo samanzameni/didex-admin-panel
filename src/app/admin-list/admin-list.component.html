@@ -96,7 +96,12 @@
               </div>
               <div class="col-sm">
                 <label for="pass">New Password</label>
-                <input type="password" class="form-control" formControlName="password" placeholder="New Password" id="pass"  [(ngModel)]="reset.newPassword">
+                <div class="input-group ">
+                <input type="password" [attr.type]="inputType ? 'text' : 'password'" class="form-control" formControlName="password" placeholder="New Password" id="pass"  [(ngModel)]="reset.newPassword">
+                <div class="input-group-prepend bottom-space">
+                  <div class="input-group-text"> <i  [ngClass]="inputType ? 'fa fa-eye' : 'fa fa-eye-slash'"  aria-hidden="true" (click)="eyeClick()"></i></div>
+                </div>
+                </div>
                 <div *ngIf="!hasLength()"  class="alert alert-danger">
                   Password Requires 8 character.
                 </div>

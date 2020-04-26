@@ -27,9 +27,9 @@
     <div class="form-group">
     <label for="inputPassword" >Password</label>
       <div class="input-group ">
-      <input [attr.type]=" inputType ? 'text' : 'password'" type="password" name="password"  formControlName="password" id="inputPassword" class="form-control bottom-space" placeholder="Password" [(ngModel)]="login.password" required >
+      <input [attr.type]="inputType ? 'text' : 'password'" type="password" name="password"  formControlName="password" id="inputPassword" class="form-control bottom-space" placeholder="Password" [(ngModel)]="login.password" required >
         <div class="input-group-prepend bottom-space">
-          <div class="input-group-text"> <i class="fa fa-eye" aria-hidden="true" (click)="eyeClick()"></i></div>
+          <div class="input-group-text"> <i  [ngClass]="inputType ? 'fa fa-eye' : 'fa fa-eye-slash'"  aria-hidden="true" (click)="eyeClick()"></i></div>
         </div>
       </div>
     <div *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)" class="alert alert-danger">
