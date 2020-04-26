@@ -13,6 +13,7 @@ import {StorageService} from '../@core/Login/storage.service';
 export class CustomLoginComponent implements OnInit {
   loginForm: FormGroup;
   login: Login;
+  inputType = false;
   constructor(private authService: AuthServiceService, private formBuilder: FormBuilder,
                private storageService: StorageService) {
     this.login = {
@@ -36,7 +37,13 @@ export class CustomLoginComponent implements OnInit {
     console.log(`Resolved captcha with response: ${captchaResponse}`);
     this.storageService.setCaptchaToken(captchaResponse);
   }
-
+  eyeClick() {
+  if (this.inputType === false) {
+  this.inputType = true;
+  } else {
+    this.inputType = false;
+  }
+  }
   ngOnInit() {
     window.scroll(0, 0);
   }
