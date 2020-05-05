@@ -1,0 +1,97 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="col-md-4 grid-margin " >
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a>Home</a></li>
+      <li class="breadcrumb-item"><a>Investment Fund</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Detail</span></li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+  <div class="col-2" style="text-align: left">
+    <button type="button" class="btn btn-outline-warning" routerLink="/pages/investmentFund"  >
+      <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+    </button>
+  </div>
+</div>
+<br>
+<div class="">
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col" >Fund Currency ShortName</th>
+            <td >{{SNCurrency.fundCurrencyShortName}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Name</th>
+            <td>{{SNCurrency.name}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <td>{{BCN[SNCurrency.type]}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Minimum Fund</th>
+            <td>{{SNCurrency.minimumFund}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">Maximum Fund</th>
+            <td>{{SNCurrency.maximumFund}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Duration</th>
+            <td>{{SNCurrency.duration}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">Fixed Interest</th>
+            <td>{{SNCurrency.fixedInterest}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Total Supply</th>
+            <td>{{SNCurrency.totalSupply}}</td>
+          </tr>
+          </tbody>
+          <thead>
+          <tr>
+            <th scope="col">Start Date</th>
+            <td>{{SNCurrency.startDate}}</td>
+          </tr>
+          </thead>
+          <tbody>
+          <tr >
+            <th scope="col">Expiration Date</th>
+            <td>{{SNCurrency.expirationDate}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

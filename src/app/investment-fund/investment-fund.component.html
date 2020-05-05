@@ -1,0 +1,91 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="col-md-4 grid-margin ">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Investment Fund</span></li>
+    </ol>
+  </nav>
+</div>
+<div class="" >
+  <div class="card">
+    <div class="card-body">
+      <div class="row float-right" *ngIf="superUserGuard.canActivate()"  >
+        <div class="col-sm-12 ">
+          <button type="button" class="btn btn-danger btn-right" data-toggle="modal" data-target="#Delete" data-backdrop="static" data-keyboard="false" [disabled]="!disableDelete">
+            <i class="fa fa-trash" aria-hidden="true"></i> Delete
+          </button>
+          <button type="button" class="btn btn-primary btn-right" routerLink="/pages/addInvestmentFund" >
+            <i class="fa fa-plus" aria-hidden="true"></i> Add
+          </button>
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col" *ngIf="superUserGuard.canActivate()">
+              <div class="form-check"><input type="radio" name="currencyRadios" class="" (change)="deSelectDelete($event)"> UnSelect</div>
+            </th>
+            <th scope="col">ShortName</th>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Detail</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let i of inv ">
+            <td *ngIf="superUserGuard.canActivate()">
+              <div class="form-check"><input type="radio" name="currencyRadios" class="" [value]="i.id" (change)="deleteSN( i.id , $event)" ></div>
+            </td>
+            <td>{{i.fundCurrencyShortName}}</td>
+            <td>{{i.name}}</td>
+            <td>{{investmentType[i.type]}}</td>
+            <td>
+              <button type="button" class="btn btn-outline-warning"  (click)="updateSN(i.id)">
+                <i class="fa fa-edit" aria-hidden="true"></i>
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-secondary"  (click)="detailSN(i.id)">
+                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="Delete" tabindex="-1" role="dialog" aria-labelledby="DeleteLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="DeleteLabel"><img src="assets/images/Delete Icon.jpeg" alt="logo" height="25" width="25" style="margin-bottom: 10px"/> Delete</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Are you sure you want to delete? <br> By deleting each coin , you can not have it again easily.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteShortName()">Yes, I am sure</button>
+              <button type="button" class="btn btn-success" data-dismiss="modal">No, I am not</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

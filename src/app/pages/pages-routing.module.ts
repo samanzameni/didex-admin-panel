@@ -32,6 +32,10 @@ import {DetailCurrencyComponent} from '../currency/detail-currency/detail-curren
 import {KycDetailComponent} from '../kyc/kyc-detail/kyc-detail.component';
 import {MarketAddComponent} from '../market/market-add/market-add.component';
 import {MarketEditComponent} from '../market/market-edit/market-edit.component';
+import {InvestmentFundComponent} from '../investment-fund/investment-fund.component';
+import {AddInvestmentComponent} from '../investment-fund/add-investment/add-investment.component';
+import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-investment.component';
+import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
 
 
 const routes: Routes = [
@@ -49,6 +53,10 @@ const routes: Routes = [
       { path: 'marketAdd', component: MarketAddComponent},
       { path: 'marketEdit', component: MarketEditComponent},
       { path: 'trader', component: TraderComponent },
+      { path: 'investmentFund', component: InvestmentFundComponent },
+      { path: 'addInvestmentFund', component:  AddInvestmentComponent},
+      { path: 'editInvestmentFund', component: EditInvestmentComponent },
+      { path: 'detailInvestmentFund', component: DetailInvestmentComponent },
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },
       { path: 'reportsTransactions', component: ReportsTransactionsComponent },

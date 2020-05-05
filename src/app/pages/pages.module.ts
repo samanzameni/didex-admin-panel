@@ -43,6 +43,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {ToastrModule} from 'ngx-toastr';
 import {ReportsTradesComponent} from '../reports-trades/reports-trades.component';
 import {ReportsTransactionsComponent} from '../reports-transactions/reports-transactions.component';
+import {InvestmentFundComponent} from '../investment-fund/investment-fund.component';
+import {AddInvestmentComponent} from '../investment-fund/add-investment/add-investment.component';
+import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-investment.component';
+import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
 
 
 @NgModule({
@@ -82,7 +86,11 @@ import {ReportsTransactionsComponent} from '../reports-transactions/reports-tran
     EditCurrencyComponent,
     DetailCurrencyComponent,
     ReportsTradesComponent,
-    ReportsTransactionsComponent
+    ReportsTransactionsComponent,
+    InvestmentFundComponent,
+    AddInvestmentComponent,
+    EditInvestmentComponent,
+    DetailInvestmentComponent,
   ],
   imports: [
     CommonModule,
@@ -131,7 +139,11 @@ import {ReportsTransactionsComponent} from '../reports-transactions/reports-tran
     EditCurrencyComponent,
     DetailCurrencyComponent,
     ReportsTradesComponent,
-    ReportsTransactionsComponent
+    ReportsTransactionsComponent,
+    InvestmentFundComponent,
+    AddInvestmentComponent,
+    EditInvestmentComponent,
+    DetailInvestmentComponent,
   ]
 })
 export class PagesModule { }

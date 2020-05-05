@@ -1,0 +1,182 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="col-md-4 grid-margin ">
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a>Home</a></li>
+      <li class="breadcrumb-item"><a>Investment Fund</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Edit</span></li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+  <div class="col-2" style="text-align: left">
+    <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" *ngIf="currencyForm.dirty">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+    </button>
+    <button type="button" class="btn btn-outline-warning" data-toggle="modal" routerLink="/pages/investmentFund" *ngIf="!currencyForm.dirty">
+      <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+    </button>
+  </div>
+</div>
+<br>
+<div class="">
+  <div class="card">
+    <div class="card-body col-sm-10 col-md-8 col-lg-6  align-self-center">
+      <form [formGroup]="currencyForm">
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="ShortName" >Fund Currency ShortName</label>
+                  <input type="text" class="form-control" id="ShortName" placeholder="ShortName" formControlName="fundCurrencyShortName"  [(ngModel)]="SNCurrency.fundCurrencyShortName" >
+                  <div *ngIf="currencyForm.controls['fundCurrencyShortName'].invalid && (currencyForm.controls['fundCurrencyShortName'].dirty || currencyForm.controls['fundCurrencyShortName'].touched)" class="alert alert-danger">
+                    <div *ngIf="currencyForm.controls['fundCurrencyShortName'].errors.required">
+                      Fund Currency ShortName is required.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="Name">Name</label>
+                <input type="text" class="form-control" id="Name" placeholder="Name" formControlName="name" [(ngModel)]="SNCurrency.name">
+                <div *ngIf="currencyForm.controls['name'].invalid && (currencyForm.controls['name'].dirty || currencyForm.controls['name'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['name'].errors.required">
+                    Name is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="Type">Type</label>
+                <select class="form-control" id="Type" [(ngModel)]="SNCurrency.type" formControlName="type">
+                  <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
+                </select>
+                <div *ngIf="currencyForm.controls['type'].invalid && (currencyForm.controls['type'].dirty || currencyForm.controls['type'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['type'].errors.required">
+                    Type is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="minimumFund">Minimum Fund</label>
+                <input type="number" class="form-control" id="minimumFund" placeholder="Minimum Fund" formControlName="minimumFund" [(ngModel)]="SNCurrency.minimumFund">
+                <div *ngIf="currencyForm.controls['minimumFund'].invalid && (currencyForm.controls['minimumFund'].dirty || currencyForm.controls['minimumFund'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['minimumFund'].errors.required">
+                    Minimum Fund is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="maximumFund">Maximum Fund</label>
+                <input type="number" class="form-control" id="maximumFund" placeholder="Maximum Fund" formControlName="maximumFund" [(ngModel)]="SNCurrency.maximumFund">
+                <div *ngIf="currencyForm.controls['maximumFund'].invalid && (currencyForm.controls['maximumFund'].dirty || currencyForm.controls['maximumFund'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['maximumFund'].errors.required">
+                    Maximum Fund is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="number" class="form-control" id="duration" placeholder="Duration" formControlName="duration" [(ngModel)]="SNCurrency.duration">
+                <div *ngIf="currencyForm.controls['duration'].invalid && (currencyForm.controls['duration'].dirty || currencyForm.controls['duration'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['duration'].errors.required">
+                    Duration is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="fixedInterest">Fixed Interest</label>
+                <input type="number" class="form-control" id="fixedInterest" placeholder="Fixed Interest" formControlName="fixedInterest" [(ngModel)]="SNCurrency.fixedInterest">
+                <div *ngIf="currencyForm.controls['fixedInterest'].invalid && (currencyForm.controls['fixedInterest'].dirty || currencyForm.controls['fixedInterest'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['fixedInterest'].errors.required">
+                    Fixed Interest is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="totalSupply">Total Supply</label>
+                <input type="number" class="form-control" id="totalSupply" placeholder="Total Supply" formControlName="totalSupply" [(ngModel)]="SNCurrency.totalSupply">
+                <div *ngIf="currencyForm.controls['totalSupply'].invalid && (currencyForm.controls['totalSupply'].dirty || currencyForm.controls['totalSupply'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['totalSupply'].errors.required">
+                    Total Supply is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="text" class="form-control" id="startDate" placeholder="Start Date" formControlName="startDate" [(ngModel)]="SNCurrency.startDate">
+                <div *ngIf="currencyForm.controls['startDate'].invalid && (currencyForm.controls['startDate'].dirty || currencyForm.controls['startDate'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['startDate'].errors.required">
+                    Start Date is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="expirationDate">Expiration Date</label>
+                <input type="text" class="form-control" id="expirationDate" placeholder="Expiration Date" formControlName="expirationDate" [(ngModel)]="SNCurrency.expirationDate">
+                <div *ngIf="currencyForm.controls['expirationDate'].invalid && (currencyForm.controls['expirationDate'].dirty || currencyForm.controls['expirationDate'].touched)" class="alert alert-danger">
+                  <div *ngIf="currencyForm.controls['expirationDate'].errors.required">
+                    Expiration Date is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+        <div class="row float-right">
+          <div class="col ">
+            <button type="button" class="btn btn-success" [disabled]="currencyForm.invalid" (click)="updateSHortName()">Save changes</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Back</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to leave the page? Your changes are not saved.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" routerLink="/pages/investmentFund">Yes</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
