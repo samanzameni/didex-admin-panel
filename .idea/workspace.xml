@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="" />
+    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,14 +119,7 @@
       <workItem from="1588501304175" duration="1903000" />
       <workItem from="1588503417103" duration="707000" />
       <workItem from="1588676865753" duration="14331000" />
-      <workItem from="1588746461435" duration="15482000" />
-    </task>
-    <task id="LOCAL-00031" summary="fixing canactivate.">
-      <created>1585391333603</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1585391333603</updated>
+      <workItem from="1588746461435" duration="16027000" />
     </task>
     <task id="LOCAL-00032" summary="recaptcha test.">
       <created>1585429773979</created>
@@ -462,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588772453637</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="invest trader v1.">
+      <created>1588772772340</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1588772772340</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="niloofar audit." />
     <MESSAGE value="BreadCrumbs." />
     <MESSAGE value="AdminList errors." />
     <MESSAGE value="AdminList errors new design." />
@@ -507,7 +508,8 @@
     <MESSAGE value="Investment Fund." />
     <MESSAGE value="Investment Fund full." />
     <MESSAGE value="invest trader." />
-    <option name="LAST_COMMIT_MESSAGE" value="invest trader." />
+    <MESSAGE value="invest trader v1." />
+    <option name="LAST_COMMIT_MESSAGE" value="invest trader v1." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -523,10 +525,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1588772450707">
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1588772768475">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588772450707" />
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588772768475" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1588503448681">
       <screen x="0" y="0" width="1600" height="860" />
@@ -538,20 +540,28 @@
     </state>
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1586936834375" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582202279741" />
+    <state x="504" y="138" key="MultipleFileMergeDialog" timestamp="1588773060071">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="504" y="138" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1588773060071" />
     <state x="301" y="73" key="SettingsEditor" timestamp="1587908167463">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1588772634960">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1588772791402">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1588772634960" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1588772791402" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1588770594767" />
     <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582384570544" />
+    <state x="466" y="62" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588773033180">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="466" y="62" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860@0.0.1600.860" timestamp="1588773033180" />
     <state x="182" y="10" key="new project wizard" timestamp="1587204798986">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
