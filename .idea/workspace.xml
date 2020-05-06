@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Investment Fund/investment-fund.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Investment Fund/investment-fund.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,14 +117,7 @@
       <workItem from="1588501304175" duration="1903000" />
       <workItem from="1588503417103" duration="707000" />
       <workItem from="1588676865753" duration="14331000" />
-      <workItem from="1588746461435" duration="15181000" />
-    </task>
-    <task id="LOCAL-00030" summary="dist update.">
-      <created>1585334770021</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1585334770021</updated>
+      <workItem from="1588746461435" duration="15482000" />
     </task>
     <task id="LOCAL-00031" summary="fixing canactivate.">
       <created>1585391333603</created>
@@ -470,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588695055353</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="invest trader.">
+      <created>1588772453635</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1588772453637</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update AdminList page fixed errors." />
     <MESSAGE value="niloofar audit." />
     <MESSAGE value="BreadCrumbs." />
     <MESSAGE value="AdminList errors." />
@@ -515,7 +506,8 @@
     <MESSAGE value="new route." />
     <MESSAGE value="Investment Fund." />
     <MESSAGE value="Investment Fund full." />
-    <option name="LAST_COMMIT_MESSAGE" value="Investment Fund full." />
+    <MESSAGE value="invest trader." />
+    <option name="LAST_COMMIT_MESSAGE" value="invest trader." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -531,10 +523,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1588695052687">
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1588772450707">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588695052687" />
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588772450707" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1588503448681">
       <screen x="0" y="0" width="1600" height="860" />
@@ -550,10 +542,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1588695083123">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1588772634960">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1588695083123" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1588772634960" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544267547" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
