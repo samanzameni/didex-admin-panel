@@ -38,7 +38,7 @@ export class InvestmentFundService {
     return this.http.delete
     (this.ServerUrl + 'admin/InvestmentFund/' + id, this.httpOptions  );
   }
-  idUserInvestGet(id: string): Observable<any> {
+  idUserInvestGet(id: number): Observable<any> {
     return this.http.get
     (this.ServerUrl + 'admin/InvestmentFund/' + id + '/UserInvest', this.httpOptions  );
   }

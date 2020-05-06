@@ -1,0 +1,111 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="col-md-4 grid-margin " >
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item"><a >Trader</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Investment</span></li>
+    </ol>
+  </nav>
+</div>
+<div class="row">
+  <div class="col-2" style="text-align: left">
+    <button type="button" class="btn btn-outline-warning" routerLink="/pages/trader"  >
+      <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+    </button>
+  </div>
+</div>
+<br>
+<div class="">
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Invest Date</th>
+            <th scope="col">Investment Fund Id</th>
+            <th scope="col">Status</th>
+            <th scope="col">Total Earn</th>
+            <th scope="col">Trader ID</th>
+            <th scope="col">Invest Records</th>
+          </tr>
+          </thead>
+          <tbody >
+          <tr *ngFor="let l of userInvest.records" >
+            <td>{{l.id}}</td>
+            <td>{{l.amount}}</td>
+            <td>{{l.investDate | date: 'mediumDate'}}</td>
+            <td>{{l.investmentFundId}}</td>
+            <td>{{statusInvest[l.status]}}</td>
+            <td>{{l.totalEarn}}</td>
+            <td>{{l.traderId}}</td>
+            <td>
+              <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" (click)="investRecords(l.investRecords)">
+                <i class="fa fa-info" aria-hidden="true" ></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Invest Records</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Accrued</th>
+                  <th scope="col">Before</th>
+                  <th scope="col">After</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Time Stamp</th>
+                </tr>
+                </thead>
+                <tbody >
+                <tr *ngFor="let i of userInvestRecords" >
+                  <td>{{i.id}}</td>
+                  <td>{{i.accrued}}</td>
+                  <td>{{i.brfore}}</td>
+                  <td>{{i.after}}</td>
+                  <td>{{investType[i.type]}}</td>
+                  <td>{{i.timeStamp | date: 'mediumDate'}}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

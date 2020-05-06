@@ -17,6 +17,8 @@ import { InvestmentFundComponent } from './investment-fund/investment-fund.compo
 import { AddInvestmentComponent } from './investment-fund/add-investment/add-investment.component';
 import { EditInvestmentComponent } from './investment-fund/edit-investment/edit-investment.component';
 import { DetailInvestmentComponent } from './investment-fund/detail-investment/detail-investment.component';
+import { TraderUserInvestComponent } from './trader/trader-user-invest/trader-user-invest.component';
+import { UserInvestRecordsComponent } from './trader/trader-user-invest/user-invest-records/user-invest-records.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { DetailInvestmentComponent } from './investment-fund/detail-investment/d
     AppComponent,
     CustomLoginComponent,
     CustomRegisterComponent,
+
+
   ],
   imports: [
     BrowserModule,

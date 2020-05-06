@@ -36,6 +36,8 @@ import {InvestmentFundComponent} from '../investment-fund/investment-fund.compon
 import {AddInvestmentComponent} from '../investment-fund/add-investment/add-investment.component';
 import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-investment.component';
 import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
+import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-user-invest.component';
+import {UserInvestRecordsComponent} from '../trader/trader-user-invest/user-invest-records/user-invest-records.component';
 
 
 const routes: Routes = [
@@ -57,6 +59,8 @@ const routes: Routes = [
       { path: 'addInvestmentFund', component:  AddInvestmentComponent},
       { path: 'editInvestmentFund', component: EditInvestmentComponent },
       { path: 'detailInvestmentFund', component: DetailInvestmentComponent },
+      { path: 'userInvest', component: TraderUserInvestComponent },
+      { path: 'userInvestRecords', component:   UserInvestRecordsComponent, },
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },
       { path: 'reportsTransactions', component: ReportsTransactionsComponent },

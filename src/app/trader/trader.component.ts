@@ -4,6 +4,8 @@ import {Trader} from '../@core/Trader/trader';
 import {TraderService} from '../@core/Trader/trader.service';
 import {TraderStatus} from '../@core/Trader/trader-status.enum';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {Router} from '@angular/router';
+import {UserInvest} from '../@core/Trader/user-invest';
 
 @Component({
   selector: 'app-trader',
@@ -14,7 +16,9 @@ export class TraderComponent implements OnInit {
 traderList: Trader[];
 trader: Trader;
 traderEnum = TraderStatus;
-  constructor(private toastrService: ToastrService, private traderService: TraderService, private ngxShowLoader: NgxSpinnerService) {
+
+  constructor(private toastrService: ToastrService, private traderService: TraderService, private ngxShowLoader: NgxSpinnerService,
+              private router: Router) {
     this.trader = {
       id: null,
       email: '',
@@ -38,6 +42,11 @@ traderEnum = TraderStatus;
   }
   change(i) {
     this.trader.id = i;
+  }
+  send(i) {
+    this.trader.id = i;
+    this.router.navigate(['/pages/userInvest'],
+      { queryParams: { id: this.trader.id} });
   }
   changeTrader() {
     this.ngxShowLoader.show();
