@@ -13,12 +13,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { PagesModule } from './pages/pages.module';
 import {RecaptchaModule} from 'ng-recaptcha';
-import { InvestmentFundComponent } from './investment-fund/investment-fund.component';
-import { AddInvestmentComponent } from './investment-fund/add-investment/add-investment.component';
-import { EditInvestmentComponent } from './investment-fund/edit-investment/edit-investment.component';
-import { DetailInvestmentComponent } from './investment-fund/detail-investment/detail-investment.component';
-import { TraderUserInvestComponent } from './trader/trader-user-invest/trader-user-invest.component';
-import { UserInvestRecordsComponent } from './trader/trader-user-invest/user-invest-records/user-invest-records.component';
 
 
 @NgModule({
@@ -26,8 +20,6 @@ import { UserInvestRecordsComponent } from './trader/trader-user-invest/user-inv
     AppComponent,
     CustomLoginComponent,
     CustomRegisterComponent,
-
-
   ],
   imports: [
     BrowserModule,

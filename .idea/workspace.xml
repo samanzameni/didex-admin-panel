@@ -3,6 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/detail-investment/detail-investment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/detail-investment/detail-investment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/user-invest-records/user-invest-records.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/user-invest-records/user-invest-records.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/user-invest-records/user-invest-records.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/user-invest-records/user-invest-records.component.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +31,31 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="newroute" />
+                    <option name="lastUsedInstant" value="1588773062" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1588772991" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="1XnCqJD8QCYBGMYhPviRqIN9PvJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -119,14 +153,7 @@
       <workItem from="1588501304175" duration="1903000" />
       <workItem from="1588503417103" duration="707000" />
       <workItem from="1588676865753" duration="14331000" />
-      <workItem from="1588746461435" duration="16027000" />
-    </task>
-    <task id="LOCAL-00032" summary="recaptcha test.">
-      <created>1585429773979</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1585429773979</updated>
+      <workItem from="1588746461435" duration="17270000" />
     </task>
     <task id="LOCAL-00033" summary="recaptcha test and error fixed.">
       <created>1585432146997</created>
@@ -464,7 +491,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588772772340</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="invest trader v2.">
+      <created>1588773188902</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1588773188902</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +518,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="BreadCrumbs." />
     <MESSAGE value="AdminList errors." />
     <MESSAGE value="AdminList errors new design." />
     <MESSAGE value="fixed routers." />
@@ -509,7 +542,8 @@
     <MESSAGE value="Investment Fund full." />
     <MESSAGE value="invest trader." />
     <MESSAGE value="invest trader v1." />
-    <option name="LAST_COMMIT_MESSAGE" value="invest trader v1." />
+    <MESSAGE value="invest trader v2." />
+    <option name="LAST_COMMIT_MESSAGE" value="invest trader v2." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -525,10 +559,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1588772768475">
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1588773186154">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588772768475" />
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588773186154" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1582544260516" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1588503448681">
       <screen x="0" y="0" width="1600" height="860" />

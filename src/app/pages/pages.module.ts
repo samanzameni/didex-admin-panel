@@ -48,7 +48,7 @@ import {AddInvestmentComponent} from '../investment-fund/add-investment/add-inve
 import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-investment.component';
 import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
 import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-user-invest.component';
-import {UserInvestRecordsComponent} from '../trader/trader-user-invest/user-invest-records/user-invest-records.component';
+
 
 
 @NgModule({
@@ -94,7 +94,6 @@ import {UserInvestRecordsComponent} from '../trader/trader-user-invest/user-inve
     EditInvestmentComponent,
     DetailInvestmentComponent,
     TraderUserInvestComponent,
-    UserInvestRecordsComponent,
   ],
   imports: [
     CommonModule,
@@ -149,7 +148,6 @@ import {UserInvestRecordsComponent} from '../trader/trader-user-invest/user-inve
     EditInvestmentComponent,
     DetailInvestmentComponent,
     TraderUserInvestComponent,
-    UserInvestRecordsComponent,
   ]
 })
 export class PagesModule { }
