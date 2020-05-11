@@ -17,6 +17,7 @@ export class InvestmentFundComponent implements OnInit {
   DSN: number;
   USN: number;
   ESN: number;
+  ISN: number;
   disableDelete = false;
   investmentType = InvestType;
   constructor(private toastrService: ToastrService, private router: Router,
@@ -32,6 +33,11 @@ export class InvestmentFundComponent implements OnInit {
     this.USN = id;
     this.router.navigate(['/pages/editInvestmentFund'],
       { queryParams: { id: this.USN } });
+  }
+  send(i) {
+    this.ISN = i;
+    this.router.navigate(['/pages/userInvest'],
+      { queryParams: { id: this.ISN} });
   }
   deleteSN(id: number,  event) {
     if (event.target.checked) {

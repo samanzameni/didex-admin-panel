@@ -41,6 +41,7 @@
             <th scope="col">Type</th>
             <th scope="col">Edit</th>
             <th scope="col">Detail</th>
+            <th scope="col">Investor</th>
           </tr>
           </thead>
           <tbody>
@@ -61,6 +62,11 @@
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
               </button>
             </td>
+            <td>
+              <button type="button" class="btn btn-outline-secondary"  (click)="send(i.id)">
+                <i class="fa fa-shopping-bag" aria-hidden="true" ></i>
+              </button>
+            </td>
           </tr>
           </tbody>
         </table>
@@ -77,7 +83,7 @@
               </button>
             </div>
             <div class="modal-body">
-              Are you sure you want to delete? <br> By deleting each coin , you can not have it again easily.
+              Are you sure you want to delete? <br> By deleting each Investment Fund , you can not have it again easily.
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="deleteShortName()">Yes, I am sure</button>

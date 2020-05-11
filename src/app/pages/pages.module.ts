@@ -4,7 +4,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import {FormsComponent} from '../forms/forms.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateParserFormatter, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AdminListComponent} from '../admin-list/admin-list.component';
 import {CurrencyComponent} from '../currency/currency.component';
 import {KYCComponent} from '../kyc/kyc.component';
@@ -105,6 +105,7 @@ import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-use
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+
   ],
   exports: [
     PagesComponent,
@@ -148,6 +149,9 @@ import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-use
     EditInvestmentComponent,
     DetailInvestmentComponent,
     TraderUserInvestComponent,
-  ]
+  ],
+  providers: [
+
+  ],
 })
 export class PagesModule { }

@@ -43,11 +43,7 @@ traderEnum = TraderStatus;
   change(i) {
     this.trader.id = i;
   }
-  send(i) {
-    this.trader.id = i;
-    this.router.navigate(['/pages/userInvest'],
-      { queryParams: { id: this.trader.id} });
-  }
+
   changeTrader() {
     this.ngxShowLoader.show();
     return this.traderService.traderPatch(this.trader.id , this.trader).subscribe(

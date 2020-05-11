@@ -10,7 +10,7 @@ export interface Investment {
   duration: number;
   fixedInterest: number;
   totalSupply: number;
-  startDate: Date;
-  expirationDate: Date;
+  startDate: string;
+  expirationDate: string;
 }
 

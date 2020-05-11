@@ -7,6 +7,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 import {InvestmentFundService} from '../../@core/Investment Fund/investment-fund.service';
 import {Investment} from '../../@core/Investment Fund/investment';
 import {InvestType} from '../../@core/Investment Fund/invest-type.enum';
+import {NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-add-investment',
@@ -17,9 +18,11 @@ export class AddInvestmentComponent implements OnInit {
 
   invPost: Investment;
   currencyForm: FormGroup;
+  startDateNgb: NgbDateStruct;
+  expirationDateNgb: NgbDateStruct;
   constructor(private toastrService: ToastrService, private route: Router,
               private ngxShowLoader: NgxSpinnerService, private formBuilder: FormBuilder,
-              private investmentFundService: InvestmentFundService) {
+              private investmentFundService: InvestmentFundService, private ngbDateParserFormatter: NgbDateParserFormatter) {
     this.createForm();
     this.invPost = {
       fundCurrencyShortName: null,
@@ -37,19 +40,22 @@ export class AddInvestmentComponent implements OnInit {
   createForm() {
     this.currencyForm = this.formBuilder.group({
       fundCurrencyShortName: ['', Validators.required ],
-      name: ['', Validators.required ],
+      name: ['', [Validators.required] ],
       type: ['', [Validators.required]],
-      minimumFund: ['', [Validators.required] ],
-      maximumFund: ['', Validators.required ],
-      duration: ['', Validators.required ],
-      fixedInterest: ['', Validators.required ],
-      totalSupply: ['', Validators.required ],
+      minimumFund: ['', [Validators.required, Validators.min(0)] ],
+      maximumFund: ['', [Validators.required, Validators.min(0)] ],
+      duration: ['', [Validators.required, Validators.min(0)] ],
+      fixedInterest: ['', [Validators.required, Validators.min(0)] ],
+      totalSupply: ['', [Validators.required, Validators.min(0)] ],
       startDate: ['', Validators.required ],
       expirationDate: ['', Validators.required ],
     });
   }
+
   addCurrency() {
     this.ngxShowLoader.show();
+    this.invPost.startDate = this.ngbDateParserFormatter.format(this.startDateNgb);
+    this.invPost.expirationDate = this.ngbDateParserFormatter.format(this.expirationDateNgb);
     return this.investmentFundService.investmentPost(this.invPost).subscribe(
       (res: any) => {
         console.log(res);
