@@ -174,10 +174,10 @@
               {{tType[i.type]}}
             </td>
             <td>
-              {{i.createdAt}}
+              {{i.createdAt| date: 'mediumDate'}}
             </td>
             <td >
-              {{i.updatedAt}}
+              {{i.updatedAt| date: 'mediumDate'}}
             </td>
             <td>
               {{i.errorCode}}

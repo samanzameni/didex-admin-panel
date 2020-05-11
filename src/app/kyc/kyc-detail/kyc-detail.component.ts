@@ -71,7 +71,6 @@ export class KycDetailComponent implements OnInit {
         console.log(res);
         this.userInformationNull = res;
         if (this.userInformationNull.personalInformation != null) {
-          this.userInformationNull.personalInformation.dateOfBirth = this.userInformationNull.personalInformation.dateOfBirth.split('T')[0];
           this.userInformation.personalInformation = this.userInformationNull.personalInformation;
         }
         if (this.userInformationNull.mobileNumber != null) {

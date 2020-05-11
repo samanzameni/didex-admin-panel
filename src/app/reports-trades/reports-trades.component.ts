@@ -66,9 +66,6 @@ export class ReportsTradesComponent implements OnInit {
         console.log(res);
         this.reportsRes = res;
 
-        for ( const i of this.reportsRes.records) {
-          if ( i.timeStamp !== null) {i.timeStamp = i.timeStamp.split('T')[0]; }
-        }
         this.reports.Till = null;
         this.reports.From = null;
         this.ngxShowLoader.hide();

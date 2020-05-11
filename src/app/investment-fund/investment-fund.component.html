@@ -39,9 +39,9 @@
             <th scope="col">ShortName</th>
             <th scope="col">Name</th>
             <th scope="col">Type</th>
+            <th scope="col">Investor</th>
             <th scope="col">Edit</th>
             <th scope="col">Detail</th>
-            <th scope="col">Investor</th>
           </tr>
           </thead>
           <tbody>
@@ -53,6 +53,11 @@
             <td>{{i.name}}</td>
             <td>{{investmentType[i.type]}}</td>
             <td>
+              <button type="button" class="btn btn-outline-secondary"  (click)="send(i.id)">
+                <i class="fa fa-shopping-bag" aria-hidden="true" ></i>
+              </button>
+            </td>
+            <td>
               <button type="button" class="btn btn-outline-warning"  (click)="updateSN(i.id)">
                 <i class="fa fa-edit" aria-hidden="true"></i>
               </button>
@@ -60,11 +65,6 @@
             <td>
               <button type="button" class="btn btn-outline-secondary"  (click)="detailSN(i.id)">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
-              </button>
-            </td>
-            <td>
-              <button type="button" class="btn btn-outline-secondary"  (click)="send(i.id)">
-                <i class="fa fa-shopping-bag" aria-hidden="true" ></i>
               </button>
             </td>
           </tr>

@@ -77,11 +77,6 @@ export class ReportsComponent implements OnInit {
         console.log(res);
         this.reportsRes = res;
 
-        for ( const i of this.reportsRes.records) {
-          if ( i.updatedAt !== null) {i.updatedAt = i.updatedAt.split('T')[0]; }
-          if ( i.expireTime !== null) {i.expireTime = i.expireTime.split('T')[0]; }
-          if ( i.createdAt !== null) {i.createdAt = i.createdAt.split('T')[0]; }
-        }
         this.reports.Till = null;
         this.reports.From = null;
         this.ngxShowLoader.hide();

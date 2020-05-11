@@ -175,10 +175,10 @@
               {{i.executedQuantity}}
             </td>
             <td >
-              {{i.createdAt}}
+              {{i.createdAt | date: 'mediumDate'}}
             </td>
             <td>
-              {{i.updatedAt}}
+              {{i.updatedAt | date: 'mediumDate'}}
             </td>
             <td>
               {{i.stopPrice}}
@@ -187,7 +187,7 @@
               {{i.postOnly}}
             </td>
             <td>
-              {{i.expireTime}}
+              {{i.expireTime | date: 'mediumDate'}}
             </td>
           </tr>
           </tbody>
