@@ -6,6 +6,7 @@ import {ReportsTransactions} from '../@core/Reports/reports-transactions';
 import {ReportsTransactionsService} from '../@core/Reports/reports-transactions.service';
 import {TransactionStatus} from '../@core/Reports/transaction-status.enum';
 import {TransactionType} from '../@core/Reports/transaction-type.enum';
+import {NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-reports-transactions',
@@ -19,8 +20,10 @@ export class ReportsTransactionsComponent implements OnInit {
   pageSize = 10;
   tStatus = TransactionStatus;
   tType = TransactionType;
+  fromNgb: NgbDateStruct;
+  tillNgb: NgbDateStruct;
   constructor(private reportsTransactionsService: ReportsTransactionsService, private toastrService: ToastrService,
-              private ngxShowLoader: NgxSpinnerService) {
+              private ngxShowLoader: NgxSpinnerService, private ngbDateParserFormatter: NgbDateParserFormatter) {
     this.reports = {
       TraderId : null,
       CurrencyShortName : null,
@@ -60,11 +63,11 @@ export class ReportsTransactionsComponent implements OnInit {
   reportsTransactionsGet() {
     this.ngxShowLoader.show();
     if (this.reports.FilterBy === 'timestamp' ) {
-      if (this.reports.From != null) {
-        this.reports.From = new Date(this.reports.From).toISOString();
+      if (this.fromNgb != null) {
+        this.reports.From =  new Date(this.ngbDateParserFormatter.format(this.fromNgb)).toISOString();
       }
-      if (this.reports.Till != null) {
-        this.reports.Till = new Date(this.reports.Till).toISOString();
+      if (this.tillNgb != null) {
+        this.reports.Till =  new Date(this.ngbDateParserFormatter.format(this.tillNgb)).toISOString();
       }
     }
     return this.reportsTransactionsService.getReportsTransactions(this.reports).subscribe(

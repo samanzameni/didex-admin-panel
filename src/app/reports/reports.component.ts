@@ -8,6 +8,8 @@ import {OrderSides} from '../@core/Reports/order-sides.enum';
 import {OrderStatus} from '../@core/Reports/order-status.enum';
 import {OrderType} from '../@core/Reports/order-type.enum';
 import {OrderTimeInForce} from '../@core/Reports/order-time-in-force.enum';
+import {InvestmentFundService} from '../@core/Investment Fund/investment-fund.service';
+import {NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -24,8 +26,10 @@ export class ReportsComponent implements OnInit {
   oStatus = OrderStatus;
   oTimeInForce = OrderTimeInForce;
   oType = OrderType;
+  fromNgb: NgbDateStruct;
+  tillNgb: NgbDateStruct;
   constructor(private reportsService: ReportsService, private toastrService: ToastrService,
-              private ngxShowLoader: NgxSpinnerService) {
+              private ngxShowLoader: NgxSpinnerService, private ngbDateParserFormatter: NgbDateParserFormatter) {
     this.reports = {
     TraderId : null,
     Symbol : null,
@@ -65,18 +69,17 @@ export class ReportsComponent implements OnInit {
   reportsGet() {
     this.ngxShowLoader.show();
     if (this.reports.FilterBy === 'timestamp' ) {
-      if (this.reports.From != null) {
-        this.reports.From = new Date(this.reports.From).toISOString();
+      if (this.fromNgb != null) {
+        this.reports.From =  new Date(this.ngbDateParserFormatter.format(this.fromNgb)).toISOString();
       }
-      if (this.reports.Till != null) {
-        this.reports.Till = new Date(this.reports.Till).toISOString();
+      if (this.tillNgb != null) {
+        this.reports.Till =  new Date(this.ngbDateParserFormatter.format(this.tillNgb)).toISOString();
       }
     }
     return this.reportsService.getReports(this.reports).subscribe(
       (res: any) => {
         console.log(res);
         this.reportsRes = res;
-
         this.reports.Till = null;
         this.reports.From = null;
         this.ngxShowLoader.hide();
@@ -91,5 +94,4 @@ export class ReportsComponent implements OnInit {
     this.reportsGet();
     window.scroll(0, 0);
   }
-
 }

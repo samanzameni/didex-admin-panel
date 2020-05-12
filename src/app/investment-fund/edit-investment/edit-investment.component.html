@@ -148,7 +148,7 @@
                   <input class="form-control" id="startDate" formControlName="startDate" placeholder="Start Date"
                          name="ep" [(ngModel)]="startDateNgb" ngbDatepicker #e="ngbDatepicker">
                   <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" (click)="e.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                    <button class="btn btn-outline-secondary calendar" (click)="e.toggle()" type="button" style="padding: 8px 14px;"><i class="fa fa-calendar"></i></button>
                   </div>
                 </div>
                 <div *ngIf="currencyForm.controls['startDate'].invalid && (currencyForm.controls['startDate'].dirty || currencyForm.controls['startDate'].touched)" class="alert alert-danger">
@@ -165,7 +165,7 @@
                   <input class="form-control" id="expirationDate" formControlName="expirationDate" placeholder="Expiration Date"
                          name="dp" [(ngModel)]="expirationDateNgb" ngbDatepicker #d="ngbDatepicker">
                   <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button" style="padding: 8px 14px;"><i class="fa fa-calendar"></i></button>
                   </div>
                 </div>
                    <div *ngIf="currencyForm.controls['expirationDate'].invalid && (currencyForm.controls['expirationDate'].dirty || currencyForm.controls['expirationDate'].touched)" class="alert alert-danger">

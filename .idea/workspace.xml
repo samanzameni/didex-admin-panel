@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/add-investment/add-investment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/add-investment/add-investment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/add-investment/add-investment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/add-investment/add-investment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" afterDir="false" />
@@ -156,14 +157,9 @@
       <workItem from="1588746461435" duration="18570000" />
       <workItem from="1589007653228" duration="744000" />
       <workItem from="1589096311177" duration="15715000" />
-      <workItem from="1589181711150" duration="14785000" />
-    </task>
-    <task id="LOCAL-00035" summary="recaptcha .">
-      <created>1585463962453</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1585463962453</updated>
+      <workItem from="1589181711150" duration="15551000" />
+      <workItem from="1589217955703" duration="3263000" />
+      <workItem from="1589231053257" duration="5443000" />
     </task>
     <task id="LOCAL-00036" summary="recaptcha and guard fixed.">
       <created>1585477518746</created>
@@ -501,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589199713207</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="fixing times in reports.">
+      <created>1589205382195</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1589205382195</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed routers." />
     <MESSAGE value="Back PopUp." />
     <MESSAGE value="reCaptcha V2." />
     <MESSAGE value="reCaptcha V2 again." />
@@ -546,7 +548,8 @@
     <MESSAGE value="invest trader v2." />
     <MESSAGE value="invest trader v3." />
     <MESSAGE value="fixing datepicker." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing datepicker." />
+    <MESSAGE value="fixing times in reports." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing times in reports." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -562,16 +565,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1589199642771">
+    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1589205379207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1588774370626" />
-    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589199642771" />
-    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1589130834372">
+    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589205379207" />
+    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1589220040176">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1589130834372" />
-    <state x="696" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1582372970364" />
+    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1589220040176" />
+    <state x="696" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589206101504" />
     <state x="450" y="212" key="IDE.errors.dialog" timestamp="1586936834375">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -585,11 +588,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1589199780224">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1589205418929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1588774400031" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589199780224" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589205418929" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
