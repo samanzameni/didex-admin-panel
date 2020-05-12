@@ -26,6 +26,7 @@ export class TraderUserInvestComponent implements OnInit {
     records: [
       {
         id: null,
+        traderEmail: null,
       investmentFundId: null,
       traderId: null,
       investDate: null,

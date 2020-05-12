@@ -11,6 +11,7 @@ export interface UserInvest {
       investDate: Date,
       totalEarn: number;
       amount: number;
+      traderEmail: string;
       investRecords: [
         {
           id: number;

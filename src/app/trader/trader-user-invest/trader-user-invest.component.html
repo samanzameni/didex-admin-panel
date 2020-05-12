@@ -33,24 +33,26 @@
           <thead>
           <tr>
             <th scope="col">Id</th>
+            <th scope="col">Trader Email</th>
+            <th scope="col">Trader ID</th>
+            <th scope="col">Investment Fund Id</th>
             <th scope="col">Amount</th>
             <th scope="col">Invest Date</th>
-            <th scope="col">Investment Fund Id</th>
             <th scope="col">Status</th>
             <th scope="col">Total Earn</th>
-            <th scope="col">Trader ID</th>
             <th scope="col">Invest Records</th>
           </tr>
           </thead>
           <tbody >
           <tr *ngFor="let l of userInvest.records" >
             <td>{{l.id}}</td>
+            <td>{{l.traderEmail}}</td>
+            <td>{{l.traderId}}</td>
+            <td>{{l.investmentFundId}}</td>
             <td>{{l.amount}}</td>
             <td>{{l.investDate | date: 'mediumDate'}}</td>
-            <td>{{l.investmentFundId}}</td>
             <td>{{statusInvest[l.status]}}</td>
             <td>{{l.totalEarn}}</td>
-            <td>{{l.traderId}}</td>
             <td>
               <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" (click)="investRecords(l.investRecords)">
                 <i class="fa fa-info" aria-hidden="true" ></i>

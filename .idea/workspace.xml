@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="" />
+    <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Trader/user-invest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Trader/user-invest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,14 +153,8 @@
       <workItem from="1589096311177" duration="15715000" />
       <workItem from="1589181711150" duration="15551000" />
       <workItem from="1589217955703" duration="3263000" />
-      <workItem from="1589231053257" duration="5706000" />
-    </task>
-    <task id="LOCAL-00037" summary="recaptcha and guard fixed.">
-      <created>1585477552656</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1585477552657</updated>
+      <workItem from="1589231053257" duration="5767000" />
+      <workItem from="1589288339912" duration="951000" />
     </task>
     <task id="LOCAL-00038" summary="recaptcha and guard fixed.">
       <created>1585478541637</created>
@@ -492,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589272030065</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="putting datepicker.">
+      <created>1589272120359</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1589272120360</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,7 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reCaptcha V2." />
     <MESSAGE value="reCaptcha V2 again." />
     <MESSAGE value="api.didex.com." />
     <MESSAGE value="devapi.didex.com." />
@@ -537,7 +543,8 @@
     <MESSAGE value="fixing datepicker." />
     <MESSAGE value="fixing times in reports." />
     <MESSAGE value="putting datepicker in reports." />
-    <option name="LAST_COMMIT_MESSAGE" value="putting datepicker in reports." />
+    <MESSAGE value="putting datepicker." />
+    <option name="LAST_COMMIT_MESSAGE" value="putting datepicker." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -553,10 +560,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1589272026501">
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1589272115984">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589272026501" />
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589272115984" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589205379207" />
     <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1589220040176">
       <screen x="0" y="0" width="1600" height="860" />
@@ -576,10 +583,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1589272070970">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1589272158212">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589272070970" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589272158212" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589205418929" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
