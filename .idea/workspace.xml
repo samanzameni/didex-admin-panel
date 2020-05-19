@@ -3,10 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/@core/Trader/user-invest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Trader/user-invest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/detail/detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/detail/detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/add-currency/add-currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/detail-currency/detail-currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/add-investment/add-investment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/add-investment/add-investment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/detail-investment/detail-investment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/detail-investment/detail-investment.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-add/market-add.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market-edit/market-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/market/market.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/market/market.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-trades/reports-trades.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports-transactions/reports-transactions.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/reports/reports.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/reports/reports.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader-user-invest/trader-user-invest.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +170,8 @@
       <workItem from="1589181711150" duration="15551000" />
       <workItem from="1589217955703" duration="3263000" />
       <workItem from="1589231053257" duration="5767000" />
-      <workItem from="1589288339912" duration="951000" />
-    </task>
-    <task id="LOCAL-00038" summary="recaptcha and guard fixed.">
-      <created>1585478541637</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1585478541637</updated>
+      <workItem from="1589288339912" duration="1775000" />
+      <workItem from="1589876159029" duration="1434000" />
     </task>
     <task id="LOCAL-00039" summary="captcha token fixed.">
       <created>1585519712691</created>
@@ -499,7 +509,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589272120360</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="changing investor.">
+      <created>1589289524667</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1589289524669</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +536,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reCaptcha V2 again." />
     <MESSAGE value="api.didex.com." />
     <MESSAGE value="devapi.didex.com." />
     <MESSAGE value="api.didex.com original." />
@@ -544,7 +560,8 @@
     <MESSAGE value="fixing times in reports." />
     <MESSAGE value="putting datepicker in reports." />
     <MESSAGE value="putting datepicker." />
-    <option name="LAST_COMMIT_MESSAGE" value="putting datepicker." />
+    <MESSAGE value="changing investor." />
+    <option name="LAST_COMMIT_MESSAGE" value="changing investor." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -560,15 +577,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581854943885" />
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1589272115984">
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1589289520649">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589272115984" />
+    <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589289520649" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589205379207" />
-    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1589220040176">
+    <state x="580" y="186" key="FileChooserDialogImpl" timestamp="1589290117246">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1589220040176" />
+    <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1589290117246" />
     <state x="696" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589206101504" />
     <state x="450" y="212" key="IDE.errors.dialog" timestamp="1586936834375">
       <screen x="0" y="0" width="1600" height="860" />
@@ -583,10 +600,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1589272158212">
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2" timestamp="1589289974581">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589272158212" />
+    <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589289974581" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589205418929" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
