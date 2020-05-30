@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Investment Fund/investment-fund.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Investment Fund/investment-fund.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +155,8 @@
       <workItem from="1589231053257" duration="5767000" />
       <workItem from="1589288339912" duration="1775000" />
       <workItem from="1589876159029" duration="3474000" />
-      <workItem from="1590819685035" duration="3760000" />
-    </task>
-    <task id="LOCAL-00040" summary="captcha token fixed.">
-      <created>1585813631719</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1585813631719</updated>
+      <workItem from="1590819685035" duration="7489000" />
+      <workItem from="1590831520477" duration="2015000" />
     </task>
     <task id="LOCAL-00041" summary="gitlab test.">
       <created>1585813984741</created>
@@ -499,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589878192171</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="fixing INVESTMENT FUNDS FROP DOWN ERROR.">
+      <created>1590824539413</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1590824539413</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +521,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="devapi.didex.com." />
     <MESSAGE value="api.didex.com original." />
     <MESSAGE value="fixed back button." />
     <MESSAGE value="fixed ngmodel." />
@@ -544,7 +545,8 @@
     <MESSAGE value="putting datepicker." />
     <MESSAGE value="changing investor." />
     <MESSAGE value="fixing responsive errors." />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing responsive errors." />
+    <MESSAGE value="fixing INVESTMENT FUNDS FROP DOWN ERROR." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing INVESTMENT FUNDS FROP DOWN ERROR." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -555,11 +557,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582369466112" />
-    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1589878189197">
+    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1590824536563">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589289520649" />
-    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589878189197" />
+    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590824536563" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1590820461248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -578,11 +580,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1589878247551">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1590824610631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589289974581" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589878247551" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590824610631" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

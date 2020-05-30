@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {StorageService} from '../Login/storage.service';
 import {Observable} from 'rxjs';
 import {Investment} from './investment';
+import {Interest} from './interest';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,10 @@ export class InvestmentFundService {
   investmentPost(formdata: Investment ): Observable<any> {
     return this.http.post
     (this.ServerUrl + 'admin/InvestmentFund', formdata, this.httpOptions  );
+  }
+  interestPost(id: number , formdata: Interest ): Observable<any> {
+    return this.http.post
+    (this.ServerUrl + 'admin/InvestmentFund/' + id + '/Interest', formdata, this.httpOptions  );
   }
   investmentGet() {
     return this.http.get

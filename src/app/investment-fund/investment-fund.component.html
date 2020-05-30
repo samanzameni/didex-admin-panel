@@ -39,6 +39,7 @@
             <th scope="col">ShortName</th>
             <th scope="col">Name</th>
             <th scope="col">Type</th>
+            <th scope="col">Interest</th>
             <th scope="col">Investor</th>
             <th scope="col">Edit</th>
             <th scope="col">Detail</th>
@@ -53,17 +54,22 @@
             <td>{{i.name}}</td>
             <td>{{investmentType[i.type]}}</td>
             <td>
-              <button type="button" class="btn btn-outline-secondary"  (click)="send(i.id)">
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Interest" data-backdrop="static" data-keyboard="false" (click)="interestID(i.id)">
+                <i class="fa fa-percent" aria-hidden="true" ></i>
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-info" (click)="send(i.id)">
                 <i class="fa fa-shopping-bag" aria-hidden="true" ></i>
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-warning"  (click)="updateSN(i.id)">
+              <button type="button" class="btn btn-outline-warning" (click)="updateSN(i.id)">
                 <i class="fa fa-edit" aria-hidden="true"></i>
               </button>
             </td>
             <td>
-              <button type="button" class="btn btn-outline-secondary"  (click)="detailSN(i.id)">
+              <button type="button" class="btn btn-outline-secondary" (click)="detailSN(i.id)">
                 <i class="fa fa-chevron-right" aria-hidden="true"></i>
               </button>
             </td>
@@ -94,5 +100,60 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="Interest" tabindex="-1" role="dialog" aria-labelledby="InterestLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="InterestLabel"> Interest</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="iForm">
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="date">Date</label>
+                <div class="input-group">
+                  <input class="form-control" id="date" formControlName="date" placeholder="Date"
+                         name="ep" [(ngModel)]="dateNgb" ngbDatepicker #e="ngbDatepicker">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" (click)="e.toggle()" type="button" style="padding: 8px 14px;"><i class="fa fa-calendar"></i></button>
+                  </div>
+                </div>
+                <div *ngIf="iForm.controls['date'].invalid && (iForm.controls['date'].dirty || iForm.controls['date'].touched)" class="alert alert-danger">
+                  <div *ngIf="iForm.controls['date'].errors.required">
+                    Date is required.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="row"><div class="col">
+              <div class="form-group">
+                <label for="interestPersent">interest Percent</label>
+                <input type="number" class="form-control" id="interestPersent" min="0" max="100" step="1" placeholder="interest Percent" formControlName="interestPersent" [(ngModel)]="int.interestPersent ">
+                <div *ngIf="iForm.controls['interestPersent'].invalid && (iForm.controls['interestPersent'].dirty || iForm.controls['interestPersent'].touched)" class="alert alert-danger">
+                  <div *ngIf="iForm.controls['interestPersent'].errors.required">
+                    interest Percent is required.
+                  </div>
+                  <div *ngIf="iForm.controls['interestPersent'].errors.min">
+                    It should not be a lesser than 0%.
+                  </div>
+                  <div *ngIf="iForm.controls['interestPersent'].errors.max">
+                    It should not be a bigger than 100%.
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" (click)="addInterest()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
