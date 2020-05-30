@@ -128,6 +128,4 @@ export class InvestmentFundComponent implements OnInit {
     this.showInvestmentList();
     window.scroll(0, 0);
   }
-
-
 }

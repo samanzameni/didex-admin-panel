@@ -53,7 +53,7 @@
             <td>{{i.fundCurrencyShortName}}</td>
             <td>{{i.name}}</td>
             <td>{{investmentType[i.type]}}</td>
-            <td >
+            <td>
               <button *ngIf="i.type == 2" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Interest" data-backdrop="static" data-keyboard="false" (click)="interestID(i.id)">
                 <i class="fa fa-percent" aria-hidden="true" ></i>
               </button>
@@ -154,7 +154,7 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal" (click)="addInterest()">Submit</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal" [disabled]="iForm.invalid" (click)="addInterest()">Submit</button>
           </div>
         </div>
       </div>
