@@ -42,6 +42,7 @@ import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-use
 const routes: Routes = [
   {
     path: '' , component: PagesComponent , children: [
+      { path: 'dashboard', component: DashboardComponent },
       { path: 'adminList', component: AdminListComponent },
       { path: 'adminListDetail', component: DetailComponent},
       { path: 'currency', component: CurrencyComponent },
@@ -62,7 +63,6 @@ const routes: Routes = [
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },
       { path: 'reportsTransactions', component: ReportsTransactionsComponent },
-      { path: 'dashboard', component: DashboardComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'buttons', component: ButtonsComponent },
       { path: 'tables', component: TablesComponent },

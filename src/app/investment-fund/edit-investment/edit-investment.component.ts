@@ -89,7 +89,7 @@ export class EditInvestmentComponent implements OnInit {
   get fields(): string[] {
     const f = InvestType;
     const keys = Object.keys(f);
-    return keys.slice(keys.length / 2);
+    return keys.slice((keys.length / 2) - 1);
   }
   ngOnInit() {
     this.USN = parseFloat(this.router.snapshot.queryParamMap.get('id'));
