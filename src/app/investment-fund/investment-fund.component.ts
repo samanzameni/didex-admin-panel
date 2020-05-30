@@ -40,7 +40,7 @@ export class InvestmentFundComponent implements OnInit {
   interestForm() {
     this.iForm = this.formBuilder.group({
       date: ['', Validators.required ],
-      interestPersent: ['', [Validators.required , Validators.min(0) , Validators.max(100)]],
+      interestPersent: ['' , [Validators.required , Validators.min(0) , Validators.max(100)]],
     });
   }
   detailSN(id: number) {

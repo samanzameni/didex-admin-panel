@@ -132,7 +132,12 @@
             <div class="row"><div class="col">
               <div class="form-group">
                 <label for="interestPersent">interest Percent</label>
+                <div class="input-group">
                 <input type="number" class="form-control" id="interestPersent" min="0" max="100" step="1" placeholder="interest Percent" formControlName="interestPersent" [(ngModel)]="int.interestPersent ">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar"  type="button" style="padding: 8px 14px;"><i class="fa fa-percent" disabled=""></i></button>
+                </div>
+                </div>
                 <div *ngIf="iForm.controls['interestPersent'].invalid && (iForm.controls['interestPersent'].dirty || iForm.controls['interestPersent'].touched)" class="alert alert-danger">
                   <div *ngIf="iForm.controls['interestPersent'].errors.required">
                     interest Percent is required.
