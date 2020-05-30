@@ -135,7 +135,7 @@
                 <div class="input-group">
                 <input type="number" class="form-control" id="interestPersent" min="0" max="100" step="1" placeholder="interest Percent" formControlName="interestPersent" [(ngModel)]="int.interestPersent ">
                 <div class="input-group-append">
-                  <button class="btn btn-outline-secondary calendar"  type="button" style="padding: 8px 14px;"><i class="fa fa-percent" disabled=""></i></button>
+                  <button class="btn btn-outline-secondary calendar"  type="button" style="padding: 8px 14px;" disabled><i class="fa fa-percent" ></i></button>
                 </div>
                 </div>
                 <div *ngIf="iForm.controls['interestPersent'].invalid && (iForm.controls['interestPersent'].dirty || iForm.controls['interestPersent'].touched)" class="alert alert-danger">
@@ -143,10 +143,10 @@
                     interest Percent is required.
                   </div>
                   <div *ngIf="iForm.controls['interestPersent'].errors.min">
-                    It should not be a lesser than 0%.
+                    The number should not be less than 0.
                   </div>
                   <div *ngIf="iForm.controls['interestPersent'].errors.max">
-                    It should not be a bigger than 100%.
+                    The number should not be more than 100.
                   </div>
                 </div>
               </div>
