@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,14 +154,7 @@
       <workItem from="1589288339912" duration="1775000" />
       <workItem from="1589876159029" duration="3474000" />
       <workItem from="1590819685035" duration="7489000" />
-      <workItem from="1590831520477" duration="7150000" />
-    </task>
-    <task id="LOCAL-00044" summary="gitlab test tag.">
-      <created>1585814443169</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1585814443169</updated>
+      <workItem from="1590831520477" duration="8575000" />
     </task>
     <task id="LOCAL-00045" summary="gitlab test tag version 1.">
       <created>1585814614371</created>
@@ -499,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590839486246</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="disable percent.">
+      <created>1590840932411</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1590840932411</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -519,7 +519,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="input number." />
     <MESSAGE value="validation number." />
     <MESSAGE value="arrow number." />
     <MESSAGE value="new password." />
@@ -544,7 +543,8 @@
     <MESSAGE value="creating new api in investment fund." />
     <MESSAGE value="percent." />
     <MESSAGE value="check percent." />
-    <option name="LAST_COMMIT_MESSAGE" value="check percent." />
+    <MESSAGE value="disable percent." />
+    <option name="LAST_COMMIT_MESSAGE" value="disable percent." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -555,11 +555,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582369466112" />
-    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1590839483437">
+    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1590840929430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589289520649" />
-    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590839483437" />
+    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590840929430" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1590820461248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -578,11 +578,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1590839502281">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1590840988072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589289974581" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590839502281" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590840988072" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

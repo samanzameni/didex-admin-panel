@@ -58,6 +58,7 @@ export class EditInvestmentComponent implements OnInit {
       (res: any) => {
         console.log(res);
         this.SNCurrency = res;
+        this.SNCurrency.type = this.SNCurrency.type - 1;
         this.startDateNgb = this.ngbDateParserFormatter.parse(this.SNCurrency.startDate);
         this.expirationDateNgb = this.ngbDateParserFormatter.parse(this.SNCurrency.expirationDate);
         this.ngxShowLoader.hide();
@@ -89,7 +90,7 @@ export class EditInvestmentComponent implements OnInit {
   get fields(): string[] {
     const f = InvestType;
     const keys = Object.keys(f);
-    return keys.slice((keys.length / 2) - 1);
+    return keys.slice((keys.length / 2) );
   }
   ngOnInit() {
     this.USN = parseFloat(this.router.snapshot.queryParamMap.get('id'));
