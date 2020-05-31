@@ -54,7 +54,7 @@
             <td>{{i.name}}</td>
             <td>{{investmentType[i.type]}}</td>
             <td>
-              <button *ngIf="i.type == 2" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Interest" data-backdrop="static" data-keyboard="false" (click)="interestID(i.id)">
+              <button *ngIf="i.type == 1" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#Interest" data-backdrop="static" data-keyboard="false" (click)="interestID(i.id)">
                 <i class="fa fa-percent" aria-hidden="true" ></i>
               </button>
             </td>
