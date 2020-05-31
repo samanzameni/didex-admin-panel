@@ -1,4 +1,4 @@
 export enum InvestType {
-  Fixed = 0,
+  Fixed = 1,
   Flexible,
 }

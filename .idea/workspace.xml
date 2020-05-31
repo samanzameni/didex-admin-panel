@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/@core/Investment Fund/invest-type.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Investment Fund/invest-type.enum.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/investment-fund.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navbar/navbar.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,14 +157,7 @@
       <workItem from="1589876159029" duration="3474000" />
       <workItem from="1590819685035" duration="7489000" />
       <workItem from="1590831520477" duration="11205000" />
-      <workItem from="1590908580237" duration="2901000" />
-    </task>
-    <task id="LOCAL-00049" summary="devapi push.">
-      <created>1586012535465</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1586012535465</updated>
+      <workItem from="1590908580237" duration="10068000" />
     </task>
     <task id="LOCAL-00050" summary="devapi push.">
       <created>1586012615162</created>
@@ -501,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590845979372</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="changing enum.">
+      <created>1590913973238</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1590913973239</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +522,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="no max." />
     <MESSAGE value="new responsive nav." />
     <MESSAGE value="password eye." />
     <MESSAGE value="new route." />
@@ -546,7 +546,8 @@
     <MESSAGE value="button flexible." />
     <MESSAGE value="test flexible." />
     <MESSAGE value="test disable button." />
-    <option name="LAST_COMMIT_MESSAGE" value="test disable button." />
+    <MESSAGE value="changing enum." />
+    <option name="LAST_COMMIT_MESSAGE" value="changing enum." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
@@ -557,11 +558,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582369466112" />
-    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1590845976373">
+    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1590913969689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589289520649" />
-    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590845976373" />
+    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590913969689" />
     <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1590820461248">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -580,11 +581,11 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1590845999990">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1590914001916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589289974581" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590845999990" />
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590914001916" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
