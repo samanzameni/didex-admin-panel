@@ -71,6 +71,8 @@ export class EditInvestmentComponent implements OnInit {
   }
   updateSHortName() {
     this.ngxShowLoader.show();
+    this.SNCurrency.type = this.SNCurrency.type + 1;
+    console.log(this.SNCurrency.type);
     this.SNCurrency.startDate = new Date(this.ngbDateParserFormatter.format(this.startDateNgb)).toISOString();
     this.SNCurrency.expirationDate = new Date(this.ngbDateParserFormatter.format(this.expirationDateNgb)).toISOString();
     return this.investmentFundService.idPut(this.USN , this.SNCurrency).subscribe(
