@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports-query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-query.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/investment-fund/edit-investment/edit-investment.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/pages.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/pages.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/search/search.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/search/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +67,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../InvestDidex/Invest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -155,14 +161,11 @@
       <workItem from="1589876159029" duration="3474000" />
       <workItem from="1590819685035" duration="7489000" />
       <workItem from="1590831520477" duration="11205000" />
-      <workItem from="1590908580237" duration="15609000" />
-    </task>
-    <task id="LOCAL-00051" summary="Update AdminList page.">
-      <created>1586040007254</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1586040007254</updated>
+      <workItem from="1590908580237" duration="21459000" />
+      <workItem from="1591092159580" duration="519000" />
+      <workItem from="1591172618558" duration="74000" />
+      <workItem from="1591342110553" duration="4480000" />
+      <workItem from="1591622029210" duration="7065000" />
     </task>
     <task id="LOCAL-00052" summary="Update AdminList page.">
       <created>1586040176967</created>
@@ -500,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590932777927</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="dropdown test.">
+      <created>1591010163703</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1591010163703</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="password eye." />
     <MESSAGE value="new route." />
     <MESSAGE value="Investment Fund." />
     <MESSAGE value="Investment Fund full." />
@@ -545,30 +554,28 @@
     <MESSAGE value="test disable button." />
     <MESSAGE value="changing enum." />
     <MESSAGE value="mobile." />
-    <option name="LAST_COMMIT_MESSAGE" value="mobile." />
+    <MESSAGE value="dropdown test." />
+    <option name="LAST_COMMIT_MESSAGE" value="dropdown test." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="460" y="148" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1587908214963" />
-    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582369466112">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582369466112" />
-    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1590932775079">
+    <state x="449" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1591010160890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589289520649" />
-    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590932775079" />
-    <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1590820461248">
+    <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591010160890" />
+    <state x="696" y="225" key="FileChooserDialogImpl" timestamp="1591017669550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1589290117246" />
-    <state x="696" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590820461248" />
-    <state x="540" y="256" key="IDE.errors.dialog" timestamp="1590910869172">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="696" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591017669550" />
+    <state x="2140" y="256" key="IDE.errors.dialog" timestamp="1591622068290">
+      <screen x="1600" y="0" width="1920" height="1040" />
     </state>
+    <state x="2140" y="256" key="IDE.errors.dialog/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1591622068290" />
     <state x="450" y="212" key="IDE.errors.dialog/0.0.1600.860@0.0.1600.860" timestamp="1586936834375" />
     <state x="540" y="256" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590910869172" />
     <state x="504" y="138" key="MultipleFileMergeDialog" timestamp="1588773060071">
@@ -579,28 +586,27 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1590932822704">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2" timestamp="1591010218890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589289974581" />
-    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590932822704" />
-    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1588770594767">
+    <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591010218890" />
+    <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1591342159340">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1588770594767" />
-    <state x="646" y="94" width="627" height="852" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582384570544" />
+    <state x="538" y="78" width="627" height="705" key="find.popup/0.0.1600.860@0.0.1600.860" timestamp="1591342159340" />
     <state x="466" y="62" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588773033180">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="466" y="62" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860@0.0.1600.860" timestamp="1588773033180" />
-    <state x="182" y="10" key="new project wizard" timestamp="1587204798986">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="218" y="12" key="new project wizard" timestamp="1591013654449">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="182" y="10" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1587204798986" />
+    <state x="218" y="12" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1591013654449" />
     <state x="513" y="198" key="run.anything.popup" timestamp="1588765399688">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="513" y="198" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1588765399688" />
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582374842162" />
   </component>
 </project>

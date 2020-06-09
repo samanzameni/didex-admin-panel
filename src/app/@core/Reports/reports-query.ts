@@ -1,5 +1,6 @@
 export interface ReportsQuery {
   TraderId?: number;
+  TraderEmail?: number;
   Symbol?: string;
   Desc?: boolean;
   FilterBy?: string;

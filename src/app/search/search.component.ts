@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   userSearch: Trader;
   user: string;
   hide = true;
+  liHide = true;
   @ViewChild('searchInput', {static: false}) searchInput: ElementRef;
   @Output() id = new EventEmitter<number>();
   constructor(private toastrService: ToastrService, private searchService: SearchService) {
@@ -26,6 +27,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   }
   searchKey(text) {
     this.hide = true;
+    this.liHide = true;
     return this.searchService.searchGet(text).subscribe(
   (res: any) => {
     console.log(res);
@@ -38,8 +40,16 @@ export class SearchComponent implements OnInit, AfterViewInit {
   }
   userId(i) {
     this.hide = false;
-    this.userSearch.id = i;
+    this.liHide = false;
+    this.userSearch.id = i.id;
     this.id.emit(this.userSearch.id);
+    this.userSearch.email = i.email;
+  }
+  remove() {
+    this.userSearch.id = null;
+    this.userSearch.email = null;
+    this.hide = true;
+    this.liHide = false;
   }
   ngOnInit() {
   }
@@ -52,7 +62,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
         // if character length greater then 2
         , filter(res => res.length > 7)
         // Time in milliseconds between key events
-        , debounceTime(1000)
+        , debounceTime(500)
         // If previous query is different from current
         , distinctUntilChanged(),
         // subscription for response
