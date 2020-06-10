@@ -3,7 +3,9 @@
         <input type="text" [(ngModel)]="userSearch.email"  class="form-control" placeholder="Enter Trader Name" #searchInput >
         <div *ngIf="!hide" class="close-pos"><i class="fa fa-close" (click)="remove()"></i></div>
       </div>
-      <ul class="list-group" *ngFor="let i of search">
-        <li class="list-group-item" type="button"  (click)="userId(i)" *ngIf="liHide" >{{i.email}}</li>
-      </ul>
+      <div class="search">
+        <ul class="list-group" *ngFor="let i of search" >
+          <li class="list-group-item" type="button"  (click)="userId(i)" *ngIf="liHide" >{{i.email}}</li>
+        </ul>
+      </div>
 </div>

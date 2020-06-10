@@ -48,6 +48,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   remove() {
     this.userSearch.id = null;
     this.userSearch.email = null;
+    this.id.emit(this.userSearch.id);
     this.hide = true;
     this.liHide = false;
   }
