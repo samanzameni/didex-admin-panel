@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f306366-bc38-4d2d-b2f4-2a87ad324459" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Admin/role-list-res.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Admin/user-search.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/@core/Trader/trader-res.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Admin/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Admin/admin.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Reports/reports-query.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Reports/reports-query.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/@core/Trader/trader.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/@core/Trader/trader.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-list/admin-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/currency/edit-currency/edit-currency.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc-detail/kyc-detail.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/kyc/kyc.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/search/search.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/search/search.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/search/search.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/search/search.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/trader/trader.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/trader/trader.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FAQ/FAQ" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,14 +175,8 @@
       <workItem from="1591172618558" duration="74000" />
       <workItem from="1591342110553" duration="4480000" />
       <workItem from="1591622029210" duration="8201000" />
-      <workItem from="1591773378327" duration="5619000" />
-    </task>
-    <task id="LOCAL-00053" summary="Update AdminList page fixed errors.">
-      <created>1586041603857</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1586041603858</updated>
+      <workItem from="1591773378327" duration="20288000" />
+      <workItem from="1591864506711" duration="18378000" />
     </task>
     <task id="LOCAL-00054" summary="niloofar audit.">
       <created>1586074978797</created>
@@ -510,7 +514,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591690365999</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="fixing search.">
+      <created>1591779853091</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1591779853091</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Investment Fund." />
     <MESSAGE value="Investment Fund full." />
     <MESSAGE value="invest trader." />
     <MESSAGE value="invest trader v1." />
@@ -555,22 +565,24 @@
     <MESSAGE value="mobile." />
     <MESSAGE value="dropdown test." />
     <MESSAGE value="changing search and footer styles." />
-    <option name="LAST_COMMIT_MESSAGE" value="changing search and footer styles." />
+    <MESSAGE value="fixing search." />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing search." />
   </component>
   <component name="WindowStateProjectService">
     <state x="460" y="148" key="#Notifications" timestamp="1587908214963">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="460" y="148" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1587908214963" />
-    <state x="2049" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1591690363159">
+    <state x="2049" y="29" width="1014" height="734" key="CommitChangelistDialog2" timestamp="1591779850181">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="302" y="47" width="1014" height="734" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1589289520649" />
     <state x="449" y="29" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591010160890" />
-    <state x="2049" y="29" key="CommitChangelistDialog2/1600.0.1920.1040/0.0.1600.860@1600.0.1920.1040" timestamp="1591690363159" />
-    <state x="2296" y="225" key="FileChooserDialogImpl" timestamp="1591694269655">
+    <state x="2049" y="29" key="CommitChangelistDialog2/1600.0.1920.1040/0.0.1600.860@1600.0.1920.1040" timestamp="1591779850181" />
+    <state x="2296" y="225" key="FileChooserDialogImpl" timestamp="1591797585222">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
+    <state x="2296" y="225" key="FileChooserDialogImpl/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1591797585222" />
     <state x="580" y="186" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1589290117246" />
     <state x="696" y="225" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1591017669550" />
     <state x="2296" y="225" key="FileChooserDialogImpl/1600.0.1920.1040/0.0.1600.860@1600.0.1920.1040" timestamp="1591694269655" />
@@ -588,12 +600,12 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="73" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587908167463" />
-    <state x="2152" y="250" key="Vcs.Push.Dialog.v2" timestamp="1591690399237">
+    <state x="2152" y="250" key="Vcs.Push.Dialog.v2" timestamp="1591779902031">
       <screen x="1600" y="0" width="1920" height="1040" />
     </state>
     <state x="460" y="207" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1589289974581" />
     <state x="552" y="250" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591010218890" />
-    <state x="2152" y="250" key="Vcs.Push.Dialog.v2/1600.0.1920.1040/0.0.1600.860@1600.0.1920.1040" timestamp="1591690399237" />
+    <state x="2152" y="250" key="Vcs.Push.Dialog.v2/1600.0.1920.1040/0.0.1600.860@1600.0.1920.1040" timestamp="1591779902031" />
     <state x="538" y="78" width="627" height="705" key="find.popup" timestamp="1591342159340">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -607,9 +619,10 @@
     </state>
     <state x="182" y="10" key="new project wizard/0.0.1600.860@0.0.1600.860" timestamp="1587204798986" />
     <state x="218" y="12" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1591013654449" />
-    <state x="513" y="198" key="run.anything.popup" timestamp="1588765399688">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="2216" y="239" key="run.anything.popup" timestamp="1592036117630">
+      <screen x="1600" y="0" width="1920" height="1040" />
     </state>
+    <state x="2216" y="239" key="run.anything.popup/0.0.1600.860/1600.0.1920.1040@1600.0.1920.1040" timestamp="1592036117630" />
     <state x="513" y="198" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1588765399688" />
   </component>
 </project>

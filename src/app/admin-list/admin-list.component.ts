@@ -8,6 +8,8 @@ import {AdminChild} from '../@core/Admin/admin-child';
 import {ErrorPass} from '../@core/Admin/error';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {ReportsQuery} from '../@core/Reports/reports-query';
+import {RoleListRes} from '../@core/Admin/role-list-res';
 
 @Component({
   selector: 'app-admin-list',
@@ -17,14 +19,14 @@ import {Router} from '@angular/router';
 export class AdminListComponent implements OnInit {
   adminRoles: AdminRole;
   adminList: AdminRole;
-  roleList: RoleList[];
+  roleList: RoleListRes;
   userRoleList: RoleList;
   add: AdminChild;
   remove: AdminChild;
   reset: AdminChild;
-  errorPass: ErrorPass[];
   passForm: FormGroup;
   inputType = false;
+  querySearch: ReportsQuery;
   constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService
   , private formBuilder: FormBuilder, private router: Router) {
     this.adminRoles = {
@@ -56,6 +58,27 @@ export class AdminListComponent implements OnInit {
       phoneNumber: null,
       phoneNumberConfirmed: null,
       twoFactorEnabled: null,
+    };
+    this.roleList = {
+      count: null,
+      records: [
+        {
+          userName: null,
+          accessFailedCount: null,
+          country: null,
+          email: null,
+          emailConfirmed: null,
+          fullName: null,
+          lockoutEnd: null,
+          phoneNumber: null,
+          phoneNumberConfirmed: null,
+          twoFactorEnabled: null,
+        }
+        ],
+    };
+    this.querySearch = {
+      UserId: null,
+      Desc: null,
     };
     this.createForm();
   }
@@ -210,13 +233,32 @@ export class AdminListComponent implements OnInit {
       },
     );
   }
-
   eyeClick() {
     if (this.inputType === false) {
       this.inputType = true;
     } else {
       this.inputType = false;
     }
+  }
+  receiveId($event) {
+    this.querySearch.UserId = $event;
+  }
+  showSearch() {
+    this.ngxShowLoader.show();
+    return this.admin.searchGet(this.querySearch).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.roleList = res;
+        this.ngxShowLoader.hide();
+      },
+      err => {
+        console.log(err);
+        if ( err.status === 403) {
+          this.toastrService.error('You Dont Have Privilege To See This Table.', '', {timeOut: 4000});
+        }
+        this.ngxShowLoader.hide();
+      },
+    );
   }
   ngOnInit() {
     this.showRoles();
