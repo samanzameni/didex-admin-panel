@@ -17,3 +17,15 @@
 .but-width{
   width: 100%;
 }
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border: 1px solid gray;
+}
+
+.custom-control-input:checked~.custom-control-label.red::before {
+  background-color: red;
+}
+
+.custom-control-input:checked~.custom-control-label.green::before {
+  background-color: #00ce68;
+}

@@ -33,7 +33,7 @@ export class AdminListComponent implements OnInit {
       roles: null,
     };
     this.adminList = {
-      roles: 'trader',
+      roles: '',
     };
     this.add = {
       email: null,

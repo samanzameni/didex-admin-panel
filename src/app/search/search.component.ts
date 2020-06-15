@@ -17,6 +17,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   user: string;
   hide = true;
   liHide = true;
+  searchHide = true;
   @ViewChild('searchInput', {static: false}) searchInput: ElementRef;
   @Output() id = new EventEmitter<number>();
   constructor(private toastrService: ToastrService, private searchService: SearchService) {
@@ -28,6 +29,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   searchKey(text) {
     this.hide = true;
     this.liHide = true;
+    this.searchHide = false;
     return this.searchService.searchGet(text).subscribe(
   (res: any) => {
     console.log(res);
@@ -41,6 +43,7 @@ export class SearchComponent implements OnInit, AfterViewInit {
   userId(i) {
     this.hide = false;
     this.liHide = false;
+    this.searchHide = true;
     this.userSearch.id = i.id;
     this.id.emit(this.userSearch.id);
     this.userSearch.email = i.email;
