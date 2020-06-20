@@ -66,7 +66,7 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let i of roleList.records">
+  <tr *ngFor="let i of roleList.records| slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
     <td>{{i.fullName}}</td>
     <td>{{i.userName}}</td>
     <td>{{i.phoneNumber}}</td>
@@ -95,6 +95,7 @@
 </table>
     </div>
     </div>
+    <ngb-pagination [collectionSize]="roleList.count" [pageSize]="10" [(page)]="page" [maxSize]="3" [rotate]="true" [boundaryLinks]="false" [directionLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
   </div>
 </div>
 <!--Modal-->

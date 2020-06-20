@@ -45,7 +45,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let i of traderList.records">
+        <tr *ngFor="let i of traderList.records | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
           <td>{{i.id}}</td>
           <td>{{i.email}}</td>
           <td>{{traderEnum[i.status]}}</td>
@@ -59,6 +59,7 @@
       </table>
     </div>
     </div>
+    <ngb-pagination [collectionSize]="traderList.count" [pageSize]="10" [(page)]="page" [maxSize]="3" [rotate]="true" [boundaryLinks]="false" [directionLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
   </div>
 </div>
 
@@ -79,11 +80,18 @@
           <div class="form-group">
             <label for="Network">Status</label>
             <select class="form-control" id="Network" [(ngModel)]="trader.status" >
-              <option [ngValue]="undefined" disabled selected> select </option>
               <option *ngFor="let field of fields; let i = index" [ngValue]="i">{{field}}</option>
             </select>
           </div>
         </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="exampleInputName1">Note</label>
+              <input type="text" class="form-control" id="exampleInputName1" placeholder="Note" [(ngModel)]="trader.note">
+            </div>
+          </div>
         </div>
       </div>
       <div class="modal-footer">

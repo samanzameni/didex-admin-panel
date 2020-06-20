@@ -1,5 +1,5 @@
 export interface Pending {
   id: number;
-  firstName: string;
-  lastName: string;
+  firstName?: string;
+  lastName?: string;
 }

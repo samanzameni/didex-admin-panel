@@ -18,20 +18,23 @@ export class TraderComponent implements OnInit {
   trader: Trader;
   traderEnum = TraderStatus;
   querySearch: ReportsQuery;
+  page = 1;
+  pageSize = 10;
   constructor(private toastrService: ToastrService, private traderService: TraderService, private ngxShowLoader: NgxSpinnerService,
               private router: Router) {
     this.trader = {
           id: null,
           email: null,
           status: TraderStatus.Newbie,
+          note: null,
     };
     this.traderList = {
       count: null,
       records: [
         {
-      id: null,
-      email: null,
-      status: TraderStatus.Newbie,
+        id: null,
+        email: null,
+        status: TraderStatus.Newbie,
         }
       ]
     };

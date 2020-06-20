@@ -27,13 +27,15 @@ export class AdminListComponent implements OnInit {
   passForm: FormGroup;
   inputType = false;
   querySearch: ReportsQuery;
+  page = 1;
+  pageSize = 10;
   constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService
   , private formBuilder: FormBuilder, private router: Router) {
     this.adminRoles = {
       roles: null,
     };
     this.adminList = {
-      roles: '',
+      roles: 'trader',
     };
     this.add = {
       email: null,

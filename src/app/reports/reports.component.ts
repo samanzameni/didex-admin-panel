@@ -45,21 +45,21 @@ export class ReportsComponent implements OnInit {
     records: [
       {
         id: null,
-    traderId: null,
-    marketSymbol: null,
-    side: OrderSides.Buy,
-    status: OrderStatus.Canceled,
-    type: OrderType.Limit,
-    timeInForce: OrderTimeInForce.Day,
-    quantity: null,
-    price: null,
-    executedQuantity: null,
-    createdAt: null,
-    updatedAt: null,
-    stopPrice: null,
-    postOnly: null,
-    expireTime: null,
-  }
+        traderId: null,
+        marketSymbol: null,
+        side: OrderSides.Buy,
+        status: OrderStatus.Canceled,
+        type: OrderType.Limit,
+        timeInForce: OrderTimeInForce.Day,
+        quantity: null,
+        price: null,
+        executedQuantity: null,
+        createdAt: null,
+        updatedAt: null,
+        stopPrice: null,
+        postOnly: null,
+        expireTime: null,
+      }
   ]
     };
   }
