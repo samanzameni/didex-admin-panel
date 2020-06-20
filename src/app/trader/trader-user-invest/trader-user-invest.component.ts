@@ -19,6 +19,8 @@ export class TraderUserInvestComponent implements OnInit {
   userInvestRecords: InvestRecords[];
   statusInvest = UserInvestStatus;
   investType = InvestType;
+  page = 1;
+  pageSize = 10;
   constructor(private router: ActivatedRoute, private investmentFundService: InvestmentFundService,
               private ngxShowLoader: NgxSpinnerService) {
     this.userInvest = {
@@ -27,23 +29,23 @@ export class TraderUserInvestComponent implements OnInit {
       {
         id: null,
         traderEmail: null,
-      investmentFundId: null,
-      traderId: null,
-      investDate: null,
-      totalEarn: null,
-      amount: null,
-      investRecords: [
-      {
-        id: null,
-        brfore: null,
-        after: null,
-        accrued: null,
-        type: null,
-        timeStamp: null,
-  }
-  ],
+        investmentFundId: null,
+        traderId: null,
+        investDate: null,
+        totalEarn: null,
+        amount: null,
+        investRecords: [
+        {
+          id: null,
+          brfore: null,
+          after: null,
+          accrued: null,
+          type: null,
+          timeStamp: null,
+    }
+    ],
         status: null,
-  }
+    }
   ],
     };
   }

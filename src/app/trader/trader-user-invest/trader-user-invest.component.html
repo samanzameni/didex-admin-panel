@@ -44,7 +44,7 @@
           </tr>
           </thead>
           <tbody >
-          <tr *ngFor="let l of userInvest.records" >
+          <tr *ngFor="let l of userInvest.records| slice: (page-1) * pageSize : (page-1) * pageSize + pageSize" >
             <td>{{l.id}}</td>
             <td>{{l.traderEmail}}</td>
             <td>{{l.traderId}}</td>
@@ -63,6 +63,7 @@
         </table>
       </div>
     </div>
+    <ngb-pagination [collectionSize]="userInvest.count" [pageSize]="10" [(page)]="page" [maxSize]="3" [rotate]="true" [boundaryLinks]="false" [directionLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
   </div>
 </div>
 

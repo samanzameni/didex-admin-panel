@@ -22,7 +22,7 @@ export class KycDetailComponent implements OnInit {
   KQueryParam: number;
   noteReject: KycReject;
   constructor(private toastrService: ToastrService, private kycService: KYCService,
-              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute) {
+              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private  route: Router) {
     this.userInformation = {
       personalInformation: {
         firstName: null,
@@ -86,8 +86,9 @@ export class KycDetailComponent implements OnInit {
     return this.kycService.getListApprove(this.userList.id).subscribe(
       (res: any) => {
         console.log(res);
+        this.route.navigate(['/pages/kyc']);
         this.ngxShowLoader.hide();
-        this.toastrService.success('You Have Successfully Get Approve.', '', {timeOut: 4000});
+        this.toastrService.success('You Have Successfully Approved KYC.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
@@ -101,8 +102,9 @@ export class KycDetailComponent implements OnInit {
     return this.kycService.postListReject(this.userList.id , this.noteReject).subscribe(
       (res: any) => {
         console.log(res);
+        this.route.navigate(['/pages/kyc']);
         this.ngxShowLoader.hide();
-        this.toastrService.success('You Have Successfully Reject.', '', {timeOut: 4000});
+        this.toastrService.success('You Have Successfully Rejected KYC.', '', {timeOut: 4000});
       },
       err => {
         console.log(err);
