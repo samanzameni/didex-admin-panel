@@ -14,7 +14,13 @@ export class KYCComponent implements OnInit {
   list: Pending[];
   IList: Pending;
   constructor(private toastrService: ToastrService, private kycService: KYCService,
-              private ngxShowLoader: NgxSpinnerService, private router: Router) { }
+              private ngxShowLoader: NgxSpinnerService, private router: Router) {
+    this.IList = {
+      id: null,
+      firstName: null,
+      lastName: null,
+    };
+  }
   getList() {
     this.ngxShowLoader.show();
     return this.kycService.getPendingVerification().subscribe(
