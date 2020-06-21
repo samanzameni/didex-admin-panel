@@ -310,7 +310,7 @@
   <div class="row" style="float: right">
     <div class="col-sm">
       <div class="form-group">
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal1" style="margin-top: 10px;">
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal1" data-backdrop="static" data-keyboard="false" style="margin-top: 10px;">
           Reject
         </button>
       </div>
@@ -363,18 +363,25 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel1">Reject</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" (click)="clean()" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" >&times;</span>
         </button>
       </div>
       <div class="modal-body">
+        <form [formGroup]="KYCForm">
         <div class="form-group">
           <label for="exampleInputName1">Note</label>
-          <input type="text" class="form-control" id="exampleInputName1" placeholder="Note" [(ngModel)]="noteReject.note">
+          <input type="text" class="form-control" id="exampleInputName1" placeholder="Note" formControlName="note" [(ngModel)]="noteReject.note">
+          <div *ngIf="KYCForm.controls['note'].invalid && (KYCForm.controls['note'].dirty || KYCForm.controls['note'].touched)" class="alert alert-danger">
+            <div *ngIf="KYCForm.controls['note'].errors.required">
+              Note is required.
+            </div>
+          </div>
         </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal" (click)="getReject()">Ok</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal" [disabled]="KYCForm.invalid" (click)="getReject()">Ok</button>
       </div>
     </div>
   </div>

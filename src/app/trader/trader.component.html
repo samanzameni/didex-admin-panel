@@ -70,8 +70,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Change Status</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <button type="button" (click)="clean()" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" >&times;</span>
         </button>
       </div>
       <div class="modal-body">
@@ -85,18 +85,24 @@
           </div>
         </div>
         </div>
+        <form [formGroup]="traderForm">
         <div class="row">
           <div class="col">
             <div class="form-group">
               <label for="exampleInputName1">Note</label>
-              <input type="text" class="form-control" id="exampleInputName1" placeholder="Note" [(ngModel)]="trader.note">
+              <input type="text" class="form-control" id="exampleInputName1" placeholder="Note" formControlName="note" [(ngModel)]="trader.note">
+              <div *ngIf="traderForm.controls['note'].invalid && (traderForm.controls['note'].dirty || traderForm.controls['note'].touched)" class="alert alert-danger">
+                <div *ngIf="traderForm.controls['note'].errors.required">
+                  Note is required.
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="changeTrader()">Submit</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" [disabled]="traderForm.invalid" (click)="changeTrader()">Submit</button>
       </div>
     </div>
   </div>

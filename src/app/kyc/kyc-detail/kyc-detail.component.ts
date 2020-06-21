@@ -7,6 +7,8 @@ import {NgxSpinnerService} from 'ngx-spinner';
 import {Image} from '../../@core/KYC/image.enum';
 import {ActivatedRoute, Router} from '@angular/router';
 import {KycReject} from '../../@core/KYC/kyc-reject';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {CurrencyService} from '../../@core/Currency/currency.service';
 
 @Component({
   selector: 'app-kyc-detail',
@@ -21,7 +23,8 @@ export class KycDetailComponent implements OnInit {
   image = Image;
   KQueryParam: number;
   noteReject: KycReject;
-  constructor(private toastrService: ToastrService, private kycService: KYCService,
+  KYCForm: FormGroup;
+  constructor(private toastrService: ToastrService, private kycService: KYCService, private formBuilder: FormBuilder,
               private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private  route: Router) {
     this.userInformation = {
       personalInformation: {
@@ -79,8 +82,13 @@ export class KycDetailComponent implements OnInit {
     this.noteReject = {
       note: null,
     };
+    this.createForm();
   }
-
+  createForm() {
+    this.KYCForm = this.formBuilder.group({
+      note: ['', Validators.required ],
+    });
+  }
   getApprove() {
     this.ngxShowLoader.show();
     return this.kycService.getListApprove(this.userList.id).subscribe(
@@ -102,6 +110,7 @@ export class KycDetailComponent implements OnInit {
     return this.kycService.postListReject(this.userList.id , this.noteReject).subscribe(
       (res: any) => {
         console.log(res);
+        this.noteReject.note = null;
         this.route.navigate(['/pages/kyc']);
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Rejected KYC.', '', {timeOut: 4000});
@@ -112,6 +121,9 @@ export class KycDetailComponent implements OnInit {
         this.toastrService.error('Error In Process.', '', {timeOut: 4000});
       },
     );
+  }
+  clean() {
+    this.noteReject.note = null;
   }
   getInformation() {
     this.ngxShowLoader.show();

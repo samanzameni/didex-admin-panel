@@ -7,6 +7,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 import {Router} from '@angular/router';
 import {TraderRes} from '../@core/Trader/trader-res';
 import {ReportsQuery} from '../@core/Reports/reports-query';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-trader',
@@ -20,8 +21,9 @@ export class TraderComponent implements OnInit {
   querySearch: ReportsQuery;
   page = 1;
   pageSize = 10;
+  traderForm: FormGroup;
   constructor(private toastrService: ToastrService, private traderService: TraderService, private ngxShowLoader: NgxSpinnerService,
-              private router: Router) {
+              private formBuilder: FormBuilder, private router: Router) {
     this.trader = {
           id: null,
           email: null,
@@ -41,6 +43,12 @@ export class TraderComponent implements OnInit {
     this.querySearch = {
       UserId: null,
     };
+    this.createForm();
+  }
+  createForm() {
+    this.traderForm = this.formBuilder.group({
+      note: ['', Validators.required ],
+    });
   }
   showTrader() {
     this.ngxShowLoader.show();
@@ -64,6 +72,7 @@ export class TraderComponent implements OnInit {
     return this.traderService.traderPatch(this.trader.id , this.trader).subscribe(
       (res: any) => {
         console.log(res);
+        this.trader.note = null;
         this.showTrader();
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Change Status.', '', {timeOut: 4000});
@@ -76,6 +85,9 @@ export class TraderComponent implements OnInit {
 
       },
     );
+  }
+  clean() {
+    this.trader.note = null;
   }
   get fields(): string[] {
     const f = TraderStatus;
