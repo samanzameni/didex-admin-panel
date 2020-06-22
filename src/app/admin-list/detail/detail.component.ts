@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {ToastrService} from 'ngx-toastr';
 import {AdminService} from '../../@core/Admin/admin.service';
 import {NgxSpinnerService} from 'ngx-spinner';
+import {RoleListRes} from '../../@core/Admin/role-list-res';
 
 @Component({
   selector: 'app-detail',
@@ -12,7 +13,7 @@ import {NgxSpinnerService} from 'ngx-spinner';
 })
 export class DetailComponent implements OnInit {
   userList: RoleList;
-   user: RoleList[];
+  user: RoleListRes;
   adminParam: string;
   detailParam: string;
   constructor(private router: ActivatedRoute, private admin: AdminService, private toastrService: ToastrService,
@@ -29,16 +30,30 @@ export class DetailComponent implements OnInit {
       phoneNumberConfirmed: null,
       twoFactorEnabled: null,
     };
-
+    this.user = {
+      count: null,
+      records: [
+      {
+        userName: null,
+        accessFailedCount: null,
+        country: null,
+        email: null,
+        emailConfirmed: null,
+        fullName: null,
+        lockoutEnd: null,
+        phoneNumber: null,
+        phoneNumberConfirmed: null,
+        twoFactorEnabled: null,
+      }
+      ],
+    };
   }
-
   showList() {
     this.ngxShowLoader.show();
     return this.admin.getList(this.adminParam).subscribe(
       (res: any) => {
-        console.log(res);
         this.user = res;
-        for (const i of this.user) {
+        for (const i of this.user.records) {
           if (i.userName ===  this.detailParam) {
             this.userList = i;
           }
