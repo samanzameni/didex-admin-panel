@@ -20,6 +20,21 @@
   <div class="">
     <div class="card">
       <div class="card-body">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="form-group ">
+              <label for="Search">Search</label>
+              <app-search id="Search" (id)="receiveId($event)"></app-search>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="form-group but-pos">
+              <button type="button" class="btn btn-warning" (click)="getList()" style="width: 100%">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="table-responsive">
   <table class="table table-striped" >
     <thead>
@@ -31,7 +46,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let i of list">
+    <tr *ngFor="let i of list.records | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <td>{{i.id}}</td>
       <td>{{i.firstName}}</td>
       <td>{{i.lastName}}</td>
@@ -45,6 +60,7 @@
   </table>
 </div>
 </div>
+      <ngb-pagination [collectionSize]="list.count" [pageSize]="10" [(page)]="page" [maxSize]="3" [rotate]="true" [boundaryLinks]="false" [directionLinks]="true" aria-label="Default pagination" class="pagination-rounded"></ngb-pagination>
     </div>
   </div>
 </div>

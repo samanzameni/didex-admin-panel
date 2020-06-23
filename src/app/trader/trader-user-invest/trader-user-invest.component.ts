@@ -6,6 +6,7 @@ import {UserInvest} from '../../@core/Trader/user-invest';
 import {UserInvestStatus} from '../../@core/Investment Fund/user-invest-status.enum';
 import {InvestRecords} from '../../@core/Investment Fund/invest-records';
 import {InvestType} from '../../@core/Investment Fund/invest-type.enum';
+import {ReportsQuery} from '../../@core/Reports/reports-query';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class TraderUserInvestComponent implements OnInit {
   DId: number;
   userInvest: UserInvest;
   userInvestRecords: InvestRecords[];
+  querySearch: ReportsQuery;
   statusInvest = UserInvestStatus;
   investType = InvestType;
   page = 1;
@@ -48,11 +50,15 @@ export class TraderUserInvestComponent implements OnInit {
     }
   ],
     };
+    this.querySearch = {
+      UserId: null,
+      Desc: null,
+    };
   }
 
   showInvest() {
     this.ngxShowLoader.show();
-    return this.investmentFundService.idUserInvestGet(this.DId).subscribe(
+    return this.investmentFundService.idUserInvestGet(this.DId , this.querySearch).subscribe(
       (res: any) => {
         console.log(res);
         this.userInvest = res;
@@ -67,6 +73,9 @@ export class TraderUserInvestComponent implements OnInit {
   investRecords(i) {
     this.userInvestRecords = i;
 }
+  receiveId($event) {
+    this.querySearch.UserId = $event;
+  }
   ngOnInit() {
     this.DId = parseFloat(this.router.snapshot.queryParamMap.get('id'));
     this.showInvest();
