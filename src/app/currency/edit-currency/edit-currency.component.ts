@@ -30,6 +30,8 @@ export class EditCurrencyComponent implements OnInit {
       payoutEnabled: null,
       transferEnabled: null,
       payoutFee: null,
+      minWithdraw: null,
+      minDeposit: null,
     };
   }
   createForm() {
@@ -38,6 +40,8 @@ export class EditCurrencyComponent implements OnInit {
       name: ['', Validators.required ],
       payinConfirmations: ['', [Validators.required, Validators.min(0)] ],
       payoutFee: ['', [Validators.required, Validators.min(0)]],
+      minWithdraw: ['', [ Validators.min(0)]],
+      minDeposit: ['', [ Validators.min(0)]],
       network: [''],
       payoutEnabled: [''],
       transferEnabled: [''],

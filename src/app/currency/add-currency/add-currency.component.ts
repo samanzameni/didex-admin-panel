@@ -29,6 +29,8 @@ export class AddCurrencyComponent implements OnInit {
       payoutEnabled: false,
       transferEnabled: false,
       payoutFee: null,
+      minWithdraw: null,
+      minDeposit: null,
     };
   }
   createForm() {
@@ -37,6 +39,8 @@ export class AddCurrencyComponent implements OnInit {
       name: ['', Validators.required ],
       payinConfirmations: ['', [Validators.required, Validators.min(0)]],
       payoutFee: ['', [Validators.required, Validators.min(0)] ],
+      minWithdraw: ['', [ Validators.min(0)] ],
+      minDeposit: ['', [ Validators.min(0)] ],
     });
   }
   addCurrency() {

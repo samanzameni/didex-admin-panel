@@ -28,6 +28,8 @@ export class DetailCurrencyComponent implements OnInit {
       payoutEnabled: null,
       transferEnabled: null,
       payoutFee: null,
+      minWithdraw: null,
+      minDeposit: null,
     };
   }
   showShortName(shortName: string) {

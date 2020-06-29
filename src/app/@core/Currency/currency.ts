@@ -11,4 +11,6 @@ export interface Currency {
   payoutEnabled: boolean;
   transferEnabled: boolean;
   payoutFee: number;
+  minWithdraw: number;
+  minDeposit: number;
 }

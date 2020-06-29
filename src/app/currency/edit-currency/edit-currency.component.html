@@ -142,7 +142,28 @@
               </div>
             </div>
           </div></div>
-        </div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="minWithdraw">Min Withdraw</label>
+              <input type="number" class="form-control" id="minWithdraw" placeholder="Min Withdraw" [(ngModel)]="SNCurrency.minWithdraw" min="0" formControlName="minWithdraw">
+              <div *ngIf="currencyForm.controls['minWithdraw'].invalid && (currencyForm.controls['minWithdraw'].dirty || currencyForm.controls['minWithdraw'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['minWithdraw'].errors.min">
+                  Min Withdraw must be more than 0.
+                </div>
+              </div>
+            </div>
+          </div></div>
+          <div class="row"><div class="col">
+            <div class="form-group">
+              <label for="minDeposit">Min Deposit</label>
+              <input type="number" class="form-control" id="minDeposit" placeholder="Min Deposit" [(ngModel)]="SNCurrency.minDeposit" min="0" formControlName="minDeposit">
+              <div *ngIf="currencyForm.controls['minDeposit'].invalid && (currencyForm.controls['minDeposit'].dirty || currencyForm.controls['minDeposit'].touched)" class="alert alert-danger">
+                <div *ngIf="currencyForm.controls['minDeposit'].errors.min">
+                  Min Deposit must be more than 0.
+                </div>
+              </div>
+            </div>
+          </div></div>        </div>
       </div>
       <div class="row">
         <div class="col ">
