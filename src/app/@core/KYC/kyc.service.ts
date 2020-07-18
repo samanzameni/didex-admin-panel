@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {StorageService} from '../Login/storage.service';
 import {KycReject} from './kyc-reject';
 import {ReportsQuery} from '../Reports/reports-query';
+import {Trader} from '../Trader/trader';
 
 @Injectable({
   providedIn: 'root',
@@ -53,5 +54,9 @@ export class KYCService {
   postListReject(id: number , formData: KycReject): Observable<any> {
     return this.http.post
     (this.ServerUrl + 'admin/Trader/Reject/' + id, formData , this.httpOptions );
+  }
+  traderPatch(id: number , formData: Trader ): Observable<any> {
+    return this.http.patch
+    (this.ServerUrl + 'admin/Trader/' + id + '/ChangeStatus', formData, this.httpOptions  );
   }
 }

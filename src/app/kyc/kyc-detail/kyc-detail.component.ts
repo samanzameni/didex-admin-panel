@@ -9,6 +9,8 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {KycReject} from '../../@core/KYC/kyc-reject';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {CurrencyService} from '../../@core/Currency/currency.service';
+import {Trader} from '../../@core/Trader/trader';
+import {TraderStatus} from '../../@core/Trader/trader-status.enum';
 
 @Component({
   selector: 'app-kyc-detail',
@@ -24,6 +26,7 @@ export class KycDetailComponent implements OnInit {
   KQueryParam: number;
   noteReject: KycReject;
   KYCForm: FormGroup;
+  rejectList: Trader;
   constructor(private toastrService: ToastrService, private kycService: KYCService, private formBuilder: FormBuilder,
               private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private  route: Router) {
     this.userInformation = {
@@ -82,6 +85,12 @@ export class KycDetailComponent implements OnInit {
     this.noteReject = {
       note: null,
     };
+    this.rejectList = {
+      id: null,
+      email: null,
+      status: null,
+      note: null,
+    };
     this.createForm();
   }
   createForm() {
@@ -107,7 +116,10 @@ export class KycDetailComponent implements OnInit {
   }
   getReject() {
     this.ngxShowLoader.show();
-    return this.kycService.postListReject(this.userList.id , this.noteReject).subscribe(
+    this.rejectList.id = this.userList.id;
+    this.rejectList.note = this.noteReject.note;
+    this.rejectList.status = 4;
+    return this.kycService.traderPatch(this.rejectList.id , this.rejectList).subscribe(
       (res: any) => {
         console.log(res);
         this.noteReject.note = null;
