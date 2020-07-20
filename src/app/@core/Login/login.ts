@@ -7,5 +7,4 @@ export interface Login {
   token?: string;
   twoFactorEnabled?: boolean;
   roles?: string[];
-  reCaptcha?: string;
 }
