@@ -85,12 +85,6 @@ export class KycDetailComponent implements OnInit {
     this.noteReject = {
       note: null,
     };
-    this.rejectList = {
-      id: null,
-      email: null,
-      status: null,
-      note: null,
-    };
     this.createForm();
   }
   createForm() {
@@ -116,10 +110,7 @@ export class KycDetailComponent implements OnInit {
   }
   getReject() {
     this.ngxShowLoader.show();
-    this.rejectList.id = this.userList.id;
-    this.rejectList.note = this.noteReject.note;
-    this.rejectList.status = 4;
-    return this.kycService.traderPatch(this.rejectList.id , this.rejectList).subscribe(
+    return this.kycService.postListReject(this.userList.id , this.noteReject).subscribe(
       (res: any) => {
         console.log(res);
         this.noteReject.note = null;

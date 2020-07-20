@@ -55,8 +55,4 @@ export class KYCService {
     return this.http.post
     (this.ServerUrl + 'admin/Trader/Reject/' + id, formData , this.httpOptions );
   }
-  traderPatch(id: number , formData: Trader ): Observable<any> {
-    return this.http.patch
-    (this.ServerUrl + 'admin/Trader/' + id + '/ChangeStatus', formData, this.httpOptions  );
-  }
 }
