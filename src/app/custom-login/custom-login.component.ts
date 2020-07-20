@@ -17,8 +17,9 @@ export class CustomLoginComponent implements OnInit {
   constructor(private authService: AuthServiceService, private formBuilder: FormBuilder,
                private storageService: StorageService) {
     this.login = {
-      email: '',
-      password: '',
+      email: null,
+      password: null,
+      reCaptcha: null
     };
     this.createForm();
   }
@@ -37,6 +38,7 @@ export class CustomLoginComponent implements OnInit {
   resolved(captchaResponse: string) {
     console.log(`Resolved captcha with response: ${captchaResponse}`);
     this.storageService.setCaptchaToken(captchaResponse);
+    this.login.reCaptcha = captchaResponse;
   }
   eyeClick() {
   if (this.inputType === false) {
