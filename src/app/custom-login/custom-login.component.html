@@ -22,6 +22,9 @@
       <div *ngIf="loginForm.controls['email'].errors.required">
         Email is required.
       </div>
+      <div *ngIf="loginForm.controls['email'].errors.email">
+        Input must be Email Type.
+      </div>
     </div>
     </div>
     <div class="form-group">
@@ -39,7 +42,7 @@
     </div>
     </div>
     <div style="margin-bottom: 5px">
-      <re-captcha formControlName="reCaptcha"  (resolved)="resolved($event)" siteKey="6Leik-cUAAAAAJG-1oLQ6nT6NQmL8k3D7QM-jOD2"></re-captcha>
+      <re-captcha  formControlName="reCaptcha" (resolved)="resolved($event)" siteKey="6Leik-cUAAAAAJG-1oLQ6nT6NQmL8k3D7QM-jOD2"></re-captcha>
     </div>
     <div *ngIf="loginForm.controls['reCaptcha'].invalid && (loginForm.controls['reCaptcha'].dirty || loginForm.controls['reCaptcha'].touched)" class="alert alert-danger">
       <div *ngIf="loginForm.controls['reCaptcha'].errors.required">
@@ -47,16 +50,6 @@
       </div>
     </div>
     <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">Sign In</button>
-<!--    <div class="text-center top-space">-->
-<!--						<span class="form-Control">-->
-<!--              have an account?-->
-<!--						</span>-->
-
-<!--      <a class="form-Control" routerLink="/register">-->
-<!--        Sign Up Page-->
-<!--      </a>-->
-<!--    </div>-->
-
   </form>
     </div>
   </div>

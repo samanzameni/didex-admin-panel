@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthServiceService} from '../@core/Login/auth-service.service';
 import {Login} from '../@core/Login/login';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -24,14 +24,12 @@ export class CustomLoginComponent implements OnInit {
   }
   createForm() {
     this.loginForm = this.formBuilder.group({
-      email: [ '', Validators.required ],
+      email: [ '', [Validators.required , Validators.email]],
       password: [ '', Validators.required],
       reCaptcha: [ '', Validators.required],
     });
   }
-
   userLogin() {
-
       this.authService.loginPost(this.login);
   }
   resolved(captchaResponse: string) {
