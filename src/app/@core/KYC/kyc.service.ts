@@ -32,6 +32,9 @@ export class KYCService {
     }  if (queryString.Limit != null) {
       this.mark = '?';
       params = params.set('Limit', String(queryString.Limit));
+    } if (queryString.Desc != null) {
+      this.mark = '?';
+      params = params.set('Desc', String(queryString.Desc));
     }
     const httpOption = {
       headers: new HttpHeaders({ 'accept': 'text/plain',

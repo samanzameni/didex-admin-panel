@@ -35,6 +35,7 @@ export class KYCComponent implements OnInit {
     };
     this.querySearch = {
       UserId: null,
+      Desc: null,
     };
   }
   receiveId($event) {

@@ -27,6 +27,15 @@
               <app-search id="Search" (id)="receiveId($event)"></app-search>
             </div>
           </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <label for="Order By">Order By</label>
+              <select class="form-control border-primary" id="Order By" [(ngModel)]="querySearch.Desc">
+                <option ngValue="true">Ascending</option>
+                <option ngValue="false" >Descending</option>
+              </select>
+            </div>
+          </div>
           <div class="col-sm-2">
             <div class="form-group but-pos">
               <button type="button" class="btn btn-warning" (click)="getList()" style="width: 100%">

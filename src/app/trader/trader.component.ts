@@ -42,6 +42,7 @@ export class TraderComponent implements OnInit {
     };
     this.querySearch = {
       UserId: null,
+      Desc: null,
     };
     this.createForm();
   }

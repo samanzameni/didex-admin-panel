@@ -96,7 +96,7 @@ export class InvestmentFundComponent implements OnInit {
     return this.investment.investmentGet().subscribe(
       (res: any) => {
         console.log(res);
-        this.inv = res;
+         this.inv = res;
         this.ngxShowLoader.hide();
       },
       err => {
