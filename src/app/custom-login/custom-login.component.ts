@@ -32,16 +32,16 @@ export class CustomLoginComponent implements OnInit {
   userLogin() {
       this.authService.loginPost(this.login);
   }
+  eyeClick() {
+    if (this.inputType === false) {
+      this.inputType = true;
+    } else {
+      this.inputType = false;
+    }
+  }
   resolved(captchaResponse: string) {
     console.log(`Resolved captcha with response: ${captchaResponse}`);
     this.storageService.setCaptchaToken(captchaResponse);
-  }
-  eyeClick() {
-  if (this.inputType === false) {
-  this.inputType = true;
-  } else {
-    this.inputType = false;
-  }
   }
   ngOnInit() {
     window.scroll(0, 0);
