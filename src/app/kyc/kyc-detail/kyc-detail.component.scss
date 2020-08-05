@@ -29,3 +29,12 @@
 .custom-control-input:checked~.custom-control-label.green::before {
   background-color: #00ce68;
 }
+.status-body{
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  box-shadow: 1px 4px 10px lightslategrey;
+}

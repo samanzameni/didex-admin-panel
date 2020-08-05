@@ -51,6 +51,7 @@
           <th scope="col">Email</th>
           <th scope="col">Status</th>
           <th scope="col">Change Status</th>
+          <th scope="col">Detail</th>
         </tr>
         </thead>
         <tbody>
@@ -61,6 +62,11 @@
           <td>
             <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" (click)="change(i.id)">
               <i class="fa fa-edit" aria-hidden="true" ></i>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-outline-info" (click)="userDetail(i)">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
             </button>
           </td>
         </tr>

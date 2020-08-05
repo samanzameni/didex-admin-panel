@@ -112,6 +112,11 @@ export class TraderComponent implements OnInit {
       },
     );
   }
+  userDetail(i) {
+    this.trader = i;
+    this.router.navigate(['/pages/kycDetail'],
+      { queryParams: { id : this.trader.id, status : this.trader.status } });
+  }
   ngOnInit() {
     this.showTrader();
     window.scroll(0, 0);

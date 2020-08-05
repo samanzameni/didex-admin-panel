@@ -58,4 +58,26 @@ export class KYCService {
     return this.http.post
     (this.ServerUrl + 'admin/Trader/Reject/' + id, formData , this.httpOptions );
   }
+  getTraderStatusHistory(queryString: ReportsQuery): Observable<any> {
+    let params = new HttpParams();
+    if (queryString.Offset != null) {
+      this.mark = '?';
+      params = params.set('Offset', String(queryString.Offset));
+    }  if (queryString.Limit != null) {
+      this.mark = '?';
+      params = params.set('Limit', String(queryString.Limit));
+    } if (queryString.Desc != null) {
+      this.mark = '?';
+      params = params.set('Desc', String(queryString.Desc));
+    }
+    const httpOption = {
+      headers: new HttpHeaders({ 'accept': 'text/plain',
+          'Authorization': 'Bearer ' + this.token,
+        },
+      ),
+      params,
+    };
+    return this.http.get
+    (this.ServerUrl + 'admin/Trader/TraderStatusHistory/' + queryString.TraderId + this.mark, httpOption );
+  }
 }

@@ -8,8 +8,8 @@ import {Image} from '../../@core/KYC/image.enum';
 import {ActivatedRoute, Router} from '@angular/router';
 import {KycReject} from '../../@core/KYC/kyc-reject';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {CurrencyService} from '../../@core/Currency/currency.service';
-import {Trader} from '../../@core/Trader/trader';
+import {ReportsQuery} from '../../@core/Reports/reports-query';
+import {HistoryKYC} from '../../@core/KYC/history-kyc';
 import {TraderStatus} from '../../@core/Trader/trader-status.enum';
 
 @Component({
@@ -24,9 +24,12 @@ export class KycDetailComponent implements OnInit {
   modalImage: string;
   image = Image;
   KQueryParam: number;
+  SQueryParam: number;
   noteReject: KycReject;
   KYCForm: FormGroup;
-  rejectList: Trader;
+  query: ReportsQuery;
+  traderHistory: HistoryKYC[];
+  status = TraderStatus;
   constructor(private toastrService: ToastrService, private kycService: KYCService, private formBuilder: FormBuilder,
               private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private  route: Router) {
     this.userInformation = {
@@ -84,6 +87,10 @@ export class KycDetailComponent implements OnInit {
     };
     this.noteReject = {
       note: null,
+    };
+    this.query = {
+      TraderId: null,
+      Limit: 1,
     };
     this.createForm();
   }
@@ -157,10 +164,28 @@ export class KycDetailComponent implements OnInit {
   getI(i) {
     this.modalImage = i;
   }
+
+  getHistory() {
+    this.ngxShowLoader.show();
+    return this.kycService.getTraderStatusHistory(this.query).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.traderHistory = res;
+        this.ngxShowLoader.hide();
+      },
+      err => {
+        console.log(err);
+        this.ngxShowLoader.hide();
+      },
+    );
+  }
   ngOnInit() {
     this.KQueryParam = parseFloat(this.router.snapshot.queryParamMap.get('id'));
+    this.SQueryParam = parseFloat(this.router.snapshot.queryParamMap.get('status'));
     this.getInformation();
     this.userList.id = this.KQueryParam;
+    this.query.TraderId = this.KQueryParam;
+    this.getHistory();
     window.scroll(0, 0);
   }
 
