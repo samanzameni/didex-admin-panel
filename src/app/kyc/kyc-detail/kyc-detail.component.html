@@ -12,7 +12,7 @@
   <nav aria-label="breadcrumb" role="navigation">
     <ol class="breadcrumb breadcrumb-custom">
       <li class="breadcrumb-item"><a >Home</a></li>
-      <li class="breadcrumb-item"><a >Trader</a></li>
+      <li class="breadcrumb-item"><a >KYC</a></li>
       <li class="breadcrumb-item active" aria-current="page"><span>Detail</span></li>
     </ol>
   </nav>
@@ -31,6 +31,9 @@
       <div *ngIf="SQueryParam === 0" style="text-align: center" class="status-body">
           This user has not been KYC.
       </div>
+      <div *ngIf="SQueryParam === 1" style="text-align: center" class="status-body">
+          This user KYC has been sent.
+      </div>
       <div *ngIf="SQueryParam !== 0 && SQueryParam !== 1" class="status-body" >
         <div *ngFor="let i of traderHistory">
       <div class="row">
@@ -42,81 +45,102 @@
         <div class="row">
           <div class="col-sm-2"><b> Note: </b></div>
           <div class="col-sm"> {{i.note}} </div>
+          <div class="col-sm-2"><b> Date: </b></div>
+          <div class="col-sm"> {{i.timeStamp | date: 'short'}} </div>
         </div>
         </div>
       </div>
       <div class="table-responsive" >
         <table class="table table-striped">
+          <thead style="background-color: #f2f8f9;">
+          <tr >
+            <th scope="col" style="vertical-align: middle;">User Type</th>
+            <td><p class="region-style">Region 2</p></td>
+            <th *ngIf="SQueryParam === 1" ></th>
+          </tr>
+          </thead>
           <thead>
           <tr>
-            <th scope="col">First Name</th>
+            <th scope="col" style="vertical-align: middle;">First Name</th>
             <td>{{userInformation.personalInformation.firstName}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </thead>
           <tbody>
           <tr >
-            <th scope="col">Last Name</th>
+            <th scope="col" style="vertical-align: middle;">Last Name</th>
             <td>{{userInformation.personalInformation.lastName}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </tbody>
           <thead>
           <tr>
-            <th scope="col">Email</th>
+            <th scope="col" style="vertical-align: middle;">Email</th>
             <td>{{userInformation.email}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </thead>
           <tbody>
           <tr >
-            <th scope="col">Date Of Birth</th>
+            <th scope="col" style="vertical-align: middle;">Date Of Birth</th>
             <td>{{userInformation.personalInformation.dateOfBirth | date: 'mediumDate'}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </tbody>
           <thead>
           <tr>
-            <th scope="col">City</th>
+            <th scope="col" style="vertical-align: middle;">City</th>
             <td>{{userInformation.personalInformation.city}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </thead>
           <tbody>
           <tr >
-            <th scope="col">Mobile Number</th>
+            <th scope="col" style="vertical-align: middle;">Mobile Number</th>
             <td>{{userInformation.mobileNumber.mobileNumber}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </tbody>
           <thead>
           <tr>
-            <th scope="col">Country Telephone Code</th>
+            <th scope="col" style="vertical-align: middle;">Country Telephone Code</th>
             <td>{{userInformation.mobileNumber.countryTelephoneCode}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </thead>
           <tbody>
           <tr >
-            <th scope="col">Country Code</th>
+            <th scope="col" style="vertical-align: middle;">Country Code</th>
             <td>{{userInformation.personalInformation.countryCode}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </tbody>
           <thead>
           <tr>
-            <th scope="col">Birth Country Code</th>
+            <th scope="col" style="vertical-align: middle;">Birth Country Code</th>
             <td>{{userInformation.personalInformation.birthCountryCode}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </thead>
           <tbody>
           <tr >
-            <th scope="col">Zip Code</th>
+            <th scope="col" style="vertical-align: middle;">Zip Code</th>
             <td>{{userInformation.personalInformation.zipCode}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </tbody>
           <thead>
           <tr>
-            <th scope="col">Address Line 1</th>
+            <th scope="col" style="vertical-align: middle;">Address Line 1</th>
             <td>{{userInformation.personalInformation.addressLine1}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </thead>
           <tbody>
           <tr >
-            <th scope="col">Address Line 2</th>
+            <th scope="col" style="vertical-align: middle;">Address Line 2</th>
             <td>{{userInformation.personalInformation.addressLine2}}</td>
+            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
           </tr>
           </tbody>
           <thead *ngFor="let i of userInformation.kycImages">
@@ -137,15 +161,24 @@
           </thead>
         </table>
       </div>
-  <div class="row" style="float: right" *ngIf="SQueryParam === 1">
-    <div class="col-sm">
+      <div class="row" style="text-align: right" *ngIf="SQueryParam === 1">
+        <div class="col-sm">
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" style="margin-top: 10px;">
+              Check It
+            </button>
+          </div>
+        </div>
+      </div>
+  <div class="row" style="text-align: right" *ngIf="SQueryParam === 1">
+    <div class="col-sm-11">
       <div class="form-group">
         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal1" data-backdrop="static" data-keyboard="false" style="margin-top: 10px;">
           Reject
         </button>
       </div>
     </div>
-    <div class="col-sm">
+    <div class="col-sm-1">
       <div class="form-group">
         <button type="button" class="btn btn-success" (click)="getApprove()"  style="margin-top: 10px;">
            Accept
