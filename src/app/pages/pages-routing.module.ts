@@ -37,6 +37,7 @@ import {AddInvestmentComponent} from '../investment-fund/add-investment/add-inve
 import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-investment.component';
 import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
 import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-user-invest.component';
+import {BankAccountConfirmationComponent} from '../bank-account-confirmation/bank-account-confirmation.component';
 
 
 const routes: Routes = [
@@ -63,6 +64,7 @@ const routes: Routes = [
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },
       { path: 'reportsTransactions', component: ReportsTransactionsComponent },
+      { path: 'BankAccountConfirmation', component: BankAccountConfirmationComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'buttons', component: ButtonsComponent },
       { path: 'tables', component: TablesComponent },

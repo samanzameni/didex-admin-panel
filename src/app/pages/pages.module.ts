@@ -4,7 +4,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import {FormsComponent} from '../forms/forms.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {NgbDateParserFormatter, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AdminListComponent} from '../admin-list/admin-list.component';
 import {CurrencyComponent} from '../currency/currency.component';
 import {KYCComponent} from '../kyc/kyc.component';
@@ -48,6 +48,7 @@ import {AddInvestmentComponent} from '../investment-fund/add-investment/add-inve
 import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-investment.component';
 import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
 import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-user-invest.component';
+import {BankAccountConfirmationComponent} from '../bank-account-confirmation/bank-account-confirmation.component';
 
 
 
@@ -94,6 +95,7 @@ import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-use
     EditInvestmentComponent,
     DetailInvestmentComponent,
     TraderUserInvestComponent,
+    BankAccountConfirmationComponent
   ],
   imports: [
     CommonModule,
@@ -149,6 +151,7 @@ import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-use
     EditInvestmentComponent,
     DetailInvestmentComponent,
     TraderUserInvestComponent,
+    BankAccountConfirmationComponent
   ],
   providers: [
 

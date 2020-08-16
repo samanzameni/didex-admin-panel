@@ -1,0 +1,76 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="col-s-7 col-md-6 col-lg-5 col-xl-4 grid-margin" >
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Bank</span></li>
+    </ol>
+  </nav>
+</div>
+<div class="" >
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">National Code</th>
+            <th scope="col">Iban</th>
+            <th scope="col">Card Number</th>
+            <th scope="col">Confirm</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let i of accountList">
+            <td>{{i.id}}</td>
+            <td>{{i.firstName}}</td>
+            <td>{{i.lastName}}</td>
+            <td>{{i.nationalCode}}</td>
+            <td>{{i.iban}}</td>
+            <td>{{i.cardNumber}}</td>
+            <td>
+              <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" (click)="updateAccount(i)">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Confirm</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are You Sure Want To Confirm ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" (click)="confirmAccount()">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+
+      </div>
+    </div>
+  </div>
+</div>
