@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {Investment} from './investment';
 import {Interest} from './interest';
 import {ReportsQuery} from '../Reports/reports-query';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class InvestmentFundService {
 
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
   mark = '';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',

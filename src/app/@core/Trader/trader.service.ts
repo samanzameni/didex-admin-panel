@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {StorageService} from '../Login/storage.service';
 import {Trader} from './trader';
 import {ReportsQuery} from '../Reports/reports-query';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,7 @@ export class TraderService {
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
   mark = '';
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',
         'Content-Type': 'application/json',

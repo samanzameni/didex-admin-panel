@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { PagesModule } from './pages/pages.module';
 import {RecaptchaFormsModule, RecaptchaModule} from 'ng-recaptcha';
+import { TwoFactorLoginComponent } from './two-factor-login/two-factor-login.component';
 
 
 
@@ -21,6 +22,7 @@ import {RecaptchaFormsModule, RecaptchaModule} from 'ng-recaptcha';
     AppComponent,
     CustomLoginComponent,
     CustomRegisterComponent,
+    TwoFactorLoginComponent,
   ],
   imports: [
     BrowserModule,

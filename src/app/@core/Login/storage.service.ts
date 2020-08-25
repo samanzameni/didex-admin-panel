@@ -34,4 +34,13 @@ export class StorageService {
     removeCaptchaToken(): void {
       localStorage.removeItem('didex_admin_captcha_token');
     }
+    setLoginStep(step: string): void {
+    localStorage.setItem('didex_login_step', step);
+  }
+    getLoginStep(): string {
+    return localStorage.getItem('didex_login_step');
+  }
+    removeLoginStep(): void {
+    localStorage.removeItem('didex_login_step');
+  }
 }

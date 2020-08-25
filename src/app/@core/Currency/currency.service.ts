@@ -3,6 +3,7 @@ import {Observable} from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Currency} from './currency';
 import {StorageService} from '../Login/storage.service';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class CurrencyService {
   constructor(private http: HttpClient, private storageService: StorageService) {
   }
   token = this.storageService.getAccessToken();
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',
       'Authorization': 'Bearer ' + this.token,

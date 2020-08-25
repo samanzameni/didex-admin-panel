@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {StorageService} from '../Login/storage.service';
 import {AdminChild} from './admin-child';
 import {ReportsQuery} from '../Reports/reports-query';
+import {environment} from '../../../environments/environment';
 
 
 @Injectable({
@@ -14,7 +15,7 @@ export class AdminService {
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
   mark = '';
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',
       'Authorization': 'Bearer ' + this.token,

@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {StorageService} from '../Login/storage.service';
 import {MarketList} from './market-list';
 import {MarketPut} from './market-put';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class MarketService {
 
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
-  ServerUrl = 'https://devapi.didex.com/api/';
+  ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',
       'Content-Type': 'application/json',
