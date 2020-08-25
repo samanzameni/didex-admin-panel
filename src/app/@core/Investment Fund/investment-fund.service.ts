@@ -14,7 +14,8 @@ export class InvestmentFundService {
 
   constructor(private http: HttpClient, private storageService: StorageService) { }
   token = this.storageService.getAccessToken();
-  ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
+  // ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
+  ServerUrl =  'https://devapi.didex.com/api/';
   mark = '';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',
