@@ -49,7 +49,9 @@ import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-i
 import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
 import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-user-invest.component';
 import {BankAccountConfirmationComponent} from '../bank-account-confirmation/bank-account-confirmation.component';
-import {TwoFactorLoginComponent} from '../two-factor-login/two-factor-login.component';
+import {PromotionComponent} from '../promotion/promotion.component';
+import {PromotionEmailsComponent} from '../promotion/promotion-emails/promotion-emails.component';
+import {ChartsComponent} from '../charts/charts.component';
 
 
 
@@ -96,7 +98,10 @@ import {TwoFactorLoginComponent} from '../two-factor-login/two-factor-login.comp
     EditInvestmentComponent,
     DetailInvestmentComponent,
     TraderUserInvestComponent,
-    BankAccountConfirmationComponent
+    BankAccountConfirmationComponent,
+    PromotionComponent,
+    PromotionEmailsComponent,
+    ChartsComponent,
   ],
   imports: [
     CommonModule,
@@ -153,6 +158,8 @@ import {TwoFactorLoginComponent} from '../two-factor-login/two-factor-login.comp
     DetailInvestmentComponent,
     TraderUserInvestComponent,
     BankAccountConfirmationComponent,
+    PromotionComponent,
+    PromotionEmailsComponent,
   ],
   providers: [
 

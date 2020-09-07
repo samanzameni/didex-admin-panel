@@ -38,6 +38,9 @@ import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-i
 import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
 import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-user-invest.component';
 import {BankAccountConfirmationComponent} from '../bank-account-confirmation/bank-account-confirmation.component';
+import {PromotionComponent} from '../promotion/promotion.component';
+import {PromotionEmailsComponent} from '../promotion/promotion-emails/promotion-emails.component';
+import {ChartsComponent} from '../charts/charts.component';
 
 
 const routes: Routes = [
@@ -64,7 +67,10 @@ const routes: Routes = [
       { path: 'reportsOrders', component: ReportsComponent },
       { path: 'reportsTrades', component: ReportsTradesComponent },
       { path: 'reportsTransactions', component: ReportsTransactionsComponent },
-      { path: 'BankAccountConfirmation', component: BankAccountConfirmationComponent },
+      { path: 'bankAccountConfirmation', component: BankAccountConfirmationComponent },
+      { path: 'promotion', component: PromotionComponent },
+      { path: 'promotionEmails', component: PromotionEmailsComponent },
+      { path: 'charts', component: ChartsComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'buttons', component: ButtonsComponent },
       { path: 'tables', component: TablesComponent },

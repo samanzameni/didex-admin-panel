@@ -56,91 +56,91 @@
           <tr >
             <th scope="col" style="vertical-align: middle;">User Type</th>
             <td><p class="region-style">Region 2</p></td>
-            <th *ngIf="SQueryParam === 1" ></th>
+<!--            <th *ngIf="SQueryParam === 1" ></th>-->
           </tr>
           </thead>
           <thead>
           <tr>
             <th scope="col" style="vertical-align: middle;">First Name</th>
             <td>{{userInformation.personalInformation.firstName}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </thead>
           <tbody>
           <tr >
             <th scope="col" style="vertical-align: middle;">Last Name</th>
             <td>{{userInformation.personalInformation.lastName}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </tbody>
           <thead>
           <tr>
             <th scope="col" style="vertical-align: middle;">Email</th>
             <td>{{userInformation.email}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </thead>
           <tbody>
           <tr >
             <th scope="col" style="vertical-align: middle;">Date Of Birth</th>
             <td>{{userInformation.personalInformation.dateOfBirth | date: 'mediumDate'}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </tbody>
           <thead>
           <tr>
             <th scope="col" style="vertical-align: middle;">City</th>
             <td>{{userInformation.personalInformation.city}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </thead>
           <tbody>
           <tr >
             <th scope="col" style="vertical-align: middle;">Mobile Number</th>
             <td>{{userInformation.mobileNumber.mobileNumber}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </tbody>
           <thead>
           <tr>
             <th scope="col" style="vertical-align: middle;">Country Telephone Code</th>
             <td>{{userInformation.mobileNumber.countryTelephoneCode}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </thead>
           <tbody>
           <tr >
             <th scope="col" style="vertical-align: middle;">Country Code</th>
             <td>{{userInformation.personalInformation.countryCode}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </tbody>
           <thead>
           <tr>
             <th scope="col" style="vertical-align: middle;">Birth Country Code</th>
             <td>{{userInformation.personalInformation.birthCountryCode}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </thead>
           <tbody>
           <tr >
             <th scope="col" style="vertical-align: middle;">Zip Code</th>
             <td>{{userInformation.personalInformation.zipCode}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </tbody>
           <thead>
           <tr>
             <th scope="col" style="vertical-align: middle;">Address Line 1</th>
             <td>{{userInformation.personalInformation.addressLine1}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </thead>
           <tbody>
           <tr >
             <th scope="col" style="vertical-align: middle;">Address Line 2</th>
             <td>{{userInformation.personalInformation.addressLine2}}</td>
-            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>
+<!--            <th *ngIf="SQueryParam === 1"><p class="region-percent">50%</p></th>-->
           </tr>
           </tbody>
           <thead *ngFor="let i of userInformation.kycImages">
@@ -161,35 +161,35 @@
           </thead>
         </table>
       </div>
-      <div class="row" style="text-align: right" *ngIf="SQueryParam === 1">
-        <div class="col-sm">
-          <div class="form-group">
-            <button type="button" class="btn btn-primary" style="margin-top: 10px;">
-              Check It
-            </button>
-          </div>
-        </div>
-      </div>
-  <div class="row" style="text-align: right" *ngIf="SQueryParam === 1">
-    <div class="col-sm-11">
-      <div class="form-group">
-        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal1" data-backdrop="static" data-keyboard="false" style="margin-top: 10px;">
-          Reject
-        </button>
-      </div>
+<!--      <div class="row" style="text-align: right" *ngIf="SQueryParam === 1">-->
+<!--        <div class="col-sm">-->
+<!--          <div class="form-group">-->
+<!--            <button type="button" [disabled]="checkDisable" (click)="showPercent()" class="btn btn-primary" style="margin-top: 10px;">-->
+<!--              Check It-->
+<!--            </button>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+
+</div>
+</div>
+</div>
+<div class="row" style="text-align: right" *ngIf="SQueryParam === 1">
+  <div class="col-sm-11">
+    <div class="form-group">
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Modal1" data-backdrop="static" data-keyboard="false" style="margin-top: 10px;">
+        Reject
+      </button>
     </div>
-    <div class="col-sm-1">
-      <div class="form-group">
-        <button type="button" class="btn btn-success" (click)="getApprove()"  style="margin-top: 10px;">
-           Accept
-        </button>
-      </div>
+  </div>
+  <div class="col-sm-1">
+    <div class="form-group">
+      <button type="button" class="btn btn-success"  (click)="getApprove()"  style="margin-top: 10px;">
+        Accept
+      </button>
     </div>
   </div>
 </div>
-</div>
-</div>
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">

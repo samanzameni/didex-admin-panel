@@ -1,0 +1,67 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="col-s-7 col-md-6 col-lg-5 col-xl-4 grid-margin" >
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Charts</span></li>
+    </ol>
+  </nav>
+</div>
+<div class="" >
+  <div class="card">
+    <div class="card-body">
+      <div class="row ">
+        <div class="col-sm-8 col-md-6 col-lg-4" style="margin: auto">
+          <form class="card-body" [formGroup]="chartForm" novalidate>
+            <div class="form-group" >
+              <label for="user"> User Number</label>
+                <input  class="form-control bottom-space" type="number" placeholder="Number" formControlName="user" id="user"  required autofocus>
+              <div *ngIf="chartForm.controls['user'].invalid && (chartForm.controls['user'].dirty || chartForm.controls['user'].touched)" class="alert alert-danger">
+                <div *ngIf="chartForm.controls['user'].errors.required">
+                  User Number is required.
+                </div>
+                <div *ngIf="chartForm.controls['user'].errors.min">
+                  User Number must be bigger than 0.
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <label for="day"> 7 days Volume</label>
+              <input  class="form-control bottom-space" type="number" id="day" placeholder="Volume" formControlName="day" required autofocus>
+              <div *ngIf="chartForm.controls['day'].invalid && (chartForm.controls['day'].dirty || chartForm.controls['day'].touched)" class="alert alert-danger">
+                <div *ngIf="chartForm.controls['day'].errors.required">
+                  7 days Volume is required.
+                </div>
+                <div *ngIf="chartForm.controls['user'].errors.min">
+                  7 days Volume must be bigger than 0.
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <label for="hour"> 24 hours Volume</label>
+              <input  class="form-control bottom-space" type="number" id="hour" placeholder="Volume" formControlName="hour" required autofocus>
+              <div *ngIf="chartForm.controls['hour'].invalid && (chartForm.controls['hour'].dirty || chartForm.controls['hour'].touched)" class="alert alert-danger">
+                <div *ngIf="chartForm.controls['hour'].errors.required">
+                  24 hours Volume is required.
+                </div>
+                <div *ngIf="chartForm.controls['user'].errors.min">
+                  24 hours Volume must be bigger than 0.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-lg btn-warning btn-block" type="submit" [disabled]="chartForm.invalid">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

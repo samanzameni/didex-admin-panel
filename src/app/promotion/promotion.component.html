@@ -1,0 +1,58 @@
+<div style="position: relative">
+  <ngx-spinner
+    size = "default"
+    color = "#FCBB44"
+    type = "ball-beat"
+    [fullScreen] = "true"
+  >
+    <p style="color: white" > Loading... </p>
+  </ngx-spinner>
+</div>
+<div class="col-s-7 col-md-6 col-lg-5 col-xl-4 grid-margin" >
+  <nav aria-label="breadcrumb" role="navigation">
+    <ol class="breadcrumb breadcrumb-custom">
+      <li class="breadcrumb-item"><a >Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><span>Promotion</span></li>
+    </ol>
+  </nav>
+</div>
+<div class="" >
+  <div class="card">
+    <div class="card-body">
+      <div class="row ">
+        <div class="col-sm-8 col-md-6 col-lg-4" style="margin: auto">
+          <form class="card-body" [formGroup]="promotionForm" novalidate>
+            <div class="form-group" >
+              <select class="form-control" formControlName="promotion">
+                <option value="1">No Role</option>
+                <option value="2">No Role</option>
+                <option value="3">No Role</option>
+              </select>
+              <div *ngIf="promotionForm.controls['promotion'].invalid && (promotionForm.controls['promotion'].dirty || promotionForm.controls['promotion'].touched)" class="alert alert-danger">
+                <div *ngIf="promotionForm.controls['promotion'].errors.required">
+                  Promotion is required.
+                </div>
+              </div>
+            </div>
+            <div class="form-group" >
+              <input  class="form-control bottom-space" type="email"  placeholder="Enter Email" formControlName="email"  required autofocus>
+              <p class="p-style" >Example: nasim.mosaei@gmail.com</p>
+              <div *ngIf="promotionForm.controls['email'].invalid && (promotionForm.controls['email'].dirty || promotionForm.controls['email'].touched)" class="alert alert-danger">
+                <div *ngIf="promotionForm.controls['email'].errors.required">
+                  Email is required.
+                </div>
+                <div *ngIf="promotionForm.controls['email'].errors.email">
+                  Wrong email format.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-lg btn-warning btn-block" type="submit" [disabled]="promotionForm.invalid">Charge</button>
+            <div class="a-style">
+              <a routerLink="/pages/promotionEmails" style="text-align: center">See Emails</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

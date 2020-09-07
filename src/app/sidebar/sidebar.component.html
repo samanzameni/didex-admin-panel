@@ -64,9 +64,25 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/pages/BankAccountConfirmation" routerLinkActive="active">
+      <a class="nav-link" routerLink="/pages/bankAccountConfirmation" routerLinkActive="active">
         <i class="menu-icon mdi mdi-bank"></i>
         <span class="menu-title">Bank</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <i class="menu-icon mdi mdi-storefront"></i>
+        <span class="menu-title">Marketing</span>
+      </a>
+    </li>
+    <li class="nav-item collapse"  id="collapseExample" >
+      <a class="nav-link" routerLink="/pages/promotion" routerLinkActive="active" style="margin-left: 25px;">
+        <i class="menu-icon mdi mdi-bullhorn"></i>
+        <span class="menu-title">Promotion</span>
+      </a>
+      <a class="nav-link" routerLink="/pages/charts" routerLinkActive="active" style="margin-left: 25px;">
+        <i class="menu-icon mdi mdi-file-chart"></i>
+        <span class="menu-title">Charts</span>
       </a>
     </li>
     <li class="nav-item">
@@ -181,3 +197,4 @@
 <!--    </li>-->
   </ul>
 </nav>
+

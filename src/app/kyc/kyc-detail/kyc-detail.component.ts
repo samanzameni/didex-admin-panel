@@ -30,6 +30,7 @@ export class KycDetailComponent implements OnInit {
   query: ReportsQuery;
   traderHistory: HistoryKYC[];
   status = TraderStatus;
+  checkDisable = false;
   constructor(private toastrService: ToastrService, private kycService: KYCService, private formBuilder: FormBuilder,
               private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private  route: Router) {
     this.userInformation = {
@@ -171,6 +172,9 @@ export class KycDetailComponent implements OnInit {
       (res: any) => {
         console.log(res);
         this.traderHistory = res;
+        if (this.traderHistory[0].note === null ) {
+          this.traderHistory[0].note = 'None';
+        }
         this.ngxShowLoader.hide();
       },
       err => {
@@ -178,6 +182,9 @@ export class KycDetailComponent implements OnInit {
         this.ngxShowLoader.hide();
       },
     );
+  }
+  showPercent() {
+    this.checkDisable = true;
   }
   ngOnInit() {
     this.KQueryParam = parseFloat(this.router.snapshot.queryParamMap.get('id'));

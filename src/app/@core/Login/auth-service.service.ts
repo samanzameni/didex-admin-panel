@@ -21,6 +21,7 @@ export class AuthServiceService {
     this.ngxShowLoader.show();
     return this.loginRestfulAPIService.userLogin(login).subscribe(
       (res: any) => {
+        console.log(res);
         if (res.status === 200 ) {
         this.storageService.setAccessToken(res.body.token);
         this.role = res.body.roles;
@@ -43,8 +44,9 @@ export class AuthServiceService {
     this.ngxShowLoader.show();
     return this.loginRestfulAPIService.user2Fa(code).subscribe(
       (res: any) => {
-          this.storageService.setAccessToken(res.token);
-          this.role = res.roles;
+        console.log(res);
+          this.storageService.setAccessToken(res.body.token);
+          this.role = res.body.roles;
           this.storageService.setAccessRole(this.role);
           this.router.navigate(['pages/dashboard']);
           this.ngxShowLoader.hide();
