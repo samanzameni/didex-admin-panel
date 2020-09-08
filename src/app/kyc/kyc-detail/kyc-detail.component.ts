@@ -20,6 +20,7 @@ import {TraderStatus} from '../../@core/Trader/trader-status.enum';
 export class KycDetailComponent implements OnInit {
   userList: Pending;
   userInformation: Information;
+  userType: string;
   userInformationNull: Information;
   modalImage: string;
   image = Image;
@@ -147,6 +148,9 @@ export class KycDetailComponent implements OnInit {
         }
         if (this.userInformationNull.mobileNumber != null) {
           this.userInformation.mobileNumber = this.userInformationNull.mobileNumber;
+          if ( this.userInformation.mobileNumber.countryTelephoneCode === '98') {
+            this.userType = 'Region 2';
+          } else { this.userType = 'Region 1'; }
         }
         if (this.userInformationNull.kycImages != null) {
           this.userInformation.kycImages = this.userInformationNull.kycImages;

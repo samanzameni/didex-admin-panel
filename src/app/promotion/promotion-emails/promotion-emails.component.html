@@ -20,11 +20,7 @@
 <div class="" >
   <div class="card">
     <div class="card-body">
-      <div class="mail-style">Nasim.mosaei@gmail.com</div>
-      <div class="mail-style">Nasim.mosaei@gmail.com</div>
-      <div class="mail-style">Nasim.mosaei@gmail.com</div>
-      <div class="mail-style">Nasim.mosaei@gmail.com</div>
-      <div class="mail-style">Nasim.mosaei@gmail.com</div>
+      <div class="mail-style" *ngFor="let i of userPromotion" >{{i.userEmail}}</div>
     </div>
   </div>
 </div>

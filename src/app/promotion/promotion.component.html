@@ -23,10 +23,8 @@
         <div class="col-sm-8 col-md-6 col-lg-4" style="margin: auto">
           <form class="card-body" [formGroup]="promotionForm" novalidate>
             <div class="form-group" >
-              <select class="form-control" formControlName="promotion">
-                <option value="1">No Role</option>
-                <option value="2">No Role</option>
-                <option value="3">No Role</option>
+              <select class="form-control" formControlName="promotion" [(ngModel)]="promotionId">
+                <option *ngFor="let i of promotionList" [ngValue]="i.id" >{{i.id}}</option>
               </select>
               <div *ngIf="promotionForm.controls['promotion'].invalid && (promotionForm.controls['promotion'].dirty || promotionForm.controls['promotion'].touched)" class="alert alert-danger">
                 <div *ngIf="promotionForm.controls['promotion'].errors.required">
@@ -35,7 +33,7 @@
               </div>
             </div>
             <div class="form-group" >
-              <input  class="form-control bottom-space" type="email"  placeholder="Enter Email" formControlName="email"  required autofocus>
+              <input  class="form-control bottom-space" type="email"  placeholder="Enter Email" formControlName="email"  required autofocus [(ngModel)]="promotion.email">
               <p class="p-style" >Example: nasim.mosaei@gmail.com</p>
               <div *ngIf="promotionForm.controls['email'].invalid && (promotionForm.controls['email'].dirty || promotionForm.controls['email'].touched)" class="alert alert-danger">
                 <div *ngIf="promotionForm.controls['email'].errors.required">
@@ -46,9 +44,9 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-lg btn-warning btn-block" type="submit" [disabled]="promotionForm.invalid">Charge</button>
-            <div class="a-style">
-              <a routerLink="/pages/promotionEmails" style="text-align: center">See Emails</a>
+            <button class="btn btn-lg btn-warning btn-block" type="submit" [disabled]="promotionForm.invalid" (click)="postPromotion()">Charge</button>
+            <div class="a-style" di>
+              <button class="btn btn-inverse-light btn-fw" [disabled]="promotionForm.controls['promotion'].invalid" (click)="marketingUser()"  style="text-align: center">See Emails</button>
             </div>
           </form>
         </div>
