@@ -26,7 +26,7 @@ export class CustomLoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       email: [ '', [Validators.required , Validators.email]],
       password: [ '', Validators.required],
-      // reCaptcha: [ '', Validators.required],
+      reCaptcha: [ '', Validators.required],
     });
   }
   userLogin() {

@@ -16,19 +16,6 @@ export class PromotionEmailsComponent implements OnInit {
   userPromotion: UserPromotion[];
   constructor(private router: ActivatedRoute, private formBuilder: FormBuilder, private toastrService: ToastrService,
               private marketingService: MarketingService, private ngxShowLoader: NgxSpinnerService) {
-    // this.userPromotion = {
-    //   id: null,
-    // fundCurrencyShortName: null,
-    // name: null,
-    // type: null,
-    // minimumFund: null,
-    // maximumFund: null,
-    // duration: null,
-    // fixedInterest: null,
-    // totalSupply: null,
-    // startDate: null,
-    // expirationDate: null,
-    // };
   }
   showUserPromotion() {
     this.ngxShowLoader.show();
