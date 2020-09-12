@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {MarketPut} from '../Market/market-put';
 import {AddUserPromotion} from './add-user-promotion';
 import {Setting} from './setting';
+import {environment} from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'

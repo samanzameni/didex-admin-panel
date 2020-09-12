@@ -1,3 +1,5 @@
+import {TraderStatus} from '../Trader/trader-status.enum';
+
 export interface ReportsQuery {
   TraderId?: number;
   UserId?: number;
@@ -11,4 +13,5 @@ export interface ReportsQuery {
   Limit?: number;
   CurrencyShortName?: string;
   TransactionId?: string;
+  Status?: TraderStatus;
 }

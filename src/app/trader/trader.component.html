@@ -29,7 +29,7 @@
         <div class="col-sm">
           <div class="form-group">
             <label for="Status">Status</label>
-            <select class="form-control border-primary" id="Status" >
+            <select class="form-control border-primary" id="Status" [(ngModel)]="querySearch.Status" >
               <option ngValue="0">Newbie</option>
               <option ngValue="1" >KycSent</option>
               <option ngValue="2">Approved</option>

@@ -45,6 +45,9 @@ export class TraderService {
     } if (queryString.Desc != null) {
       this.mark = '?';
       params = params.set('Desc', String(queryString.Desc));
+    } if (queryString.Status != null) {
+      this.mark = '?';
+      params = params.set('Status', String(queryString.Status));
     }
     const httpOption = {
       headers: new HttpHeaders({ 'accept': 'text/plain',
