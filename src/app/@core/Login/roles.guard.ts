@@ -16,10 +16,11 @@ export class RolesGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const expectedRole = 'superUser';
     const expectedRole1 = 'moderator';
+    const expectedRole2 = 'marketingManager';
     const role = this.storageService.getAccessRole();
     if (role !== null) {
     for (const i of role) {
-      if (i === expectedRole || i === expectedRole1 ) {
+      if (i === expectedRole || i === expectedRole1 || i === expectedRole2 ) {
         this.toastrService.success('You Have Successfully Signed In.', '', {timeOut: 4000});
         return true;
       }

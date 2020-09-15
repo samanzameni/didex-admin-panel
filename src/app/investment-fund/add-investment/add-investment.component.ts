@@ -54,6 +54,7 @@ export class AddInvestmentComponent implements OnInit {
 
   addCurrency() {
     this.ngxShowLoader.show();
+    this.invPost.type = this.invPost.type + 1;
     this.invPost.startDate =  new Date(this.ngbDateParserFormatter.format(this.startDateNgb)).toISOString();
     this.invPost.expirationDate = new Date(this.ngbDateParserFormatter.format(this.expirationDateNgb)).toISOString();
     return this.investmentFundService.investmentPost(this.invPost).subscribe(

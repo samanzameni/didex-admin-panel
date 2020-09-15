@@ -16,7 +16,7 @@ export class AdminService {
   token = this.storageService.getAccessToken();
   mark = '';
   // ServerUrl = environment.production ? 'https://api.didex.com/api/' : 'https://devapi.didex.com/api/';
-  ServerUrl =  'https://devapi.didex.com/api/';
+   ServerUrl =  'https://devapi.didex.com/api/';
   httpOptions = {
     headers: new HttpHeaders({ 'accept': 'text/plain',
       'Authorization': 'Bearer ' + this.token,

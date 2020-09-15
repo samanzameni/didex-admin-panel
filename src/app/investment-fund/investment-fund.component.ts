@@ -81,6 +81,7 @@ export class InvestmentFundComponent implements OnInit {
     return this.investment.idDelete(this.DSN).subscribe(
       (res: any) => {
         console.log(res);
+        this.disableDelete = false;
         this.showInvestmentList();
         this.ngxShowLoader.hide();
         this.toastrService.success('You Have Successfully Delete Investment.', '', {timeOut: 4000});
