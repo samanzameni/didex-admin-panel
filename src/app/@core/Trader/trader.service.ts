@@ -59,4 +59,8 @@ export class TraderService {
     return this.http.get
     (this.ServerUrl + 'admin/Trader' + this.mark, httpOption );
   }
+  verifyKycGet( id: number): Observable<any> {
+    return this.http.get
+    (this.ServerUrl + 'admin/Trader/verifyKyc/' + id , this.httpOptions  );
+  }
 }

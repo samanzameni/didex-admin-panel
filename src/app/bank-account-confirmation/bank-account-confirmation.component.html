@@ -30,6 +30,7 @@
             <th scope="col">Iban</th>
             <th scope="col">Card Number</th>
             <th scope="col">Confirm</th>
+            <th scope="col">Query</th>
           </tr>
           </thead>
           <tbody>
@@ -43,6 +44,11 @@
             <td>
               <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal" data-backdrop="static" data-keyboard="false" (click)="updateAccount(i)">
                 <i class="fa fa-check" aria-hidden="true"></i>
+              </button>
+            </td>
+            <td>
+              <button type="button" class="btn btn-outline-info"  data-toggle="modal" data-target="#Modal" data-backdrop="static" data-keyboard="false" (click)="getQuery(i)">
+                <i class="fa fa-info" aria-hidden="true"></i>
               </button>
             </td>
           </tr>
@@ -69,7 +75,56 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-success" data-dismiss="modal" (click)="confirmAccount()">Yes</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!--Modal-->
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ModalLabel"> Query</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive" *ngIf="!checkError">
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th scope="col" style="vertical-align: middle;">Card Holder Name</th>
+                  <td>{{query.cardHolderName}}</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr >
+                  <th scope="col" style="vertical-align: middle;">iBan Name</th>
+                  <td>{{query.iBanName}}</td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                  <th scope="col" style="vertical-align: middle;">IBan Status</th>
+                  <td>{{iBanStatus}}</td>
+                </tr>
+                </thead>
+              </table>
+            </div>
+            <div class="alert alert-fill-danger" *ngIf="checkError">
+              <div *ngFor="let i of errorArray">
+                {{i}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal" >ok</button>
       </div>
     </div>
   </div>

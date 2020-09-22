@@ -11,6 +11,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ReportsQuery} from '../../@core/Reports/reports-query';
 import {HistoryKYC} from '../../@core/KYC/history-kyc';
 import {TraderStatus} from '../../@core/Trader/trader-status.enum';
+import {TraderService} from '../../@core/Trader/trader.service';
+import {VerifyKYC} from '../../@core/Trader/verify-kyc';
 
 @Component({
   selector: 'app-kyc-detail',
@@ -32,8 +34,11 @@ export class KycDetailComponent implements OnInit {
   traderHistory: HistoryKYC[];
   status = TraderStatus;
   checkDisable = false;
+  checkError: string[];
+  verifyKYC: VerifyKYC;
   constructor(private toastrService: ToastrService, private kycService: KYCService, private formBuilder: FormBuilder,
-              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private  route: Router) {
+              private ngxShowLoader: NgxSpinnerService, private router: ActivatedRoute, private  route: Router,
+              private traderService: TraderService) {
     this.userInformation = {
       personalInformation: {
         firstName: null,
@@ -93,6 +98,10 @@ export class KycDetailComponent implements OnInit {
     this.query = {
       TraderId: null,
       Limit: 1,
+    };
+    this.verifyKYC = {
+      firstNameSimilarity: null,
+      lastNameSimilarity: null,
     };
     this.createForm();
   }
@@ -187,8 +196,25 @@ export class KycDetailComponent implements OnInit {
       },
     );
   }
-  showPercent() {
+
+  getCheckIt() {
+    this.ngxShowLoader.show();
     this.checkDisable = true;
+    return this.traderService.verifyKycGet(this.userList.id).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.verifyKYC = res;
+        this.ngxShowLoader.hide();
+      },
+      err => {
+        console.log(err);
+        const error = err.error;
+        if (error) {
+          this.checkError = Object.values(error.errors);
+        }
+        this.ngxShowLoader.hide();
+      },
+    );
   }
   ngOnInit() {
     this.KQueryParam = parseFloat(this.router.snapshot.queryParamMap.get('id'));

@@ -28,4 +28,8 @@ export class BankService {
     return this.http.get
     (this.ServerUrl + 'admin/Trader/bankAccount/' + id + '/confirm', this.httpOptions  );
   }
+  queryGet( id: number): Observable<any> {
+    return this.http.get
+    (this.ServerUrl + 'admin/Trader/bankAccount/' + id + '/query' , this.httpOptions  );
+  }
 }
