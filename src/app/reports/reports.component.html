@@ -62,7 +62,7 @@
           <label for="From1">From</label>
           <div class="input-group">
             <input class="form-control" id="From1" placeholder="From"
-                   name="fp" [(ngModel)]="fromNgb" ngbDatepicker #f="ngbDatepicker">
+                   name="fp" [(ngModel)]="fromNgb" ngbDatepicker #f="ngbDatepicker" >
             <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar" (click)="f.toggle()" type="button" style="padding: 8px 14px;"><i class="fa fa-calendar"></i></button>
             </div>
@@ -80,7 +80,7 @@
           <label for="Till1">Till</label>
           <div class="input-group">
             <input class="form-control" id="Till1" placeholder="Till"
-                   name="tp" [(ngModel)]="tillNgb" ngbDatepicker #t="ngbDatepicker">
+                   name="tp" [(ngModel)]="tillNgb" ngbDatepicker #t="ngbDatepicker" >
             <div class="input-group-append">
               <button class="btn btn-outline-secondary calendar" (click)="t.toggle()" type="button" style="padding: 8px 14px;"><i class="fa fa-calendar"></i></button>
             </div>

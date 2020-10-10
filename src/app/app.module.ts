@@ -14,7 +14,6 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { PagesModule } from './pages/pages.module';
 import {RecaptchaFormsModule, RecaptchaModule} from 'ng-recaptcha';
 import { TwoFactorLoginComponent } from './two-factor-login/two-factor-login.component';
-import { ChartsComponent } from './charts/charts.component';
 
 
 
@@ -38,7 +37,7 @@ import { ChartsComponent } from './charts/charts.component';
     PagesModule,
     NgxSpinnerModule,
     RecaptchaModule,
-    RecaptchaFormsModule
+    RecaptchaFormsModule,
   ],
   providers: [
   ],

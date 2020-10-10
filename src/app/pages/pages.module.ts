@@ -52,6 +52,7 @@ import {BankAccountConfirmationComponent} from '../bank-account-confirmation/ban
 import {PromotionComponent} from '../promotion/promotion.component';
 import {PromotionEmailsComponent} from '../promotion/promotion-emails/promotion-emails.component';
 import {ChartsComponent} from '../charts/charts.component';
+import {TextMaskModule} from 'angular2-text-mask';
 
 
 
@@ -113,7 +114,6 @@ import {ChartsComponent} from '../charts/charts.component';
     ReactiveFormsModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-
   ],
   exports: [
     PagesComponent,

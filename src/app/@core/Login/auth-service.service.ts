@@ -13,6 +13,7 @@ import {Factor} from '../TwoFactor/factor';
 })
 export class AuthServiceService {
   role: string[];
+  error: string[];
   constructor(private storageService: StorageService, private loginRestfulAPIService: LoginRestfulAPIService,
               private toastrService: ToastrService,  private router: Router, private ngxShowLoader: NgxSpinnerService) {
   }
@@ -35,8 +36,11 @@ export class AuthServiceService {
       },
       err => {
         console.log(err);
+        if (err.error) {
+          this.error = Object.values(err.error.errors);
+          this.toastrService.error(this.error[0] , '', {timeOut: 10000});
+        } else { this.toastrService.error( 'Error' , '', {timeOut: 10000}); }
         this.ngxShowLoader.hide();
-        this.toastrService.error('Wrong Email Or Password.', '', {timeOut: 10000});
       },
     );
   }

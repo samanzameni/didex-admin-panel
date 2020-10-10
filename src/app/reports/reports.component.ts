@@ -8,7 +8,6 @@ import {OrderSides} from '../@core/Reports/order-sides.enum';
 import {OrderStatus} from '../@core/Reports/order-status.enum';
 import {OrderType} from '../@core/Reports/order-type.enum';
 import {OrderTimeInForce} from '../@core/Reports/order-time-in-force.enum';
-import {InvestmentFundService} from '../@core/Investment Fund/investment-fund.service';
 import {NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 
