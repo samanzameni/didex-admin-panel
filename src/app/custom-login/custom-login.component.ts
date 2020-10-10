@@ -33,11 +33,7 @@ export class CustomLoginComponent implements OnInit {
       this.authService.loginPost(this.login);
   }
   eyeClick() {
-    if (this.inputType === false) {
-      this.inputType = true;
-    } else {
-      this.inputType = false;
-    }
+    this.inputType = !this.inputType;
   }
   resolved(captchaResponse: string) {
     console.log(`Resolved captcha with response: ${captchaResponse}`);

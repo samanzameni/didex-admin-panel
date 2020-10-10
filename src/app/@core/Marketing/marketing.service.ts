@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {StorageService} from '../Login/storage.service';
 import {Observable} from 'rxjs';
-import {MarketPut} from '../Market/market-put';
 import {AddUserPromotion} from './add-user-promotion';
 import {Setting} from './setting';
 import {environment} from '../../../environments/environment';

@@ -52,7 +52,7 @@ export class AuthServiceService {
           this.storageService.setAccessToken(res.body.token);
           this.role = res.body.roles;
           this.storageService.setAccessRole(this.role);
-          this.router.navigate(['pages/dashboard']);
+          this.router.navigate(['/pages']);
           this.ngxShowLoader.hide();
       },
       err => {

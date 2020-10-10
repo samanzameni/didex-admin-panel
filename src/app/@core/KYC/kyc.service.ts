@@ -4,7 +4,6 @@ import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {StorageService} from '../Login/storage.service';
 import {KycReject} from './kyc-reject';
 import {ReportsQuery} from '../Reports/reports-query';
-import {Trader} from '../Trader/trader';
 import {environment} from '../../../environments/environment';
 
 @Injectable({
