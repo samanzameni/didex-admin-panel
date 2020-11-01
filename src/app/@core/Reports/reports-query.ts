@@ -14,4 +14,5 @@ export interface ReportsQuery {
   CurrencyShortName?: string;
   TransactionId?: string;
   Status?: TraderStatus;
+  roles?: string;
 }

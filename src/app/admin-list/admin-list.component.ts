@@ -5,11 +5,11 @@ import {AdminService} from '../@core/Admin/admin.service';
 import {RoleList} from '../@core/Admin/role-list';
 import {NgxSpinnerService} from 'ngx-spinner';
 import {AdminChild} from '../@core/Admin/admin-child';
-import {ErrorPass} from '../@core/Admin/error';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {ReportsQuery} from '../@core/Reports/reports-query';
 import {RoleListRes} from '../@core/Admin/role-list-res';
+import {SavesAdminService} from '../@core/Admin/saves-admin.service';
 
 @Component({
   selector: 'app-admin-list',
@@ -30,12 +30,12 @@ export class AdminListComponent implements OnInit {
   page = 1;
   pageSize = 10;
   constructor(private toastrService: ToastrService, private admin: AdminService, private ngxShowLoader: NgxSpinnerService
-  , private formBuilder: FormBuilder, private router: Router) {
+  , private formBuilder: FormBuilder, private router: Router, private savesAdminService: SavesAdminService) {
     this.adminRoles = {
       roles: null,
     };
     this.adminList = {
-      roles: 'trader',
+      roles: '',
     };
     this.add = {
       email: null,
@@ -127,6 +127,9 @@ export class AdminListComponent implements OnInit {
   }
   showList() {
     this.ngxShowLoader.show();
+    this.savesAdminService.query.roles = this.adminList.roles;
+    this.querySearch.Desc = null ;
+    this.querySearch.UserId = null;
     return this.admin.getList(this.adminList.roles).subscribe(
       (res: any) => {
         console.log(res);
@@ -247,6 +250,8 @@ export class AdminListComponent implements OnInit {
   }
   showSearch() {
     this.ngxShowLoader.show();
+    this.savesAdminService.query = this.querySearch;
+    console.log(this.savesAdminService.query);
     return this.admin.searchGet(this.querySearch).subscribe(
       (res: any) => {
         console.log(res);
@@ -263,8 +268,21 @@ export class AdminListComponent implements OnInit {
     );
   }
   ngOnInit() {
+    if (this.savesAdminService.query.roles !== null) {
+      this.adminList.roles = this.savesAdminService.query.roles ;
+    }
+    if (this.savesAdminService.query.Desc !== null) {
+      this.querySearch.Desc = this.savesAdminService.query.Desc ;
+    }
+    if (this.savesAdminService.query.UserId !== null) {
+      this.querySearch.UserId = this.savesAdminService.query.UserId ;
+    }
     this.showRoles();
-    this.showList();
+    if (this.querySearch.Desc !== null || this.querySearch.UserId !== null ) {
+      this.showSearch();
+    } else {
+      this.showList();
+    }
     window.scroll(0, 0);
   }
 

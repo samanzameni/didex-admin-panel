@@ -8,6 +8,7 @@ import {Router} from '@angular/router';
 import {TraderRes} from '../@core/Trader/trader-res';
 import {ReportsQuery} from '../@core/Reports/reports-query';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {SavesKYCService} from '../@core/KYC/saves-kyc.service';
 
 @Component({
   selector: 'app-trader',
@@ -23,7 +24,7 @@ export class TraderComponent implements OnInit {
   pageSize = 10;
   traderForm: FormGroup;
   constructor(private toastrService: ToastrService, private traderService: TraderService, private ngxShowLoader: NgxSpinnerService,
-              private formBuilder: FormBuilder, private router: Router) {
+              private formBuilder: FormBuilder, private router: Router, private savesKYCService: SavesKYCService) {
     this.trader = {
           id: null,
           email: null,
@@ -101,6 +102,7 @@ export class TraderComponent implements OnInit {
   }
   showSearch() {
     this.ngxShowLoader.show();
+    this.savesKYCService.query = this.querySearch;
     return this.traderService.searchGet(this.querySearch).subscribe(
       (res: any) => {
         console.log(res);
@@ -119,7 +121,20 @@ export class TraderComponent implements OnInit {
       { queryParams: { id : this.trader.id, status : this.trader.status } });
   }
   ngOnInit() {
-    this.showTrader();
+    if (this.savesKYCService.query.Desc !== null) {
+      this.querySearch.Desc = this.savesKYCService.query.Desc ;
+    }
+    if (this.savesKYCService.query.UserId !== null) {
+      this.querySearch.UserId = this.savesKYCService.query.UserId ;
+    }
+    if (this.savesKYCService.query.Status !== null) {
+      this.querySearch.Status = this.savesKYCService.query.Status ;
+    }
+    if (this.querySearch.Desc !== null || this.querySearch.UserId !== null || this.querySearch.Status !== null ) {
+      this.showSearch();
+    } else {
+      this.showTrader();
+    }
     window.scroll(0, 0);
   }
 
