@@ -35,7 +35,7 @@ export class AdminListComponent implements OnInit {
       roles: null,
     };
     this.adminList = {
-      roles: '',
+      roles: 'trader',
     };
     this.add = {
       email: null,

@@ -6,6 +6,8 @@ import {ReportsQuery} from '../@core/Reports/reports-query';
 import {ReportsTrades} from '../@core/Reports/reports-trades';
 import {OrderSides} from '../@core/Reports/order-sides.enum';
 import {NgbDateParserFormatter, NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
+import {SavesReportsService} from '../@core/Reports/saves-reports.service';
+import {SavesReportsTradesService} from '../@core/Reports/saves-reports-trades.service';
 
 @Component({
   selector: 'app-reports-trades',
@@ -21,7 +23,8 @@ export class ReportsTradesComponent implements OnInit {
   fromNgb: NgbDateStruct;
   tillNgb: NgbDateStruct;
   constructor(private reportsTradesService: ReportsTradesService, private toastrService: ToastrService,
-              private ngxShowLoader: NgxSpinnerService, private ngbDateParserFormatter: NgbDateParserFormatter) {
+              private ngxShowLoader: NgxSpinnerService, private ngbDateParserFormatter: NgbDateParserFormatter,
+              private savesReportsTradesService: SavesReportsTradesService) {
     this.reports = {
       TraderId : null,
       Symbol : null,
@@ -64,12 +67,13 @@ export class ReportsTradesComponent implements OnInit {
         this.reports.Till =  new Date(this.ngbDateParserFormatter.format(this.tillNgb)).toISOString();
       }
     }
+    this.savesReportsTradesService.query = this.reports;
     return this.reportsTradesService.getReportsTrades(this.reports).subscribe(
       (res: any) => {
         console.log(res);
         this.reportsRes = res;
-        this.reports.Till = null;
-        this.reports.From = null;
+        // this.reports.Till = null;
+        // this.reports.From = null;
         this.ngxShowLoader.hide();
       },
       err => {
@@ -79,6 +83,24 @@ export class ReportsTradesComponent implements OnInit {
     );
   }
   ngOnInit() {
+    if (this.savesReportsTradesService.query.Desc !== null) {
+      this.reports.Desc = this.savesReportsTradesService.query.Desc ;
+    }
+    if (this.savesReportsTradesService.query.TraderId !== null) {
+      this.reports.TraderId = this.savesReportsTradesService.query.TraderId ;
+    }
+    if (this.savesReportsTradesService.query.Symbol !== null) {
+      this.reports.Symbol = this.savesReportsTradesService.query.Symbol ;
+    }
+    if (this.savesReportsTradesService.query.FilterBy !== null) {
+      this.reports.FilterBy = this.savesReportsTradesService.query.FilterBy ;
+    }
+    if (this.savesReportsTradesService.query.From !== null) {
+      this.reports.From = this.savesReportsTradesService.query.From ;
+    }
+    if (this.savesReportsTradesService.query.Till !== null) {
+      this.reports.Till = this.savesReportsTradesService.query.Till ;
+    }
     this.reportsTradesGet();
     window.scroll(0, 0);
   }

@@ -7,6 +7,7 @@ import {UserInvestStatus} from '../../@core/Investment Fund/user-invest-status.e
 import {InvestRecords} from '../../@core/Investment Fund/invest-records';
 import {InvestType} from '../../@core/Investment Fund/invest-type.enum';
 import {ReportsQuery} from '../../@core/Reports/reports-query';
+import {SavesInvestmentService} from '../../@core/Investment Fund/saves-investment.service';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class TraderUserInvestComponent implements OnInit {
   page = 1;
   pageSize = 10;
   constructor(private router: ActivatedRoute, private investmentFundService: InvestmentFundService,
-              private ngxShowLoader: NgxSpinnerService) {
+              private ngxShowLoader: NgxSpinnerService, private savesInvestmentService: SavesInvestmentService) {
     this.userInvest = {
       count: null,
     records: [
@@ -58,6 +59,7 @@ export class TraderUserInvestComponent implements OnInit {
 
   showInvest() {
     this.ngxShowLoader.show();
+    this.savesInvestmentService.query = this.querySearch;
     return this.investmentFundService.idUserInvestGet(this.DId , this.querySearch).subscribe(
       (res: any) => {
         console.log(res);
@@ -78,6 +80,12 @@ export class TraderUserInvestComponent implements OnInit {
   }
   ngOnInit() {
     this.DId = parseFloat(this.router.snapshot.queryParamMap.get('id'));
+    if (this.savesInvestmentService.query.Desc !== null) {
+      this.querySearch.Desc = this.savesInvestmentService.query.Desc ;
+    }
+    if (this.savesInvestmentService.query.UserId !== null) {
+      this.querySearch.UserId = this.savesInvestmentService.query.UserId ;
+    }
     this.showInvest();
   }
 
