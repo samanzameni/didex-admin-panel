@@ -29,19 +29,19 @@
         <div class="col-sm">
           <div class="form-group">
             <label for="ShortName">Currency ShortName</label>
-            <input type="text" class="form-control" id="ShortName" placeholder="Enter Currency ShortName" [(ngModel)]="reports.CurrencyShortName">
+            <input type="text" class="form-control" id="ShortName" placeholder="Enter Currency ShortName" [(ngModel)]="reports.CurrencyShortName" (change)="selectedOrder($event)">
           </div>
         </div>
         <div class="col-sm">
           <div class="form-group">
             <label for="TransactionId">Transaction Id</label>
-            <input type="text" class="form-control" id="TransactionId" placeholder="Enter Transaction Id" [(ngModel)]="reports.TransactionId">
+            <input type="text" class="form-control" id="TransactionId" placeholder="Enter Transaction Id" [(ngModel)]="reports.TransactionId" (change)="selectedOrder($event)">
           </div>
         </div>
         <div class="col-sm">
           <div class="form-group">
             <label for="Order By">Order By</label>
-            <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc">
+            <select class="form-control border-primary" id="Order By" [(ngModel)]="reports.Desc" (change)="selectedOrder($event)">
               <option ngValue="true">Ascending</option>
               <option ngValue="false" >Descending</option>
             </select>
@@ -62,7 +62,7 @@
           <div class="form-group">
             <div *ngIf="reports.FilterBy == 'id'">
               <label for="From">From</label>
-              <input type="text" class="form-control" id="From" placeholder="id" [(ngModel)]="reports.From">
+              <input type="text" class="form-control" id="From" placeholder="id" [(ngModel)]="reports.From" (change)="selectedOrder($event)">
             </div>
             <div *ngIf="reports.FilterBy == 'timestamp'">
               <label for="From1">From</label>
@@ -80,7 +80,7 @@
           <div class="form-group">
             <div *ngIf="reports.FilterBy == 'id'">
               <label for="Till">Till</label>
-              <input type="text" class="form-control" id="Till" placeholder="id" [(ngModel)]="reports.Till">
+              <input type="text" class="form-control" id="Till" placeholder="id" [(ngModel)]="reports.Till" (change)="selectedOrder($event)">
             </div>
             <div *ngIf="reports.FilterBy == 'timestamp'">
               <label for="Till1">Till</label>

@@ -99,6 +99,19 @@ export class TraderComponent implements OnInit {
   }
   receiveId($event) {
     this.querySearch.UserId = $event;
+    if ($event !== null) {
+      this.showSearch();
+    }
+  }
+  selectedStatus(event) {
+    if (event.target.value !== null) {
+      this.showSearch();
+    }
+  }
+  selectedOrder(event) {
+    if (event.target.value !== null) {
+      this.showSearch();
+    }
   }
   showSearch() {
     this.ngxShowLoader.show();

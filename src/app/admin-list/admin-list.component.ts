@@ -145,11 +145,7 @@ export class AdminListComponent implements OnInit {
       },
     );
   }
-  selectedRole(event) {
-    if (event.target.value !== null) {
-      this.showList();
-    }
-  }
+
   userDetail(i) {
    this.userRoleList = i;
     this.router.navigate(['/pages/adminListDetail'],
@@ -247,6 +243,19 @@ export class AdminListComponent implements OnInit {
   }
   receiveId($event) {
     this.querySearch.UserId = $event;
+    if ($event !== null) {
+      this.showSearch();
+    }
+  }
+  selectedRole(event) {
+    if (event.target.value !== null) {
+      this.showList();
+    }
+  }
+  selectedOrder(event) {
+    if (event.target.value !== null) {
+      this.showSearch();
+    }
   }
   showSearch() {
     this.ngxShowLoader.show();

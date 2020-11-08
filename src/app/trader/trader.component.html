@@ -29,7 +29,7 @@
         <div class="col-sm">
           <div class="form-group">
             <label for="Status">Status</label>
-            <select class="form-control border-primary" id="Status" [(ngModel)]="querySearch.Status" >
+            <select class="form-control border-primary" id="Status" [(ngModel)]="querySearch.Status" (change)="selectedStatus($event)">
               <option ngValue="0">Newbie</option>
               <option ngValue="1" >KycSent</option>
               <option ngValue="2">Approved</option>
@@ -41,7 +41,7 @@
         <div class="col-sm">
           <div class="form-group">
             <label for="Order By">Order By</label>
-            <select class="form-control border-primary" id="Order By" [(ngModel)]="querySearch.Desc">
+            <select class="form-control border-primary" id="Order By" [(ngModel)]="querySearch.Desc" (change)="selectedOrder($event)">
               <option ngValue="true">Ascending</option>
               <option ngValue="false" >Descending</option>
             </select>

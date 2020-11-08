@@ -66,10 +66,23 @@ export class ReportsComponent implements OnInit {
   }
   receiveId($event) {
     this.reports.TraderId = $event;
+    if ($event !== null) {
+      this.reportsGet();
+    }
   }
+  selectedSymbol(event) {
+    if (event.target.value !== null) {
+      this.reportsGet();
+    }
+  }
+  selectedOrder(event) {
+    if (event.target.value !== null) {
+      this.reportsGet();
+    }
+  }
+
   reportsGet() {
     this.ngxShowLoader.show();
-
     if (this.reports.FilterBy === 'timestamp' ) {
       if (this.fromNgb != null) {
         this.reports.From =  new Date(this.ngbDateParserFormatter.format(this.fromNgb)).toISOString();

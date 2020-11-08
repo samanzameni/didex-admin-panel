@@ -38,7 +38,7 @@
         <div class="col-sm-4">
           <div class="form-group">
             <label for="Order By">Order By</label>
-            <select class="form-control border-primary" id="Order By" [(ngModel)]="querySearch.Desc">
+            <select class="form-control border-primary" id="Order By" [(ngModel)]="querySearch.Desc" (change)="selectedOrder($event)">
               <option ngValue="true">Ascending</option>
               <option ngValue="false">Descending</option>
             </select>

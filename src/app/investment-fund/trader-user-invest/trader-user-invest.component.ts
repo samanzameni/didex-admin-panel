@@ -77,6 +77,14 @@ export class TraderUserInvestComponent implements OnInit {
 }
   receiveId($event) {
     this.querySearch.UserId = $event;
+    if ($event !== null) {
+      this.showInvest();
+    }
+  }
+  selectedOrder(event) {
+    if (event.target.value !== null) {
+      this.showInvest();
+    }
   }
   ngOnInit() {
     this.DId = parseFloat(this.router.snapshot.queryParamMap.get('id'));

@@ -30,7 +30,7 @@ import {NavbarComponent} from '../navbar/navbar.component';
 import {SidebarComponent} from '../sidebar/sidebar.component';
 import {FooterComponent} from '../footer/footer.component';
 import {DetailComponent} from '../admin-list/detail/detail.component';
-import {KycDetailComponent} from '../kyc/kyc-detail/kyc-detail.component';
+import {KycDetailComponent} from '../trader/kyc-detail/kyc-detail.component';
 import {MarketAddComponent} from '../market/market-add/market-add.component';
 import {MarketEditComponent} from '../market/market-edit/market-edit.component';
 import {SearchComponent} from '../search/search.component';
@@ -47,7 +47,7 @@ import {InvestmentFundComponent} from '../investment-fund/investment-fund.compon
 import {AddInvestmentComponent} from '../investment-fund/add-investment/add-investment.component';
 import {EditInvestmentComponent} from '../investment-fund/edit-investment/edit-investment.component';
 import {DetailInvestmentComponent} from '../investment-fund/detail-investment/detail-investment.component';
-import {TraderUserInvestComponent} from '../trader/trader-user-invest/trader-user-invest.component';
+import {TraderUserInvestComponent} from '../investment-fund/trader-user-invest/trader-user-invest.component';
 import {BankAccountConfirmationComponent} from '../bank-account-confirmation/bank-account-confirmation.component';
 import {PromotionComponent} from '../promotion/promotion.component';
 import {PromotionEmailsComponent} from '../promotion/promotion-emails/promotion-emails.component';

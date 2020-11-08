@@ -32,13 +32,13 @@
   <div class="col-sm">
     <div class="form-group ">
       <label for="Search">Search</label>
-      <app-search id="Search" (id)="receiveId($event)"></app-search>
+      <app-search id="Search" (id)="receiveId($event)"  ></app-search>
     </div>
   </div>
   <div class="col-sm">
     <div class="form-group">
       <label for="Order By">Order By</label>
-      <select class="form-control border-primary" id="Order By" [(ngModel)]="querySearch.Desc">
+      <select class="form-control border-primary" id="Order By" [(ngModel)]="querySearch.Desc" (change)="selectedOrder($event)">
         <option ngValue="true">Ascending</option>
         <option ngValue="false" >Descending</option>
       </select>

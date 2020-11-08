@@ -62,6 +62,14 @@ export class ReportsTransactionsComponent implements OnInit {
 
   receiveId($event) {
     this.reports.TraderId = $event;
+    if ($event !== null) {
+      this.reportsTransactionsGet();
+    }
+  }
+  selectedOrder(event) {
+    if (event.target.value !== null) {
+      this.reportsTransactionsGet();
+    }
   }
   reportsTransactionsGet() {
     this.ngxShowLoader.show();
