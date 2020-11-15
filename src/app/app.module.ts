@@ -12,7 +12,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { PagesModule } from './pages/pages.module';
-import {RecaptchaFormsModule, RecaptchaModule} from 'ng-recaptcha';
+import {RECAPTCHA_V3_SITE_KEY, RecaptchaFormsModule, RecaptchaModule, RecaptchaV3Module} from 'ng-recaptcha';
 import { TwoFactorLoginComponent } from './two-factor-login/two-factor-login.component';
 
 
@@ -36,10 +36,11 @@ import { TwoFactorLoginComponent } from './two-factor-login/two-factor-login.com
     ToastrModule.forRoot(),
     PagesModule,
     NgxSpinnerModule,
-    RecaptchaModule,
+    RecaptchaV3Module,
     RecaptchaFormsModule,
   ],
   providers: [
+    { provide: RECAPTCHA_V3_SITE_KEY, useValue: '6LcgguIUAAAAAE1GXYfJd7z-uEah67Dd9kTgWcpz' },
   ],
   bootstrap: [AppComponent]
 })

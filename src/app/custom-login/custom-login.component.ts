@@ -3,6 +3,7 @@ import {AuthServiceService} from '../@core/Login/auth-service.service';
 import {Login} from '../@core/Login/login';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {StorageService} from '../@core/Login/storage.service';
+import {ReCaptchaV3Service} from 'ng-recaptcha';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class CustomLoginComponent implements OnInit {
   login: Login;
   inputType = false;
   constructor(private authService: AuthServiceService, private formBuilder: FormBuilder,
-               private storageService: StorageService) {
+               private storageService: StorageService, private recaptchaV3Service: ReCaptchaV3Service) {
     this.login = {
       email: null,
       password: null,
@@ -26,19 +27,23 @@ export class CustomLoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       email: [ '', [Validators.required , Validators.email]],
       password: [ '', Validators.required],
-      // reCaptcha: [ '', Validators.required],
+      // recaptcha: [ '', Validators.required],
     });
   }
   userLogin() {
+      this.executeImportantAction();
       this.authService.loginPost(this.login);
   }
   eyeClick() {
     this.inputType = !this.inputType;
   }
-  resolved(captchaResponse: string) {
-    console.log(`Resolved captcha with response: ${captchaResponse}`);
-    this.storageService.setCaptchaToken(captchaResponse);
+  public executeImportantAction(): void {
+    this.recaptchaV3Service.execute('importantAction')
+      .subscribe((token) =>
+        this.storageService.setCaptchaToken(token)
+    );
   }
+
   ngOnInit() {
     window.scroll(0, 0);
   }
