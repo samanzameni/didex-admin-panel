@@ -101,6 +101,8 @@ export class TraderComponent implements OnInit {
     this.querySearch.UserId = $event;
     if ($event !== null) {
       this.showSearch();
+    } else {
+      this.showTrader();
     }
   }
   selectedStatus(event) {
@@ -112,6 +114,12 @@ export class TraderComponent implements OnInit {
     if (event.target.value !== null) {
       this.showSearch();
     }
+  }
+  refresh() {
+    this.querySearch.Desc = null;
+    this.querySearch.UserId = null;
+    this.querySearch.Status = null;
+    this.showTrader();
   }
   showSearch() {
     this.ngxShowLoader.show();

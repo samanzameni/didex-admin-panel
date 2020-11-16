@@ -245,6 +245,8 @@ export class AdminListComponent implements OnInit {
     this.querySearch.UserId = $event;
     if ($event !== null) {
       this.showSearch();
+    } else {
+      this.showList();
     }
   }
   selectedRole(event) {
@@ -256,6 +258,12 @@ export class AdminListComponent implements OnInit {
     if (event.target.value !== null) {
       this.showSearch();
     }
+  }
+  refresh() {
+    this.querySearch.UserId = null;
+    this.querySearch.Desc = null;
+    this.adminList.roles = 'trader';
+    this.showList();
   }
   showSearch() {
     this.ngxShowLoader.show();

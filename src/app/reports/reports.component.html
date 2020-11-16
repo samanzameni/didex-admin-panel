@@ -89,10 +89,14 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-2 offset-10">
-      <button type="submit" class="btn btn-warning mr-2 but-pos float-right" (click)="reportsGet()"><i class="fa fa-search"></i></button>
+  <div class="row" >
+    <div class="col-sm-2 offset-8">
+      <button type="submit" class="btn btn-warning mr-2 but-pos float-right" (click)="refresh()"><i class="fa fa-refresh"></i></button>
     </div>
+    <div class="col-sm-2 " *ngIf="reports.FilterBy == 'timestamp'">
+      <button type="submit" class="btn btn-info mr-2 but-pos float-right" (click)="reportsGet()"><i class="fa fa-search"></i></button>
+    </div>
+
   </div>
   <hr>
 </div>

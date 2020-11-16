@@ -58,12 +58,23 @@ export class ReportsTradesComponent implements OnInit {
     this.reports.TraderId = $event;
     if ($event !== null) {
       this.reportsTradesGet();
+    }  else {
+      this.reportsTradesGet();
     }
   }
   selectedOrder(event) {
     if (event.target.value !== null) {
       this.reportsTradesGet();
     }
+  }
+  refresh() {
+    this.reports.Desc = null;
+    this.reports.TraderId = null;
+    this.reports.Symbol = null;
+    this.reports.FilterBy = null;
+    this.reports.From = null;
+    this.reports.Till = null;
+    this.reportsTradesGet();
   }
   reportsTradesGet() {
     this.ngxShowLoader.show();

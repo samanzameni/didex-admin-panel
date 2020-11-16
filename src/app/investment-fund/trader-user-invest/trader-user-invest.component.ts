@@ -56,7 +56,11 @@ export class TraderUserInvestComponent implements OnInit {
       Desc: null,
     };
   }
-
+  refresh() {
+      this.querySearch.Desc = null;
+      this.querySearch.UserId = null;
+      this.showInvest();
+  }
   showInvest() {
     this.ngxShowLoader.show();
     this.savesInvestmentService.query = this.querySearch;
@@ -78,6 +82,8 @@ export class TraderUserInvestComponent implements OnInit {
   receiveId($event) {
     this.querySearch.UserId = $event;
     if ($event !== null) {
+      this.showInvest();
+    } else {
       this.showInvest();
     }
   }

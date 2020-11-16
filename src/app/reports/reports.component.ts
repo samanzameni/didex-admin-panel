@@ -68,6 +68,8 @@ export class ReportsComponent implements OnInit {
     this.reports.TraderId = $event;
     if ($event !== null) {
       this.reportsGet();
+    } else {
+      this.reportsGet();
     }
   }
   selectedSymbol(event) {
@@ -80,7 +82,15 @@ export class ReportsComponent implements OnInit {
       this.reportsGet();
     }
   }
-
+  refresh() {
+    this.reports.Desc = null;
+    this.reports.TraderId = null;
+    this.reports.Symbol = null;
+    this.reports.FilterBy = null;
+    this.reports.From = null;
+    this.reports.Till = null;
+    this.reportsGet();
+  }
   reportsGet() {
     this.ngxShowLoader.show();
     if (this.reports.FilterBy === 'timestamp' ) {
