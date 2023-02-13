@@ -20,8 +20,8 @@ export class BankAccountConfirmationComponent implements OnInit {
   constructor( private ngxShowLoader: NgxSpinnerService, private toastrService: ToastrService, private bankService: BankService) {
     this.query = {
       cardHolderName: null,
-    iBanName: null,
-    iBanStatus: null,
+      iBanName: null,
+      iBanStatus: null,
     };
   }
 

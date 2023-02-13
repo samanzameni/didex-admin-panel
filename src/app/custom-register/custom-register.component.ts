@@ -13,11 +13,11 @@ export class CustomRegisterComponent implements OnInit {
   registerForm: FormGroup;
   constructor(private authService: AuthServiceService, private formBuilder: FormBuilder) {
     this.register = {
-      email: '',
-      password: '',
-      phoneNumber: '',
-      country: '',
-      fullName: '',
+      email: null,
+      password: null,
+      phoneNumber: null,
+      country: null,
+      fullName: null,
     };
     this.createForm();
   }
